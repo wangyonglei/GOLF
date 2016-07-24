@@ -1,0 +1,17 @@
+.gonglue .title {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  font-size: 15px;
+  color: #333;
+  background-color: #fff;
+  text-indent: 15px; }
+.gonglue .gonglue_img {
+  width: 100%;
+  text-align: center;
+  height: auto;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  .gonglue .gonglue_img img {
+    max-width: 100%; }

@@ -1,0 +1,48 @@
+.cart_edit {
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+  .cart_edit .duan {
+    text-indent: 0; }
+    .cart_edit .duan p {
+      float: right;
+      margin-right: 10px; }
+  .cart_edit .touxiang {
+    height: 70px;
+    padding: 10px 0;
+    line-height: 70px;
+    overflow: hidden;
+    width: 100%; }
+    .cart_edit .touxiang p {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 50px;
+      border: 1px solid #ddd; }
+    .cart_edit .touxiang img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%; }
+    .cart_edit .touxiang .jiao {
+      margin-top: 25px; }
+  .cart_edit .gexing, .cart_edit .ziyuan {
+    border-bottom: 0; }
+    .cart_edit .gexing p, .cart_edit .ziyuan p {
+      color: #c5c5c5; }
+  .cart_edit .dianshu, .cart_edit .email {
+    border-bottom: 0; }
+  .cart_edit .baocun {
+    float: left;
+    border-radius: 5px;
+    background-color: #4fb4aa;
+    text-align: center;
+    width: 80%;
+    height: 45px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 45px;
+    float: left;
+    margin-left: 10%;
+    margin-top: 30px;
+    margin-bottom: 20px; }

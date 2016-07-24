@@ -1,0 +1,64 @@
+$border: 1px solid #dddddd; $height: 45px; $marginright: 15px;
+.activitydetail { width: 100%; height: auto; overflow: hidden;
+	.banner { width: 100%; max-height: 200px;
+		img { width: 100%; max-height: 200px; }
+	}
+	.title { color: #4fb4aa; height: $height; background-color: #fff; line-height: $height; text-indent: 15px; font-size: 17px; border-bottom: $border; font-weight: normal;
+		span { float: right; font-size: 15px; color: #ed6466; margin-right: $marginright; }
+	}
+	.jiao { position: absolute; right: $marginright; top: 0; display: block; width: 7px; height: 11px; background-image: url(../images/jiao.png); background-size: cover; margin-top: 15px; }
+	.wai { width: 100%; height: auto; overflow: hidden; background-color: #fff; margin-top: 10px; float: left; border-bottom: $border; }
+	.weizhi { background-image: url(../images/weizhi.png); }
+	.zhaopian { background-image: url(../images/zhaopian.png); }
+	.date { background-image: url(../images/date.png);  border-bottom: 0;}
+	.yaoqing { background-image: url(../images/yaoqing.png); border-bottom: 0; }
+	.pinglun { background-image: url(../images/pinglun.png); border-bottom: 0; }
+	.renwu { float: left; width: 100%; height: auto; overflow: hidden;
+		li { margin-left: 15px; width: 100%; height: $height; border-top: $border; padding: 12px 0; position: relative;
+			.renwuicon { width: 40px; height: 40px; border-radius: 50%; float: left; overflow: hidden; border: $border; margin-right: 10px;
+				img { width: 100%; height: 100%; }
+			}
+			.renwuname { font-size: 15px; color: #333; float: left; width: 82%; margin-top: 3px; }
+			.huodongquan { position: absolute; right: 30px; line-height: $height; font-size: 14px; color: #4fb4aa; }
+			.renwuqianming { font-size: 14px; color: #999; float: left; /*width: 82%;*/width: 60%; margin-top: 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+		}
+	}
+	.pinglunlist { float: left; width: 100%; height: auto; overflow: hidden;
+		li { margin-left: 15px; width: 100%; height: $height; border-top: $border; padding: 12px 0; position: relative;
+			.pinglunicon { width: 25px; height: 25px; border-radius: 50%; float: left; overflow: hidden; border: $border; margin-right: 10px;
+				img { width: 100%; height: 100%; border-radius: 50%; }
+			}
+			.pinglunname { font-size: 15px; color: #333; float: left; width: 82%; margin-top: 3px; }
+			.pinglundate { position: absolute; right: 30px; line-height: $height; font-size: 13px; color: #999; }
+			.pingluncon { font-size: 14px; color: #999; float: left; width: 82%; margin-top: 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+		}
+	}
+	.zhaopianimg { padding-bottom: 10px; float: left; width: 100%; height: auto; overflow: hidden;
+		li { margin-left: 15px; float: left; overflow: hidden; width: 70px; height: 70px; border: $border; margin: 15px 5px 0 15px; border-radius: 7px; overflow: hidden;
+			img { width: 100%; height: 100%; }
+		}
+		li:last-child { font-size: 50px; text-align: center; line-height: 70px;
+			a { color: #b5b5b5; width: 100%; height: 100%; overflow: hidden; display: block; }
+		}
+	}
+	.hf { margin-top: 0; position: relative;
+		.huifubtn { position: absolute; right: 10%; line-height: 30px; color: #4fb4aa; outline: none; top: 15px; height: 30px; border: 0; background: none; border-left: $border; padding: 0 15px; }
+		.huifu { width: 77%; padding-left: 3%; height: 40px; outline: none; margin: 10px 10%; border: none; background-color: #f2f2f2; border: 1px solid #c5c5c5; border-radius: 5px; text-indent: 15px; }
+	}
+	.chegnjitit { width: 100%; height: auto; padding-top: 20px; padding-bottom: 10px; float: left; background-color: #f8f8f8;
+		p { width: 50px; float: right; text-align: center; color: #666; font-size: 14px; }
+	}
+	.chengjicon { float: left; width: 100%; height: auto; overflow: hidden;
+		li { margin-left: 15px; width: 100%; overflow: hidden; height: 55px;
+			.chengjiicon { width: 25px; height: 25px; border-radius: 50%; float: left; border: $border; margin: 15px 10px;
+				img { width: 100%; height: 100%; border-radius: 50%; }
+			}
+			.chengjiname { float: left; line-height: 55px; float: left; font-size: 15px; color: #333; }
+			p { width: 50px; float: right; text-align: center; color: #666; font-size: 14px; line-height: 55px; font-size: 14px; color: #4fb4aa; }
+			p:nth-of-type(1) { margin-right: 15px; }
+		}
+	}
+	.jifenkabtn { margin-top: 0;
+		.jifenka { width: 80%; height: 40px; line-height: 40px; text-align: center; color: #fff; background-color: #4fb4aa; margin: 0 auto; margin-top: 40px; margin-bottom: 20px; font-size: 15px; border-radius: 6px; }
+	}
+}

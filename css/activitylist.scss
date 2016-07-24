@@ -1,0 +1,29 @@
+$c: #4fb4aa;
+$border: 1px solid #dddddd;
+.activitylist { 
+	.al_title { width: 100%; height: 45px; font-size: 15px; color: #666;
+		ul { width: 100%; height: 100%; overflow: hidden; }
+		li { width: 25%; height: 100px; line-height: 45px; text-align: center;float: left; cursor: pointer; }
+		.cur{ color: $c; border-bottom: 2px solid $c; height: 43px; }
+	}
+	.al_con{width: 100%;  height: auto; overflow: hidden; background-color: #fff ;
+		ul{ width:94%; height: auto; overflow: hidden; margin: 0 3%; margin: 0 auto;  }
+		li{ width: 100%; height: 71px;  padding: 12px 0; border-bottom: $border;
+			.al_img{ float: left; height: 71px; position: relative;  width: 100px; margin-right: 10px; 
+				img{ width: 100px; height: 100%; }
+				.al_mask ,.al_mask_img{position: absolute; bottom: 0;height: 18px; left: 0; width: 100px; }
+				.al_mask{ z-index: 2;  background-color: #000; opacity: .6; }
+				.al_mask_img{ z-index: 3; background-image: url(../images/photo.png);  background-repeat: no-repeat; background-position: 5px center; text-indent: 25px; background-size: 15px; text-align: left; color: #fff; line-height: 18px; font-size: 12px; }
+			}
+			.alright_con{ float: left; width:63%;  position: relative;
+				h1{ font-size: 17px; color: $c; font-weight: normal; margin-top: 1px; }
+				p{ font-size: 13px; height: 20px; line-height: 20px; ;background-repeat: no-repeat; background-size: 13px; text-indent: 20px; background-position: left center; }
+				p:nth-of-type(1){ color: #666 ; background-image: url(../images/shijian.png);margin-top: 7px;}
+				p:nth-of-type(2){ color: #333; background-image: url(../images/qiu.png);}
+				.al_km{ position: absolute;  right: 15px; top: 3px; font-size: 13px; color: #f25f5d}
+			}
+			
+
+		}
+	}
+}
