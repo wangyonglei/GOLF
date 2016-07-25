@@ -11,7 +11,7 @@ $(document).ready(function() {
 	var id = $.getUrlParam('id');
 		// 获取内容参数
 	$.ajax({
-			url: 'http://v.jiaolianpai.com/user/Venue/getDetails?venue_id='+id,
+			url: 'http://v.jgsports.com.cn/user/Venue/getDetails?venue_id='+id,
 			type: 'GET',
 			dataType: 'json',
 			data: {},

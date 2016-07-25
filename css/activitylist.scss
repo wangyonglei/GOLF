@@ -2,8 +2,8 @@ $c: #4fb4aa;
 $border: 1px solid #dddddd;
 .activitylist { 
 	.al_title { width: 100%; height: 45px; font-size: 15px; color: #666;
-		ul { width: 100%; height: 100%; overflow: hidden; }
-		li { width: 25%; height: 100px; line-height: 45px; text-align: center;float: left; cursor: pointer; }
+		ul { width: 100%; height: 45px; overflow: hidden; }
+		li { width: 25%; height: 45px; line-height: 45px; text-align: center;float: left; cursor: pointer; }
 		.cur{ color: $c; border-bottom: 2px solid $c; height: 43px; }
 	}
 	.al_con{width: 100%;  height: auto; overflow: hidden; background-color: #fff ;

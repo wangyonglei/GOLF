@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	// 加载列表
 	$.ajax({
-			url: 'http://v.jiaolianpai.com/user/Venue/getList',
+			url: 'http://v.jgsports.com.cn/user/Venue/getList',
 			type: 'Get',
 			dataType: 'json',
 			data: {
@@ -29,7 +29,7 @@ $(document).ready(function() {
 	 var search = function(){
 	 	var title = $('#search_input').val();
 	 	$.ajax({
-	 		url: 'http://v.jiaolianpai.com/user/Venue/getList?title=' + title,
+	 		url: 'http://v.jgsports.com.cn/user/Venue/getList?title=' + title,
 	 		type: 'GET',
 	 		success: function(data) {
 	 			var data = jQuery.parseJSON(data);

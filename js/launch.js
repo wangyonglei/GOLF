@@ -4,7 +4,7 @@ $(document).ready(function() {
 		$('.qiuchang_maxk').css('display', 'block');
 		$('.qiuchang_mask').css('display', 'block');
 		$.ajax({
-			url: 'http://v.jiaolianpai.com/user/Venue/getList',
+			url: 'http://v.jgsports.com.cn/user/Venue/getList',
 			dataType: 'json',
 			type: 'GET',
 			success: function(data) {
@@ -37,7 +37,7 @@ $(document).ready(function() {
 	var search = function() {
 		var title = $('#search_input').val();
 		$.ajax({
-			url: 'http://v.jiaolianpai.com/user/Venue/getList?title=' + title,
+			url: 'http://v.jgsports.com.cn/user/Venue/getList?title=' + title,
 			type: 'GET',
 			success: function(data) {
 				var data = jQuery.parseJSON(data);
@@ -75,7 +75,7 @@ $(document).ready(function() {
 		}
 		$('.yaoqing_maxk').css('display', 'none');
 		$.ajax({
-				url: 'http://v.jiaolianpai.com/user/User/addUserInfo',
+				url: 'http://v.jgsports.com.cn/user/User/addUserInfo',
 				type: 'post',
 				dataType: 'json',
 				data: yaoqing_namrel
@@ -101,7 +101,7 @@ $(document).ready(function() {
 			join_member : $('.yaoqing').val()
 		}
 		$.ajax({
-				url: 'http://v.jiaolianpai.com/user/Act/addInfo',
+				url: 'http://v.jgsports.com.cn/user/Act/addInfo',
 				type: 'post',
 				dataType: 'json',
 				data: dataval

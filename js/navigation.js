@@ -11,7 +11,7 @@ $(document).ready(function() {
 	var id = $.getUrlParam('id');
 	// 获取内容参数
 	$.ajax({
-			url: 'http://v.jiaolianpai.com/user/Venue/getDetails?venue_id=' + id,
+			url: 'http://v.jgsports.com.cn/user/Venue/getDetails?venue_id=' + id,
 			type: 'GET',
 			dataType: 'json',
 			data: {},
@@ -22,8 +22,8 @@ $(document).ready(function() {
 			var golf_name = navigation.title;
 			var x = navigation.lng_x;
 			var y = navigation.lat_y;
-			var xy = [+y, +x];
-			console.log(xy)
+			var xy = [+x, +y];
+			// console.log(xy)
 			var map = new AMap.Map('container', {
 				resizeEnable: true,
 				zoom: 10,
