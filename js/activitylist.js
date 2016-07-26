@@ -1,51 +1,50 @@
 $(document).ready(function() {
-	
-	// function url(type) {
-	// 	var map = {
-	// 		all: 0,
-	// 		week: 1,
-	// 		month: 2,
-	// 		place: 3,
-	// 	};
-	// 	var url = 'http://v.jgsports.com.cn/user/Act/getList';
-	// 	return url + "? type = "+map[type];
-	// }
-	
+	// 默认全部加载
+	$.ajax({
+			url: 'http://v.jgsports.com.cn/user/Act/getList',
+			type: 'Get',
+			dataType: 'json',
+			data: {
+				type: 0,
+				uid: 304,
+			},
+			success: function(data) {
+				var html = "";
+				var actlistdata = data.data;
+				for (var i = 0; i < actlistdata.length; i++) {
+					html += '<li><div class="al_img"><img src="' + actlistdata[i].actPhotoAlbumList.picurl + '">' +
+						'<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumList.actPhotoAlbumNumber + '</div></div>' +
+						'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
+						'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div>	</li>';
+				};
+				$("#activitylist").html(html);
+			}
+		})
+		// 点击加载各类 0为全部 ， 1 为本周  ，2为本月  3为球场
+	var uid = 304;
 	$(".al_title li").click(function() {
-
-	      $(this).addClass("cur").siblings().removeClass('cur');
-	      var index = $(this).index()
-	      $.ajax({
-	      		url: 'http://v.jgsports.com.cn/user/Act/getList',
-	      		type: 'Get',
-	      		dataType: 'json',
-	      		data: {'type':index}
-	      	})
-	      	.done(function(data) {
-	      			// var activitylist = data.data;
-	      			if (index ==0) {
-	      				var html = "";
-	      				for (var i = 0; i < 1; i++) {
-	      					html += '<li><div class="al_img"><img src="images/golfdetail1.jpg">'+
-	      					'<div class="al_mask"></div><div class="al_mask_img">6</div></div>'+
-	      					'<div class="alright_con"><h1>国际迎新活动</h1><p>2016-06-24 14:00</p><p>北京北京北京北京北京</p>'+
-	      					'<div class="al_km">1.7km</div>	</div>	</li>';
-	      				};
-	      				$("#activitylist").html(html);
-	      			} else if (index == 1) {
-	      				var html = "";
-	      				for (var i = 0; i < 1; i++) {
-	      					html += '1<li><div class="al_img"><img src="images/golfdetail1.jpg">'+
-	      					'<div class="al_mask"></div><div class="al_mask_img">6</div></div>'+
-	      					'<div class="alright_con"><h1>国际迎新活动</h1><p>2016-06-24 14:00</p><p>北京北京北京北京北京</p>'+
-	      					'<div class="al_km">1.7km</div>	</div>	</li>';
-	      				};
-	      				$("#activitylist").html(html);
-	      			}
-	      			
-	      	})
-	  })
-
-	
-		
+		$(this).addClass("cur").siblings().removeClass('cur');
+		var index = $(this).index();
+		var actdata = {
+			type: index,
+			uid: 304,
+		}
+		$.ajax({
+			url: 'http://v.jgsports.com.cn/user/Act/getList',
+			type: 'Get',
+			dataType: 'json',
+			data: actdata,
+			success: function(data) {
+				var html = "";
+				var actlistdata = data.data;
+				for (var i = 0; i < actlistdata.length; i++) {
+					html += '<li><div class="al_img"><img src="' + actlistdata[i].actPhotoAlbumList.picurl + '">' +
+						'<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumList.actPhotoAlbumNumber + '</div></div>' +
+						'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
+						'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div>	</li>';
+				};
+				$("#activitylist").html(html);
+			}
+		})
+	})
 })
