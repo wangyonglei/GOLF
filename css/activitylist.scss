@@ -20,10 +20,12 @@ $border: 1px solid #dddddd;
 				p{ font-size: 13px; height: 20px; line-height: 20px; ;background-repeat: no-repeat; background-size: 13px; text-indent: 20px; background-position: left center; }
 				p:nth-of-type(1){ color: #666 ; background-image: url(../images/shijian.png);margin-top: 7px;}
 				p:nth-of-type(2){ color: #333; background-image: url(../images/qiu.png);}
-				.al_km{ position: absolute;  right: 15px; top: 3px; font-size: 13px; color: #f25f5d}
+				.al_km{ position: absolute;  right: 0px; top: 3px; font-size: 13px; color: #f25f5d}
 			}
 			
+			a{ width: 100%; height: 100%; overflow: hidden; display: block; }
 
 		}
+		.Loading{ width: 100%; height: 25px; line-height: 25px; text-align: center; }
 	}
 }

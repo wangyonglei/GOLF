@@ -90,7 +90,17 @@
         background-image: url(../images/qiu.png); }
       .activitylist .al_con li .alright_con .al_km {
         position: absolute;
-        right: 15px;
+        right: 0px;
         top: 3px;
         font-size: 13px;
         color: #f25f5d; }
+    .activitylist .al_con li a {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: block; }
+  .activitylist .al_con .Loading {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center; }
