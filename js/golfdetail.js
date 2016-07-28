@@ -24,7 +24,7 @@ $(document).ready(function() {
 				html += '<div class="swiper-slide"><img src="' + golfdetail.venue_img_list[i] + '"></div>';
 			}
 			html +='</div><div class="swiper-pagination"></div></div></div>';
-			html +='<h1 class="title"><a href="navigation.html?id='+golfdetail.id+'">' +
+			html +='<h1 class="title"><a href="navigation.html?id='+golfdetail.id+'&x='+golfdetail.lng_x+'&y='+golfdetail.lat_y+'&name='+golfdetail.title+'">' +
 				golfdetail.title + '</h1><div class="wai"><div class="daohang duan" data-x="'+golfdetail.lng_x+'" data-y="'+golfdetail.lat_y+'">' +
 				golfdetail.route + '<span class="jiao"></span></a></div><div class="weizhi duans">' +
 				golfdetail.address + '</div></div><div class="tel chang"><a href="tel:' + golfdetail.tel +'">' +
