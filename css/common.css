@@ -69,6 +69,7 @@ button {
 
 body {
   background-color: #f8f8f8;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 a, input {

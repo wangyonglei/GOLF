@@ -203,6 +203,25 @@
   overflow: hidden;
   display: block;
 }
+.activitydetail .zhaopianimg .tuce {
+  position: relative;
+}
+.activitydetail .zhaopianimg .tuce .photos {
+  background-color: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border: 0;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+.activitydetail .zhaopianimg .tuce a {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 .activitydetail .hf {
   margin-top: 0;
   position: relative;

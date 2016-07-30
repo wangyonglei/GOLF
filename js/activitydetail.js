@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	// 获取act_id
 	(function($) {
 		$.getUrlParam = function(name) {
 			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -8,6 +9,7 @@ $(document).ready(function() {
 		}
 	})(jQuery);
 	var id = $.getUrlParam('id');
+	//加载信息
 	$.ajax({
 		url: 'http://v.jgsports.com.cn/user/Act/getDetails?act_id=' + id,
 		type: 'Get',
@@ -23,7 +25,7 @@ $(document).ready(function() {
 				html += '<div class="swiper-slide"><img src="' + act_det.venueImgList[i] + '"></div>';
 			}
 			html += '</div><div class="swiper-pagination"></div></div></div><h1 class="title">' + act_det.title + '<span>进行中</span></h1>' +
-			'<div class="wai"><div class="weizhi duan" data-x="'+act_det.lngX+'" data-y="'+act_det.latY+'"><a href="navigation.html?id='+act_det.id+'&x='+act_det.lngX+'&y='+act_det.latY+'&name='+act_det.venueTitle+'">' + act_det.venueTitle + '<span class="jiao"></span></a></div><div class="date duan">' + act_det.act_date_str + '<span class="jiao"></span></div></div>' +
+				'<div class="wai"><div class="weizhi duan" data-x="' + act_det.lngX + '" data-y="' + act_det.latY + '"><a href="navigation.html?id=' + act_det.id + '&x=' + act_det.lngX + '&y=' + act_det.latY + '&name=' + act_det.venueTitle + '">' + act_det.venueTitle + '<span class="jiao"></span></a></div><div class="date duan">' + act_det.act_date_str + '<span class="jiao"></span></div></div>' +
 				'<div class="wai"><div class="yaoqing duan">';
 			for (var i = 0; i < act_det.joinActMembers.length; i++) {
 				html += act_det.joinActMembers[i].rname;
@@ -32,11 +34,11 @@ $(document).ready(function() {
 			for (var i = 0; i < act_det.joinActMembers.length; i++) {
 				html += '<li><div class="renwuicon">';
 				if (!act_det.joinActMembers.avatar) {
-					html +='<img src="images/card_img.jpg">';
-				}else{
-					html +='<img src="'+act_det.joinActMembers[i].avatar+'">';
+					html += '<img src="images/card_img.jpg">';
+				} else {
+					html += '<img src="' + act_det.joinActMembers[i].avatar + '">';
 				}
-				html +='</div><div class="renwuname">'+act_det.joinActMembers[i].rname+'</div><div class="renwuqianming">'+act_det.joinActMembers[i].signature+'</div><div class="huodongquan">活动圈3月首发</div></li>'
+				html += '</div><div class="renwuname">' + act_det.joinActMembers[i].rname + '</div><div class="renwuqianming">' + act_det.joinActMembers[i].signature + '</div><div class="huodongquan">活动圈3月首发</div></li>'
 			}
 			html += '</ul></div>'
 			$('#activitydetail').html(html);
@@ -50,6 +52,73 @@ $(document).ready(function() {
 				autoplay: 2500,
 				autoplayDisableOnInteraction: false
 			});
+			pinglun();
 		}
 	})
-})
+	// 刷新评论
+	var pinglun = function() {
+			$.ajax({
+				url: 'http://v.jgsports.com.cn/user/Act/getDetails?act_id=' + id,
+				type: 'Get',
+				dataType: 'json',
+				data: {
+					act_id: id
+				},
+				success: function(data) {
+					var html = '';
+					var pinglundata = data.data;
+					for (var i = 0; i < pinglundata.actCommentList.length; i++) {
+						html += '<li><div class="pinglunicon"><img src="' + pinglundata.actCommentList[i].avatar + '"></div><div class="pinglunname">' + pinglundata.actCommentList[i].rname + '</div>	<div class="pingluncon">' + pinglundata.actCommentList[i].content + '</div><div class="pinglundate">' + pinglundata.actCommentList[i].c_time + '</div></li>';
+					}
+					$('.pinglunlist').html(html);
+					$('.huifu').val('')
+				}
+			})
+		}
+		//评论
+	$('.huifubtn').click(function(event) {
+		var content = $('.huifu').val();
+		$.ajax({
+			url: 'http://v.jgsports.com.cn/user/Act/releaseActComment',
+			type: 'post',
+			dataType: 'json',
+			data: {
+				uid: 304,
+				act_id: id,
+				content: content
+			},
+			success: function(data) {
+				pinglun();
+			}
+		})
+	})
+	// 加载活动图册
+	var photos = $('.photos').attr('name');
+	console.log(photos)
+	$('.photos').change(function(event) {
+		$.ajax({
+			url: 'http://v.jgsports.com.cn/user/Act/addPhotoAlbum',
+			type: 'post',
+			dataType: 'json',
+			data: {
+				act_id: id,
+				uid:304,
+				photos:photos
+			},
+			success: function(data) {
+				var html = '';
+				var tucedata = data.data;
+				for (var i = 0; i < tucedata.length; i++) {
+					html += '<li><a href="photodetail.html?"><img src="'+tucedata.img[i]+'"></a></li>';
+					// html += '<li><img src="'+tucedata.img[i]+'"></li>';
+				}
+				$('.tuce').before(html);
+			}
+		})
+	});
+
+	
+
+
+
+});
