@@ -108,7 +108,7 @@ $(document).ready(function() {
 				var html = '';
 				var tucedata = data.data;
 				for (var i = 0; i < tucedata.actPhotoAlbumList.length; i++) {
-					html += '<li><a href="photodetail.html?"><img src="' + tucedata.actPhotoAlbumList[i].picurl + '"></a></li>';
+					html += '<li><a href="photodetail.html?did='+tucedata.actPhotoAlbumList[i].id+'"><img src="' + tucedata.actPhotoAlbumList[i].picurl + '"></a></li>';
 				}
 				$('.zhaopianimg ul').html(html);
 				$('.photos').val('')

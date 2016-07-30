@@ -9,22 +9,16 @@ $(document).ready(function() {
 			},
 		})
 		.done(function(data) {
-			// console.log("success");
 			if (data.status = 1) {
 				var listdata = data.data;
 				var html = "";
 				for (var i = 0; i < listdata.length; i++) {
 					html += '<li><a href="golfdetail.html?id=' + listdata[i].id + '">' + listdata[i].title + '<p class="jiao"></p></a></li>';
 				};
-				$("#ball_list").html(html);
+				// $("#ball_list").html(html);
+				$('.loading').before(html)
 			}
 		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
 	// 搜索
 	 var search = function(){
 	 	var title = $('#search_input').val();
@@ -42,7 +36,6 @@ $(document).ready(function() {
 	 		}
 	 	});
 	 }
-	// 搜索
 	$('#search_btn').click(function() {
 			search();
 		})
@@ -54,4 +47,37 @@ $(document).ready(function() {
 	$('#x').click(function() {
 		$('#search_input').val('');
 	})
+
+
+//滑动加载
+	var stop = true;
+	page = 2;
+	$(window).scroll(function() {
+		var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
+		if ($(document).height() <= totalheight) {
+			if (stop == true) {
+				stop = false;
+
+				$.ajax({
+					url: 'http://v.jgsports.com.cn/user/Venue/getList',
+					type: 'Get',
+					dataType: 'json',
+					data: {
+						page: page,
+						limit: 10,
+					},
+					success: function(data) {
+						var listdata = data.data;
+						var ballhtml = "";
+						for (var i = 0; i < listdata.length; i++) {
+							ballhtml += '<li><a href="golfdetail.html?id=' + listdata[i].id + '">' + listdata[i].title + '<p class="jiao"></p></a></li>';
+						};
+						$(".loading").before(ballhtml);
+						stop = true;
+						page++;
+					}
+				})
+			}
+		}
+	});
 });
