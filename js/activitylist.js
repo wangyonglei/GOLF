@@ -9,7 +9,7 @@ $(document).ready(function() {
 				type: 0,
 				uid: uid,
 				page: 1,
-				limit: 5
+				limit: 6
 			},
 			success: function(data) {
 				var html = $('#activitylist').html();
