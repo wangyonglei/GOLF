@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	// 加载列表
 	$.ajax({
-			url: 'http://v.jgsports.com.cn/user/Venue/getList',
+			url: 'http://v.jgsports.com.cn/user/Venue/getList?page=1&limit=15',
 			type: 'Get',
 			dataType: 'json',
 			data: {
