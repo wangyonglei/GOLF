@@ -115,38 +115,32 @@ $(document).ready(function() {
 			}
 		})
 	}
-	// function ajaxFileUpload() {
-	// 	$.ajaxFileUpload({
-	// 		url: 'http://v.jgsports.com.cn/user/Act/addPhotoAlbum',
-	// 		secureuri: false,
-	// 		fileElementId: 'file1',
-	// 		dataType: 'json',
-	// 		data: {
-	// 			act_id: id,
-	// 			uid: 304
-	// 				// photos:photos
-	// 		},
-	// 		success: function(data, status) {
-	// 			photos();
-	// 		},
-	// 	})
-	// 	// return false;
-	// }
-	$('.photos').change(function(event) {
+	function ajaxFileUpload() {
 		$.ajaxFileUpload({
-				url: 'http://v.jgsports.com.cn/user/Act/addPhotoAlbum',
-				secureuri: false,
-				fileElementId: 'file1',
-				dataType: 'json',
-				data: {
-					act_id: id,
-					uid: 304
-						// photos:photos
-				},
-				success: function(data, status) {
-					photos();
-				},
-			})
-		
-	});
+			url: 'http://v.jgsports.com.cn/user/Act/addPhotoAlbum',
+			secureuri: false,
+			fileElementId: 'file1',
+			// dataType: 'json',
+			data: {
+				act_id: id,
+				uid: 304
+				// photos:photos
+			},
+			success: function(data, status) {
+				photos();
+				upload();
+			},
+			error: function(data, status, e) {
+				console.log('error')
+
+			}
+		})
+		return false;
+	}
+	var upload = function(){
+		$('.photos').change(function(event) {
+			ajaxFileUpload();
+		});
+	}
+	upload();
 });
