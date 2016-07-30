@@ -14,7 +14,7 @@ $(document).ready(function() {
 			success: function(data) {
 				var html = $('#activitylist').html();
 				var actlistdata = data.data;
-				for (var i = 0; i < 5; i++) {
+				for (var i = 0; i < 6; i++) {
 					html += '<li><a href="activitydetail.html?id=' + actlistdata[i].id + '"><div class="al_img">';
 					if (!actlistdata[i].actPhotoAlbumList.picurl) {
 						html += '<img src="images/golfdetail1.jpg">';

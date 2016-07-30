@@ -11,51 +11,57 @@ $(document).ready(function() {
 	var id = $.getUrlParam('id');
 	//加载信息
 	$.ajax({
-		url: 'http://v.jgsports.com.cn/user/Act/getDetails?act_id=' + id,
-		type: 'Get',
-		dataType: 'json',
-		data: {
-			act_id: id
-		},
-		success: function(data) {
-			var act_det = data.data;
-			var html = '';
-			html += '<div class="banner"><div class="swiper-container"><div class="swiper-wrapper">';
-			for (var i = 0; i < act_det.venueImgList.length; i++) {
-				html += '<div class="swiper-slide"><img src="' + act_det.venueImgList[i] + '"></div>';
-			}
-			html += '</div><div class="swiper-pagination"></div></div></div><h1 class="title">' + act_det.title + '<span>进行中</span></h1>' +
-				'<div class="wai"><div class="weizhi duan" data-x="' + act_det.lngX + '" data-y="' + act_det.latY + '"><a href="navigation.html?id=' + act_det.id + '&x=' + act_det.lngX + '&y=' + act_det.latY + '&name=' + act_det.venueTitle + '">' + act_det.venueTitle + '<span class="jiao"></span></a></div><div class="date duan">' + act_det.act_date_str + '<span class="jiao"></span></div></div>' +
-				'<div class="wai"><div class="yaoqing duan">';
-			for (var i = 0; i < act_det.joinActMembers.length; i++) {
-				html += act_det.joinActMembers[i].rname;
-			}
-			html += '（' + act_det.joinActMembersNumber + '人）<span class="jiao"></span></div>	<ul class="renwu">';
-			for (var i = 0; i < act_det.joinActMembers.length; i++) {
-				html += '<li><div class="renwuicon">';
-				if (!act_det.joinActMembers.avatar) {
-					html += '<img src="images/card_img.jpg">';
-				} else {
-					html += '<img src="' + act_det.joinActMembers[i].avatar + '">';
+			url: 'http://v.jgsports.com.cn/user/Act/getDetails?act_id=' + id,
+			type: 'Get',
+			dataType: 'json',
+			data: {
+				act_id: id
+			},
+			success: function(data) {
+				var act_det = data.data;
+				var html = '';
+				html += '<div class="banner"><div class="swiper-container"><div class="swiper-wrapper">';
+				for (var i = 0; i < act_det.venueImgList.length; i++) {
+					html += '<div class="swiper-slide"><img src="' + act_det.venueImgList[i] + '"></div>';
 				}
-				html += '</div><div class="renwuname">' + act_det.joinActMembers[i].rname + '</div><div class="renwuqianming">' + act_det.joinActMembers[i].signature + '</div><div class="huodongquan">活动圈3月首发</div></li>'
+				html += '</div><div class="swiper-pagination"></div></div></div><h1 class="title">' + act_det.title + '<span>进行中</span></h1>' +
+					'<div class="wai"><div class="weizhi duan" data-x="' + act_det.lngX + '" data-y="' + act_det.latY + '"><a href="navigation.html?id=' + act_det.id + '&x=' + act_det.lngX + '&y=' + act_det.latY + '&name=' + act_det.venueTitle + '">' + act_det.venueTitle + '<span class="jiao"></span></a></div><div class="date duan">' + act_det.act_date_str + '<span class="jiao"></span></div></div>' +
+					'<div class="wai"><div class="yaoqing duan">';
+				for (var i = 0; i < act_det.joinActMembers.length; i++) {
+					html += act_det.joinActMembers[i].rname;
+				}
+				html += '（' + act_det.joinActMembersNumber + '人）<span class="jiao"></span></div>	<ul class="renwu">';
+				for (var i = 0; i < act_det.joinActMembers.length; i++) {
+					html += '<li><div class="renwuicon">';
+					if (!act_det.joinActMembers.avatar) {
+						html += '<img src="images/card_img.jpg">';
+					} else {
+						html += '<img src="' + act_det.joinActMembers[i].avatar + '">';
+					}
+					html += '</div><div class="renwuname">' + act_det.joinActMembers[i].rname + '</div><div class="renwuqianming">' + act_det.joinActMembers[i].signature + '</div><div class="huodongquan">活动圈3月首发</div></li>'
+				}
+				html += '</ul></div>'
+				$('#activitydetail').html(html);
+				var swiper = new Swiper('.swiper-container', {
+					pagination: '.swiper-pagination',
+					nextButton: '.swiper-button-next',
+					prevButton: '.swiper-button-prev',
+					paginationClickable: true,
+					spaceBetween: 10,
+					centeredSlides: true,
+					autoplay: 2500,
+					autoplayDisableOnInteraction: false
+				});
+				pinglun();
+				photos();
+				// var photoshtml = ''
+				// for (var i = 0; i < act_det.actPhotoAlbumList.length; i++) {
+				// 	photoshtml += '<li><a href="photodetail.html?"><img src="' + act_det.actPhotoAlbumList[i].picurl + '"></a></li>';
+				// }
+				// $('.zhaopianimg ul').html(photoshtml);
 			}
-			html += '</ul></div>'
-			$('#activitydetail').html(html);
-			var swiper = new Swiper('.swiper-container', {
-				pagination: '.swiper-pagination',
-				nextButton: '.swiper-button-next',
-				prevButton: '.swiper-button-prev',
-				paginationClickable: true,
-				spaceBetween: 10,
-				centeredSlides: true,
-				autoplay: 2500,
-				autoplayDisableOnInteraction: false
-			});
-			pinglun();
-		}
-	})
-	// 刷新评论
+		})
+		// 刷新评论
 	var pinglun = function() {
 			$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getDetails?act_id=' + id,
@@ -93,32 +99,54 @@ $(document).ready(function() {
 		})
 	})
 	// 加载活动图册
-	var photos = $('.photos').attr('name');
-	console.log(photos)
-	$('.photos').change(function(event) {
+	var photos = function () {
 		$.ajax({
-			url: 'http://v.jgsports.com.cn/user/Act/addPhotoAlbum',
-			type: 'post',
+			url: 'http://v.jgsports.com.cn/user/Act/getDetails?act_id=' + id,
+			type: 'Get',
 			dataType: 'json',
-			data: {
-				act_id: id,
-				uid:304,
-				photos:photos
-			},
 			success: function(data) {
 				var html = '';
 				var tucedata = data.data;
-				for (var i = 0; i < tucedata.length; i++) {
-					html += '<li><a href="photodetail.html?"><img src="'+tucedata.img[i]+'"></a></li>';
-					// html += '<li><img src="'+tucedata.img[i]+'"></li>';
+				for (var i = 0; i < tucedata.actPhotoAlbumList.length; i++) {
+					html += '<li><a href="photodetail.html?"><img src="' + tucedata.actPhotoAlbumList[i].picurl + '"></a></li>';
 				}
-				$('.tuce').before(html);
+				$('.zhaopianimg ul').html(html);
+				$('.photos').val('')
 			}
 		})
+	}
+	// function ajaxFileUpload() {
+	// 	$.ajaxFileUpload({
+	// 		url: 'http://v.jgsports.com.cn/user/Act/addPhotoAlbum',
+	// 		secureuri: false,
+	// 		fileElementId: 'file1',
+	// 		dataType: 'json',
+	// 		data: {
+	// 			act_id: id,
+	// 			uid: 304
+	// 				// photos:photos
+	// 		},
+	// 		success: function(data, status) {
+	// 			photos();
+	// 		},
+	// 	})
+	// 	// return false;
+	// }
+	$('.photos').change(function(event) {
+		$.ajaxFileUpload({
+				url: 'http://v.jgsports.com.cn/user/Act/addPhotoAlbum',
+				secureuri: false,
+				fileElementId: 'file1',
+				dataType: 'json',
+				data: {
+					act_id: id,
+					uid: 304
+						// photos:photos
+				},
+				success: function(data, status) {
+					photos();
+				},
+			})
+		
 	});
-
-	
-
-
-
 });
