@@ -6,11 +6,41 @@
     width: 100%;
     height: auto;
     max-height: 450px;
+    overflow: hidden;
     text-align: center;
-    background-color: #fff; }
+    background-color: #fff;
+    position: relative; }
     .photodetail .photo img {
       max-width: 100%;
-      max-height: 100%; }
+      max-height: 100%;
+      /*width: 100%; max-height: 100%; */ }
+    .photodetail .photo .dianzanmask, .photodetail .photo .dianzan, .photodetail .photo .pinglun, .photodetail .photo .pinglunmask {
+      line-height: 37px;
+      width: 80px;
+      height: 37px;
+      position: absolute;
+      bottom: 10px; }
+    .photodetail .photo .dianzanmask, .photodetail .photo .pinglunmask {
+      background-color: #000;
+      opacity: .6;
+      filter: alpha(opacity=60);
+      z-index: 5; }
+    .photodetail .photo .pinglun, .photodetail .photo .pinglunmask {
+      right: 0;
+      border-radius: 50px 0px 0px 50px; }
+    .photodetail .photo .dianzan, .photodetail .photo .dianzanmask {
+      left: 0;
+      border-radius: 0px 50px 50px 0px; }
+    .photodetail .photo .dianzan {
+      background-image: url(../images/like.png);
+      z-index: 6;
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: 15px center;
+      text-align: left;
+      text-indent: 40px;
+      color: #fff;
+      font-size: 13px; }
   .photodetail .renwu {
     float: left;
     width: 100%;
