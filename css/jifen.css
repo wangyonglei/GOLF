@@ -3,35 +3,40 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  padding: 20px 0; }
-  .jifen .renwu .renwuicon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    float: left;
-    overflow: hidden;
-    border: 1px solid #ddd;
-    margin-right: 10px;
-    margin-left: 3%; }
-    .jifen .renwu .renwuicon img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%; }
-  .jifen .renwu .renwuname {
-    font-size: 15px;
-    color: #333;
-    float: left;
-    width: 79%;
-    margin-top: 3px; }
-  .jifen .renwu .renwuqianming {
-    font-size: 14px;
-    color: #999;
-    float: left;
-    width: 60%;
-    margin-top: 5px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; }
+  padding: 20px 0;
+}
+.jifen .renwu .renwuicon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  margin-left: 3%;
+}
+.jifen .renwu .renwuicon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.jifen .renwu .renwuname {
+  font-size: 15px;
+  color: #333;
+  float: left;
+  width: 79%;
+  margin-top: 3px;
+}
+.jifen .renwu .renwuqianming {
+  font-size: 14px;
+  color: #999;
+  float: left;
+  width: 60%;
+  margin-top: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .jifen .jifen_con {
   width: 94%;
   margin: 0 3%;
@@ -40,61 +45,77 @@
   overflow: hidden;
   border-radius: 10px;
   border: 1px solid #4fb4aa;
-  margin-bottom: 20px; }
-  .jifen .jifen_con ul {
-    width: 50%;
-    float: left;
-    height: auto;
-    overflow: hidden; }
-    .jifen .jifen_con ul li {
-      height: 40px;
-      width: 100%;
-      border-bottom: 1px solid #ddd;
-      color: #333; }
-      .jifen .jifen_con ul li p {
-        width: 33.3%;
-        float: left;
-        height: 100%;
-        font-size: 15px;
-        text-align: center;
-        line-height: 40px; }
-      .jifen .jifen_con ul li p:nth-of-type(1) {
-        color: #666; }
-      .jifen .jifen_con ul li p:nth-of-type(2) {
-        color: #c5c5c5;
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        margin-left: -2px; }
-      .jifen .jifen_con ul li .red {
-        color: #ed6466; }
-      .jifen .jifen_con ul li .green {
-        color: #4fb4aa; }
-    .jifen .jifen_con ul li:nth-of-type(1) {
-      height: 45px;
-      background-color: #4fb4aa;
-      border-bottom: 0; }
-      .jifen .jifen_con ul li:nth-of-type(1) p {
-        line-height: 45px;
-        color: #fff; }
-    .jifen .jifen_con ul li:last-child {
-      border-bottom: 1px solid #4fb4aa; }
-  .jifen .jifen_con ul:nth-of-type(1) li:nth-of-type(1) p:nth-of-type(3) {
-    border-right: 1px solid #ddd;
-    margin-left: -1px; }
-  .jifen .jifen_con ul:nth-of-type(1) p:nth-of-type(3) {
-    border-right: 1px solid #4fb4aa;
-    margin-left: -1px; }
-  .jifen .jifen_con .all {
-    width: 100%;
-    height: 45px;
-    font-size: 15px;
-    color: #333; }
-    .jifen .jifen_con .all p {
-      width: 33.3%;
-      float: left;
-      height: 100%;
-      line-height: 45px;
-      text-align: center; }
-    .jifen .jifen_con .all span {
-      color: #4fb4aa;
-      margin-left: 10px; }
+  margin-bottom: 20px;
+}
+.jifen .jifen_con ul {
+  width: 50%;
+  float: left;
+  height: auto;
+  overflow: hidden;
+}
+.jifen .jifen_con ul li {
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+.jifen .jifen_con ul li p {
+  width: 33.3%;
+  float: left;
+  height: 100%;
+  font-size: 15px;
+  text-align: center;
+  line-height: 40px;
+}
+.jifen .jifen_con ul li p:nth-of-type(1) {
+  color: #666;
+}
+.jifen .jifen_con ul li p:nth-of-type(2) {
+  color: #c5c5c5;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  margin-left: -2px;
+}
+.jifen .jifen_con ul li .red {
+  color: #ed6466;
+}
+.jifen .jifen_con ul li .green {
+  color: #4fb4aa;
+}
+.jifen .jifen_con ul li:nth-of-type(1) {
+  height: 45px;
+  background-color: #4fb4aa;
+  border-bottom: 0;
+}
+.jifen .jifen_con ul li:nth-of-type(1) p {
+  line-height: 45px;
+  color: #fff;
+}
+.jifen .jifen_con ul li:last-child {
+  border-bottom: 1px solid #4fb4aa;
+}
+.jifen .jifen_con ul:nth-of-type(1) li:nth-of-type(1) p:nth-of-type(3) {
+  border-right: 1px solid #ddd;
+  margin-left: -1px;
+}
+.jifen .jifen_con ul:nth-of-type(1) p:nth-of-type(3) {
+  border-right: 1px solid #4fb4aa;
+  margin-left: -1px;
+}
+.jifen .jifen_con .all {
+  width: 100%;
+  height: 45px;
+  font-size: 15px;
+  color: #333;
+}
+.jifen .jifen_con .all p {
+  width: 33.3%;
+  float: left;
+  height: 100%;
+  line-height: 45px;
+  text-align: center;
+}
+.jifen .jifen_con .all span {
+  color: #4fb4aa;
+  margin-left: 10px;
+}

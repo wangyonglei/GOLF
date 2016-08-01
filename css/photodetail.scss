@@ -1,6 +1,6 @@
 $border: 1px solid #dddddd; $height: 45px; $marginright: 15px;
 .photodetail { width: 100%; height: auto; overflow: hidden;
-	.photo { width: 100%; height: auto;  max-height: 450px; overflow: hidden; text-align: center; background-color: #fff; position: relative;
+	.photo { width: 100%; height: auto; min-height: 60px;  max-height: 450px; overflow: hidden; text-align: center; background-color: #fff; position: relative;
 		img { max-width: 100%; max-height:100%  ; /*width: 100%; max-height: 100%; */}
 		.dianzanmask ,.dianzan ,.pinglun ,.pinglunmask{ line-height: 37px;  width: 80px; height: 37px; position: absolute;  bottom: 10px; }
 		.dianzanmask ,.pinglunmask{background-color: #000;opacity: .6; filter: alpha(opacity=60); z-index: 5;}

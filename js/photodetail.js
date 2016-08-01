@@ -10,21 +10,22 @@ $(document).ready(function() {
 	var album_id = $.getUrlParam('album_id');
 	//加载信息
 	$.ajax({
-		url: 'http://v.jgsports.com.cn/user/Act/getActPhotoAlbumDetail',
-		type: 'post',
-		dataType: 'json',
-		data: {
-			album_id: album_id
-		},
-		success: function(data) {
-			var album = data.data;
-			var html = '';
-			html += '<div class="photo"><img src="' + album.picurl + '"><div class="dianzan">1</div><div class="dianzanmask"></div><div class="pinglun"></div><div class="pinglunmask"></div></div><div class="wai renwu"><ul><li><div class="renwuicon"><img src="' + album.avatar + '"></div><div class="renwuname">' + album.rname + '</div><div class="renwuqianming">' + album.rname + '</div><div class="huodongquan">'+album.c_time+'</div></li></ul></div>'
-			$('#photo').html(html);
-			pinglun();
-		}
-	})
-	// 刷新评论
+			url: 'http://v.jgsports.com.cn/user/Act/getActPhotoAlbumDetail',
+			type: 'post',
+			dataType: 'json',
+			data: {
+				album_id: album_id
+			},
+			success: function(data) {
+				var album = data.data;
+				var html = '';
+				html += '<div class="photo"><img src="' + album.picurl + '"><div class="dianzan">1</div><div class="dianzanmask"></div><div class="pinglun"></div><div class="pinglunmask"></div></div><div class="wai renwu"><ul><li><div class="renwuicon"><img src="' + album.avatar + '"></div><div class="renwuname">' + album.rname + '</div><div class="renwuqianming">' + album.rname + '</div><div class="huodongquan">' + album.c_time + '</div></li></ul></div>'
+				$('#photo').html(html);
+				pinglun();
+				like();
+			}
+		})
+		// 刷新评论
 	var pinglun = function() {
 			$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getActPhotoAlbumDetail',
@@ -46,20 +47,42 @@ $(document).ready(function() {
 		}
 		//评论
 	$('.huifubtn').click(function(event) {
-		var content = $('.huifu').val();
+			var content = $('.huifu').val();
+			$.ajax({
+				url: 'http://v.jgsports.com.cn/user/Act/releasePicComment',
+				type: 'post',
+				dataType: 'json',
+				data: {
+					uid: 304,
+					pic_id: album_id,
+					album_id: album_id,
+					content: content
+				},
+				success: function(data) {
+					pinglun();
+				}
+			})
+		})
+		//like
+	var like = function() {
 		$.ajax({
-			url: 'http://v.jgsports.com.cn/user/Act/releasePicComment',
+			url: 'http://v.jgsports.com.cn/user/Act/clickLike',
 			type: 'post',
 			dataType: 'json',
 			data: {
 				uid: 304,
-				pic_id: album_id,
 				album_id: album_id,
-				content: content
+				pic_id: album_id
 			},
 			success: function(data) {
-				pinglun();
+				var html ='';
+				var likedata = data.data;
+				$('.dianzan').html(likedata.picLikeNumber)
 			}
 		})
+	}
+	$('body').click(function() {
+		// alert(1)
+			like();
 	})
 })
