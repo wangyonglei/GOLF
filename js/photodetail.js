@@ -14,6 +14,7 @@ $(document).ready(function() {
 			type: 'post',
 			dataType: 'json',
 			data: {
+				uid:304,
 				album_id: album_id
 			},
 			success: function(data) {
@@ -32,6 +33,7 @@ $(document).ready(function() {
 				type: 'post',
 				dataType: 'json',
 				data: {
+					uid:304,
 					album_id: album_id
 				},
 				success: function(data) {
