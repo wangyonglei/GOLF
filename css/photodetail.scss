@@ -7,7 +7,7 @@ $border: 1px solid #dddddd; $height: 45px; $marginright: 15px;
 		.pinglun ,.pinglunmask{right: 0 ;border-radius:  50px 0px 0px 50px;}
 		.dianzan ,.dianzanmask{left: 0;border-radius: 0px 50px 50px 0px;}
 		.dianzan{ background-image: url(../images/like.png);  z-index: 6; background-size: 20px; background-repeat: no-repeat; background-position: 15px center;text-align:left;  text-indent: 40px; color: #fff; font-size: 13px;}
-
+		.pinglun{ background-image: url(../images/pinglun.png);  z-index: 6; background-size: 20px; background-repeat: no-repeat; background-position: 25px center;text-align:left;  text-indent: 50px; color: #fff; font-size: 13px;}
 	}
 	.renwu { float: left; width: 100%; height: auto; overflow: hidden; margin-top: 0;
 		li { margin-left: 15px; width: 100%; height: auto; overflow: hidden; padding: 10px 0; position: relative;

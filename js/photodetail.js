@@ -62,6 +62,7 @@ $(document).ready(function() {
 			},
 			success: function(data) {
 				pinglun();
+				islike();
 			}
 		})
 	})
@@ -77,7 +78,7 @@ $(document).ready(function() {
 				success: function(data) {
 					var album = data.data;
 					var html = '';
-					html += '<div class="dianzan">' + album.picLikeNumber + '</div><div class="dianzanmask"></div><div class="pinglun"></div><div class="pinglunmask"></div>'
+					html += '<div class="dianzan">' + album.picLikeNumber + '</div><div class="dianzanmask"></div><div class="pinglun">'+album.picCommentNumber+'</div><div class="pinglunmask"></div>'
 					$('#islike').html(html)
 				}
 			})

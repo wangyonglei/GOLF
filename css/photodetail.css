@@ -50,6 +50,17 @@
   color: #fff;
   font-size: 13px;
 }
+.photodetail .photo .pinglun {
+  background-image: url(../images/pinglun.png);
+  z-index: 6;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 25px center;
+  text-align: left;
+  text-indent: 50px;
+  color: #fff;
+  font-size: 13px;
+}
 .photodetail .renwu {
   float: left;
   width: 100%;
