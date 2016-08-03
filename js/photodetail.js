@@ -14,16 +14,16 @@ $(document).ready(function() {
 			type: 'post',
 			dataType: 'json',
 			data: {
-				uid:304,
+				uid: 304,
 				album_id: album_id
 			},
 			success: function(data) {
 				var album = data.data;
 				var html = '';
-				html += '<div class="photo"><img src="' + album.picurl + '"><div class="dianzan"></div><div class="dianzanmask"></div><div class="pinglun"></div><div class="pinglunmask"></div></div><div class="wai renwu"><ul><li><div class="renwuicon"><img src="' + album.avatar + '"></div><div class="renwuname">' + album.rname + '</div><div class="renwuqianming">' + album.rname + '</div><div class="huodongquan">' + album.c_time + '</div></li></ul></div>'
+				html += '<div class="photo"><img src="' + album.picurl + '"><span id="islike"></span></div><div class="wai renwu"><ul><li><div class="renwuicon"><img src="' + album.avatar + '"></div><div class="renwuname">' + album.rname + '</div><div class="renwuqianming">' + album.venueTitle + '</div><div class="huodongquan">' + album.c_time + '</div></li></ul></div>'
 				$('#photo').html(html);
 				pinglun();
-				// like();
+				islike();
 			}
 		})
 		// 刷新评论
@@ -33,7 +33,7 @@ $(document).ready(function() {
 				type: 'post',
 				dataType: 'json',
 				data: {
-					uid:304,
+					uid: 304,
 					album_id: album_id
 				},
 				success: function(data) {
@@ -49,22 +49,39 @@ $(document).ready(function() {
 		}
 		//评论
 	$('.huifubtn').click(function(event) {
-			var content = $('.huifu').val();
+		var content = $('.huifu').val();
+		$.ajax({
+			url: 'http://v.jgsports.com.cn/user/Act/releasePicComment',
+			type: 'post',
+			dataType: 'json',
+			data: {
+				uid: 304,
+				pic_id: album_id,
+				album_id: album_id,
+				content: content
+			},
+			success: function(data) {
+				pinglun();
+			}
+		})
+	})
+	var islike = function() {
 			$.ajax({
-				url: 'http://v.jgsports.com.cn/user/Act/releasePicComment',
+				url: 'http://v.jgsports.com.cn/user/Act/getActPhotoAlbumDetail',
 				type: 'post',
 				dataType: 'json',
 				data: {
 					uid: 304,
-					pic_id: album_id,
-					album_id: album_id,
-					content: content
+					album_id: album_id
 				},
 				success: function(data) {
-					pinglun();
+					var album = data.data;
+					var html = '';
+					html += '<div class="dianzan">' + album.picLikeNumber + '</div><div class="dianzanmask"></div><div class="pinglun"></div><div class="pinglunmask"></div>'
+					$('#islike').html(html)
 				}
 			})
-		})
+		}
 		//like
 	var like = function() {
 		$.ajax({
@@ -77,14 +94,11 @@ $(document).ready(function() {
 				pic_id: album_id
 			},
 			success: function(data) {
-				var html ='';
-				var likedata = data.data;
-				$('.dianzan').html(likedata.picLikeNumber)
+				islike();
 			}
 		})
 	}
-	$('body').click(function() {
-		// alert(1)
-			like();
+	$('#photo').on('click', '.dianzan', function() {
+		like();
 	})
 })
