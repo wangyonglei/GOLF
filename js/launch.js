@@ -3,21 +3,40 @@ $(document).ready(function() {
 	$('.qiuchang').click(function() {
 		$('.qiuchang_maxk').css('display', 'block');
 		$('.qiuchang_mask').css('display', 'block');
+		// $.ajax({
+		// 	url: 'http://v.jgsports.com.cn/user/Venue/getList',
+		// 	dataType: 'json',
+		// 	type: 'GET',
+		// 	success: function(data) {
+		// 		if (data.status = 1) {
+		// 			var listdata = data.data;
+		// 			var html = "";
+		// 			for (var i = 0; i < listdata.length; i++) {
+		// 				html += '<li data-qid="' + listdata[i].id + '">' + listdata[i].title + '</li>';
+		// 			};
+		// 			$("#ball_list").html(html);
+		// 		}
+		// 	}
+		// })
 		$.ajax({
-			url: 'http://v.jgsports.com.cn/user/Venue/getList',
-			dataType: 'json',
-			type: 'GET',
-			success: function(data) {
+				url: 'http://v.jgsports.com.cn/user/Venue/getList?page=1&limit=15',
+				type: 'Get',
+				dataType: 'json',
+				data: {
+					id: 'title'
+				},
+			})
+			.done(function(data) {
 				if (data.status = 1) {
 					var listdata = data.data;
 					var html = "";
 					for (var i = 0; i < listdata.length; i++) {
-						html += '<li data-qid="' + listdata[i].id + '">' + listdata[i].title + '</li>';
+						html += '<li><a href="golfdetail.html?id=' + listdata[i].id + '">' + listdata[i].title + '<p class="jiao"></p></a></li>';
 					};
-					$("#ball_list").html(html);
+					// $("#ball_list").html(html);
+					$('.loading').before(html)
 				}
-			}
-		})
+			})
 	})
 	$('#ball_list').on('click', 'li', function() {
 		$('.qiuchang_input').val('')
@@ -113,4 +132,40 @@ $(document).ready(function() {
 				}
 			})
 	})
+
+	//滑动加载
+		var stop = true;
+		page = 2;
+		$('.qiuchang_maxk').scroll(function() {
+			var totalheight = parseFloat($('.qiuchang_maxk').height()) + parseFloat($('.qiuchang_maxk').scrollTop());
+	
+
+			if ($("#ball_list").height() <= totalheight) {
+				if (stop == true) {
+					stop = false;
+
+					$.ajax({
+						url: 'http://v.jgsports.com.cn/user/Venue/getList',
+						type: 'Get',
+						dataType: 'json',
+						data: {
+							page: page,
+							limit: 10,
+						},
+						success: function(data) {
+							var listdata = data.data;
+							var ballhtml = "";
+							for (var i = 0; i < listdata.length; i++) {
+								ballhtml += '<li><a href="golfdetail.html?id=' + listdata[i].id + '">' + listdata[i].title + '<p class="jiao"></p></a></li>';
+							};
+							$(".loading").before(ballhtml);
+							stop = true;
+							page++;
+						}
+					})
+				}
+			}
+		});
+
+
 });

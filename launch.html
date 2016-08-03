@@ -7,8 +7,9 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link rel="stylesheet" type="text/css" href="css/common.css">
-	<link rel="stylesheet" type="text/css" href="css/launch.css">
 	<link rel="stylesheet" type="text/css" href="css/ball_list.css">
+	<link rel="stylesheet" type="text/css" href="css/launch.css">
+
 	<link rel="stylesheet" type="text/css" href="css/launch/datedropper.css">
 	<link rel="stylesheet" type="text/css" href="css/launch/timedropper.min.css"></head>
 <body>
@@ -48,17 +49,23 @@
 		<div class="qiuchang_mask"></div>
 		<div class="qiuchang_maxk">
 			<div class="ball_list">
-				<div class="ball_search">
+				<!-- <div class="ball_search">
 					<input type="text" id="search_input" placeholder="输入场馆名称">
 					<button class="search_btn" id="search_btn">搜索</button>
 					<p class="x" id="x"></p>
+				</div> -->
+				<div class="ballsearch">
+					<div class="ball_search">
+						<input type="text" id="search_input" placeholder="请输入场馆名称">				
+						<button class="search_btn" id="search_btn">搜索</button>
+						<p class="x" id="x"></p>
+					</div>
 				</div>
+
 				<div class="wai">
 					<ul id="ball_list">
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
+						
+						<p class="loading">loading...</p>
 					</ul>
 				</div>
 			</div>

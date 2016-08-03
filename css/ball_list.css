@@ -2,94 +2,82 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  padding-top: 40px;
-}
-.ball_list .ballsearch {
-  background-color: #f8f8f8;
-  width: 100%;
-  height: 50px;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-.ball_list .ball_search {
-  margin-top: 10px;
-  width: 80%;
-  margin-left: 10%;
-  height: 34px;
-  float: left;
-  overflow: hidden;
-  position: relative;
-}
-.ball_list .ball_search input {
-  border: 0;
-  border: 1px solid #ddd;
-  height: 32px;
-  width: 78%;
-  float: left;
-  text-indent: 35px;
-  border-radius: 6px;
-  line-height: 32px;
-  background-image: url(../images/search.png);
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  background-size: 20px;
-}
-.ball_list .ball_search .search_btn {
-  width: 21%;
-  float: left;
-  border: 0;
-  text-align: center;
-  line-height: 32px;
-  outline: none;
-  font-size: 15px;
-  color: #4fb4aa;
-  background: none;
-}
-.ball_list .ball_search .x {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-image: url(../images/x.png);
-  background-size: contain;
-  right: 25%;
-  top: 7px;
-}
-.ball_list ul {
-  margin-top: 5px;
-}
-.ball_list ul li {
-  height: 45px;
-  border-bottom: 1px solid  #ddd;
-  line-height: 45px;
-  background-color: #fff;
-  font-size: 15px;
-  color: #333;
-  padding-right: 10%;
-  position: relative;
-  margin-left: 15px;
-  width: 90%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.ball_list ul li .jiao {
-  margin-right: 15px;
-}
-.ball_list ul a {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: block;
-}
-.ball_list ul li:last-child {
-  border-bottom: 0;
-}
-.ball_list .loading {
-  height: 25px;
-  width: 100%;
-  text-align: center;
-  line-height: 25px;
-}
+  padding-top: 40px; }
+  .ball_list .ballsearch {
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; }
+  .ball_list .ball_search {
+    margin-top: 10px;
+    width: 80%;
+    margin-left: 10%;
+    height: 34px;
+    float: left;
+    overflow: hidden;
+    position: relative; }
+    .ball_list .ball_search input {
+      border: 0;
+      border: 1px solid #ddd;
+      height: 32px;
+      width: 78%;
+      float: left;
+      text-indent: 35px;
+      border-radius: 6px;
+      line-height: 32px;
+      background-image: url(../images/search.png);
+      background-position: 10px center;
+      background-repeat: no-repeat;
+      background-size: 20px; }
+    .ball_list .ball_search .search_btn {
+      width: 21%;
+      float: left;
+      border: 0;
+      text-align: center;
+      line-height: 32px;
+      outline: none;
+      font-size: 15px;
+      color: #4fb4aa;
+      background: none; }
+    .ball_list .ball_search .x {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/x.png);
+      background-size: contain;
+      right: 25%;
+      top: 7px; }
+  .ball_list ul {
+    margin-top: 5px; }
+    .ball_list ul li {
+      height: 45px;
+      border-bottom: 1px solid  #ddd;
+      line-height: 45px;
+      background-color: #fff;
+      font-size: 15px;
+      color: #333;
+      padding-right: 10%;
+      position: relative;
+      margin-left: 15px;
+      width: 90%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+      .ball_list ul li .jiao {
+        margin-right: 15px; }
+    .ball_list ul a {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: block; }
+    .ball_list ul li:last-child {
+      border-bottom: 0; }
+  .ball_list .loading {
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    line-height: 25px; }
