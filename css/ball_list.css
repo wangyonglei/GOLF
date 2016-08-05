@@ -77,7 +77,7 @@
     .ball_list ul li:last-child {
       border-bottom: 0; }
   .ball_list .loading {
-    height: 25px;
+    height: 45px;
     width: 100%;
     text-align: center;
-    line-height: 25px; }
+    line-height: 45px; }

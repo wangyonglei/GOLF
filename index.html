@@ -7,19 +7,28 @@
 <body>
     <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
     <script type="text/javascript">
-    $(document).ready(function($) {
-            window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9c20b588991e7db2&redirect_uri=http://m.jgsports.com.cn/ball_list.html&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect"; 
-      (function($) {
-          $.getUrlParam = function(name) {
-              var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-              var r = window.location.search.substr(1).match(reg);
-              if (r != null) return unescape(r[2]);
-              return null;
-          }
-      })(jQuery);
-      var code = $.getUrlParam('code');
-      alert(code)
-    });
-  </script>
+$(document).ready(function($) {
+window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9c20b588991e7db2&redirect_uri=http://m.jgsports.com.cn/ball_list.html&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect"; 
+(function($) {
+$.getUrlParam = function(name) {
+var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+var r = window.location.search.substr(1).match(reg);
+if (r != null) return unescape(r[2]);
+return null;
+}
+})(jQuery);
+var code = $.getUrlParam('code');
+alert(code)
+});
+</script>
+    <script type="text/javascript">
+function is_weixin(){
+var ua = navigator.userAgent.toLowerCase();  
+if(ua.match(/MicroMessenger/i)=="micromessenger") {       
+return true;  
+} else {      
+return false;  }
+}
+</script>
 </body>
 </html>
