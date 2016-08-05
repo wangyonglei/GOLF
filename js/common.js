@@ -14,10 +14,12 @@ window.onload = function() {
 		if (ua.match(/MicroMessenger/i) == "micromessenger") {
 			if (!code) {
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
+			} else {
+				location = 'http://m.jgsports.com.cn/ball_list.html'
 			}
 		} else {
-			
+			alert('请在微信客户端打开')
 		}
+		is_weixin();
 	}
-	is_weixin();
 }
