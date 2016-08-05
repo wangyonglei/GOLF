@@ -1,77 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
 <body>
-  
-  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
-
-  <script type="text/javascript">
-    $(function () {
-    var wxopenid=getcookie('wxopenid');
-    var key=getcookie('key');
-    if (key==''){
-      alert(0)
-        var access_code=GetQueryString('code');
-        if (wxopenid==""){
-            if (access_code==null)
-            {   
-                var fromurl=location.href;
-                // var url='https://open.weixin.qq.com/connect/oauth2/authorize?appid=填你自已的appid哟&redirect_uri='+encodeURIComponent(fromurl)+'&response_type=code&scope=snsapi_base&state=STATE%23wechat_redirect&connect_redirect=1#wechat_redirect';
-                var url='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9c20b588991e7db2&redirect_uri=http://v.jgsports.com.cn/user/User/getUserInfo&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect';
-                location.href=url;
-            }
-            else
-            {   
-                // $.ajax({
-                //     type:'get',
-                //     url:ApiUrl+'/index.php?act=payment&op=getopenid', 
-                //     async:false,
-                //     cache:false,
-                //     data:{code:access_code},
-                //     dataType:'json',
-                //     success:function(result){                 
-                //             if (result!=null && result.hasOwnProperty('openid') && result.openid!=""){
-                //                addcookie('wxopenid',result.openid,360000);                           
-                //                getlogininfo(result.openid);
-                //             } 
-                //             else
-                //             {
-                //               alert('微信身份识别失败 \n '+result);
-                //               location.href=fromurl;
-                //             }
-                //         }
-                //     });    
-            }
-        }else{
-           if (key=='' && wxopenid!='')
-               getlogininfo(wxopenid);  
-        }
- 
-        function getlogininfo(wxopenid){       
-            // $.ajax({
-            //    type:'get',
-            //    url: ApiUrl + '/index.php?act=login&op=autologininfo',
-            //    data: { wxopenid:wxopenid},
-            //    dataType:'json',
-            //    async:false,
-            //    cache:false,               
-            //    success: function (result) {                   
-            //            if (result.return_code=='OK'){
-            //                addcookie('key',result.memberinfo.key);
-            //                addcookie('username',result.memberinfo.username);
-            //            }else{
-            //                alert(result.return_msg);
-            //                location.href=WapSiteUrl+'ball_list.html';
-            //            }
-            //    }
-            // });
-        }
-    }
-});
-
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function($) {
+            window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9c20b588991e7db2&redirect_uri=http://m.jgsports.com.cn/ball_list.html&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect"; 
+      (function($) {
+          $.getUrlParam = function(name) {
+              var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+              var r = window.location.search.substr(1).match(reg);
+              if (r != null) return unescape(r[2]);
+              return null;
+          }
+      })(jQuery);
+      var code = $.getUrlParam('code');
+      alert(code)
+    });
   </script>
 </body>
 </html>
