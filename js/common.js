@@ -15,11 +15,23 @@ window.onload = function() {
 			if (!code) {
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
 			} else {
+				$.ajax({
+						url: 'http://v.jgsports.com.cn//user/User/getUserInfo',
+						type: 'Get',
+						// dataType: 'json',
+						data: {
+							code: code
+						},
+					})
+					.done(function(data) {
+					})
+
 				location = 'http://m.jgsports.com.cn/ball_list.html'
 			}
 		} else {
-			alert('请在微信客户端打开')
+			alert('请在微信客户端打开！')
+			
 		}
-		is_weixin();
 	}
+	is_weixin();
 }
