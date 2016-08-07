@@ -29,7 +29,7 @@ window.onload = function() {
 				if (!code) {
 					location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
 				} else {
-					location = 'http://m.jgsports.com.cn/card.html';
+					// location = 'http://m.jgsports.com.cn/card.html';
 				}
 			} else {
 				alert('请在微信客户端打开！')
