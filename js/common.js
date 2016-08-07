@@ -25,7 +25,7 @@ window.onload = function() {
 					})
 					.done(function(data) {
 						alert(code);
-						location = 'http://m.jgsports.com.cn/card.html'
+						// location = 'http://m.jgsports.com.cn/card.html'
 					})
 			}
 		} else {
