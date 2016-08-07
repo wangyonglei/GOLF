@@ -24,9 +24,11 @@ window.onload = function() {
 						},
 					})
 					.done(function(data) {
+
+						alert(code)
 					})
 
-				location = 'http://m.jgsports.com.cn/ball_list.html'
+				// location = 'http://m.jgsports.com.cn/ball_list.html'
 			}
 		} else {
 			alert('请在微信客户端打开！')
