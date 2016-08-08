@@ -8,8 +8,8 @@ jQuery(document).ready(function($) {
 				return null;
 			}
 		})(jQuery);
-		// var code = $.getUrlParam('code');
-		var code = '9960f77cb12a585372a530a2eb730878';
+		var code = $.getUrlParam('code');
+		// var code = '9960f77cb12a585372a530a2eb730878';
 
 		var locationUrl = window.location.href;
 		var ua = navigator.userAgent.toLowerCase();
@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 			if (!code) {
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
 			} else{
-				location = 'http://m.jgsports.com.cn/card.html?code=9960f77cb12a585372a530a2eb730878';
+				location = 'http://m.jgsports.com.cn/card.html?code='+code;
 			}
 		} else {
 			alert('请在微信客户端打开！')

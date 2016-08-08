@@ -48,9 +48,11 @@ jQuery(document).ready(function($) {
 	var code = $.getUrlParam('code');
 
 	$.ajax({
-			url: 'http://v.jgsports.com.cn//user/User/getUserInfo',
+			url: 'http://v.jgsports.com.cn/user/User/getNewUserInfo',
+			// url: 'http://v.jgsports.com.cn//user/User/getUserInfo',
 			type: 'Get',
-			dataType: 'json',
+			dataType: 'jsonp',
+			jsonp:callback,
 			data: {
 				code: code
 			},
