@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 			if (!code) {
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
 			} else{
-				location = 'http://v.jgsports.com.cn/card.html?code=' + code;
+				location = 'http://m.jgsports.com.cn/card.html?code=' + code;
 			}
 		} else {
 			alert('请在微信客户端打开！')
