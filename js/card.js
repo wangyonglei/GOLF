@@ -51,7 +51,7 @@ jQuery(document).ready(function($) {
 			url: 'http://v.jgsports.com.cn//user/User/getUserInfo',
 			type: 'Get',
 			dataType: 'jsonp',
-			jsonp: 'callback',
+			// jsonp: 'callback',
 			data: {
 				code: code
 			},
