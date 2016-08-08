@@ -8,14 +8,16 @@ jQuery(document).ready(function($) {
 				return null;
 			}
 		})(jQuery);
-		var code = $.getUrlParam('code');
+		// var code = $.getUrlParam('code');
+		var code = '9960f77cb12a585372a530a2eb730878';
+
 		var locationUrl = window.location.href;
 		var ua = navigator.userAgent.toLowerCase();
 		if (ua.match(/MicroMessenger/i) == "micromessenger") {
 			if (!code) {
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
 			} else{
-				location = 'http://m.jgsports.com.cn/card.html?code=' + code;
+				location = 'http://m.jgsports.com.cn/card.html?code=9960f77cb12a585372a530a2eb730878';
 			}
 		} else {
 			alert('请在微信客户端打开！')
