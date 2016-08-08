@@ -28,10 +28,10 @@ jQuery(document).ready(function($) {
 	// ex_mobile = document.cookie.indexOf("ex_mobile=");
 	// ex_uid = document.cookie.indexOf("ex_uid=");
 	// if (ex_code == -1 && ex_mobile == -1 && ex_uid == -1) {
-	ex_code = getCookie("ex_code");
-	ex_mobile = getCookie("ex_mobile");
-	ex_uid = getCookie("ex_uid");
-	if (!ex_code && !ex_mobile && !ex_uid) {
+	var ex_code = $.cookie("ex_code");
+	var ex_mobile = $.cookie("ex_mobile");
+	var ex_uid = $.cookie("ex_uid");
+	if (ex_code== null && ex_mobile ==null && ex_uid==null) {
 		(function($) {
 			$.getUrlParam = function(name) {
 				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -63,5 +63,7 @@ jQuery(document).ready(function($) {
 		} else {
 			alert('请在微信客户端打开！')
 		}
-	} 
+	} else{
+		location = 'http://v.jgsports.com.cn/GOLF/card.html';
+	}
 });
