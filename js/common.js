@@ -50,8 +50,8 @@ jQuery(document).ready(function($) {
 				$.ajax({
 					url: 'http://v.jgsports.com.cn/user/User/login',
 					type: 'get',
-					dataType: 'jsonp',
-					jsonp: 'callback',
+					dataType: 'json',
+					// jsonp: 'callback',
 					data: {
 						code: code
 					},
