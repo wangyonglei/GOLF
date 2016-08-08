@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 			if (!code) {
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
 			} else {
-				location = 'http://m.jgsports.com.cn/card.html?code'+code
+				location = 'http://m.jgsports.com.cn/card.html?code='+code
 				
 			}
 		} else {
