@@ -24,10 +24,14 @@
 // 		}
 // });
 jQuery(document).ready(function($) {
-	ex_code = document.cookie.indexOf("ex_code=");
-	ex_mobile = document.cookie.indexOf("ex_mobile=");
-	ex_uid = document.cookie.indexOf("ex_uid=");
-	if (ex_code == -1 && ex_mobile == -1 && ex_uid == -1) {
+	// ex_code = document.cookie.indexOf("ex_code=");
+	// ex_mobile = document.cookie.indexOf("ex_mobile=");
+	// ex_uid = document.cookie.indexOf("ex_uid=");
+	// if (ex_code == -1 && ex_mobile == -1 && ex_uid == -1) {
+	ex_code = getCookie("ex_code");
+	ex_mobile = getCookie("ex_mobile");
+	ex_uid = getCookie("ex_uid");
+	if (!ex_code && !ex_mobile && !ex_uid) {
 		(function($) {
 			$.getUrlParam = function(name) {
 				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -52,7 +56,7 @@ jQuery(document).ready(function($) {
 						code: code
 					},
 					success: function(data) {
-						location = 'http://m.jgsports.com.cn/card.html?code=' + code
+						location = 'http://v.jgsports.com.cn/GOLF/card.html?code=' + code
 					}
 				})
 			}
