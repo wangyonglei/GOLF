@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 						code: code
 					},
 					success: function(data) {
-						location = 'http://v.jgsports.com.cn/GOLF/card.html?code=' + code
+						location = 'http://v.jgsports.com.cn/GOLF/card.html';
 					}
 				})
 			}
