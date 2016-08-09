@@ -1,19 +1,23 @@
 $(document).ready(function($) {
 	alert(1)
+	(function($) {
+		$.getUrlParam = function(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return unescape(r[2]);
+			return null;
+		}
+	})(jQuery);
+	var code = $.getUrlParam('code');
+
+
+	
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
 	if (!ex_code && !ex_mobile  && !ex_uid) {
 		alert(2)
-		(function($) {
-			$.getUrlParam = function(name) {
-				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-				var r = window.location.search.substr(1).match(reg);
-				if (r != null) return unescape(r[2]);
-				return null;
-			}
-		})(jQuery);
-		var code = $.getUrlParam('code');
+		
 		var locationUrl = window.location.href;
 		var ua = navigator.userAgent.toLowerCase();
 		if (ua.match(/MicroMessenger/i) == "micromessenger") {
