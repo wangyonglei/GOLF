@@ -18,7 +18,7 @@ $(document).ready(function($) {
 		var ua = navigator.userAgent.toLowerCase();
 		if (ua.match(/MicroMessenger/i) == "micromessenger") {
 			alert(3)
-			if (!code) {
+			if (true) {
 				alert(4)
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
 			} else {
