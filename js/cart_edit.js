@@ -1,4 +1,5 @@
 $(document).ready(function($) {
+	alert(0)
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
