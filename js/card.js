@@ -33,12 +33,12 @@ $(document).ready(function($) {
 								html += '<div class="card_ban"><div class="card_img"><img src="' + carddata.avatar + '"></div><div class="card_con"><div class="xian"><p></p><p>·</p><p></p></div><div class="card_name">' + carddata.rname + '</div><div class="card_des">' + carddata.signature + '</div><div class="card_qiu"><span>球龄</span>' + carddata.ball_age + '<span>差点</span>' + carddata.almost + '</div></div></div><div class="card_vip">' + carddata.membership + '</div><div class="card_tel">' + carddata.tel + '</div><div class="card_email">' + carddata.email + '</div><div class="hengxian"><p></p><p>·</p><p></p></div><div class="card_company">公司：' + carddata.company_describe + '</div><div class="card_post">职务：</div><div class="card_city">城市：' + carddata.city + '</div><div class="card_resources">资源：' + carddata.resources + '</div><div class="card_btn"><button class="card_but">编辑</button></div></div>'
 								$('.card').html(html)
 							}
-							error: function(data) {
+							error: function() {
 								alert('error');
 							}
 						})
 					}
-					error: function(data) {
+					error: function() {
 						alert('error');
 					}
 				})
