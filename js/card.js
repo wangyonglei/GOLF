@@ -14,6 +14,8 @@ $(document).ready(function($) {
 		// 	}
 		// })(jQuery);
 		// var code = $.getUrlParam('code');
+
+		var code = decodeURIComponent((new RegExp('[?|&]sId=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		var locationUrl = window.location.href;
 		var ua = navigator.userAgent.toLowerCase();
 		if (ua.match(/MicroMessenger/i) == "micromessenger") {
