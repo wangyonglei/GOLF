@@ -2,9 +2,7 @@ $(document).ready(function($) {
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
-
-
-	var loadCard = function(){
+	var loadCard = function() {
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/User/getUserInfo',
 				type: 'Get',
@@ -35,18 +33,15 @@ $(document).ready(function($) {
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
 			} else {
 				$.ajax({
-					url: 'http://v.jgsports.com.cn/user/User/login',
-					type: 'get',
-					dataType: 'json',
-					data: {
-						code: code
-					}
-				})
-				.done(function(data) {
-					loadCard()
-
-
-
+						url: 'http://v.jgsports.com.cn/user/User/login',
+						type: 'get',
+						dataType: 'json',
+						data: {
+							code: code
+						}
+					})
+					.done(function(data) {
+						loadCard()
 					})
 					.fail(function() {
 						console.log("error");
@@ -59,7 +54,6 @@ $(document).ready(function($) {
 			alert('请在微信客户端打开！')
 		}
 	} else {
-
-loadCard()
+		loadCard()
 	}
 });
