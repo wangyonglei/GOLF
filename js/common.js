@@ -24,14 +24,10 @@
 // 		}
 // });
 jQuery(document).ready(function($) {
-	// ex_code = document.cookie.indexOf("ex_code=");
-	// ex_mobile = document.cookie.indexOf("ex_mobile=");
-	// ex_uid = document.cookie.indexOf("ex_uid=");
-	// if (ex_code == -1 && ex_mobile == -1 && ex_uid == -1) {
-	var ex_code = $.cookie("ex_code");
-	var ex_mobile = $.cookie("ex_mobile");
-	var ex_uid = $.cookie("ex_uid");
-	if (ex_code== null && ex_mobile ==null && ex_uid==null) {
+	var ex_code = getCookie("ex_code");
+	var ex_mobile = getCookie("ex_mobile");
+	var ex_uid = getCookie("ex_uid");
+	if (!ex_code && !ex_mobile  && !ex_uid) {
 		(function($) {
 			$.getUrlParam = function(name) {
 				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
