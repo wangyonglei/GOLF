@@ -24,6 +24,7 @@ $(document).ready(function($) {
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
 			} else {
 				alert(5)
+				alert(code)
 				$.ajax({
 					url: 'http://v.jgsports.com.cn/user/User/login',
 					type: 'get',
