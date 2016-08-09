@@ -72,15 +72,15 @@ $(document).ready(function($) {
 
 		$('.baocun').click(function(){
 			var datacart = {
-				signature:$('.signature').val()
-				membership :$('.membership').val()
-				ball_age:$('.ball_age').val()
-				almost:$('.almost').val()
-				tel:$('.tel').val()
-				email:$('.email').val()
-				company_describe:$('.company_describe').val()
-				position:$('.position').val()
-				city:$('.city').val()
+				signature:$('.signature').val(),
+				membership :$('.membership').val(),
+				ball_age:$('.ball_age').val(),
+				almost:$('.almost').val(),
+				tel:$('.tel').val(),
+				email:$('.email').val(),
+				company_describe:$('.company_describe').val(),
+				position:$('.position').val(),
+				city:$('.city').val(),
 				resources:$('.resources').val()
 			}
 			$.ajax({
