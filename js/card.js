@@ -14,10 +14,12 @@ $(document).ready(function($) {
 			}
 		})(jQuery);
 		var code = $.getUrlParam('code');
+		alert(code)
 		var locationUrl = window.location.href;
 		var ua = navigator.userAgent.toLowerCase();
 		if (ua.match(/MicroMessenger/i) == "micromessenger") {
 			alert(3)
+			alert(code)
 			if (!code) {
 				alert(4)
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
