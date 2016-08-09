@@ -5,15 +5,15 @@ $(document).ready(function($) {
 	var ex_uid = getCookie("ex_uid");
 	if (!ex_code && !ex_mobile  && !ex_uid) {
 		alert(2)
-		(function($) {
-			$.getUrlParam = function(name) {
-				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-				var r = window.location.search.substr(1).match(reg);
-				if (r != null) return unescape(r[2]);
-				return null;
-			}
-		})(jQuery);
-		var code = $.getUrlParam('code');
+		// (function($) {
+		// 	$.getUrlParam = function(name) {
+		// 		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		// 		var r = window.location.search.substr(1).match(reg);
+		// 		if (r != null) return unescape(r[2]);
+		// 		return null;
+		// 	}
+		// })(jQuery);
+		// var code = $.getUrlParam('code');
 		alert(code)
 		var locationUrl = window.location.href;
 		var ua = navigator.userAgent.toLowerCase();
