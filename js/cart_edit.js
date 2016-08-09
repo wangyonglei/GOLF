@@ -70,7 +70,8 @@ $(document).ready(function($) {
 	} else {
 		cartEdit();
 
-		$('.baocun').click(function(){
+		
+		$('body').on('click', '.baocun', function() {
 			var datacart = {
 				signature:$('.signature').val(),
 				membership :$('.membership').val(),
@@ -91,6 +92,7 @@ $(document).ready(function($) {
 				})
 				.done(function(data) {
 					console.log("ok")
+					alert('编辑成功')
 				})
 				.fail(function() {
 					console.log("error");
@@ -99,5 +101,19 @@ $(document).ready(function($) {
 					console.log("complete");
 				});
 		})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 });
