@@ -113,7 +113,7 @@ $(document).ready(function($) {
 
 $(document).ready(function() {
 	// 球场列表
-	$('.huiji_s').click(function() {
+	$('body').on('click','huiji_s',function() {
 		$('.qiuchang_maxk').css('display', 'block');
 		$('.qiuchang_mask').css('display', 'block');
 
