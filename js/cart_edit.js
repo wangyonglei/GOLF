@@ -119,7 +119,6 @@ $(document).ready(function($) {
 $(document).ready(function() {
 	// 球场列表
 	$('body').on('click','.huiji_s',function() {
-		alert(0)
 
 		$('.qiuchang_maxk').css('display', 'block');
 		$('.qiuchang_mask').css('display', 'block');
@@ -133,14 +132,12 @@ $(document).ready(function() {
 				},
 			})
 			.done(function(data) {
-				if (data.status = 1) {
 					var listdata = data.data;
 					var html = "";
 					for (var i = 0; i < listdata.length; i++) {
 						html += '<li data-iid="'+listdata[i].id+'">' + listdata[i].title + '<p class="jiao"></p></li>';
 					};
 					$('.loading').before(html)
-				}
 			})
 	})
 	$('#ball_list').on('click', 'li', function() {
