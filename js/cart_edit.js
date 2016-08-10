@@ -24,10 +24,13 @@ $(document).ready(function($) {
 				// 		html =+ '<div class="duan"><label class="label">	会籍情况<input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
 
 				// }else{
-					for (var i = 0; i < carteditdata.membership.length; i++) {
-						html =+ '<div class="duan"><label class="label">	会籍情况<input type="" class="membership" name="" value="'+carteditdata.membership[i].title+'" placeholder=""><span class="jiao"></span>	</label></div>';
-					}
+					// for (var i = 0; i < carteditdata.membership.length; i++) {
+					// 	html =+ '<div class="duan"><label class="label">	会籍情况<input type="" class="membership" name="" value="'+carteditdata.membership[i].title+'" placeholder=""><span class="jiao"></span>	</label></div>';
+					// }
 				// }
+
+				html =+ '<div class="duan"><label class="label">会籍情况<input type="" class="membership" name="" value="'+carteditdata.membership[i].title+'" placeholder=""><span class="jiao"></span>	</label></div>';
+
 				html +='<div class="duan"><label class="label">联系电话<input type="" name="" class="tel" value="'+carteditdata.tel+'" placeholder=""><span class="jiao"></span></label></div>'+
 				'<div class="duan email"><label class="label">	邮箱<input type="" name="" class="emaili" value="'+carteditdata.email+'" placeholder="@qq.com"><span class="jiao"></span>	</label></div></div>'+
 				'<div class="wai"><div class="duan"><label class="label">	公司<input type="" class="company_describe" name="" value="'+carteditdata.company_describe+'" placeholder=""><span class="jiao"></span></label></div>'+
@@ -35,7 +38,8 @@ $(document).ready(function($) {
 				'<div class="duan"><label class="label">城市<input type="" name="" class="city" value="'+carteditdata.city+'" placeholder=""><span class="jiao"></span></label></div>'+
 				'<div class="duan ziyuan"><label class="label">	资源<input type="" name="" class="resources" value="'+carteditdata.resources+'" placeholder="填写您所拥有的资源"><span class="jiao"></span></label></div></div>'+
 				'<div class="baocun">保存</div>'
-				$('.cart_edit').html(html)
+				$('.cart_edit').html(html);
+
 			})
 			.fail(function() {
 				console.log("error");
@@ -100,6 +104,7 @@ $(document).ready(function($) {
 				.done(function(data) {
 					console.log("ok")
 					alert('编辑成功')
+					location = 'card.html'
 				})
 				.fail(function() {
 					console.log("error");
