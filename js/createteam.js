@@ -5,8 +5,6 @@ $(document).ready(function($) {
 	var ex_uid = getCookie("ex_uid");
 	var createTeam = function() {
 		$('.team_addbut').click(function(){
-			// alert($('.team_input').val())
-			// alert($('.team_con').val())
 			var createteam = {
 				title: $('.team_input').val(),
 				profile:$('.team_con').val()
