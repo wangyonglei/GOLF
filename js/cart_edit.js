@@ -130,7 +130,7 @@ $(document).ready(function() {
 					var listdata = data.data;
 					var html = "";
 					for (var i = 0; i < listdata.length; i++) {
-						html += '<li>' + listdata[i].title + '<p class="jiao"></p></li>';
+						html += '<li data-iid="'+listdata[i].id+'">' + listdata[i].title + '<p class="jiao"></p></li>';
 					};
 					$('.loading').before(html)
 				}
@@ -139,8 +139,9 @@ $(document).ready(function() {
 	$('#ball_list').on('click', 'li', function() {
 		$('.qiuchang_input').val('')
 		$('.qiuchang_inputid').html('')
-		var venue = $(this).text();
-		var venueid = $(this).attr('data-qid');
+		// var venue = $(this).text();
+		// var venueid = $(this).attr('data-iid');
+		var venue = $(this).attr('data-iid');
 		$('.membership').val(venue);
 		$('.qiuchang_inputid').html(venueid);
 		$('.qiuchang_maxk').css('display', 'none');
@@ -203,7 +204,7 @@ $(document).ready(function() {
 							var listdata = data.data;
 							var ballhtml = "";
 							for (var i = 0; i < listdata.length; i++) {
-								ballhtml += '<li>' + listdata[i].title + '<p class="jiao"></p></li>';
+								ballhtml += '<li data-iid="'+listdata[i].id+'">' + listdata[i].title + '<p class="jiao"></p></li>';
 							};
 							$(".loading").before(ballhtml);
 							stop = true;
