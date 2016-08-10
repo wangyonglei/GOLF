@@ -3,21 +3,7 @@ $(document).ready(function() {
 	$('.qiuchang').click(function() {
 		$('.qiuchang_maxk').css('display', 'block');
 		$('.qiuchang_mask').css('display', 'block');
-		// $.ajax({
-		// 	url: 'http://v.jgsports.com.cn/user/Venue/getList',
-		// 	dataType: 'json',
-		// 	type: 'GET',
-		// 	success: function(data) {
-		// 		if (data.status = 1) {
-		// 			var listdata = data.data;
-		// 			var html = "";
-		// 			for (var i = 0; i < listdata.length; i++) {
-		// 				html += '<li data-qid="' + listdata[i].id + '">' + listdata[i].title + '</li>';
-		// 			};
-		// 			$("#ball_list").html(html);
-		// 		}
-		// 	}
-		// })
+
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Venue/getList?page=1&limit=15',
 				type: 'Get',
@@ -31,7 +17,7 @@ $(document).ready(function() {
 					var listdata = data.data;
 					var html = "";
 					for (var i = 0; i < listdata.length; i++) {
-						html += '<li><a href="golfdetail.html?id=' + listdata[i].id + '">' + listdata[i].title + '<p class="jiao"></p></a></li>';
+						html += '<li>' + listdata[i].title + '<p class="jiao"></p></li>';
 					};
 					// $("#ball_list").html(html);
 					$('.loading').before(html)
@@ -156,7 +142,7 @@ $(document).ready(function() {
 							var listdata = data.data;
 							var ballhtml = "";
 							for (var i = 0; i < listdata.length; i++) {
-								ballhtml += '<li><a href="golfdetail.html?id=' + listdata[i].id + '">' + listdata[i].title + '<p class="jiao"></p></a></li>';
+								ballhtml += '<li>' + listdata[i].title + '<p class="jiao"></p></li>';
 							};
 							$(".loading").before(ballhtml);
 							stop = true;
