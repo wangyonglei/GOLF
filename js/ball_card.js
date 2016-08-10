@@ -20,7 +20,7 @@ $(document).ready(function($) {
 // html += '<div class="wai"><div class="duan ball_card_title">大鹏队（2人）<p class="xiajiao"></p></div>'+
 // '<ul class="ball_card_people"><li><div class="people_img"><img src="images/card_img.jpg"></div><p>大鹏</p></li></ul></div>'
 
-html +='<div class="wai"><div class="duan ball_card_title">大鹏队（'+balldata.membersNumber+'人）<p class="xiajiao"></p></div><ul class="ball_card_people">'+
+html +='<div class="wai"><div class="duan ball_card_title">大鹏队（'+balldata.membersNumber+'人）<p class="xiajiao"></p></div><ul class="ball_card_people">'
 if (balldata.membersList.length == 0 ) {
 	html +='<li>暂无</li>'
 }else{
