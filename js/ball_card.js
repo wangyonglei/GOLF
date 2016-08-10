@@ -3,14 +3,13 @@ $(document).ready(function($) {
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
 	var ballCar = function() {
-		var ballteam = {
-			title: $('.ballteam_input').val()
-		}
+		var title = $('.ballteam_input').val()
+		
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Team/getList',
 				type: 'get',
 				dataType: 'json',
-				data: ballteam
+				data: title
 			})
 			.done(function(data) {
 				var balldata = data.data;
@@ -19,13 +18,13 @@ $(document).ready(function($) {
 					// if (	balldata.membersList.length == 0 ) {
 					// 	html +='<li>暂无</li>'
 					// }else{
-				// for (var i = 0; i < balldata.membersList.length; i++) {
-				// 	html += '<li><div class="people_img"><img src="' + balldata.membersList[i].avatar + '"></div><p>' + balldata.membersList[i].rname + '</p></li>'
+				for (var i = 0; i < balldata.membersList.length; i++) {
+					html += '<li><div class="people_img"><img src="' + balldata.membersList[i].avatar + '"></div><p>' + balldata.membersList[i].rname + '</p></li>'
+				}
 				// }
-				// }
-				// if (balldata.membersList.teamMaster == 1) {
-				// 	html += '<li><div class="people_img"><img src="images/jia.png"></div></li><li><div class="people_img"><img src="images/jian.png"></div></li>'
-				// } else {}
+				if (balldata.membersList.teamMaster == 1) {
+					html += '<li><div class="people_img"><img src="images/jia.png"></div></li><li><div class="people_img"><img src="images/jian.png"></div></li>'
+				} else {}
 				html += '</ul></div>'
 				$('#ball_card').html(html)
 			})
