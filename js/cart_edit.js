@@ -27,7 +27,17 @@ $(document).ready(function($) {
 				// 		html += '<div class="duan huiji_s""><label class="label">	会籍情况<span id="huiji_id"></span><input type="" class="membership" name="" value="' + carteditdata.membership[i].title + '" placeholder=""><span class="jiao"></span>	</label></div>';
 				// 	}
 				// }
-					'<div class="duan huiji_s"><label class="label">	会籍情况<span id="huiji_id"></span><div class="membership">'
+					'<div class="duan huiji_s"><label class="label">会籍情况<span id="huiji_id">'
+					if (carteditdata.membership.length == 0) {
+						html +='';
+					} else {
+						for (var i = 0; i < carteditdata.membership.length; i++) {
+							html += ''+carteditdata.membership[i].id+'';
+						}
+					}
+					
+
+					html +='</span><div class="membership">'
 				if (carteditdata.membership.length == 0) {
 					html += '无';
 				} else {
