@@ -18,7 +18,7 @@ $(document).ready(function($) {
 					// '<div class="duan xingbie">	<label class="label">性别<input type="" name="" class="ball_age" value="'+carteditdata.ball_age+'" ><span class="jiao"></span></label></div>'+
 					'<div class="duan gexing"><label class="label">	个性签名<input type="text" class="signature" value="' + carteditdata.signature + '" placeholder="简单的介绍一下自己"><span class="jiao"></span>	</label></div></div>' +
 					'<div class="wai">	<div class="duan">	<label class="label">球龄<input type="" name="" class="ball_age" value="' + carteditdata.ball_age + '" placeholder=""><span class="jiao"></span>	</label></div>' +
-					'<div class="duan dianshu">	<label class="label">	点数<input type="" name="" class="almost" value="' + carteditdata.almost + '" placeholder=""><span class="jiao"></span>	</label></div></div><div class="wai">'
+					'<div class="duan dianshu">	<label class="label">	点数<input type="" name="" class="almost" value="' + carteditdata.almost + '" placeholder=""><span class="jiao"></span>	</label></div></div><div class="wai">'+
 				// 单个球场
 				// if (carteditdata.membership.length == 0) {
 				// 	html += '<div class="duan huiji_s"><label class="label">	会籍情况<span id="huiji_id"></span><input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
@@ -27,17 +27,18 @@ $(document).ready(function($) {
 				// 		html += '<div class="duan huiji_s""><label class="label">	会籍情况<span id="huiji_id"></span><input type="" class="membership" name="" value="' + carteditdata.membership[i].title + '" placeholder=""><span class="jiao"></span>	</label></div>';
 				// 	}
 				// }
-
+					'<div class="duan huiji_s"><label class="label">	会籍情况<span id="huiji_id"></span><div class="membership">'
 				if (carteditdata.membership.length == 0) {
-					html += '<div class="duan huiji_s"><label class="label">	会籍情况<span id="huiji_id"></span><div class="membership"></div><span class="jiao"></span>	</label></div>';
+					html += '无';
 				} else {
 					for (var i = 0; i < carteditdata.membership.length; i++) {
-						html += '<div class="duan huiji_s""><label class="label">	会籍情况<span id="huiji_id"></span><div class="membership">'+carteditdata.membership[i].title+'</div>  <span class="jiao"></span>	</label></div>';
+						html += ''+carteditdata.membership[i].title+'';
 					}
 				}
 
 
-				html += '<div class="duan"><label class="label">联系电话<input type="" name="" class="tel" value="' + carteditdata.tel + '" placeholder=""><span class="jiao"></span></label></div>' +
+				html += '</div><span class="jiao"></span>	</label></div>'+
+					'<div class="duan"><label class="label">联系电话<input type="" name="" class="tel" value="' + carteditdata.tel + '" placeholder=""><span class="jiao"></span></label></div>' +
 					'<div class="duan email"><label class="label">	邮箱<input type="" name="" class="emaili" value="' + carteditdata.email + '" placeholder="@qq.com"><span class="jiao"></span>	</label></div></div>' +
 					'<div class="wai"><div class="duan"><label class="label">	公司<input type="" class="company_describe" name="" value="' + carteditdata.company_describe + '" placeholder=""><span class="jiao"></span></label></div>' +
 					'<div class="duan">	<label class="label">	职务<input type="" name="" class="position" value="' + carteditdata.position + '" placeholder="">	<span class="jiao"></span></label></div>' +
