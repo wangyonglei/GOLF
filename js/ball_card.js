@@ -4,7 +4,7 @@ $(document).ready(function($) {
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
 	var ballCar = function() {
-		$('.team_addbut').click(function(){
+		$('.search_btn').click(function(){
 			var ballteam = {
 				title: $('.ballteam_input').val()
 			}
