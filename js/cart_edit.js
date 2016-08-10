@@ -19,7 +19,7 @@ $(document).ready(function($) {
 				// '<div class="duan xingbie">	<label class="label">性别<input type="" name="" class="ball_age" value="'+carteditdata.ball_age+'" ><span class="jiao"></span></label></div>'+
 				'<div class="duan gexing"><label class="label">	个性签名<input type="text" class="signature" value="'+carteditdata.signature+'" placeholder="简单的介绍一下自己"><span class="jiao"></span>	</label></div></div>'+
 				'<div class="wai">	<div class="duan">	<label class="label">球龄<input type="" name="" class="ball_age" value="'+carteditdata.ball_age +'" placeholder=""><span class="jiao"></span>	</label></div>'+
-				'<div class="duan dianshu">	<label class="label">	点数<input type="" name="" class="almost" value="'+carteditdata.almost+'" placeholder=""><span class="jiao"></span>	</label></div></div><div class="wai">';
+				'<div class="duan dianshu">	<label class="label">	点数<input type="" name="" class="almost" value="'+carteditdata.almost+'" placeholder=""><span class="jiao"></span>	</label></div></div><div class="wai">'
 				// if (carteditdata.membership.length == 0) {
 				// 		html =+ '<div class="duan"><label class="label">	会籍情况<input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
 
@@ -29,7 +29,7 @@ $(document).ready(function($) {
 					// }
 				// }
 
-				html =+ '<div class="duan"><label class="label">会籍情况<input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
+				html =+ '<div class="duan"><label class="label">会籍情况<input type="" class="membership" name="" value="123" placeholder=""><span class="jiao"></span>	</label></div>';
 
 				html +='<div class="duan"><label class="label">联系电话<input type="" name="" class="tel" value="'+carteditdata.tel+'" placeholder=""><span class="jiao"></span></label></div>'+
 				'<div class="duan email"><label class="label">	邮箱<input type="" name="" class="emaili" value="'+carteditdata.email+'" placeholder="@qq.com"><span class="jiao"></span>	</label></div></div>'+
