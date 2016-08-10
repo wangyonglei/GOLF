@@ -23,8 +23,8 @@ body { padding: 15px; }
 		p { float: left; border-bottom: 1px solid $c; height: 3px; width: 43%; }
 		p:nth-of-type(2) { height: 3px; width: 14%; line-height: 3px; border-bottom: none; text-align: center; color: $c; font-weight: bold; font-size: 20px; }
 	}
-	.card_vip, .card_tel, .card_email { width: 100%; height: 30px; text-indent: 40px; line-height: 30px; background-position: left center; background-size: 25px; float: left; margin-top: 20px; overflow: hidden; background-repeat: no-repeat; font-size: 14px; }
-	.card_vip { background-image: url(../images/card_vip.png); color: #333; }
+	.card_vip, .card_tel, .card_email { width: 100%; height: 30px; padding-left: 40px; line-height: 30px; background-position: left center; background-size: 25px; float: left; margin-top: 20px; overflow: hidden; background-repeat: no-repeat; font-size: 14px; }
+	.card_vip { background-image: url(../images/card_vip.png); color: #333; height: auto; background-position: center top; }
 	.card_tel { background-image: url(../images/card_tel.png); color: #666; }
 	.card_email { background-image: url(../images/card_email.png); color: #333; }
 
