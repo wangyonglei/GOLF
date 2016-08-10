@@ -104,7 +104,7 @@ body {
     background-image: url(../images/card_vip.png);
     color: #333;
     height: auto;
-    background-position: center top; }
+    background-position: left top; }
   .card .card_tel {
     background-image: url(../images/card_tel.png);
     color: #666; }
