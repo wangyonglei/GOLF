@@ -27,7 +27,7 @@ $(document).ready(function() {
 	$('#ball_list').on('click', 'li', function() {
 		$('.qiuchang_input').val('')
 		$('.qiuchang_inputid').html('')
-		var venue = $(this).html();
+		var venue = $(this).text();
 		var venueid = $(this).attr('data-qid');
 		$('.qiuchang_input').val(venue);
 		$('.qiuchang_inputid').html(venueid);
