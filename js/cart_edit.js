@@ -24,7 +24,7 @@ $(document).ready(function($) {
 					html =+ '<div class="wai">	<div class="duan"><label class="label">	会籍情况<input type="" class="membership" name="" value="'+carteditdata.membership[i].title+'" placeholder=""><span class="jiao"></span>	</label></div>';
 				}
 				html +='<div class="duan"><label class="label">联系电话<input type="" name="" class="tel" value="'+carteditdata.tel+'" placeholder=""><span class="jiao"></span></label></div>'+
-				'<div class="duan email"><label class="label">	邮箱<input type="" name="" class="email" value="'+carteditdata.email+'" placeholder="@qq.com"><span class="jiao"></span>	</label></div></div>'+
+				'<div class="duan email"><label class="label">	邮箱<input type="" name="" class="emaili" value="'+carteditdata.email+'" placeholder="@qq.com"><span class="jiao"></span>	</label></div></div>'+
 				'<div class="wai"><div class="duan"><label class="label">	公司<input type="" class="company_describe" name="" value="'+carteditdata.company_describe+'" placeholder=""><span class="jiao"></span></label></div>'+
 				'<div class="duan">	<label class="label">	职务<input type="" name="" class="position" value="'+carteditdata.position+'" placeholder="">	<span class="jiao"></span></label></div>'+
 				'<div class="duan"><label class="label">城市<input type="" name="" class="city" value="'+carteditdata.city+'" placeholder=""><span class="jiao"></span></label></div>'+
@@ -80,7 +80,7 @@ $(document).ready(function($) {
 				ball_age:$('.ball_age').val(),
 				almost:$('.almost').val(),
 				tel:$('.tel').val(),
-				email:$('.email').val(),
+				email:$('.emaili').val(),
 				company_describe:$('.company_describe').val(),
 				position:$('.position').val(),
 				city:$('.city').val(),
