@@ -119,6 +119,7 @@ $(document).ready(function($) {
 $(document).ready(function() {
 	// 球场列表
 	$('body').on('click','.huiji_s',function() {
+		alert(0)
 
 		$('.qiuchang_maxk').css('display', 'block');
 		$('.qiuchang_mask').css('display', 'block');
