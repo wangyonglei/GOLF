@@ -31,14 +31,14 @@ body {
 .card .card_ban .card_con .xian {
   float: left;
   width: 1px;
-  height: 135px;
+  height: 100px;
   margin: 10px 15px 10px 0px;
 }
 .card .card_ban .card_con p {
   width: 3px;
   border-right: 1px solid #fff;
   float: left;
-  height: 60px;
+  height: 33px;
   opacity: .6;
 }
 .card .card_ban .card_con p:nth-of-type(2) {
