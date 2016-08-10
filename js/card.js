@@ -16,9 +16,14 @@ $(document).ready(function($) {
 				var html = '';
 
 				html += '<div class="card_ban"><div class="card_img"><img src="' + carddata.avatar + '"></div><div class="card_con"><div class="xian"><p></p><p>·</p><p></p></div><div class="card_name">' + carddata.rname + '</div><div class="card_des">' + carddata.signature + '</div><div class="card_qiu"><span>球龄</span>' + carddata.ball_age + '<span>差点</span>' + carddata.almost + '</div></div></div>';
-					for (var i = 0; i < carddata.membership.length; i++) {
+				for (var i = 0; i < carddata.membership.length; i++) {
+					if (carddata.membership.length == 0) {
+						html += '<div class="card_vip">无</div>'
+					}else{
 						html += '<div class="card_vip">' + carddata.membership[i].title + '</div>'
 					}
+					
+				}
 				html += '<div class="card_tel">' + carddata.tel + '</div><div class="card_email">' + carddata.email + '</div><div class="hengxian"><p></p><p>·</p><p></p></div><div class="card_company">公司：' + carddata.company_describe + '</div><div class="card_post">职务：' + carddata.position + '</div><div class="card_city">城市：' + carddata.city + '</div><div class="card_resources">资源：' + carddata.resources + '</div><div class="card_btn"><a href="cart_edit.html?uid=' + carddata.uid + '">编辑</a></div></div>'
 				$('.card').html(html)
 			})
