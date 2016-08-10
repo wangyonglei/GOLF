@@ -20,7 +20,7 @@ $(document).ready(function($) {
 				'<div class="duan gexing"><label class="label">	个性签名<input type="text" class="signature" value="'+carteditdata.signature+'" placeholder="简单的介绍一下自己"><span class="jiao"></span>	</label></div></div>'+
 				'<div class="wai">	<div class="duan">	<label class="label">球龄<input type="" name="" class="ball_age" value="'+carteditdata.ball_age +'" placeholder=""><span class="jiao"></span>	</label></div>'+
 				'<div class="duan dianshu">	<label class="label">	点数<input type="" name="" class="almost" value="'+carteditdata.almost+'" placeholder=""><span class="jiao"></span>	</label></div></div>';
-				if (carteditdata.membership.length == 0) {
+				if (carteditdata.membership == '') {
 						html =+ '<div class="wai">	<div class="duan"><label class="label">	会籍情况<input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
 
 				}else{
