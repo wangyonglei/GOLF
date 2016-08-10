@@ -29,7 +29,7 @@ $(document).ready(function($) {
 					// }
 				// }
 
-				html =+ '<div class="duan"><label class="label">会籍情况<input type="" class="membership" name="" value="123" placeholder=""><span class="jiao"></span>	</label></div>';
+				// html =+ '<div class="duan"><label class="label">会籍情况<input type="" class="membership" name="" value="123" placeholder=""><span class="jiao"></span>	</label></div>';
 
 				html +='<div class="duan"><label class="label">联系电话<input type="" name="" class="tel" value="'+carteditdata.tel+'" placeholder=""><span class="jiao"></span></label></div>'+
 				'<div class="duan email"><label class="label">	邮箱<input type="" name="" class="emaili" value="'+carteditdata.email+'" placeholder="@qq.com"><span class="jiao"></span>	</label></div></div>'+
