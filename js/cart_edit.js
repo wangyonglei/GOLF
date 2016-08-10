@@ -61,7 +61,6 @@ $(document).ready(function($) {
 						}
 					})
 					.done(function(data) {
-						alert(5)
 						cartEdit()
 					})
 					.fail(function() {
@@ -76,44 +75,52 @@ $(document).ready(function($) {
 		}
 	} else {
 		cartEdit();
-		$('body').on('click', '.baocun', function() {
-			var datacart = {
-				signature: $('.signature').val(),
-				membership: $('#huiji_id').html(),
-				ball_age: $('.ball_age').val(),
-				almost: $('.almost').val(),
-				tel: $('.tel').val(),
-				email: $('.emaili').val(),
-				company_describe: $('.company_describe').val(),
-				position: $('.position').val(),
-				city: $('.city').val(),
-				resources: $('.resources').val()
-			}
-			$.ajax({
-					url: 'http://v.jgsports.com.cn/user/User/modifyUserInfo',
-					type: 'post',
-					dataType: 'json',
-					data: datacart,
-				})
-				.done(function(data) {
-					console.log("ok")
-					alert('编辑成功')
-					location = 'card.html'
-				})
-				.fail(function() {
-					console.log("error");
-				})
-				.always(function() {
-					console.log("complete");
-				});
-		})
+
 	}
+
+
+
+	$('body').on('click', '.baocun', function() {
+		alert('提交按钮成功')
+		var datacart = {
+			signature: $('.signature').val(),
+			membership: $('#huiji_id').html(),
+			ball_age: $('.ball_age').val(),
+			almost: $('.almost').val(),
+			tel: $('.tel').val(),
+			email: $('.emaili').val(),
+			company_describe: $('.company_describe').val(),
+			position: $('.position').val(),
+			city: $('.city').val(),
+			resources: $('.resources').val()
+		}
+		$.ajax({
+				url: 'http://v.jgsports.com.cn/user/User/modifyUserInfo',
+				type: 'post',
+				dataType: 'json',
+				data: datacart,
+			})
+			.done(function(data) {
+				console.log("ok")
+				alert('编辑成功')
+				location = 'card.html'
+			})
+			.fail(function() {
+				console.log("error");
+			})
+			.always(function() {
+				console.log("complete");
+			});
+	})
+
+	
 });
 
 
 $(document).ready(function() {
 	// 球场列表
 	$('body').on('click','.huiji_s',function() {
+
 		$('.qiuchang_maxk').css('display', 'block');
 		$('.qiuchang_mask').css('display', 'block');
 
