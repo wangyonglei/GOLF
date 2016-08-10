@@ -143,7 +143,7 @@ $(document).ready(function() {
 		// var venueid = $(this).attr('data-iid');
 		var venue = $(this).attr('data-iid');
 		$('.membership').val(venue);
-		$('.qiuchang_inputid').html(venueid);
+		// $('.qiuchang_inputid').html(venueid);
 		$('.qiuchang_maxk').css('display', 'none');
 		$('.qiuchang_mask').css('display', 'none');
 	})
