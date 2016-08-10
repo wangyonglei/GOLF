@@ -14,18 +14,23 @@ $(document).ready(function($) {
 			.done(function(data) {
 				var balldata = data.data;
 				var html = '';
-				html += '<div class="wai"><div class="duan ball_card_title">'+balldata.title+'（' + balldata.membersNumber + '人）<p class="xiajiao"></p></div><ul class="ball_card_people">'
-					// if (	balldata.membersList.length == 0 ) {
-					// 	html +='<li>暂无</li>'
-					// }else{
-				for (var i = 0; i < balldata.membersList.length; i++) {
-					html += '<li><div class="people_img"><img src="' + balldata.membersList[i].avatar + '"></div><p>' + balldata.membersList[i].rname + '</p></li>'
+				for (var j = 0; j<balldata.length; j++) {
+					html += '<div class="wai"><div class="duan ball_card_title">'+balldata[j].title+'（' + balldata[j].membersNumber + '人）<p class="xiajiao"></p></div><ul class="ball_card_people">'
+						// if (	balldata.membersList.length == 0 ) {
+						// 	html +='<li>暂无</li>'
+						// }else{
+					for (var i = 0; i < balldata[j].membersList.length; i++) {
+						html += '<li><div class="people_img"><img src="' + balldata[j].membersList[i].avatar + '"></div><p>' + balldata[j].membersList[i].rname + '</p></li>'
+					}
+					// }
+					if (balldata[j].membersList.teamMaster == 1) {
+						html += '<li><div class="people_img"><img src="images/jia.png"></div></li><li><div class="people_img"><img src="images/jian.png"></div></li>'
+					} else {
+						
+					}
+					html += '</ul></div>'
 				}
-				// }
-				if (balldata.membersList.teamMaster == 1) {
-					html += '<li><div class="people_img"><img src="images/jia.png"></div></li><li><div class="people_img"><img src="images/jian.png"></div></li>'
-				} else {}
-				html += '</ul></div>'
+
 				$('#ball_card').html(html)
 			})
 	}
