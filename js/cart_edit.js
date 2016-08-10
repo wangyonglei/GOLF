@@ -24,7 +24,7 @@ $(document).ready(function($) {
 					html += '<div class="duan huiji_s"><label class="label">	会籍情况<span id="huiji_id"></span><input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
 				} else {
 					for (var i = 0; i < carteditdata.membership.length; i++) {
-						html += '<div class="duan huiji_s""><label class="label">	会籍情况<span id="huiji_id"<input type="" class="membership" name="" value="' + carteditdata.membership[i].title + '" placeholder=""><span class="jiao"></span>	</label></div>';
+						html += '<div class="duan huiji_s""><label class="label">	会籍情况<span id="huiji_id"></span><input type="" class="membership" name="" value="' + carteditdata.membership[i].title + '" placeholder=""><span class="jiao"></span>	</label></div>';
 					}
 				}
 				// html += '<div class="duan"><label class="label">会籍情况<input type="" class="membership" name="" value="123" placeholder=""><span class="jiao"></span>	</label></div>';
