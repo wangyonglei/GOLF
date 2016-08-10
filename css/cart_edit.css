@@ -62,7 +62,7 @@
     margin-top: 30px;
     margin-bottom: 20px; }
   .cart_edit .membership {
-    height: 45px;
+    height: auto;
     width: 72%;
     float: right;
     margin-right: 10px;
@@ -77,6 +77,9 @@
     /*height: 20%;*/ }
   .ball_list ul {
     margin-top: 0; }
+
+.huiji_s {
+  height: auto; }
 
 #huiji_id {
   display: none; }
