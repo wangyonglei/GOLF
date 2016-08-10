@@ -86,6 +86,10 @@
   margin-top: 0;
 }
 
+#huiji_id {
+  display: none;
+}
+
 .qiuchang_mask {
   display: none;
   width: 100%;

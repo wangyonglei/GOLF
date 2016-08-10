@@ -21,10 +21,10 @@ $(document).ready(function($) {
 					'<div class="wai">	<div class="duan">	<label class="label">球龄<input type="" name="" class="ball_age" value="' + carteditdata.ball_age + '" placeholder=""><span class="jiao"></span>	</label></div>' +
 					'<div class="duan dianshu">	<label class="label">	点数<input type="" name="" class="almost" value="' + carteditdata.almost + '" placeholder=""><span class="jiao"></span>	</label></div></div><div class="wai">'
 				if (carteditdata.membership.length == 0) {
-					html += '<div class="duan huiji_s"><label class="label">	会籍情况<input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
+					html += '<div class="duan huiji_s"><label class="label">	会籍情况<span id="huiji_id"></span><input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
 				} else {
 					for (var i = 0; i < carteditdata.membership.length; i++) {
-						html += '<div class="duan huiji_s""><label class="label">	会籍情况<input type="" class="membership" name="" value="' + carteditdata.membership[i].title + '" placeholder=""><span class="jiao"></span>	</label></div>';
+						html += '<div class="duan huiji_s""><label class="label">	会籍情况<span id="huiji_id"<input type="" class="membership" name="" value="' + carteditdata.membership[i].title + '" placeholder=""><span class="jiao"></span>	</label></div>';
 					}
 				}
 				// html += '<div class="duan"><label class="label">会籍情况<input type="" class="membership" name="" value="123" placeholder=""><span class="jiao"></span>	</label></div>';
@@ -79,7 +79,7 @@ $(document).ready(function($) {
 		$('body').on('click', '.baocun', function() {
 			var datacart = {
 				signature: $('.signature').val(),
-				membership: $('.membership').val(),
+				membership: $('#huiji_id').html(),
 				ball_age: $('.ball_age').val(),
 				almost: $('.almost').val(),
 				tel: $('.tel').val(),
@@ -139,11 +139,11 @@ $(document).ready(function() {
 	$('#ball_list').on('click', 'li', function() {
 		$('.qiuchang_input').val('')
 		$('.qiuchang_inputid').html('')
-		// var venue = $(this).text();
+		var venue = $(this).text();
 		// var venueid = $(this).attr('data-iid');
-		var venue = $(this).attr('data-iid');
+		var huiji_id = $(this).attr('data-iid');
+		$('#huiji_id').val(huiji_id);
 		$('.membership').val(venue);
-		// $('.qiuchang_inputid').html(venueid);
 		$('.qiuchang_maxk').css('display', 'none');
 		$('.qiuchang_mask').css('display', 'none');
 	})
