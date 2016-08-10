@@ -21,10 +21,10 @@ $(document).ready(function($) {
 					'<div class="wai">	<div class="duan">	<label class="label">球龄<input type="" name="" class="ball_age" value="' + carteditdata.ball_age + '" placeholder=""><span class="jiao"></span>	</label></div>' +
 					'<div class="duan dianshu">	<label class="label">	点数<input type="" name="" class="almost" value="' + carteditdata.almost + '" placeholder=""><span class="jiao"></span>	</label></div></div><div class="wai">'
 				if (carteditdata.membership.length == 0) {
-					html += '<div class="duan class="huiji_s"><label class="label">	会籍情况<input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
+					html += '<div class="duan huiji_s"><label class="label">	会籍情况<input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
 				} else {
 					for (var i = 0; i < carteditdata.membership.length; i++) {
-						html += '<div class="duan class="huiji_s""><label class="label">	会籍情况<input type="" class="membership" name="" value="' + carteditdata.membership[i].title + '" placeholder=""><span class="jiao"></span>	</label></div>';
+						html += '<div class="duan huiji_s""><label class="label">	会籍情况<input type="" class="membership" name="" value="' + carteditdata.membership[i].title + '" placeholder=""><span class="jiao"></span>	</label></div>';
 					}
 				}
 				// html += '<div class="duan"><label class="label">会籍情况<input type="" class="membership" name="" value="123" placeholder=""><span class="jiao"></span>	</label></div>';
