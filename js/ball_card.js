@@ -21,13 +21,13 @@ $(document).ready(function($) {
 // '<ul class="ball_card_people"><li><div class="people_img"><img src="images/card_img.jpg"></div><p>大鹏</p></li></ul></div>'
 
 html +='<div class="wai"><div class="duan ball_card_title">大鹏队（'+balldata.membersNumber+'人）<p class="xiajiao"></p></div><ul class="ball_card_people">'
-if (balldata.membersList.length == 0 ) {
-	html +='<li>暂无</li>'
-}else{
+// if (	balldata.membersList.length == 0 ) {
+// 	html +='<li>暂无</li>'
+// }else{
 	for (var i = 0; i <balldata.membersList.length; i++) {
 		html +='<li><div class="people_img"><img src="'+balldata.membersList[i].avatar+'"></div><p>'+balldata.membersList[i].rname+'</p></li>'
 	}
-}
+// }
 if (balldata.membersList.teamMaster == 1) {
 html +='<li><div class="people_img"><img src="images/jia.png"></div></li><li><div class="people_img"><img src="images/jian.png"></div></li>'
 
