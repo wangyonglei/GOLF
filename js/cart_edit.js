@@ -176,7 +176,7 @@ $(document).ready(function() {
 		// $('.qiuchang_inputid').html('')
 		var venue = $(this).text();
 		var huiji_id = $(this).attr('data-iid');
-		$('#huiji_id').append(parseFloat(','+huiji_id));
+		$('#huiji_id').append(','+parseFloat(huiji_id));
 		$('.membership').append('<br>'+venue);
 		$('.qiuchang_maxk').css('display', 'none');
 		$('.qiuchang_mask').css('display', 'none');
