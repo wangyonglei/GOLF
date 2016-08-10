@@ -14,20 +14,29 @@ $(document).ready(function($) {
 			.done(function(data) {
 				var carteditdata = data.data;
 				var html = '';
-				// html += '<div class="card_ban"><div class="card_img"><img src="' + carddata.avatar + '"></div><div class="card_con"><div class="xian"><p></p><p>·</p><p></p></div><div class="card_name">' + carddata.rname + '</div><div class="card_des">' + carddata.signature + '</div><div class="card_qiu"><span>球龄</span>' + carddata.ball_age + '<span>差点</span>' + carddata.almost + '</div></div></div><div class="card_vip">' + carddata.membership + '</div><div class="card_tel">' + carddata.tel + '</div><div class="card_email">' + carddata.email + '</div><div class="hengxian"><p></p><p>·</p><p></p></div><div class="card_company">公司：' + carddata.company_describe + '</div><div class="card_post">职务：</div><div class="card_city">城市：' + carddata.city + '</div><div class="card_resources">资源：' + carddata.resources + '</div><div class="card_btn"><a href="cart_edit.html?uid=' + carddata.uid + '">编辑</a></div></div>'
 				html += '<div class="wai"><div class="duan touxiang">头像<p><img src="' + carteditdata.avatar + '"></p></div>' +
 					// '<div class="duan xingbie">	<label class="label">性别<input type="" name="" class="ball_age" value="'+carteditdata.ball_age+'" ><span class="jiao"></span></label></div>'+
 					'<div class="duan gexing"><label class="label">	个性签名<input type="text" class="signature" value="' + carteditdata.signature + '" placeholder="简单的介绍一下自己"><span class="jiao"></span>	</label></div></div>' +
 					'<div class="wai">	<div class="duan">	<label class="label">球龄<input type="" name="" class="ball_age" value="' + carteditdata.ball_age + '" placeholder=""><span class="jiao"></span>	</label></div>' +
 					'<div class="duan dianshu">	<label class="label">	点数<input type="" name="" class="almost" value="' + carteditdata.almost + '" placeholder=""><span class="jiao"></span>	</label></div></div><div class="wai">'
+				// 单个球场
+				// if (carteditdata.membership.length == 0) {
+				// 	html += '<div class="duan huiji_s"><label class="label">	会籍情况<span id="huiji_id"></span><input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
+				// } else {
+				// 	for (var i = 0; i < carteditdata.membership.length; i++) {
+				// 		html += '<div class="duan huiji_s""><label class="label">	会籍情况<span id="huiji_id"></span><input type="" class="membership" name="" value="' + carteditdata.membership[i].title + '" placeholder=""><span class="jiao"></span>	</label></div>';
+				// 	}
+				// }
+
 				if (carteditdata.membership.length == 0) {
-					html += '<div class="duan huiji_s"><label class="label">	会籍情况<span id="huiji_id"></span><input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
+					html += '<div class="duan huiji_s"><label class="label">	会籍情况<span id="huiji_id"></span><div class="membership"></div><span class="jiao"></span>	</label></div>';
 				} else {
 					for (var i = 0; i < carteditdata.membership.length; i++) {
-						html += '<div class="duan huiji_s""><label class="label">	会籍情况<span id="huiji_id"></span><input type="" class="membership" name="" value="' + carteditdata.membership[i].title + '" placeholder=""><span class="jiao"></span>	</label></div>';
+						html += '<div class="duan huiji_s""><label class="label">	会籍情况<span id="huiji_id"></span><div class="membership">'+carteditdata.membership[i].title+'</div>  <span class="jiao"></span>	</label></div>';
 					}
 				}
-				// html += '<div class="duan"><label class="label">会籍情况<input type="" class="membership" name="" value="123" placeholder=""><span class="jiao"></span>	</label></div>';
+
+
 				html += '<div class="duan"><label class="label">联系电话<input type="" name="" class="tel" value="' + carteditdata.tel + '" placeholder=""><span class="jiao"></span></label></div>' +
 					'<div class="duan email"><label class="label">	邮箱<input type="" name="" class="emaili" value="' + carteditdata.email + '" placeholder="@qq.com"><span class="jiao"></span>	</label></div></div>' +
 					'<div class="wai"><div class="duan"><label class="label">	公司<input type="" class="company_describe" name="" value="' + carteditdata.company_describe + '" placeholder=""><span class="jiao"></span></label></div>' +
@@ -140,17 +149,29 @@ $(document).ready(function() {
 					$('.loading').before(html)
 			})
 	})
+	// 单个球队
+	// $('#ball_list').on('click', 'li', function() {
+	// 	$('.qiuchang_input').val('')
+	// 	$('.qiuchang_inputid').html('')
+	// 	var venue = $(this).text();
+	// 	var huiji_id = $(this).attr('data-iid');
+	// 	$('#huiji_id').html(huiji_id);
+	// 	$('.membership').val(venue);
+	// 	$('.qiuchang_maxk').css('display', 'none');
+	// 	$('.qiuchang_mask').css('display', 'none');
+	// })
 	$('#ball_list').on('click', 'li', function() {
-		$('.qiuchang_input').val('')
-		$('.qiuchang_inputid').html('')
+		// $('.qiuchang_input').val('')
+		// $('.qiuchang_inputid').html('')
 		var venue = $(this).text();
-		// var venueid = $(this).attr('data-iid');
 		var huiji_id = $(this).attr('data-iid');
-		$('#huiji_id').html(huiji_id);
-		$('.membership').val(venue);
+		$('#huiji_id').append(huiji_id+',');
+		$('.membership').append(venue);
 		$('.qiuchang_maxk').css('display', 'none');
 		$('.qiuchang_mask').css('display', 'none');
 	})
+
+
 	$('.qiuchang_mask').click(function() {
 			$('.qiuchang_maxk').css('display', 'none');
 			$('.qiuchang_mask').css('display', 'none');
