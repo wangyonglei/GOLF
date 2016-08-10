@@ -19,9 +19,11 @@ $(document).ready(function($) {
 				'<div class="duan xingbie">	<label class="label">性别<input type="" name="" class="ball_age" value="'+carteditdata.ball_age+'" ><span class="jiao"></span></label></div>'+
 				'<div class="duan gexing"><label class="label">	个性签名<input type="text" class="signature" value="'+carteditdata.signature+'" placeholder="简单的介绍一下自己"><span class="jiao"></span>	</label></div></div>'+
 				'<div class="wai">	<div class="duan">	<label class="label">球龄<input type="" name="" class="ball_age" value="'+carteditdata.ball_age +'" placeholder=""><span class="jiao"></span>	</label></div>'+
-				'<div class="duan dianshu">	<label class="label">	点数<input type="" name="" class="almost" value="'+carteditdata.almost+'" placeholder=""><span class="jiao"></span>	</label></div></div>'+
-				'<div class="wai">	<div class="duan"><label class="label">	会籍情况<input type="" class="membership" name="" value="'+carteditdata.membership+'" placeholder=""><span class="jiao"></span>	</label></div>'+
-				'<div class="duan"><label class="label">联系电话<input type="" name="" class="tel" value="'+carteditdata.tel+'" placeholder=""><span class="jiao"></span></label></div>'+
+				'<div class="duan dianshu">	<label class="label">	点数<input type="" name="" class="almost" value="'+carteditdata.almost+'" placeholder=""><span class="jiao"></span>	</label></div></div>';
+				for (var i = 0; i < carteditdata.membership.lengt6h; i++) {
+					html =+ '<div class="wai">	<div class="duan"><label class="label">	会籍情况<input type="" class="membership" name="" value="'+carteditdata.membership[i].title+'" placeholder=""><span class="jiao"></span>	</label></div>';
+				}
+				html +='<div class="duan"><label class="label">联系电话<input type="" name="" class="tel" value="'+carteditdata.tel+'" placeholder=""><span class="jiao"></span></label></div>'+
 				'<div class="duan email"><label class="label">	邮箱<input type="" name="" class="email" value="'+carteditdata.email+'" placeholder="@qq.com"><span class="jiao"></span>	</label></div></div>'+
 				'<div class="wai"><div class="duan"><label class="label">	公司<input type="" class="company_describe" name="" value="'+carteditdata.company_describe+'" placeholder=""><span class="jiao"></span></label></div>'+
 				'<div class="duan">	<label class="label">	职务<input type="" name="" class="position" value="'+carteditdata.position+'" placeholder="">	<span class="jiao"></span></label></div>'+
