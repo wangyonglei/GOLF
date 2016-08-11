@@ -29,18 +29,23 @@ $(document).ready(function($) {
 		})
 	}
 
-	$('.jianjian').click(function(){
-			console.log($('this').html())
-			console.log($('this').parent().parent().html())
-			$('this').parent().parent().addClass('chuxian')
-		})
+	
 
+
+var jianjian = function(){
+		$('.ball_card_people').on('click', '.jianjian', function() {
+			alert('jianjian')
+				console.log($('this').html())
+				console.log($('this').parent().parent().html())
+				$('this').parent().parent().addClass('chuxian')
+			})
+}
 
 
 	var btn_jian = function() {
 
-	
 
+	
 
 
 
@@ -97,6 +102,7 @@ $(document).ready(function($) {
 				$('#ball_card').html(html);
 				btn_jia();
 				btn_jian();
+				jianjian();
 			})
 	}
 	if (!ex_code && !ex_mobile && !ex_uid) {
@@ -135,6 +141,9 @@ $(document).ready(function($) {
 		ballCar();
 		$('.search_btn').click(function() {
 			ballCar();
+			btn_jian();
+			jianjian();
+
 		})
 	}
 })
