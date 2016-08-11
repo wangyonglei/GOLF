@@ -16,7 +16,7 @@ $(document).ready(function($) {
 				var html = '';
 				for (var j = 0; j<balldata.length; j++) {
 					html += '<div class="wai"><div class="duan ball_card_title">'+balldata[j].title+'（' + balldata[j].membersNumber + '人）<p class="xiajiao"></p></div><ul class="ball_card_people">'
-					if (	balldata.membersList.length == 0 ) {
+					if (	balldata[j].membersList.length == 0 ) {
 						html +='<li>暂无</li>'
 					}else{
 						for (var i = 0; i < balldata[j].membersList.length; i++) {
