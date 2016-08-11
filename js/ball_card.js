@@ -14,7 +14,7 @@ $(document).ready(function($) {
 				var balldata = data.data;
 				var html = '';
 				for (var j = 0; j < balldata.length; j++) {
-					html += '<div class="wai"><div class="duan ball_card_title">' + balldata[j].title + '（' + balldata[j].membersNumber + '人）<p class="xiajiao"></p></div><ul class="ball_card_people">'
+					html += '<div class="wai"><div class="duan ball_card_title">' + balldata[j].title + '（' + balldata[j].membersNumber + '人）<p class="xiajiao"></p></div><ul class="ball_card_people" data-teamId="'+balldata[j].id+'">'
 					if (balldata[j].membersList.length == 0) {
 						html += '<li>暂无</li>'
 					} else {

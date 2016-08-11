@@ -62,6 +62,7 @@
 .ball_card .ball_card_people li {
   float: left;
   margin-left: 15px;
+  line-height: 52px;
 }
 .ball_card .ball_card_people .people_img {
   width: 50px;
