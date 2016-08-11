@@ -6,7 +6,6 @@ $(document).ready(function($) {
 	var btn_jia = function(){
 		$('.ball_card_people').on('click', '.teamjia', function() {
 			var teamid = $(this).parent().parent().attr('data-teamId');
-			alert(teamid)
 			$('.jiajian').show();
 			$('.yaoqing_btn').html('确认添加');
 			$('.yaoqing_btn').addClass('yaoqing_btnjia');
@@ -43,6 +42,48 @@ $(document).ready(function($) {
 	}
 
 
+	var btn_jian = function(){
+		// $('.ball_card_people').on('click', '.teamjia', function() {
+		// 	var teamid = $(this).parent().parent().attr('data-teamId');
+		// 	$('.jiajian').show();
+		// 	$('.yaoqing_btn').html('确认添加');
+		// 	$('.yaoqing_btn').addClass('yaoqing_btnjia');
+			
+		// 	// 确认添加
+		// 	$('.yaoqing_btnjia').click(function(event) {
+		// 		var jiajiandata = {
+		// 			rname: $('.jiajian_name').val(),
+		// 			mobile: $('.jiajian_tel').val(),
+		// 			teamId: teamid
+		// 		}
+		// 		$.ajax({
+		// 				url: 'http://v.jgsports.com.cn/user/Team/addTeamMembers',
+		// 				type: 'post',
+		// 				dataType: 'json',
+		// 				data: jiajiandata,
+		// 			})
+		// 			.done(function() {
+		// 					$('.jiajian_name').val(''),
+		// 					$('.jiajian_tel').val(''),
+		// 					$('.jiajian').hide();
+		// 					$('.yaoqing_btn').removeClass('yaoqing_btnjia');
+		// 					ballCar();
+						
+		// 			})
+		// 			.fail(function() {
+		// 				console.log("error");
+		// 			})
+		// 			.always(function() {
+		// 				console.log("complete");
+		// 			});
+		// 	});
+		// })
+	}
+
+
+
+
+
 	var ballCar = function() {
 		var title = encodeURIComponent($('.ballteam_input').val())
 		$.ajax({
@@ -71,36 +112,8 @@ $(document).ready(function($) {
 				}
 				$('#ball_card').html(html);
 				btn_jia();
-				// jian
-				// $('.ball_card_people').on('click', '.teamjian', function() {
-				// 	$('.jiajian').show();
-				// 	$('.yaoqing_btn').html('确认删除')
-				// 	$('.yaoqing_btn').addClass('yaoqing_btnjian')
-				// })
-				// $('.yaoqing_btnjian').click(function(event) {
-				// 	var jiajiandata = {
-				// 		rname: $('.jiajian_name').val(),
-				// 		mobile: $('.jiajian_tel').val(),
-				// 		teamId: $(this).attr('data-teamId')
-				// 	}
-				// 	$.ajax({
-				// 			url: 'http://v.jgsports.com.cn/user/Team/signOutTeam',
-				// 			type: 'post',
-				// 			dataType: 'json',
-				// 			data: jiajiandata,
-				// 		})
-				// 		.done(function() {
-				// 			$('.yaoqing_btn').click(function(event) {
-				// 				$('.jiajian').hide();
-				// 			});
-				// 		})
-				// 		.fail(function() {
-				// 			console.log("error");
-				// 		})
-				// 		.always(function() {
-				// 			console.log("complete");
-				// 		});
-				// });
+				btn_jian();
+				
 
 
 			})
