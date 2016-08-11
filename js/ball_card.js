@@ -40,7 +40,7 @@ $(document).ready(function($) {
 			});
 		})
 	}
-	btn_jia();
+
 
 	var ballCar = function() {
 		var title = encodeURIComponent($('.ballteam_input').val())
@@ -69,7 +69,6 @@ $(document).ready(function($) {
 					html += '</ul></div>'
 				}
 				$('#ball_card').html(html);
-			
 				
 				// jian
 				// $('.ball_card_people').on('click', '.teamjian', function() {
@@ -123,6 +122,7 @@ $(document).ready(function($) {
 					})
 					.done(function(data) {
 						ballCar();
+						btn_jia();
 						$('.search_btn').click(function() {
 							ballCar();
 						})
@@ -141,6 +141,8 @@ $(document).ready(function($) {
 		ballCar();
 		$('.search_btn').click(function() {
 			ballCar();
+			btn_jia();
+
 		})
 	}
 })
