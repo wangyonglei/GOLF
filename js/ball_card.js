@@ -2,6 +2,45 @@ $(document).ready(function($) {
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
+
+	var btn_jia = function{
+		$('.ball_card_people').on('click', '.teamjia', function() {
+			var teamid = $(this).parent().parent().attr('data-teamId');
+			alert(teamid)
+			$('.jiajian').show();
+			$('.yaoqing_btn').html('确认添加');
+			$('.yaoqing_btn').addClass('yaoqing_btnjia');
+			
+			// 确认添加
+			$('.yaoqing_btnjia').click(function(event) {
+				var jiajiandata = {
+					rname: $('.jiajian_name').val(),
+					mobile: $('.jiajian_tel').val(),
+					teamId: teamid
+				}
+				$.ajax({
+						url: 'http://v.jgsports.com.cn/user/Team/addTeamMembers',
+						type: 'post',
+						dataType: 'json',
+						data: jiajiandata,
+					})
+					.done(function() {
+						
+							$('.jiajian').hide();
+							$('.yaoqing_btn').removeClass('yaoqing_btnjia');
+							ballCar();
+						
+					})
+					.fail(function() {
+						console.log("error");
+					})
+					.always(function() {
+						console.log("complete");
+					});
+			});
+		})
+	}
+
 	var ballCar = function() {
 		var title = encodeURIComponent($('.ballteam_input').val())
 		$.ajax({
@@ -29,41 +68,8 @@ $(document).ready(function($) {
 					html += '</ul></div>'
 				}
 				$('#ball_card').html(html);
-				$('.ball_card_people').on('click', '.teamjia', function() {
-					var teamid = $(this).parent().parent().attr('data-teamId');
-					alert(teamid)
-					$('.jiajian').show();
-					$('.yaoqing_btn').html('确认添加');
-					$('.yaoqing_btn').addClass('yaoqing_btnjia');
-					
-					// 确认添加
-					$('.yaoqing_btnjia').click(function(event) {
-						var jiajiandata = {
-							rname: $('.jiajian_name').val(),
-							mobile: $('.jiajian_tel').val(),
-							teamId: teamid
-						}
-						$.ajax({
-								url: 'http://v.jgsports.com.cn/user/Team/addTeamMembers',
-								type: 'post',
-								dataType: 'json',
-								data: jiajiandata,
-							})
-							.done(function() {
-								
-									$('.jiajian').hide();
-									$('.yaoqing_btn').removeClass('yaoqing_btnjia');
-								
-							})
-							.fail(function() {
-								console.log("error");
-							})
-							.always(function() {
-								console.log("complete");
-							});
-					});
-				})
-		
+			
+				
 				// jian
 				// $('.ball_card_people').on('click', '.teamjian', function() {
 				// 	$('.jiajian').show();
