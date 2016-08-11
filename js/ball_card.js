@@ -3,7 +3,7 @@ $(document).ready(function($) {
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
 	var ballCar = function() {
-		var title = HttpUtility.UrlDecode($('.ballteam_input').val())
+		var title = unicode($('.ballteam_input').val())
 		alert(title)
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Team/getList',
