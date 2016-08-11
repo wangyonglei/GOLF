@@ -36,8 +36,7 @@ $(document).ready(function($) {
 	}
 	var btn_jian = function() {
 		$('.ball_card_people').on('click', '.teamjian', function() {
-			alert($(this).parent().parent().parent().attr('data-teamId'))
-			alert($(this).parent().parent().attr('data-uid'))
+			
 			var jiandata = {
 				teamid: $(this).parent().parent().parent().attr('data-teamId'),
 				uid: $(this).parent().parent().attr('data-uid')
