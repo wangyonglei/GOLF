@@ -69,7 +69,6 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  overflow: hidden;
   border: 1px solid #ddd;
 }
 .ball_card .ball_card_people .people_img img {
@@ -82,8 +81,9 @@
   height: 25px;
   border-radius: 50%;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -4px;
+  top: -12px;
+  z-index: 2;
 }
 .ball_card .ball_card_people p {
   width: 100%;
