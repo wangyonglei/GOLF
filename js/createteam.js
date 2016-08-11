@@ -16,7 +16,7 @@ $(document).ready(function($) {
 					data: createteam
 				})
 				.done(function(data) {
-						console.log('ok')
+						location='ball_card.html'
 				})
 		})
 	}
