@@ -28,12 +28,15 @@ $(document).ready(function($) {
 			});
 		})
 	}
+
+	
+	$('.ball_card_people').on('click', '.jianjian', function() {
+		console.log($('this').html())
+		$('this').parent().parent().addClass('chuxian')
+	})
+
+
 	var btn_jian = function() {
-		$('.ball_card_people').on('click', '.jianjian', function() {
-			alert('jianjian')
-			console.log($('this').html())
-			$('this').parent().parent().addClass('chuxian')
-		})
 
 		$('.ball_card_people').on('click', '.teamjian', function() {
 			
