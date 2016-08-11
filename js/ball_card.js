@@ -6,7 +6,7 @@ $(document).ready(function($) {
 		var title = encodeURIComponent($('.ballteam_input').val())
 		alert(title)
 		$.ajax({
-				url: 'http://v.jgsports.com.cn/user/Team/getList',
+				url: 'http://v.jgsports.com.cn/user/Team/getList?title='+title,
 				type: 'get',
 				dataType: 'json',
 				data: title
