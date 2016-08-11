@@ -43,41 +43,41 @@ $(document).ready(function($) {
 
 
 	var btn_jian = function(){
-		// $('.ball_card_people').on('click', '.teamjia', function() {
-		// 	var teamid = $(this).parent().parent().attr('data-teamId');
-		// 	$('.jiajian').show();
-		// 	$('.yaoqing_btn').html('确认添加');
-		// 	$('.yaoqing_btn').addClass('yaoqing_btnjia');
+		$('.ball_card_people').on('click', '.teamjian', function() {
+			var teamid = $(this).parent().parent().attr('data-teamId');
+			$('.jiajian').show();
+			$('.yaoqing_btn').html('确认删除');
+			$('.yaoqing_btn').addClass('yaoqing_btnjian');
 			
-		// 	// 确认添加
-		// 	$('.yaoqing_btnjia').click(function(event) {
-		// 		var jiajiandata = {
-		// 			rname: $('.jiajian_name').val(),
-		// 			mobile: $('.jiajian_tel').val(),
-		// 			teamId: teamid
-		// 		}
-		// 		$.ajax({
-		// 				url: 'http://v.jgsports.com.cn/user/Team/addTeamMembers',
-		// 				type: 'post',
-		// 				dataType: 'json',
-		// 				data: jiajiandata,
-		// 			})
-		// 			.done(function() {
-		// 					$('.jiajian_name').val(''),
-		// 					$('.jiajian_tel').val(''),
-		// 					$('.jiajian').hide();
-		// 					$('.yaoqing_btn').removeClass('yaoqing_btnjia');
-		// 					ballCar();
+			// 确认添加
+			$('.yaoqing_btnjian').click(function(event) {
+				var jiajiandata = {
+					rname: $('.jiajian_name').val(),
+					mobile: $('.jiajian_tel').val(),
+					teamId: teamid
+				}
+				$.ajax({
+						url: 'http://v.jgsports.com.cn/user/Team/addTeamMembers',
+						type: 'post',
+						dataType: 'json',
+						data: jiajiandata,
+					})
+					.done(function() {
+							$('.jiajian_name').val(''),
+							$('.jiajian_tel').val(''),
+							$('.jiajian').hide();
+							$('.yaoqing_btn').removeClass('yaoqing_btnjian');
+							ballCar();
 						
-		// 			})
-		// 			.fail(function() {
-		// 				console.log("error");
-		// 			})
-		// 			.always(function() {
-		// 				console.log("complete");
-		// 			});
-		// 	});
-		// })
+					})
+					.fail(function() {
+						console.log("error");
+					})
+					.always(function() {
+						console.log("complete");
+					});
+			});
+		})
 	}
 
 
@@ -96,16 +96,16 @@ $(document).ready(function($) {
 				var balldata = data.data;
 				var html = '';
 				for (var j = 0; j < balldata.length; j++) {
-					html += '<div class="wai"><div class="duan ball_card_title">' + balldata[j].title + '（' + balldata[j].membersNumber + '人）<p class="xiajiao"></p></div><ul class="ball_card_people" data-teamId="' + balldata[j].id + '">'
+					html += '<div class="wai"><div class="duan ball_card_title">' + balldata[j].title + '（' + balldata[j].membersNumber + '人）<p class="xiajiao"></p></div><ul class="ball_card_people"  data-uid="' + balldata[j].uid + '" data-teamId="' + balldata[j].id + '">'
 					if (balldata[j].membersList.length == 0) {
 						html += '<li>暂无</li>'
 					} else {
 						for (var i = 0; i < balldata[j].membersList.length; i++) {
-							html += '<li><div class="people_img"><img src="' + balldata[j].membersList[i].avatar + '"></div><p>' + balldata[j].membersList[i].rname + '</p></li>'
+							html += '<li><div class="people_img"><img src="' + balldata[j].membersList[i].avatar + '"><div class="teamjian"><img src="images/jian.png"></div></div><p>' + balldata[j].membersList[i].rname + '</p></li>'
 						}
 					}
 					if (balldata[j].teamMaster == 1) {
-						html += '<li><div class="people_img teamjia"><img src="images/jia.png"></div></li><li><div class="people_img teamjian"><img src="images/jian.png"></div></li>'
+						html += '<li><div class="people_img teamjia"><img src="images/jia.png"></div></li>'
 					} else {
 					}
 					html += '</ul></div>'
