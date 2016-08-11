@@ -4,6 +4,7 @@ $(document).ready(function($) {
 	var ex_uid = getCookie("ex_uid");
 	var ballCar = function() {
 		var title = encodeURIComponent($('.ballteam_input').val())
+		alert(title)
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Team/getList',
 				type: 'get',
