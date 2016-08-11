@@ -1,13 +1,12 @@
 $(document).ready(function($) {
-
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
 	var createTeam = function() {
-		$('.team_addbut').click(function(){
+		$('.team_addbut').click(function() {
 			var createteam = {
 				title: $('.team_input').val(),
-				profile:$('.team_con').val()
+				profile: $('.team_con').val()
 			}
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Team/addTeam',
@@ -16,7 +15,7 @@ $(document).ready(function($) {
 					data: createteam
 				})
 				.done(function(data) {
-						location='ball_card.html'
+					location = 'ball_card.html'
 				})
 		})
 	}
@@ -52,15 +51,4 @@ $(document).ready(function($) {
 	} else {
 		createTeam()
 	}
-
-
-
-
-
-
-
-
-
-
-	
 })
