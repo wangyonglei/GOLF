@@ -25,16 +25,14 @@ $(document).ready(function($) {
 							$('.jiajian').hide();
 						ballCar();
 					})
-					.fail(function() {
-						console.log("error");
-					})
-					.always(function() {
-						console.log("complete");
-					});
 			});
 		})
 	}
 	var btn_jian = function() {
+		$('.ball_card_people').on('click', '.jianjian', function() {
+			$('this').parent().parent().addClass('chuxian')
+		})
+
 		$('.ball_card_people').on('click', '.teamjian', function() {
 			
 			var jiandata = {
@@ -48,15 +46,12 @@ $(document).ready(function($) {
 					data: jiandata,
 				})
 				.done(function() {
-					alert('删除成功')
+
+					$('.ball_card_people').removeClass('chuxian')
+
+
 					ballCar();
 				})
-				.fail(function() {
-					console.log("error");
-				})
-				.always(function() {
-					console.log("complete");
-				});
 		})
 	}
 	var ballCar = function() {
