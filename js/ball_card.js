@@ -29,17 +29,17 @@ $(document).ready(function($) {
 		})
 	}
 
-
-
-
-	var btn_jian = function() {
-
-		$('.jianjian').click(function(){
+	$('.jianjian').click(function(){
 			console.log($('this').html())
 			console.log($('this').parent().parent().html())
 			$('this').parent().parent().addClass('chuxian')
 		})
 
+
+
+	var btn_jian = function() {
+
+	
 
 
 
