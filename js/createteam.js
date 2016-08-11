@@ -51,7 +51,7 @@ $(document).ready(function($) {
 								})
 								.done(function(data) {
 									alert(1)
-									window.location.href = 'http://v.jgsports.com.cn/ball_card.html'
+									window.location.href = 'http://v.jgsports.com.cn/Golf/ball_card.html'
 								})
 						})
 
@@ -83,7 +83,7 @@ $(document).ready(function($) {
 				})
 				.done(function(data) {
 					alert(3)
-					window.location.href = 'http://v.jgsports.com.cn/ball_card.html'
+					window.location.href = 'http://v.jgsports.com.cn/GOLF/ball_card.html'
 				})
 		})
 
