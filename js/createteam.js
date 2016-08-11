@@ -38,6 +38,7 @@ $(document).ready(function($) {
 					.done(function(data) {
 						
 						$('.team_addbut').click(function() {
+							alert(0)
 							var createteam = {
 								title: $('.team_input').val(),
 								profile: $('.team_con').val()
@@ -49,6 +50,7 @@ $(document).ready(function($) {
 									data: createteam
 								})
 								.done(function(data) {
+									alert(1)
 									window.location.href = 'http://v.jgsports.com.cn/ball_card.html'
 								})
 						})
@@ -68,6 +70,7 @@ $(document).ready(function($) {
 	} else {
 		
 		$('.team_addbut').click(function() {
+			alert(2)
 			var createteam = {
 				title: $('.team_input').val(),
 				profile: $('.team_con').val()
@@ -79,10 +82,11 @@ $(document).ready(function($) {
 					data: createteam
 				})
 				.done(function(data) {
+					alert(3)
 					window.location.href = 'http://v.jgsports.com.cn/ball_card.html'
 				})
 		})
 
-		
+
 	}
 })
