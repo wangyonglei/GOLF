@@ -25,7 +25,8 @@ $(document).ready(function($) {
 						data: jiajiandata,
 					})
 					.done(function() {
-						
+							$('.jiajian_name').val(''),
+							$('.jiajian_tel').val(''),
 							$('.jiajian').hide();
 							$('.yaoqing_btn').removeClass('yaoqing_btnjia');
 							ballCar();
