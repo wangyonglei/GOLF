@@ -29,14 +29,20 @@ $(document).ready(function($) {
 		})
 	}
 
-	
-	$('.ball_card_people').on('click', '.jianjian', function() {
-		console.log($('this').html())
-		$('this').parent().parent().addClass('chuxian')
-	})
+
 
 
 	var btn_jian = function() {
+
+		$('.jianjian').click(function(){
+			console.log($('this').html())
+			console.log($('this').parent().parent().html())
+			$('this').parent().parent().addClass('chuxian')
+		})
+
+
+
+
 
 		$('.ball_card_people').on('click', '.teamjian', function() {
 			
