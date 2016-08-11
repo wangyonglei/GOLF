@@ -40,6 +40,7 @@ $(document).ready(function($) {
 			});
 		})
 	}
+	btn_jia();
 
 	var ballCar = function() {
 		var title = encodeURIComponent($('.ballteam_input').val())
