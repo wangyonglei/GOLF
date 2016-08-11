@@ -15,7 +15,7 @@ $(document).ready(function($) {
 					data: createteam
 				})
 				.done(function(data) {
-					location = 'ball_card.html'
+					window.location.href = 'http://v.jgsports.com.cn/ball_card.html'
 				})
 		})
 	}
