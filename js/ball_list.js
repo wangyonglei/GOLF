@@ -2,7 +2,7 @@ $(document).ready(function() {
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
-	var ball_list = function() {
+	var ball_lists = function() {
 		// 加载列表
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Venue/getList?page=1&limit=15',
@@ -81,7 +81,7 @@ $(document).ready(function() {
 			}
 		});
 	}
-	
+
 	if (!ex_code && !ex_mobile && !ex_uid) {
 		var code = decodeURIComponent((new RegExp('[?|&]code=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		var locationUrl = window.location.href;
@@ -99,7 +99,7 @@ $(document).ready(function() {
 						}
 					})
 					.done(function(data) {
-						ball_list()
+						ball_lists();
 					})
 					.fail(function() {
 						console.log("error");
@@ -112,7 +112,7 @@ $(document).ready(function() {
 			alert('请在微信客户端打开！')
 		}
 	} else {
-		ball_list()
+		ball_lists();
 	}
 	
 });
