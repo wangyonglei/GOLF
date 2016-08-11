@@ -3,7 +3,7 @@ $(document).ready(function($) {
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
 
-	var btn_jia = function{
+	var btn_jia = function(){
 		$('.ball_card_people').on('click', '.teamjia', function() {
 			var teamid = $(this).parent().parent().attr('data-teamId');
 			alert(teamid)
