@@ -47,7 +47,10 @@ $(document).ready(function($) {
 								data: jiajiandata,
 							})
 							.done(function() {
-								$('.jiajian').hide();
+								$('.yaoqing_btn').click(function(event) {
+									$('.jiajian').hide();
+								});
+								
 							})
 							.fail(function() {
 								console.log("error");
