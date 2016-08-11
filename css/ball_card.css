@@ -1,74 +1,122 @@
 .ball_card {
   width: 100%;
   height: auto;
-  overflow: hidden; }
-  .ball_card .ball_search {
-    margin-top: 10px;
-    width: 80%;
-    margin-left: 10%;
-    height: 34px;
-    float: left;
-    overflow: hidden;
-    position: relative; }
-    .ball_card .ball_search input {
-      border: 1px solid #ddd;
-      display: block;
-      height: 32px;
-      width: 82%;
-      float: left;
-      text-indent: 35px;
-      border-radius: 6px;
-      line-height: 32px;
-      background-image: url(../images/search.png);
-      background-position: 10px center;
-      background-repeat: no-repeat;
-      background-size: 20px;
-      overflow: hidden; }
-    .ball_card .ball_search .search_btn {
-      width: 17%;
-      float: left;
-      border: 0;
-      text-align: center;
-      line-height: 32px;
-      outline: none;
-      font-size: 15px;
-      color: #4fb4aa;
-      background: none; }
-    .ball_card .ball_search .x {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-image: url(../images/x.png);
-      background-size: contain;
-      right: 21%;
-      top: 7px; }
-  .ball_card .ball_card_title {
-    text-indent: 15px;
-    color: #666;
-    text-indent: 0; }
-  .ball_card .ball_card_people {
-    width: 100%;
-    height: auto;
-    padding: 15px 0;
-    background-color: #fff;
-    overflow: hidden; }
-    .ball_card .ball_card_people li {
-      float: left;
-      margin-left: 15px; }
-    .ball_card .ball_card_people .people_img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 1px solid #ddd; }
-      .ball_card .ball_card_people .people_img img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%; }
-    .ball_card .ball_card_people p {
-      width: 100%;
-      height: auto;
-      font-size: 15px;
-      color: #333;
-      text-align: center;
-      margin-top: 10px; }
+  overflow: hidden;
+}
+.ball_card .ball_search {
+  margin-top: 10px;
+  width: 80%;
+  margin-left: 10%;
+  height: 34px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+.ball_card .ball_search input {
+  border: 1px solid #ddd;
+  display: block;
+  height: 32px;
+  width: 82%;
+  float: left;
+  text-indent: 35px;
+  border-radius: 6px;
+  line-height: 32px;
+  background-image: url(../images/search.png);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  overflow: hidden;
+}
+.ball_card .ball_search .search_btn {
+  width: 17%;
+  float: left;
+  border: 0;
+  text-align: center;
+  line-height: 32px;
+  outline: none;
+  font-size: 15px;
+  color: #4fb4aa;
+  background: none;
+}
+.ball_card .ball_search .x {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/x.png);
+  background-size: contain;
+  right: 21%;
+  top: 7px;
+}
+.ball_card .ball_card_title {
+  text-indent: 15px;
+  color: #666;
+  text-indent: 0;
+}
+.ball_card .ball_card_people {
+  width: 100%;
+  height: auto;
+  padding: 15px 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+.ball_card .ball_card_people li {
+  float: left;
+  margin-left: 15px;
+}
+.ball_card .ball_card_people .people_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+.ball_card .ball_card_people .people_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.ball_card .ball_card_people p {
+  width: 100%;
+  height: auto;
+  font-size: 15px;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+}
+.ball_card .jiajian {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  left: 0;
+  background-color: #f8f8f8;
+  display: block;
+  z-index: 30;
+}
+.ball_card .jiajian .jiajian_input {
+  width: 80%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 10%;
+  border-radius: 8px;
+}
+.ball_card .jiajian input {
+  text-indent: 1em;
+  width: 100%;
+}
+.ball_card .jiajian .yaoqing_btn {
+  height: 50px;
+  outline: none;
+  width: 100%;
+  background-color: #4fb4aa;
+  font-size: 17px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  border: 0;
+}
