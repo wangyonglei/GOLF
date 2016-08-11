@@ -33,13 +33,14 @@ $(document).ready(function($) {
 					$('.jiajian').show();
 					$('.yaoqing_btn').html('确认添加');
 					$('.yaoqing_btn').addClass('yaoqing_btnjia');
-					var teamid = $(this).attr('data-teamId');
+					var teamid = $(this).parent().parent().attr('data-teamId');
+					alert(teamid)
 					// 确认添加
 					$('.yaoqing_btnjia').click(function(event) {
 						var jiajiandata = {
 							rname: $('.jiajian_name').val(),
 							mobile: $('.jiajian_tel').val(),
-							teamId: teamid
+							teamId: $(this).attr('data-teamId');
 						}
 						$.ajax({
 								url: 'http://v.jgsports.com.cn/user/Team/addTeamMembers',
