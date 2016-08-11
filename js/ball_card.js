@@ -4,7 +4,6 @@ $(document).ready(function($) {
 	var ex_uid = getCookie("ex_uid");
 	var ballCar = function() {
 		var title = encodeURIComponent($('.ballteam_input').val())
-		alert(title)
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Team/getList?title='+title,
 				type: 'get',
@@ -23,10 +22,11 @@ $(document).ready(function($) {
 							html += '<li><div class="people_img"><img src="' + balldata[j].membersList[i].avatar + '"></div><p>' + balldata[j].membersList[i].rname + '</p></li>'
 						}
 					}
-					if (balldata[j].membersList.teamMaster == 1) {
+					// if (balldata[j].membersList.teamMaster == 1) {
 						html += '<li><div class="people_img teamjia"><img src="images/jia.png"></div></li><li><div class="people_img teamjian"><img src="images/jian.png"></div></li>'
-					} else {
-					}
+					// } else {
+						
+					// }
 					html += '</ul></div>'
 				}
 				$('#ball_card').html(html);
