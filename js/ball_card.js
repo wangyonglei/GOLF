@@ -69,7 +69,7 @@ $(document).ready(function($) {
 					html += '</ul></div>'
 				}
 				$('#ball_card').html(html);
-				
+				btn_jia();
 				// jian
 				// $('.ball_card_people').on('click', '.teamjian', function() {
 				// 	$('.jiajian').show();
@@ -122,7 +122,7 @@ $(document).ready(function($) {
 					})
 					.done(function(data) {
 						ballCar();
-						btn_jia();
+						
 						$('.search_btn').click(function() {
 							ballCar();
 						})
@@ -141,7 +141,7 @@ $(document).ready(function($) {
 		ballCar();
 		$('.search_btn').click(function() {
 			ballCar();
-			btn_jia();
+			
 
 		})
 	}
