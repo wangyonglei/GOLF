@@ -63,6 +63,7 @@
   float: left;
   margin-left: 15px;
   line-height: 52px;
+  position: relative;
 }
 .ball_card .ball_card_people .people_img {
   width: 50px;
@@ -75,6 +76,14 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+.ball_card .ball_card_people .teamjian {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .ball_card .ball_card_people p {
   width: 100%;
