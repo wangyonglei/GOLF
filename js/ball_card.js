@@ -30,7 +30,7 @@ $(document).ready(function($) {
 				}
 				$('#ball_card').html(html);
 				$('.ball_card_people').on('click', '.teamjia', function() {
-					var teamid = $(this).attr('data-teamId');
+					var teamid = $(this).parent().parent().attr('data-teamId');
 					alert(teamid)
 					$('.jiajian').show();
 					$('.yaoqing_btn').html('确认添加');
