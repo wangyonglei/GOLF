@@ -31,7 +31,7 @@ $(document).ready(function($) {
 	var btn_jian = function() {
 		$('.ball_card_people').on('click', '.jianjian', function() {
 			alert('jianjian')
-			console.log($('this').parent().parent().html())
+			console.log($('this').html())
 			$('this').parent().parent().addClass('chuxian')
 		})
 
