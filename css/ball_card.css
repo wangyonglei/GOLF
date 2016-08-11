@@ -103,6 +103,10 @@
   border-radius: 8px;
 }
 .ball_card .jiajian input {
+  border: 0;
+  background-color: none;
+  height: 45px;
+  color: #333;
   text-indent: 1em;
   width: 100%;
 }
