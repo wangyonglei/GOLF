@@ -41,7 +41,7 @@ $(document).ready(function($) {
 						var jiajiandata = {
 							rname: $('.jiajian_name').val(),
 							mobile: $('.jiajian_tel').val(),
-							teamId: $(this).attr('data-teamId');
+							teamId: teamid
 						}
 						$.ajax({
 								url: 'http://v.jgsports.com.cn/user/Team/addTeamMembers',
