@@ -3,7 +3,7 @@ $(document).ready(function($) {
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
 	var ballCar = function() {
-		var title = $('.ballteam_input').val()
+		var title = decodeURIComponent($('.ballteam_input').val())
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Team/getList',
 				type: 'get',
@@ -28,7 +28,39 @@ $(document).ready(function($) {
 					}
 					html += '</ul></div>'
 				}
-				$('#ball_card').html(html)
+				$('#ball_card').html(html);
+
+
+					$('.ball_card_people').on('click', '.teamjia', function() {
+						$('.jiajian').show();
+						$('.yaoqing_btn').html('确认添加')
+						var jiajiandata = {
+							rname: $('.jiajian_name').val(),
+							mobile: $('.jiajian_tel').val(),
+							teamId: $(this).attr('data-teamId')
+						}
+						$.ajax({
+								url: 'http://v.jgsports.com.cn/user/Team/addTeamMembers',
+								type: 'post',
+								dataType: 'json',
+								data: jiajiandata,
+							})
+							.done(function() {
+								console.log("success");
+							})
+							.fail(function() {
+								console.log("error");
+							})
+							.always(function() {
+								console.log("complete");
+							});
+					})
+
+
+
+
+
+
 			})
 	}
 	if (!ex_code && !ex_mobile && !ex_uid) {
