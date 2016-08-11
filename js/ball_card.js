@@ -47,7 +47,7 @@ $(document).ready(function($) {
 								data: jiajiandata,
 							})
 							.done(function() {
-								console.log("success");
+								$('.jiajian').hide();
 							})
 							.fail(function() {
 								console.log("error");
