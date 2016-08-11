@@ -84,7 +84,7 @@ $(document).ready(function($) {
 						}
 					}
 					if (balldata[j].teamMaster == 1) {
-						html += '<li><div class="people_img teamjia"><img src="images/jia.png"></div></li>'
+						html += '<li><div class="people_img teamjia"><img src="images/jia.png"></div></li><li><div class="people_img teamjia"><img src="images/jian.png"></div></li>'
 					} else {}
 					html += '</ul></div>'
 				}
