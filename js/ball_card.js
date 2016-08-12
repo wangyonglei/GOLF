@@ -31,9 +31,6 @@ $(document).ready(function($) {
 	var jianjian = function() {
 
 		$('.ball_card_people').on('click', '.jianjian', function() {
-			var teamidsss = $(this).parent().parent().attr('data-teamId');
-			alert(teamidsss)
-			console.log($(this).parent().parent().html())
 			$(this).parent().parent().addClass('chuxian')
 		})
 	}
