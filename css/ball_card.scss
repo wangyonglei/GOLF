@@ -18,7 +18,10 @@ body { padding: 0 }
 		p { width: 100%; height: auto; font-size: 15px; color: #333; text-align: center; margin-top: 10px; }
 	}
 	.chuxian { 
-		.teamjian { display: block; }
+		li{
+			.teamjian { display: block; }
+		}
+		
 	}
 	.jiajian { width: 100%; height: 100%; position: fixed; top: 0; overflow: hidden; left: 0; background-color: #f8f8f8; display: none; z-index: 30;
 		.jiajian_input { width: 80%; height: auto; overflow: hidden; margin-top: 10px; margin-left: 10%; border-radius: 8px; }
