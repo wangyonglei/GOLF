@@ -35,10 +35,9 @@ $(document).ready(function($) {
 		})
 	}
 	var ziliao = function(){
-		alert(0)
 		$('.ziliao').click(function() {
-			var ziliaouid = $(this).parent().attr('data-uid')
-			alert(ziliaouid)
+			var ziliaouid = $(this).attr('data-uid')
+			console.log(ziliaouid)
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/User/getTeamUserInfo',
 					type: 'post',
@@ -46,7 +45,6 @@ $(document).ready(function($) {
 					data: ziliaouid
 				})
 				.done(function() {
-					alert('ok')
 					location ='card.html?uid='+ziliaouid
 				})
 			
