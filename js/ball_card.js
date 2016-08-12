@@ -21,17 +21,18 @@ $(document).ready(function($) {
 					})
 					.done(function() {
 						$('.jiajian_name').val(''),
-							$('.jiajian_tel').val(''),
-							$('.jiajian').hide();
+						$('.jiajian_tel').val(''),
+						$('.jiajian').hide();
 						ballCar();
 					})
 			});
 		})
 	}
 	var jianjian = function() {
-		
+
 		$('body').on('click', '.jianjian', function() {
-			alert('jianjian')
+			var teamidsss = $(this).parent().parent().attr('data-teamId');
+			alert(teamidsss)
 			console.log($('this').html())
 			console.log($('this').parent().parent().html())
 			$('this').parent().parent().addClass('chuxian')
@@ -73,9 +74,9 @@ $(document).ready(function($) {
 					} else {
 						for (var i = 0; i < balldata[j].membersList.length; i++) {
 							html += '<li data-uid="' + balldata[j].membersList[i].uid + '"><div class="people_img"><img src="' + balldata[j].membersList[i].avatar + '">'
-							if (balldata[j].teamMaster == 1) {
-								html += '<div class="teamjian"><img src="images/jian.png"></div>'
-							}
+							// if (balldata[j].teamMaster == 1) {
+							// 	html += '<div class="teamjian"><img src="images/jian.png"></div>'
+							// }
 							html += '</div><p>' + balldata[j].membersList[i].rname + '</p></li>'
 						}
 					}
@@ -90,6 +91,9 @@ $(document).ready(function($) {
 				jianjian();
 			})
 	}
+
+
+
 	if (!ex_code && !ex_mobile && !ex_uid) {
 		var code = decodeURIComponent((new RegExp('[?|&]code=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		var locationUrl = window.location.href;
