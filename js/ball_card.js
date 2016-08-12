@@ -70,7 +70,7 @@ $(document).ready(function($) {
 				})
 			
 		});
-		$('.close_ziliao').click(function(event) {
+		$('.gerenziliao').on('click', '.close_ziliao', function() {
 			$('.gerenziliao').css('height','0%');
 			$('.card').html('')
 
