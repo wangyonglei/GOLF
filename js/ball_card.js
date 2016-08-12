@@ -101,6 +101,7 @@ $(document).ready(function($) {
 				btn_jia();
 				btn_jian();
 				jianjian();
+				ziliao();
 			})
 	}
 
