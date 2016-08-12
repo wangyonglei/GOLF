@@ -63,8 +63,8 @@ $(document).ready(function($) {
 					
 					
 					html += '</div><div class="card_tel">' + carddata.tel + '</div><div class="card_email">' + carddata.email + '</div><div class="hengxian"><p></p><p>·</p><p></p></div><div class="card_company">公司：' + carddata.company_describe + '</div><div class="card_post">职务：' + carddata.position + '</div><div class="card_city">城市：' + carddata.city + '</div><div class="card_resources">资源：' + carddata.resources + '</div></div>'
-					$('.gerenziliao').html(html)
-					$('.gerenziliao').css('height','100%')
+					$('.card').html(html)
+					$('.card').css('height','100%')
 
 
 				})
