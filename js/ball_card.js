@@ -80,8 +80,6 @@ $(document).ready(function($) {
 	var btn_jian = function() {
 		// $('.ball_card_people').on('click', '.teamjian', function() {
 		$('.teamjian').click(function() {
-			console.log($(this).parent().parent().attr('data-teamId'))
-			console.log($(this).parent().attr('data-uid'))
 			var jiandata = {
 				teamid: $(this).parent().parent().attr('data-teamId'),
 				uid: $(this).parent().attr('data-uid')
@@ -93,6 +91,7 @@ $(document).ready(function($) {
 					data: jiandata,
 				})
 				.done(function() {
+					$('.gerenziliao').css('height','0%');
 					$('.ball_card_people').removeClass('chuxian')
 					ballCar();
 				})
