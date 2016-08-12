@@ -29,7 +29,8 @@ $(document).ready(function($) {
 		})
 	}
 	var jianjian = function() {
-		$('.ball_card_people').on('click', '.jianjian', function() {
+		
+		$('body').on('click', '.jianjian', function() {
 			alert('jianjian')
 			console.log($('this').html())
 			console.log($('this').parent().parent().html())
