@@ -70,10 +70,11 @@ $(document).ready(function($) {
 			$('.yaoqing_maxk').css('display', 'block');
 			// $('.yaoqing_yq').html('')
 		})
+		var htmlrname =''
 		$('.yaoqing_btn').click(function(event) {
 			var rname = $('.yaoqing_name').val();
 			var mobile = $('.yaoqing_tel').val();
-			var htmlrname += rname;
+			htmlrname += ''+rname+'';
 			$('.yaoqing_yq').val(htmlrname+',');
 			var yaoqing_namrel = {
 				rname: $('.yaoqing_name').val(),
