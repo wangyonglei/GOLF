@@ -93,9 +93,14 @@ $(document).ready(function($) {
 					
 					// $('.card').html('')
 					// $('.gerenziliao').css('height','0%');
+					if (confirm("确定删除？")) {
+						
+						$('.ball_card_people').removeClass('chuxian')
+						ballCar();
+					}
 
-					$('.ball_card_people').removeClass('chuxian')
-					ballCar();
+
+				
 				})
 		})
 	}

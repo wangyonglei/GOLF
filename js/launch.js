@@ -3,12 +3,10 @@ $(document).ready(function($) {
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
 	var launchs = function() {
-		
-			// 球场列表
+		// 球场列表
 		$('.qiuchang').click(function() {
 			$('.qiuchang_maxk').css('display', 'block');
 			$('.qiuchang_mask').css('display', 'block');
-
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Venue/getList?page=1&limit=15',
 					type: 'Get',
@@ -18,15 +16,13 @@ $(document).ready(function($) {
 					},
 				})
 				.done(function(data) {
-					if (data.status = 1) {
-						var listdata = data.data;
-						var html = "";
-						for (var i = 0; i < listdata.length; i++) {
-							html += '<li>' + listdata[i].title + '<p class="jiao"></p></li>';
-						};
-						// $("#ball_list").html(html);
-						$('.loading').before(html)
-					}
+					var listdata = data.data;
+					var html = "";
+					for (var i = 0; i < listdata.length; i++) {
+						html += '<li data-qid="'+ listdata[i].id +'">' + listdata[i].title + '<p class="jiao"></p></li>';
+					};
+					// $("#ball_list").html(html);
+					$('.loading').before(html)
 				})
 		})
 		$('#ball_list').on('click', 'li', function() {
@@ -75,7 +71,6 @@ $(document).ready(function($) {
 			$('.yaoqing_yq').html('')
 		})
 		$('.yaoqing_btn').click(function(event) {
-
 			var rname = $('.yaoqing_name').val();
 			var mobile = $('.yaoqing_tel').val();
 			$('.yaoqing_yq').append(rname);
@@ -123,41 +118,36 @@ $(document).ready(function($) {
 					}
 				})
 		})
-
 		//滑动加载
-			var stop = true;
-			page = 2;
-			$('.qiuchang_maxk').scroll(function() {
-				var totalheight = parseFloat($('.qiuchang_maxk').height()) + parseFloat($('.qiuchang_maxk').scrollTop());
-		
-
-				if ($("#ball_list").height() <= totalheight) {
-					if (stop == true) {
-						stop = false;
-
-						$.ajax({
-							url: 'http://v.jgsports.com.cn/user/Venue/getList',
-							type: 'Get',
-							dataType: 'json',
-							data: {
-								page: page,
-								limit: 10,
-							},
-							success: function(data) {
-								var listdata = data.data;
-								var ballhtml = "";
-								for (var i = 0; i < listdata.length; i++) {
-									ballhtml += '<li>' + listdata[i].title + '<p class="jiao"></p></li>';
-								};
-								$(".loading").before(ballhtml);
-								stop = true;
-								page++;
-							}
-						})
-					}
+		var stop = true;
+		page = 2;
+		$('.qiuchang_maxk').scroll(function() {
+			var totalheight = parseFloat($('.qiuchang_maxk').height()) + parseFloat($('.qiuchang_maxk').scrollTop());
+			if ($("#ball_list").height() <= totalheight) {
+				if (stop == true) {
+					stop = false;
+					$.ajax({
+						url: 'http://v.jgsports.com.cn/user/Venue/getList',
+						type: 'Get',
+						dataType: 'json',
+						data: {
+							page: page,
+							limit: 10,
+						},
+						success: function(data) {
+							var listdata = data.data;
+							var ballhtml = "";
+							for (var i = 0; i < listdata.length; i++) {
+								ballhtml += '<li>' + listdata[i].title + '<p class="jiao"></p></li>';
+							};
+							$(".loading").before(ballhtml);
+							stop = true;
+							page++;
+						}
+					})
 				}
-			});
-
+			}
+		});
 	}
 	if (!ex_code && !ex_mobile && !ex_uid) {
 		var code = decodeURIComponent((new RegExp('[?|&]code=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
@@ -191,6 +181,4 @@ $(document).ready(function($) {
 	} else {
 		launchs()
 	}
-
-
 });

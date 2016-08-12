@@ -9,9 +9,10 @@
 		.list_num { font-size: 30px; color: #333; float: left; width: 40px; text-align: center; text-indent: 0;
 			p { font-size: 15px; line-height: 0px; }
 		}
-		.list_jia, .list_jian { color: #999; text-indent: 0; border-radius: 4px; border: 1px solid #ddd; text-align: center; line-height: 51px; width: 51px; height: 51px; font-size: 30px; float: left; }
-		.list_jia { margin: 0 15px; }
+		.add, .reduce { color: #999; text-indent: 0; border-radius: 4px; border: 1px solid #ddd; text-align: center; line-height: 51px; width: 51px; height: 51px; font-size: 30px; float: left; }
+		.add { margin: 0 15px; }
 		.list_core { text-indent: 0; float: right; width: 60px; text-align: center; margin-right: 50px; position: relative; line-height: 51px; color: #ed6466; font-size: 30px;
+			input{ width: 100%; height: 100%; border: 0; width: 60px; text-align: center;  line-height: 51px; color: #ed6466; font-size: 30px;}
 			p { font-size: 14px; height: 20px; width: 60px; text-align: center; line-height: 20px; color: #fff; position: absolute; bottom: -10px; background-color: #ed6466; border-radius: 5px; margin-right: 15px; }
 		}
 		li:last-child{ border-bottom: 0 ; }
