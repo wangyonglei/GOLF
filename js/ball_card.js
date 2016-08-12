@@ -91,7 +91,10 @@ $(document).ready(function($) {
 					data: jiandata,
 				})
 				.done(function() {
+					// 
+					$('.card').html('')
 					$('.gerenziliao').css('height','0%');
+
 					$('.ball_card_people').removeClass('chuxian')
 					ballCar();
 				})
