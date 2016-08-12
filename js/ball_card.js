@@ -70,8 +70,7 @@ $(document).ready(function($) {
 				})
 			
 		});
-		// $('.gerenziliao').on('click', '.close_ziliao', function() {
-		$('.close_ziliao').click(function() {
+		$('.gerenziliao').on('click', '.close_ziliao', function() {
 			$('.gerenziliao').css('height','0%');
 			setTimeout(function(){ $('.card').html('')},400);
 
@@ -79,7 +78,8 @@ $(document).ready(function($) {
 		});
 	}
 	var btn_jian = function() {
-		$('.ball_card_people').on('click', '.teamjian', function() {
+		// $('.ball_card_people').on('click', '.teamjian', function() {
+		$('.teamjian').click(function() {
 			console.log($(this).parent().parent().attr('data-teamId'))
 			console.log($(this).parent().attr('data-uid'))
 			var jiandata = {
