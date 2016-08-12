@@ -46,7 +46,7 @@ $(document).ready(function($) {
 						uid:ziliaouid
 					}
 				})
-				.done(function() {
+				.done(function(data) {
 					
 					var carddata = data.data;
 					var html = '';
@@ -65,7 +65,7 @@ $(document).ready(function($) {
 					html += '</div><div class="card_tel">' + carddata.tel + '</div><div class="card_email">' + carddata.email + '</div><div class="hengxian"><p></p><p>·</p><p></p></div><div class="card_company">公司：' + carddata.company_describe + '</div><div class="card_post">职务：' + carddata.position + '</div><div class="card_city">城市：' + carddata.city + '</div><div class="card_resources">资源：' + carddata.resources + '</div><div class="card_btn"><a href="cart_edit.html?uid=' + carddata.uid + '">编辑</a></div></div>'
 					$('.card').html(html)
 
-					
+
 				})
 			
 		});
