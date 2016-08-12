@@ -49,7 +49,7 @@ $(document).ready(function($) {
 									data: createteam
 								})
 								.done(function(data) {
-									// window.location.href = 'http://v.jgsports.com.cn/GOLF/ball_card.html'
+									window.location.href = 'http://v.jgsports.com.cn/GOLF/ball_card.html'
 								})
 						})
 
@@ -79,7 +79,7 @@ $(document).ready(function($) {
 					data: createteam
 				})
 				.done(function(data) {
-					// window.location.href = 'http://v.jgsports.com.cn/GOLF/ball_card.html'
+					window.location.href = 'http://v.jgsports.com.cn/GOLF/ball_card.html'
 				})
 		})
 
