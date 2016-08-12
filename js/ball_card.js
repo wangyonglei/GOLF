@@ -112,11 +112,14 @@ $(document).ready(function($) {
 						html += '<li>暂无</li>'
 					} else {
 						for (var i = 0; i < balldata[j].membersList.length; i++) {
-							html += '<li data-uid="' + balldata[j].membersList[i].uid + '" class="ziliao"> <div class="people_img"><img src="' + balldata[j].membersList[i].avatar + '">'
+							html += '<li data-uid="' + balldata[j].membersList[i].uid + '" class="ziliao"> '
 							if (balldata[j].teamMaster == 1) {
 								html += '<div class="teamjian"><img src="images/jian.png"></div>'
 							}
-							html += '</div><p>' + balldata[j].membersList[i].rname + '</p></li>'
+
+							
+							
+							html += '<div class="people_img"><img src="' + balldata[j].membersList[i].avatar + '"></div><p>' + balldata[j].membersList[i].rname + '</p></li>'
 						}
 					}
 					if (balldata[j].teamMaster == 1) {
