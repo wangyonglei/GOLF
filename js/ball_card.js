@@ -47,7 +47,7 @@ $(document).ready(function($) {
 					}
 				})
 				.done(function() {
-					location ='card.html?uid='+ziliaouid
+					// location ='card.html?uid='+ziliaouid
 				})
 			
 		});
