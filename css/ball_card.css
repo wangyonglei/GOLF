@@ -172,11 +172,12 @@ body {
   background-color: #fff;
 }
 .gerenziliao .close_ziliao {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   right: 10px;
   top: 10px;
+  border-radius: 3px;
 }
 .gerenziliao .close_ziliao img {
   width: 100%;
@@ -184,5 +185,5 @@ body {
 }
 
 .card {
-  margin-top: 15px;
+  margin-top: 10px;
 }
