@@ -68,7 +68,7 @@ $(document).ready(function($) {
 			// 邀请好友
 		$('.yaoqing').click(function() {
 			$('.yaoqing_maxk').css('display', 'block');
-			$('.yaoqing_yq').html('')
+			// $('.yaoqing_yq').html('')
 		})
 		$('.yaoqing_btn').click(function(event) {
 			var rname = $('.yaoqing_name').val();
