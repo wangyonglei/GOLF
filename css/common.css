@@ -207,3 +207,11 @@ a, input {
   overflow: hidden;
   display: block;
 }
+
+.anim {
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}

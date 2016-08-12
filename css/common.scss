@@ -29,3 +29,4 @@ $border: 1px solid #dddddd; $height: 45px; $marginright: 15px;
 .righticon { float: right; width: 20px; height: 20px; background-size: contain; margin-top: 12px;
 	a { width: 100%; height: 100%; overflow: hidden; display: block; }
 }
+.anim{transition: all .3s ease-in-out;-webkit-transition: all .3s ease-in-out;-ms-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;}
