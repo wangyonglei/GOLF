@@ -42,7 +42,9 @@ $(document).ready(function($) {
 					url: 'http://v.jgsports.com.cn/user/User/getTeamUserInfo',
 					type: 'post',
 					dataType: 'json',
-					data: ziliaouid
+					data: {
+						uid:ziliaouid
+					}
 				})
 				.done(function() {
 					location ='card.html?uid='+ziliaouid
