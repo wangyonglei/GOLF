@@ -175,8 +175,8 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 3%;
+  top: 10px;
   border-radius: 3px;
 }
 .gerenziliao .close_ziliao img {
