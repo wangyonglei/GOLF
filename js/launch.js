@@ -73,7 +73,8 @@ $(document).ready(function($) {
 		$('.yaoqing_btn').click(function(event) {
 			var rname = $('.yaoqing_name').val();
 			var mobile = $('.yaoqing_tel').val();
-			$('.yaoqing_yq').val(+rname+',');
+			var htmlrname += rname;
+			$('.yaoqing_yq').val(htmlrname+',');
 			var yaoqing_namrel = {
 				rname: $('.yaoqing_name').val(),
 				mobile: $('.yaoqing_tel').val()
