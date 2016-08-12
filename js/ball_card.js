@@ -35,9 +35,8 @@ $(document).ready(function($) {
 		})
 	}
 	var ziliao = function(){
-		$('.ziliao').click(function() {
-			var ziliaouid = $(this).attr('data-uid')
-			console.log(ziliaouid)
+		$('.people_img').click(function() {
+			var ziliaouid = $(this).parent().attr('data-uid')
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/User/getTeamUserInfo',
 					type: 'post',
@@ -91,9 +90,9 @@ $(document).ready(function($) {
 					data: jiandata,
 				})
 				.done(function() {
-					// 
-					$('.card').html('')
-					$('.gerenziliao').css('height','0%');
+					
+					// $('.card').html('')
+					// $('.gerenziliao').css('height','0%');
 
 					$('.ball_card_people').removeClass('chuxian')
 					ballCar();
