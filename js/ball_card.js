@@ -72,7 +72,8 @@ $(document).ready(function($) {
 		});
 		$('.gerenziliao').on('click', '.close_ziliao', function() {
 			$('.gerenziliao').css('height','0%');
-			$('.card').html('')
+			setTimout($('.card').html(''),400)
+
 
 		});
 	}
