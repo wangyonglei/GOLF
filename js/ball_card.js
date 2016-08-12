@@ -64,11 +64,16 @@ $(document).ready(function($) {
 					
 					html += '</div><div class="card_tel">' + carddata.tel + '</div><div class="card_email">' + carddata.email + '</div><div class="hengxian"><p></p><p>·</p><p></p></div><div class="card_company">公司：' + carddata.company_describe + '</div><div class="card_post">职务：' + carddata.position + '</div><div class="card_city">城市：' + carddata.city + '</div><div class="card_resources">资源：' + carddata.resources + '</div></div>'
 					$('.card').html(html)
-					$('.gerenziliao').css('height','94%')
+					$('.gerenziliao').css('height','100%')
 
 
 				})
 			
+		});
+		$('.close_ziliao').click(function(event) {
+			$('.gerenziliao').css('height','0%');
+			$('.card').html('')
+
 		});
 	}
 	var btn_jian = function() {
