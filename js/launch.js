@@ -132,7 +132,7 @@ $(document).ready(function($) {
 						html += '</ul></div>'
 					}
 					$('#ball_card').html(html);
-					tongxunlu_id();
+					// tongxunlu_id();
 				})
 
 		}
