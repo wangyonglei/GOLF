@@ -138,6 +138,7 @@ $(document).ready(function($) {
 		}
 
 		var tongxunlu_id = function(){
+			var ziliaohtml = '';
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid');
 				var ziliaouname = $(this).parent().attr('data-rname');
@@ -153,7 +154,7 @@ $(document).ready(function($) {
 						alert(ziliaouid)
 						alert(ziliaouname)
 						ziliaohtml += ''+ziliaouname+',';
-				$('.yaoqing_yq').val(ziliaohtml);
+						$('.yaoqing_yq').val(ziliaohtml);
 						// var carddata = data.data;
 						// var html = '';
 
