@@ -99,7 +99,7 @@ $(document).ready(function($) {
 		$('#yaoqinghuodong').click(function() {
 			var dataval = {
 				data: $('.datadata').html(),
-				uid: 304,
+				// uid: 304,
 				title: $('.faqi_input').val(),
 				act_date: $('#pickdate').val(),
 				act_time: $('#picktime').val(),
