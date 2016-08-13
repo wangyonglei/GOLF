@@ -2,110 +2,110 @@ $(document).ready(function($) {
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
-	// var btn_jia = function() {
-	// 	$('.ball_card_people').on('click', '.teamjia', function() {
-	// 		var teamid = $(this).parent().parent().attr('data-teamId');
-	// 		$('.jiajian').show();
-	// 		// 确认添加
-	// 		$('.yaoqing_btn').click(function(event) {
-	// 			var jiajiandata = {
-	// 				rname: $('.jiajian_name').val(),
-	// 				mobile: $('.jiajian_tel').val(),
-	// 				teamId: teamid
-	// 			}
-	// 			$.ajax({
-	// 					url: 'http://v.jgsports.com.cn/user/Team/addTeamMembers',
-	// 					type: 'post',
-	// 					dataType: 'json',
-	// 					data: jiajiandata,
-	// 				})
-	// 				.done(function() {
-	// 					$('.jiajian_name').val(''),
-	// 					$('.jiajian_tel').val(''),
-	// 					$('.jiajian').hide();
-	// 					ballCar();
-	// 				})
-	// 		});
-	// 	})
-	// }
-	// var jianjian = function() {
+	var btn_jia = function() {
+		$('.ball_card_people').on('click', '.teamjia', function() {
+			var teamid = $(this).parent().parent().attr('data-teamId');
+			$('.jiajian').show();
+			// 确认添加
+			$('.yaoqing_btn').click(function(event) {
+				var jiajiandata = {
+					rname: $('.jiajian_name').val(),
+					mobile: $('.jiajian_tel').val(),
+					teamId: teamid
+				}
+				$.ajax({
+						url: 'http://v.jgsports.com.cn/user/Team/addTeamMembers',
+						type: 'post',
+						dataType: 'json',
+						data: jiajiandata,
+					})
+					.done(function() {
+						$('.jiajian_name').val(''),
+						$('.jiajian_tel').val(''),
+						$('.jiajian').hide();
+						ballCar();
+					})
+			});
+		})
+	}
+	var jianjian = function() {
 
-	// 	$('.ball_card_people').on('click', '.jianjian', function() {
-	// 		$(this).parent().parent().addClass('chuxian')
-	// 	})
-	// }
-	// var ziliao = function(){
-	// 	$('.people_img').click(function() {
-	// 		var ziliaouid = $(this).parent().attr('data-uid')
-	// 		$.ajax({
-	// 				url: 'http://v.jgsports.com.cn/user/User/getTeamUserInfo',
-	// 				type: 'post',
-	// 				dataType: 'json',
-	// 				data: {
-	// 					uid:ziliaouid
-	// 				}
-	// 			})
-	// 			.done(function(data) {
+		$('.ball_card_people').on('click', '.jianjian', function() {
+			$(this).parent().parent().addClass('chuxian')
+		})
+	}
+	var ziliao = function(){
+		$('.people_img').click(function() {
+			var ziliaouid = $(this).parent().attr('data-uid')
+			$.ajax({
+					url: 'http://v.jgsports.com.cn/user/User/getTeamUserInfo',
+					type: 'post',
+					dataType: 'json',
+					data: {
+						uid:ziliaouid
+					}
+				})
+				.done(function(data) {
 					
-	// 				var carddata = data.data;
-	// 				var html = '';
+					var carddata = data.data;
+					var html = '';
 
-	// 				html += '<div class="close_ziliao"><img src="images/c.png" alt=""></div><div class="card_ban"><div class="card_img"><img src="' + carddata.avatar + '"></div><div class="card_con"><div class="xian"><p></p><p>·</p><p></p></div><div class="card_name">' + carddata.rname + '</div><div class="card_des">' + carddata.signature + '</div><div class="card_qiu"><span>球龄</span>' + carddata.ball_age + '<span>差点</span>' + carddata.almost + '</div></div></div><div class="card_vip">';
+					html += '<div class="close_ziliao"><img src="images/c.png" alt=""></div><div class="card_ban"><div class="card_img"><img src="' + carddata.avatar + '"></div><div class="card_con"><div class="xian"><p></p><p>·</p><p></p></div><div class="card_name">' + carddata.rname + '</div><div class="card_des">' + carddata.signature + '</div><div class="card_qiu"><span>球龄</span>' + carddata.ball_age + '<span>差点</span>' + carddata.almost + '</div></div></div><div class="card_vip">';
 					
-	// 				if (carddata.membership.length == 0) {
-	// 					html += '无'
-	// 				}else{
-	// 					for (var i = 0; i < carddata.membership.length; i++) {
-	// 					html += '' + carddata.membership[i].title + '<br>'
-	// 					}
-	// 				}
+					if (carddata.membership.length == 0) {
+						html += '无'
+					}else{
+						for (var i = 0; i < carddata.membership.length; i++) {
+						html += '' + carddata.membership[i].title + '<br>'
+						}
+					}
 					
 					
-	// 				html += '</div><div class="card_tel">' + carddata.tel + '</div><div class="card_email">' + carddata.email + '</div><div class="hengxian"><p></p><p>·</p><p></p></div><div class="card_company">公司：' + carddata.company_describe + '</div><div class="card_post">职务：' + carddata.position + '</div><div class="card_city">城市：' + carddata.city + '</div><div class="card_resources">资源：' + carddata.resources + '</div></div>'
-	// 				$('.card').html(html)
-	// 				$('.gerenziliao').css('height','100%')
+					html += '</div><div class="card_tel">' + carddata.tel + '</div><div class="card_email">' + carddata.email + '</div><div class="hengxian"><p></p><p>·</p><p></p></div><div class="card_company">公司：' + carddata.company_describe + '</div><div class="card_post">职务：' + carddata.position + '</div><div class="card_city">城市：' + carddata.city + '</div><div class="card_resources">资源：' + carddata.resources + '</div></div>'
+					$('.card').html(html)
+					$('.gerenziliao').css('height','100%')
 
 
-	// 			})
+				})
 			
-	// 	});
-	// 	$('.gerenziliao').on('click', '.close_ziliao', function() {
-	// 		$('.gerenziliao').css('height','0%');
-	// 		setTimeout(function(){ $('.card').html('')},400);
+		});
+		$('.gerenziliao').on('click', '.close_ziliao', function() {
+			$('.gerenziliao').css('height','0%');
+			setTimeout(function(){ $('.card').html('')},400);
 
 
-	// 	});
-	// }
-	// var btn_jian = function() {
-	// 	// $('.ball_card_people').on('click', '.teamjian', function() {
-	// 	$('.teamjian').click(function() {
-	// 		var jiandata = {
-	// 			teamid: $(this).parent().parent().attr('data-teamId'),
-	// 			uid: $(this).parent().attr('data-uid')
-	// 		}
-	// 		$.ajax({
-	// 				url: 'http://v.jgsports.com.cn/user/Team/signOutTeam',
-	// 				type: 'post',
-	// 				dataType: 'json',
-	// 				data: jiandata,
-	// 			})
-	// 			.done(function() {
+		});
+	}
+	var btn_jian = function() {
+		// $('.ball_card_people').on('click', '.teamjian', function() {
+		$('.teamjian').click(function() {
+			var jiandata = {
+				teamid: $(this).parent().parent().attr('data-teamId'),
+				uid: $(this).parent().attr('data-uid')
+			}
+			$.ajax({
+					url: 'http://v.jgsports.com.cn/user/Team/signOutTeam',
+					type: 'post',
+					dataType: 'json',
+					data: jiandata,
+				})
+				.done(function() {
 					
-	// 				// $('.card').html('')
-	// 				// $('.gerenziliao').css('height','0%');
-	// 				if (confirm("确定删除？")) {
-	// 					console.log(1)
-	// 					$('.ball_card_people').removeClass('chuxian');
-	// 					ballCar();
-	// 				}else{
-	// 					console.log(2)
-	// 				}
+					// $('.card').html('')
+					// $('.gerenziliao').css('height','0%');
+					if (confirm("确定删除？")) {
+						console.log(1)
+						$('.ball_card_people').removeClass('chuxian');
+						ballCar();
+					}else{
+						console.log(2)
+					}
 
 
 				
-	// 			})
-	// 	})
-	// }
+				})
+		})
+	}
 	var ballCar = function() {
 		var title = encodeURIComponent($('.ballteam_input').val())
 		$.ajax({
@@ -139,10 +139,10 @@ $(document).ready(function($) {
 					html += '</ul></div>'
 				}
 				$('#ball_card').html(html);
-				// btn_jia();
-				// btn_jian();
-				// jianjian();
-				// ziliao();
+				btn_jia();
+				btn_jian();
+				jianjian();
+				ziliao();
 			})
 	}
 
