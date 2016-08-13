@@ -96,6 +96,7 @@ $(document).ready(function($) {
 					if (confirm("确定删除？")) {
 						console.log(1)
 						$('.ball_card_people').removeClass('chuxian');
+						btn_jian();
 						ballCar();
 					}else{
 						console.log(2)
