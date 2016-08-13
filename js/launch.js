@@ -94,7 +94,7 @@ $(document).ready(function($) {
 					console.log('O(∩_∩)O哈哈~')
 					$('.yaoqing_name').val('');
 					$('.yaoqing_tel').val('');
-					$('.datadata').append(data)
+					$('.datadata').append(data+',')
 				})
 		});
 
@@ -233,7 +233,7 @@ $(document).ready(function($) {
 				act_time: $('#picktime').val(),
 				remarks: $('.beizhu_input').val(),
 				venue_id: $('.qiuchang_inputid').html(),
-				join_member : $('.yaoqing').val()
+				join_member : $('.datadata').html()
 			}
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Act/addInfo',
