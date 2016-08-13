@@ -142,6 +142,7 @@ $(document).ready(function($) {
 				var ziliaouname = $(this).parent().attr('data-rname');
 				ziliaohtml += ''+ziliaouname+',';
 				$('.yaoqing_yq').val(ziliaohtml);
+				$('.datadata').append(ziliaouid+',')
 				$('.tongxunlu_mask').css('display', 'none');
 				$('.ball_card').css('display', 'none');
 
