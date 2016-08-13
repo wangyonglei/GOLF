@@ -137,7 +137,7 @@ $(document).ready(function($) {
 
 		}
 
-		// var tongxunlu_id = function(){
+		var tongxunlu_id = function(){
 			var ziliaohtml = '';
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid');
@@ -151,7 +151,7 @@ $(document).ready(function($) {
 				
 			});
 		
-		// }
+		}
 
 
 
@@ -197,14 +197,15 @@ $(document).ready(function($) {
 
 
 
-		
+
 
 
 
 		$('.righticon').click(function(){
 			$('.tongxunlu_mask').css('display', 'block');
 			$('.ball_card').css('display', 'block');
-			tongxunlu()
+			tongxunlu();
+			tongxunlu_id()
 
 
 
