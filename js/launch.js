@@ -126,9 +126,7 @@ $(document).ready(function($) {
 								html += '<div class="people_img"><img src="' + balldata[j].membersList[i].avatar + '"></div><p>' + balldata[j].membersList[i].rname + '</p></li>'
 							}
 						}
-						if (balldata[j].teamMaster == 1) {
-							html += '<li><div class="people_img teamjia"><img src="images/jia.png"></div></li><li><div class="people_img jianjian"><img src="images/jian.png"></div></li>'
-						} 
+						
 						html += '</ul></div>'
 					}
 					$('#ball_card').html(html);
