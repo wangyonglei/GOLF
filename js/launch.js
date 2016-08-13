@@ -25,6 +25,8 @@ $(document).ready(function($) {
 					$('.loading').before(html)
 				})
 		})
+		
+
 		$('#ball_list').on('click', 'li', function() {
 			$('.qiuchang_input').val('')
 			$('.qiuchang_inputid').html('')
@@ -95,6 +97,57 @@ $(document).ready(function($) {
 					$('.datadata').html(data)
 				})
 		});
+
+		// 通讯录icon
+		var tongxunlu = function(){
+			var title = encodeURIComponent($('.ballteam_input').val())
+			$.ajax({
+					url: 'http://v.jgsports.com.cn/user/Team/getList?title=' + title,
+					type: 'get',
+					dataType: 'json',
+					data: title
+				})
+				.done(function(data) {
+					var balldata = data.data;
+					var html = '';
+					for (var j = 0; j < balldata.length; j++) {
+						html += '<div class="wai"><div class="duan ball_card_title">' + balldata[j].title + '（' + balldata[j].membersNumber + '人）<p class="xiajiao"></p></div><ul class="ball_card_people"   data-teamId="' + balldata[j].id + '">'
+						if (balldata[j].membersList.length == 0) {
+							html += '<li>暂无</li>'
+						} else {
+							for (var i = 0; i < balldata[j].membersList.length; i++) {
+								html += '<li data-uid="' + balldata[j].membersList[i].uid + '" class="ziliao"> '
+								if (balldata[j].teamMaster == 1) {
+									html += '<div class="teamjian"><img src="images/jian.png"></div>'
+								}
+
+								
+								
+								html += '<div class="people_img"><img src="' + balldata[j].membersList[i].avatar + '"></div><p>' + balldata[j].membersList[i].rname + '</p></li>'
+							}
+						}
+						if (balldata[j].teamMaster == 1) {
+							html += '<li><div class="people_img teamjia"><img src="images/jia.png"></div></li><li><div class="people_img jianjian"><img src="images/jian.png"></div></li>'
+						} 
+						html += '</ul></div>'
+					}
+					$('.tongxunlu').html(html);
+					
+				})
+
+		}
+		$('.righticon').click(function(){
+			$('.tongxunlu_mask').css('display', 'block');
+			$('.tongxunlu').css('display', 'block');
+			tongxunlu()
+
+
+
+		})
+		$('.tongxunlu_mask').click(function() {
+				$('.tongxunlu_mask').css('display', 'none');
+				$('.tongxunlu').css('display', 'none');
+			})
 		// 发布邀请活动
 		$('#yaoqinghuodong').click(function() {
 			var dataval = {
