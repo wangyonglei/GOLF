@@ -138,7 +138,7 @@ $(document).ready(function($) {
 		}
 
 		var tongxunlu_id = function(){
-			var ziliaohtml ;
+			var ziliaohtml = '';
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid');
 				var ziliaouname = $(this).parent().attr('data-rname');
