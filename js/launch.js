@@ -136,6 +136,52 @@ $(document).ready(function($) {
 				})
 
 		}
+
+		var ziliao = function(){
+			$('.people_img').click(function() {
+				var ziliaouid = $(this).parent().attr('data-uid')
+				$.ajax({
+						url: 'http://v.jgsports.com.cn/user/User/getTeamUserInfo',
+						type: 'post',
+						dataType: 'json',
+						data: {
+							uid:ziliaouid
+						}
+					})
+					.done(function(data) {
+						
+						var carddata = data.data;
+						var html = '';
+
+						html += '<div class="close_ziliao"><img src="images/c.png" alt=""></div><div class="card_ban"><div class="card_img"><img src="' + carddata.avatar + '"></div><div class="card_con"><div class="xian"><p></p><p>·</p><p></p></div><div class="card_name">' + carddata.rname + '</div><div class="card_des">' + carddata.signature + '</div><div class="card_qiu"><span>球龄</span>' + carddata.ball_age + '<span>差点</span>' + carddata.almost + '</div></div></div><div class="card_vip">';
+						
+						if (carddata.membership.length == 0) {
+							html += '无'
+						}else{
+							for (var i = 0; i < carddata.membership.length; i++) {
+							html += '' + carddata.membership[i].title + '<br>'
+							}
+						}
+						
+						
+						html += '</div><div class="card_tel">' + carddata.tel + '</div><div class="card_email">' + carddata.email + '</div><div class="hengxian"><p></p><p>·</p><p></p></div><div class="card_company">公司：' + carddata.company_describe + '</div><div class="card_post">职务：' + carddata.position + '</div><div class="card_city">城市：' + carddata.city + '</div><div class="card_resources">资源：' + carddata.resources + '</div></div>'
+						$('.card').html(html)
+						$('.gerenziliao').css('height','100%')
+
+
+					})
+				
+			});
+			$('.gerenziliao').on('click', '.close_ziliao', function() {
+				$('.gerenziliao').css('height','0%');
+				setTimeout(function(){ $('.card').html('')},400);
+
+
+			});
+		}
+
+
+		
 		$('.righticon').click(function(){
 			$('.tongxunlu_mask').css('display', 'block');
 			$('.ball_card').css('display', 'block');
@@ -167,10 +213,10 @@ $(document).ready(function($) {
 					data: dataval
 				})
 				.done(function(data) {
-					console.log('发布邀请活动成功！O(∩_∩)O哈哈~')
-					if (confirm("发布活动成功！确定-进入活动列表")) {
-						window.location.href = "activitylist.html"
-					}
+					// console.log('发布邀请活动成功！O(∩_∩)O哈哈~')
+					// if (confirm("发布活动成功！确定-进入活动列表")) {
+					// 	window.location.href = "activitylist.html"
+					// }
 				})
 		})
 		//滑动加载
