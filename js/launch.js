@@ -145,7 +145,17 @@ $(document).ready(function($) {
 				$('.tongxunlu_mask').css('display', 'none');
 				$('.ball_card').css('display', 'none');
 
-				
+				$.ajax({
+						url: 'http://v.jgsports.com.cn/user/User/addUserInfo',
+						type: 'post',
+						dataType: 'json',
+					})
+					.done(function(data) {
+						var data = data.data;
+						console.log('O(∩_∩)O哈哈~')
+					
+						$('.datadata').html(data)
+					})
 				
 			});
 		
