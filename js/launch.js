@@ -116,7 +116,7 @@ $(document).ready(function($) {
 							html += '<li>暂无</li>'
 						} else {
 							for (var i = 0; i < balldata[j].membersList.length; i++) {
-								html += '<li data-uid="' + balldata[j].membersList[i].uid + '" class="ziliao"> '
+								html += '<li data-uid="' + balldata[j].membersList[i].uid + '" data-rname="' + balldata[j].membersList[i].rname + '" class="ziliao"> '
 								if (balldata[j].teamMaster == 1) {
 									html += '<div class="teamjian"><img src="images/jian.png"></div>'
 								}
@@ -140,6 +140,7 @@ $(document).ready(function($) {
 		var tongxunlu_id = function(){
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid')
+				var ziliaouname = $(this).parent().attr('data-rname')
 				$.ajax({
 						url: 'http://v.jgsports.com.cn/user/User/getTeamUserInfo',
 						type: 'post',
@@ -150,6 +151,7 @@ $(document).ready(function($) {
 					})
 					.done(function(data) {
 						alert(ziliaouid)
+						alert(ziliaouname)
 						
 						// var carddata = data.data;
 						// var html = '';
