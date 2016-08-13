@@ -15,7 +15,6 @@ $(document).ready(function($) {
 					data: createteam
 				})
 				.done(function(data) {
-					alert(0)
 					location = 'http://v.jgsports.com.cn/GOLF/ball_card.html'
 				})
 		})
