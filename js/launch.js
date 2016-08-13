@@ -131,14 +131,14 @@ $(document).ready(function($) {
 						} 
 						html += '</ul></div>'
 					}
-					$('.ball_card').html(html);
+					$('#ball_card').html(html);
 					
 				})
 
 		}
 		$('.righticon').click(function(){
 			$('.tongxunlu_mask').css('display', 'block');
-			$('.tongxunlu').css('display', 'block');
+			$('.ball_card').css('display', 'block');
 			tongxunlu()
 
 
@@ -146,7 +146,7 @@ $(document).ready(function($) {
 		})
 		$('.tongxunlu_mask').click(function() {
 				$('.tongxunlu_mask').css('display', 'none');
-				$('.tongxunlu').css('display', 'none');
+				$('.ball_card').css('display', 'none');
 			})
 		// 发布邀请活动
 		$('#yaoqinghuodong').click(function() {
