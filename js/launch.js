@@ -140,7 +140,7 @@ $(document).ready(function($) {
 							var listdata = data.data;
 							var ballhtml = "";
 							for (var i = 0; i < listdata.length; i++) {
-								ballhtml += '<li>' + listdata[i].title + '<p class="jiao"></p></li>';
+								ballhtml += '<li  data-qid="'+ listdata[i].id +'">' + listdata[i].title + '<p class="jiao"></p></li>';
 							};
 							$(".loading").before(ballhtml);
 							stop = true;
