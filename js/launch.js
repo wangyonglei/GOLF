@@ -138,10 +138,11 @@ $(document).ready(function($) {
 		}
 
 		var tongxunlu_id = function(){
-			var ziliaohtml = '';
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid');
 				var ziliaouname = $(this).parent().attr('data-rname');
+			var ziliaohtml = '';
+				
 				ziliaohtml += ''+ziliaouname+',';
 				$('.yaoqing_yq').val(ziliaohtml);
 				$('.tongxunlu_mask').css('display', 'none');
