@@ -137,12 +137,11 @@ $(document).ready(function($) {
 
 		}
 
-		var tongxunlu_id = function(){
+		// var tongxunlu_id = function(){
+			var ziliaohtml = '';
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid');
 				var ziliaouname = $(this).parent().attr('data-rname');
-			var ziliaohtml = '';
-				
 				ziliaohtml += ''+ziliaouname+',';
 				$('.yaoqing_yq').val(ziliaohtml);
 				$('.tongxunlu_mask').css('display', 'none');
@@ -152,7 +151,53 @@ $(document).ready(function($) {
 				
 			});
 		
-		}
+		// }
+
+
+
+
+
+
+
+
+
+		// var htmlrname =''
+		// $('.yaoqing_btn').click(function(event) {
+		// 	var rname = $('.yaoqing_name').val();
+		// 	var mobile = $('.yaoqing_tel').val();
+		// 	htmlrname += ''+rname+',';
+		// 	$('.yaoqing_yq').val(htmlrname);
+		// 	var yaoqing_namrel = {
+		// 		rname: $('.yaoqing_name').val(),
+		// 		mobile: $('.yaoqing_tel').val()
+		// 	}
+		// 	$('.yaoqing_maxk').css('display', 'none');
+		// 	$.ajax({
+		// 			url: 'http://v.jgsports.com.cn/user/User/addUserInfo',
+		// 			type: 'post',
+		// 			dataType: 'json',
+		// 			data: yaoqing_namrel
+		// 		})
+		// 		.done(function(data) {
+		// 			var data = data.data;
+		// 			console.log('O(∩_∩)O哈哈~')
+		// 			$('.yaoqing_name').val('');
+		// 			$('.yaoqing_tel').val('');
+		// 			$('.datadata').html(data)
+		// 		})
+		// });
+
+
+
+
+
+
+
+
+
+
+
+		
 
 
 
