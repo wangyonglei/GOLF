@@ -131,7 +131,7 @@ $(document).ready(function($) {
 						} 
 						html += '</ul></div>'
 					}
-					$('.tongxunlu_con').html(html);
+					$('.ball_card').html(html);
 					
 				})
 
