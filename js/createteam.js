@@ -2,23 +2,7 @@ $(document).ready(function($) {
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
-	var createTeam = function() {
-		$('.team_addbut').click(function() {
-			var createteam = {
-				title: $('.team_input').val(),
-				profile: $('.team_con').val()
-			}
-			$.ajax({
-					url: 'http://v.jgsports.com.cn/user/Team/addTeam',
-					type: 'post',
-					dataType: 'json',
-					data: createteam
-				})
-				.done(function(data) {
-					location = 'ball_card.html'
-				})
-		})
-	}
+	
 	if (!ex_code && !ex_mobile && !ex_uid) {
 		var code = decodeURIComponent((new RegExp('[?|&]code=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		var locationUrl = window.location.href;
@@ -56,5 +40,22 @@ $(document).ready(function($) {
 		createTeam();
 
 
+	}
+	var createTeam = function() {
+		$('.team_addbut').click(function() {
+			var createteam = {
+				title: $('.team_input').val(),
+				profile: $('.team_con').val()
+			}
+			$.ajax({
+					url: 'http://v.jgsports.com.cn/user/Team/addTeam',
+					type: 'post',
+					dataType: 'json',
+					data: createteam
+				})
+				.done(function(data) {
+					location = 'ball_card.html'
+				})
+		})
 	}
 })
