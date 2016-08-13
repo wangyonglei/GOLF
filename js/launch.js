@@ -132,12 +132,12 @@ $(document).ready(function($) {
 						html += '</ul></div>'
 					}
 					$('#ball_card').html(html);
-					
+					tongxunlu_id();
 				})
 
 		}
 
-		var ziliao = function(){
+		var tongxunlu_id = function(){
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid')
 				$.ajax({
@@ -149,39 +149,34 @@ $(document).ready(function($) {
 						}
 					})
 					.done(function(data) {
+						alert(ziliaouid)
 						
-						var carddata = data.data;
-						var html = '';
+						// var carddata = data.data;
+						// var html = '';
 
-						html += '<div class="close_ziliao"><img src="images/c.png" alt=""></div><div class="card_ban"><div class="card_img"><img src="' + carddata.avatar + '"></div><div class="card_con"><div class="xian"><p></p><p>·</p><p></p></div><div class="card_name">' + carddata.rname + '</div><div class="card_des">' + carddata.signature + '</div><div class="card_qiu"><span>球龄</span>' + carddata.ball_age + '<span>差点</span>' + carddata.almost + '</div></div></div><div class="card_vip">';
+						// html += '<div class="close_ziliao"><img src="images/c.png" alt=""></div><div class="card_ban"><div class="card_img"><img src="' + carddata.avatar + '"></div><div class="card_con"><div class="xian"><p></p><p>·</p><p></p></div><div class="card_name">' + carddata.rname + '</div><div class="card_des">' + carddata.signature + '</div><div class="card_qiu"><span>球龄</span>' + carddata.ball_age + '<span>差点</span>' + carddata.almost + '</div></div></div><div class="card_vip">';
 						
-						if (carddata.membership.length == 0) {
-							html += '无'
-						}else{
-							for (var i = 0; i < carddata.membership.length; i++) {
-							html += '' + carddata.membership[i].title + '<br>'
-							}
-						}
+						// if (carddata.membership.length == 0) {
+						// 	html += '无'
+						// }else{
+						// 	for (var i = 0; i < carddata.membership.length; i++) {
+						// 	html += '' + carddata.membership[i].title + '<br>'
+						// 	}
+						// }
 						
 						
-						html += '</div><div class="card_tel">' + carddata.tel + '</div><div class="card_email">' + carddata.email + '</div><div class="hengxian"><p></p><p>·</p><p></p></div><div class="card_company">公司：' + carddata.company_describe + '</div><div class="card_post">职务：' + carddata.position + '</div><div class="card_city">城市：' + carddata.city + '</div><div class="card_resources">资源：' + carddata.resources + '</div></div>'
-						$('.card').html(html)
-						$('.gerenziliao').css('height','100%')
+						// html += '</div><div class="card_tel">' + carddata.tel + '</div><div class="card_email">' + carddata.email + '</div><div class="hengxian"><p></p><p>·</p><p></p></div><div class="card_company">公司：' + carddata.company_describe + '</div><div class="card_post">职务：' + carddata.position + '</div><div class="card_city">城市：' + carddata.city + '</div><div class="card_resources">资源：' + carddata.resources + '</div></div>'
+						// $('.card').html(html)
 
 
 					})
 				
 			});
-			$('.gerenziliao').on('click', '.close_ziliao', function() {
-				$('.gerenziliao').css('height','0%');
-				setTimeout(function(){ $('.card').html('')},400);
-
-
-			});
+		
 		}
 
 
-		
+
 		$('.righticon').click(function(){
 			$('.tongxunlu_mask').css('display', 'block');
 			$('.ball_card').css('display', 'block');
