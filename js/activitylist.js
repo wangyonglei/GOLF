@@ -82,7 +82,7 @@ $(document).ready(function() {
 
 		// 点击加载各类 0为全部 ， 1 为本周  ，2为本月  3为球场
 	$(".al_con").eq(0).show();
-	$(".al_title li").click(function() {
+	$(".al_title li").oneclick(function() {
 			$(this).addClass("cur").siblings().removeClass('cur');
 			index = $(this).index();
 			$(".al_con").hide().eq($(this).index()).show();
