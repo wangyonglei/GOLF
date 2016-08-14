@@ -250,7 +250,11 @@ $(document).ready(function($) {
 				})
 				.done(function(data) { 
 					if (data.status == 1) {
-						alert('发布成功')
+
+						// alert('发布成功')
+						if (confirm("发布活动成功！确定-进入活动列表")) {
+							window.location.href = "activitylist.html"
+						}
 					}else if(data.msg =='活动已经存在'){
 						alert('活动已经存在')
 					}else if(data.msg =="活动名称不能为空"){
@@ -264,10 +268,7 @@ $(document).ready(function($) {
 					}
 
 
-					// console.log('发布邀请活动成功！O(∩_∩)O哈哈~')
-					// if (confirm("发布活动成功！确定-进入活动列表")) {
-					// 	window.location.href = "activitylist.html"
-					// }
+					
 				})
 		})
 		//滑动加载
