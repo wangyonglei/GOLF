@@ -76,6 +76,7 @@ $(document).ready(function($) {
 		$('.yaoqing_btn').click(function(event) {
 			var rname = $('.yaoqing_name').val();
 			var mobile = $('.yaoqing_tel').val();
+			$('.yaoqing_span').css('display','none');
 			htmlrname += ''+rname+',';
 			$('.yaoqing_yq').append(htmlrname);
 			var yaoqing_namrel = {
@@ -140,6 +141,7 @@ $(document).ready(function($) {
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid');
 				var ziliaouname = $(this).parent().attr('data-rname');
+				$('.yaoqing_span').css('display','none');
 				// ziliaohtml += ','+ziliaouname+',';
 				// $('.yaoqing_yq').val(ziliaohtml);
 				htmlrname += ''+ziliaouname+',';
