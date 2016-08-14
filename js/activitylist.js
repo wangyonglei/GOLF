@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var uid = 304;
+	// 已经报名
 	// 默认全部加载5条
 	$.ajax({
 			url: 'http://v.jgsports.com.cn/user/Act/getList',
@@ -7,15 +7,15 @@ $(document).ready(function() {
 			dataType: 'json',
 			data: {
 				type: 0,
-				uid: uid,
 				page: 1,
-				limit: 6
+				limit: 6,
+				category:1
 			},
 			success: function(data) {
 				var html = $('#activitylist').html();
 				var actlistdata = data.data;
 				for (var i = 0; i < 6; i++) {
-					html += '<li><a href="activitydetail.html?id=' + actlistdata[i].id + '"><div class="al_img">';
+					html += '<li><a href="activitydetail.html"><div class="al_img">';
 					if (!actlistdata[i].actPhotoAlbumList.picurl) {
 						html += '<img src="images/golfdetail1.jpg">';
 					}
@@ -80,7 +80,7 @@ $(document).ready(function() {
 						var html = '';
 						var actlistdata = data.data;
 						for (var i = 0; i < actlistdata.length; i++) {
-							html += '<li><a href="activitydetail.html?id=' + actlistdata[i].id + '"><div class="al_img">';
+							html += '<li><a href="activitydetail.html"><div class="al_img">';
 							if (!actlistdata[i].actPhotoAlbumList.picurl) {
 								html += '<img src="images/golfdetail1.jpg">';
 							}
