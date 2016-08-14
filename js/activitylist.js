@@ -12,7 +12,8 @@ $(document).ready(function() {
 				category:1
 			},
 			success: function(data) {
-				var html = $('#activitylist').html();
+				// var html = $('#activitylist').html();
+				var html = '';
 				var actlistdata = data.data;
 				for (var i = 0; i < 10; i++) {
 					html += '<li><a href="activitydetail.html"><div class="al_img">';
@@ -23,7 +24,8 @@ $(document).ready(function() {
 						'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
 						'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
 				};
-				$("#activitylist").html(html);
+				// $("#activitylist").html(html);
+				$('.Loading').before(html)
 			}
 		})
 		// 点击加载各类 0为全部 ， 1 为本周  ，2为本月  3为球场
@@ -72,9 +74,10 @@ $(document).ready(function() {
 					dataType: 'json',
 					data: {
 						page: page,
-						limit: 1,
+						limit: 6,
 						type: 0,
-						uid: 304
+						category:1
+						// uid: 304
 					},
 					success: function(data) {
 						var html = '';
