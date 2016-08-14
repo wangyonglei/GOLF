@@ -140,7 +140,7 @@ $(document).ready(function($) {
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid');
 				var ziliaouname = $(this).parent().attr('data-rname');
-				ziliaohtml += ''+ziliaouname+',';
+				ziliaohtml += ','+ziliaouname+',';
 				$('.yaoqing_yq').val(ziliaohtml);
 				$('.datadata').append(ziliaouid+',')
 				$('.tongxunlu_mask').css('display', 'none');
