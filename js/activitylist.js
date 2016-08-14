@@ -19,7 +19,6 @@ $(document).ready(function() {
 						}
 					})
 					.done(function(data) {
-						alert(3)
 						activitylists()
 					})
 					.fail(function() {
@@ -33,14 +32,12 @@ $(document).ready(function() {
 			alert('请在微信客户端打开！')
 		}
 	} else {
-		alert(0)
 		activitylists()
 	}
 
 
 
 	var activitylists = function(){
-		alert(1)
 		 $(".al_con0").show();
 		// 已经报名
 		// 默认全部加载6条
@@ -56,8 +53,8 @@ $(document).ready(function() {
 					// code:code
 				},
 				success: function(data) {
-					alert(2)
 					// var html = $('#activitylist').html();
+					// $('#')
 					var html = '';
 					var actlistdata = data.data;
 					for (var i = 0; i < 6; i++) {
@@ -69,8 +66,8 @@ $(document).ready(function() {
 							'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
 							'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
 					};
-					// $("#activitylist").html(html);
-					$('.Loading0').before(html)
+					$("#activitylist").append(html);
+					// $('.Loading0').before(html)
 					scrollpage(0);
 				}
 			})
@@ -107,7 +104,8 @@ $(document).ready(function() {
 										'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
 										'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
 								};
-								$(".Loading"+type).before(html);
+								// $(".Loading"+type).before(html);
+								$('#activitylist').append(html)
 								stop = true;
 								page++;
 								if (data.msg=="暂无活动信息") {
@@ -131,7 +129,7 @@ $(document).ready(function() {
 		$(".al_title li").click(function() {
 				$(this).addClass("cur").siblings().removeClass('cur');
 				index = $(this).index();
-				$(".al_con").hide().eq($(this).index()).show();
+				// $(".al_con").hide().eq($(this).index()).show();
 				var actdata = {
 					type: index,
 					page: 1,
@@ -146,6 +144,7 @@ $(document).ready(function() {
 					dataType: 'json',
 					data: actdata,
 					success: function(data) {
+						$('#activitylist').html('')
 						var html = '';
 						var actlistdata = data.data;
 						for (var i = 0; i < 6; i++) {
@@ -157,7 +156,8 @@ $(document).ready(function() {
 								'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
 								'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
 						};
-						$(".Loading"+index).before(html);
+						// $(".Loading"+index).before(html);
+						$('#activitylist').append(html)
 						scrollpage(index);
 					}
 				});
