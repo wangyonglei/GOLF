@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// 已经报名
-	// 默认全部加载5条
+	// 默认全部加载10条
 	$.ajax({
 			url: 'http://v.jgsports.com.cn/user/Act/getList',
 			type: 'Get',
@@ -8,13 +8,13 @@ $(document).ready(function() {
 			data: {
 				type: 0,
 				page: 1,
-				limit: 6,
+				limit: 10,
 				category:1
 			},
 			success: function(data) {
 				var html = $('#activitylist').html();
 				var actlistdata = data.data;
-				for (var i = 0; i < 6; i++) {
+				for (var i = 0; i < 10; i++) {
 					html += '<li><a href="activitydetail.html"><div class="al_img">';
 					if (!actlistdata[i].actPhotoAlbumList.picurl) {
 						html += '<img src="images/golfdetail1.jpg">';
