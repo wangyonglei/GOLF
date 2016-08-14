@@ -248,7 +248,12 @@ $(document).ready(function($) {
 					dataType: 'json',
 					data: dataval
 				})
-				.done(function(data) {
+				.done(function(data) { 
+					if (data.status == 1) {
+						alert('发布成功')
+					}else{
+						alert('发布失败')
+					}
 					// console.log('发布邀请活动成功！O(∩_∩)O哈哈~')
 					// if (confirm("发布活动成功！确定-进入活动列表")) {
 					// 	window.location.href = "activitylist.html"
