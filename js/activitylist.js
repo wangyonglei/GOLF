@@ -32,14 +32,15 @@ $(document).ready(function() {
 			alert('请在微信客户端打开！')
 		}
 	} else {
-						
-
 		activitylists()
 	}
 
 
 
-	var allloading = function(){
+	var activitylists = function(){
+		 $(".al_con0").show();
+		// 已经报名
+		// 默认全部加载6条
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getList',
 				type: 'Get',
@@ -48,7 +49,7 @@ $(document).ready(function() {
 					type: 0,
 					page: 1,
 					limit: 6,
-					category:1,
+					category:1
 					// code:code
 				},
 				success: function(data) {
@@ -69,14 +70,6 @@ $(document).ready(function() {
 					scrollpage(0);
 				}
 			})
-	}
-
-
-	var activitylists = function(){
-		 $(".al_con0").show();
-		// 已经报名
-		// 默认全部加载6条
-		allloading();
 			
 		var scrollpage = function(type){
 				// 滑屏加载数据
