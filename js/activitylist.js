@@ -109,9 +109,9 @@ $(document).ready(function() {
 								stop = true;
 								page++;
 								if (data.msg=="暂无活动信息") {
-									$(".Loading"+type).html("全部加载完！");
+									$(".Loading").html("全部加载完！");
 								}else{
-									$(".Loading"+type).html("Loading...");
+									$(".Loading").html("Loading...");
 
 								}
 							}
