@@ -37,30 +37,30 @@ $(document).ready(function() {
 
 
 
-	var activitylists = function(){
-		 $(".al_con0").show();
+	var activitylists = function() {
+		$(".al_con0").show();
 		// 已经报名
 		// 默认全部加载6条
 		$.ajax({
-				url: 'http://v.jgsports.com.cn/user/Act/getList',
-				type: 'Get',
-				dataType: 'json',
-				data: {
-					type: 0,
-					page: 1,
-					limit: 6,
-					category:2
+			url: 'http://v.jgsports.com.cn/user/Act/getList',
+			type: 'Get',
+			dataType: 'json',
+			data: {
+				type: 0,
+				page: 1,
+				limit: 6,
+				category: 2
 					// code:code
-				},
-				success: function(data) {
-					// var html = $('#activitylist').html();
-					// $('#')
-					var html = '';
-					var actlistdata = data.data;
-					var j =actlistdata.length
-					if (j<=6) {
+			},
+			success: function(data) {
+				// var html = $('#activitylist').html();
+				// $('#')
+				var html = '';
+				var actlistdata = data.data;
+				var j = actlistdata.length;
+				if (j <= 6) {
 
-						for (var i = 0; i <j; i++) {
+					for (var i = 0; i < j; i++) {
 						html += '<li><a href="activitydetail.html"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
 							html += '<img src="images/golfdetail1.jpg">';
@@ -68,32 +68,32 @@ $(document).ready(function() {
 						html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
 							'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
 							'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
-							$("#activitylist").append(html);
-							$('.Loading').html('全部加载完！')
-							scrollpage(0);
-						};
+						$("#activitylist").append(html);
+						$('.Loading').html('全部加载完！')
+						scrollpage(0);
+					};
 
-						}else{
-							for (var i = 0; i < 6; i++) {
-								html += '<li><a href="activitydetail.html"><div class="al_img">';
-								if (!actlistdata[i].actPhotoAlbumList.picurl) {
-									html += '<img src="images/golfdetail1.jpg">';
-								}
-								html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
-									'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
-									'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
-							};
-							$("#activitylist").append(html);
-							// $('.Loading0').before(html)
-							scrollpage(0);
-						}
-					
-					
+				} else {
+					// for (var i = 0; i < 6; i++) {
+					// 	html += '<li><a href="activitydetail.html"><div class="al_img">';
+					// 	if (!actlistdata[i].actPhotoAlbumList.picurl) {
+					// 		html += '<img src="images/golfdetail1.jpg">';
+					// 	}
+					// 	html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
+					// 		'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
+					// 		'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
+					// };
+					// $("#activitylist").append(html);
+					// // $('.Loading0').before(html)
+					// scrollpage(0);
 				}
-			})
-			
-		var scrollpage = function(type){
-				// 滑屏加载数据
+
+
+			}
+		})
+
+		var scrollpage = function(type) {
+			// 滑屏加载数据
 			var stop = true;
 			page = 2;
 			$(window).scroll(function() {
@@ -109,8 +109,8 @@ $(document).ready(function() {
 								page: page,
 								limit: 2,
 								type: type,
-								category:2
-								// code:code
+								category: 2
+									// code:code
 							},
 							success: function(data) {
 								var html = '';
@@ -128,9 +128,9 @@ $(document).ready(function() {
 								$('#activitylist').append(html)
 								stop = true;
 								page++;
-								if (data.msg=="暂无活动信息") {
+								if (data.msg == "暂无活动信息") {
 									$(".Loading").html("全部加载完！");
-								}else{
+								} else {
 									$(".Loading").html("Loading...");
 
 								}
@@ -143,48 +143,47 @@ $(document).ready(function() {
 
 
 
+		// 点击加载各类 0为全部 ， 1 为本周  ，2为本月  3为球场
 
-			// 点击加载各类 0为全部 ， 1 为本周  ，2为本月  3为球场
-		
 		$(".al_title li").click(function() {
-				$(this).addClass("cur").siblings().removeClass('cur');
-				index = $(this).index();
-				// $(".al_con").hide().eq($(this).index()).show();
-				var actdata = {
-					type: index,
-					page: 1,
-					limit: 6,
-					category:2
+			$(this).addClass("cur").siblings().removeClass('cur');
+			index = $(this).index();
+			// $(".al_con").hide().eq($(this).index()).show();
+			var actdata = {
+				type: index,
+				page: 1,
+				limit: 6,
+				category: 2
 					// code:code
 
+			}
+			$.ajax({
+				url: 'http://v.jgsports.com.cn/user/Act/getList',
+				type: 'Get',
+				dataType: 'json',
+				data: actdata,
+				success: function(data) {
+					$('#activitylist').html('')
+					var html = '';
+					var actlistdata = data.data;
+					for (var i = 0; i < 6; i++) {
+						html += '<li><a href="activitydetail.html"><div class="al_img">';
+						if (!actlistdata[i].actPhotoAlbumList.picurl) {
+							html += '<img src="images/golfdetail1.jpg">';
+						}
+						html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
+							'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
+							'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
+					};
+					// $(".Loading"+index).before(html);
+					$('#activitylist').append(html)
+					scrollpage(index);
 				}
-				$.ajax({
-					url: 'http://v.jgsports.com.cn/user/Act/getList',
-					type: 'Get',
-					dataType: 'json',
-					data: actdata,
-					success: function(data) {
-						$('#activitylist').html('')
-						var html = '';
-						var actlistdata = data.data;
-						for (var i = 0; i < 6; i++) {
-							html += '<li><a href="activitydetail.html"><div class="al_img">';
-							if (!actlistdata[i].actPhotoAlbumList.picurl) {
-								html += '<img src="images/golfdetail1.jpg">';
-							}
-							html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
-								'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
-								'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
-						};
-						// $(".Loading"+index).before(html);
-						$('#activitylist').append(html)
-						scrollpage(index);
-					}
-				});
-			})
+			});
+		})
 
 	}
-	
+
 
 
 })
