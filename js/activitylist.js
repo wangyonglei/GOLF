@@ -100,7 +100,6 @@ $(document).ready(function() {
 				dataType: 'json',
 				data: actdata,
 				success: function(data) {
-					// $("#activitylist").html('')
 					var html = '';
 					var actlistdata = data.data;
 					for (var i = 0; i < 6; i++) {
