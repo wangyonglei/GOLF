@@ -49,7 +49,7 @@ $(document).ready(function() {
 					type: 0,
 					page: 1,
 					limit: 6,
-					category:1
+					category:2
 					// code:code
 				},
 				success: function(data) {
@@ -89,7 +89,7 @@ $(document).ready(function() {
 								page: page,
 								limit: 2,
 								type: type,
-								category:1,
+								category:2
 								// code:code
 							},
 							success: function(data) {
@@ -134,7 +134,7 @@ $(document).ready(function() {
 					type: index,
 					page: 1,
 					limit: 6,
-					category:1,
+					category:2
 					// code:code
 
 				}
