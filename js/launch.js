@@ -136,12 +136,16 @@ $(document).ready(function($) {
 		}
 
 		var tongxunlu_id = function(){
-			var ziliaohtml = '';
+			var htmlrname =''
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid');
 				var ziliaouname = $(this).parent().attr('data-rname');
-				ziliaohtml += ','+ziliaouname+',';
-				$('.yaoqing_yq').val(ziliaohtml);
+				// ziliaohtml += ','+ziliaouname+',';
+				// $('.yaoqing_yq').val(ziliaohtml);
+				htmlrname += ''+rname+',';
+				$('.yaoqing_yq').val(htmlrname);
+
+				
 				$('.datadata').append(ziliaouid+',')
 				$('.tongxunlu_mask').css('display', 'none');
 				$('.ball_card').css('display', 'none');
