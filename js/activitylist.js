@@ -8,14 +8,14 @@ $(document).ready(function() {
 			data: {
 				type: 0,
 				page: 1,
-				limit: 6,
+				limit: 2,
 				category:1
 			},
 			success: function(data) {
 				// var html = $('#activitylist').html();
 				var html = '';
 				var actlistdata = data.data;
-				for (var i = 0; i < 6; i++) {
+				for (var i = 0; i < 2; i++) {
 					html += '<li><a href="activitydetail.html"><div class="al_img">';
 					if (!actlistdata[i].actPhotoAlbumList.picurl) {
 						html += '<img src="images/golfdetail1.jpg">';
