@@ -49,7 +49,8 @@ $(document).ready(function($) {
 					type: 0,
 					page: 1,
 					limit: 6,
-					category:1
+					category:1,
+					code:code
 				},
 				success: function(data) {
 					// var html = $('#activitylist').html();
@@ -87,7 +88,8 @@ $(document).ready(function($) {
 								page: page,
 								limit: 2,
 								type: type,
-								category:1
+								category:1,
+								code:code
 							},
 							success: function(data) {
 								var html = '';
@@ -130,7 +132,8 @@ $(document).ready(function($) {
 					type: index,
 					page: 1,
 					limit: 6,
-					category:1
+					category:1,
+					code:code
 
 				}
 				$.ajax({
