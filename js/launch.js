@@ -142,7 +142,7 @@ $(document).ready(function($) {
 				var ziliaouname = $(this).parent().attr('data-rname');
 				// ziliaohtml += ','+ziliaouname+',';
 				// $('.yaoqing_yq').val(ziliaohtml);
-				htmlrname += ''+rname+',';
+				htmlrname += ''+ziliaouname+',';
 				$('.yaoqing_yq').val(htmlrname);
 
 				
