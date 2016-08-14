@@ -60,7 +60,7 @@ $(document).ready(function() {
 					var j =actlistdata.length
 					if (j<=6) {
 
-						for (var i = 0; i <= j; i++) {
+						for (var i = 0; i <j; i++) {
 						html += '<li><a href="activitydetail.html"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
 							html += '<img src="images/golfdetail1.jpg">';
