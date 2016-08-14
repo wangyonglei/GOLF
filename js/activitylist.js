@@ -95,7 +95,7 @@ $(document).ready(function() {
 						stop = true;
 						page++;
 						if (data.msg=="暂无活动信息") {
-							$(".Loading").html("暂无活动信息");
+							$(".Loading").html("全部加载完！");
 						}
 					}
 				})
