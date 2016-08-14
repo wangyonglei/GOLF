@@ -19,6 +19,7 @@ $(document).ready(function() {
 						}
 					})
 					.done(function(data) {
+						alert(3)
 						activitylists()
 					})
 					.fail(function() {
@@ -32,12 +33,14 @@ $(document).ready(function() {
 			alert('请在微信客户端打开！')
 		}
 	} else {
+		alert(0)
 		activitylists()
 	}
 
 
 
 	var activitylists = function(){
+		alert(1)
 		 $(".al_con0").show();
 		// 已经报名
 		// 默认全部加载6条
@@ -53,6 +56,7 @@ $(document).ready(function() {
 					// code:code
 				},
 				success: function(data) {
+					alert(2)
 					// var html = $('#activitylist').html();
 					var html = '';
 					var actlistdata = data.data;
