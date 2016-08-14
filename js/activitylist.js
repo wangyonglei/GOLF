@@ -25,7 +25,7 @@ $(document).ready(function() {
 						'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
 				};
 				// $("#activitylist").html(html);
-				$('.Loading0').before(html)
+				$('.Loading').before(html)
 			}
 		})
 		
