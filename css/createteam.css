@@ -2,10 +2,10 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  /*.team_addcon{ background-color: #fff; width: 100%;min-height: 175px; padding: 10px 0; margin-top: 10px; font-size: 14px; border-bottom: 1px solid #dddddd;color: #c5c5c5;  }*/ }
+  /*.team_addcon{ background-color: #fff; width: 100%;min-height: 175px; padding: 10px 0; margin-top: 10px; font-size: 14px; border-bottom: 1px solid #dddddd;color: #000;  }*/ }
   .createteam .team_input {
     font-size: 15px;
-    color: #c5c5c5;
+    color: #000;
     border: 0;
     outline: none;
     width: 100%;
@@ -19,7 +19,7 @@
     min-height: 175px;
     border: 0;
     font-size: 15px;
-    color: #c5c5c5;
+    color: #000;
     padding: 10px 0;
     margin-top: 10px; }
   .createteam p {
