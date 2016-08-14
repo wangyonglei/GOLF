@@ -26,7 +26,6 @@ $(document).ready(function() {
 				};
 				// $("#activitylist").html(html);
 				$('.Loading0').before(html)
-				scrollpage(0);
 			}
 		})
 		
@@ -76,6 +75,7 @@ $(document).ready(function() {
 			}
 		});
 	}
+				scrollpage(0);
 
 
 
