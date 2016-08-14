@@ -60,7 +60,7 @@ $(document).ready(function() {
 				var j = actlistdata.length;
 				if (j <= 6) {
 
-					for (var i = 0; i < j; i++) {
+					for (var i = 0; i < 2; i++) {
 						html += '<li><a href="activitydetail.html"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
 							html += '<img src="images/golfdetail1.jpg">';
@@ -74,18 +74,18 @@ $(document).ready(function() {
 					};
 
 				} else {
-					// for (var i = 0; i < 6; i++) {
-					// 	html += '<li><a href="activitydetail.html"><div class="al_img">';
-					// 	if (!actlistdata[i].actPhotoAlbumList.picurl) {
-					// 		html += '<img src="images/golfdetail1.jpg">';
-					// 	}
-					// 	html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
-					// 		'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
-					// 		'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
-					// };
-					// $("#activitylist").append(html);
-					// // $('.Loading0').before(html)
-					// scrollpage(0);
+					for (var i = 0; i < 6; i++) {
+						html += '<li><a href="activitydetail.html"><div class="al_img">';
+						if (!actlistdata[i].actPhotoAlbumList.picurl) {
+							html += '<img src="images/golfdetail1.jpg">';
+						}
+						html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
+							'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
+							'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
+					};
+					$("#activitylist").append(html);
+					// $('.Loading0').before(html)
+					scrollpage(0);
 				}
 
 
