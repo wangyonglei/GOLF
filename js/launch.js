@@ -77,7 +77,7 @@ $(document).ready(function($) {
 			var rname = $('.yaoqing_name').val();
 			var mobile = $('.yaoqing_tel').val();
 			htmlrname += ''+rname+',';
-			$('.yaoqing_yq').val(htmlrname);
+			$('.yaoqing_yq').append(htmlrname);
 			var yaoqing_namrel = {
 				rname: $('.yaoqing_name').val(),
 				mobile: $('.yaoqing_tel').val()
@@ -143,9 +143,9 @@ $(document).ready(function($) {
 				// ziliaohtml += ','+ziliaouname+',';
 				// $('.yaoqing_yq').val(ziliaohtml);
 				htmlrname += ''+ziliaouname+',';
-				$('.yaoqing_yq').val(htmlrname);
+				$('.yaoqing_yq').append(htmlrname);
 
-				
+
 				$('.datadata').append(ziliaouid+',')
 				$('.tongxunlu_mask').css('display', 'none');
 				$('.ball_card').css('display', 'none');
