@@ -62,7 +62,7 @@ $(document).ready(function() {
 		})
 		// 滑屏加载数据
 	var stop = true;
-	page = 1;
+	page = 2;
 	$(window).scroll(function() {
 		var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
 		if ($(document).height() <= totalheight) {
@@ -74,7 +74,7 @@ $(document).ready(function() {
 					dataType: 'json',
 					data: {
 						page: page,
-						limit: 6,
+						limit: 2,
 						type: 0,
 						category:1
 						// uid: 304
