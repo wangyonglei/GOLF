@@ -89,7 +89,7 @@ $(document).ready(function() {
 								limit: 2,
 								type: type,
 								category:1,
-								code:code
+								// code:code
 							},
 							success: function(data) {
 								var html = '';
@@ -133,7 +133,7 @@ $(document).ready(function() {
 					page: 1,
 					limit: 6,
 					category:1,
-					code:code
+					// code:code
 
 				}
 				$.ajax({
