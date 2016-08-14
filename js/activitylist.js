@@ -90,9 +90,8 @@ $(document).ready(function() {
 			var actdata = {
 				type: index,
 				page: 1,
-				limit: 2,
+				limit: 6,
 				category:1
-				// uid: 304,
 
 			}
 			$.ajax({
@@ -104,7 +103,7 @@ $(document).ready(function() {
 					// $("#activitylist").html('')
 					var html = '';
 					var actlistdata = data.data;
-					for (var i = 0; i < 2; i++) {
+					for (var i = 0; i < 6; i++) {
 						html += '<li><a href="activitydetail.html"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
 							html += '<img src="images/golfdetail1.jpg">';
