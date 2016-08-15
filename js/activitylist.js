@@ -47,6 +47,8 @@ $(document).ready(function() {
 				code: code
 			},
 			success: function(data) {
+					console.log('默认'+limit)
+				
 				// var html = $('#activitylist').html();
 				var html = '';
 				var actlistdata = data.data;
@@ -67,7 +69,6 @@ $(document).ready(function() {
 							// scrollpage(0);
 					};
 				} else {
-					console.log('默认'+limit)
 					for (var i = 0; i < limit; i++) {
 						html += '<li><a href="activitydetail.html"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
@@ -169,7 +170,7 @@ $(document).ready(function() {
 					// 		'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
 					// };
 
-
+					console.log('点击'+limit)
 					var j = actlistdata.length;
 					if (j <= 7) {
 						for (var i = 0; i < j; i++) {
@@ -187,7 +188,7 @@ $(document).ready(function() {
 								scrollpage(index);
 						};
 					} else {
-						console.log('点击'+limit)
+						
 						for (var i = 0; i < limit; i++) {
 							html += '<li><a href="activitydetail.html"><div class="al_img">';
 							if (!actlistdata[i].actPhotoAlbumList.picurl) {
