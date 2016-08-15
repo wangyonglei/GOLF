@@ -199,7 +199,6 @@ $(document).ready(function() {
 
 
 	function codeactlist(){
-		alert(0)
 		$.ajax({
 			url: 'http://v.jgsports.com.cn/user/Act/getList',
 			type: 'Get',
