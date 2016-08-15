@@ -68,7 +68,7 @@ $(document).ready(function() {
 							// scrollpage(0);
 					};
 				} else {
-					for (var i = 0; i < 6; i++) {
+					for (var i = 0; i < j; i++) {
 						html += '<li><a href="activitydetail.html"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
 							html += '<img src="images/golfdetail1.jpg">';
