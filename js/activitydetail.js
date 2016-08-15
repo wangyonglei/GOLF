@@ -20,7 +20,7 @@ $(document).ready(function() {
 						}
 					})
 					.done(function(data) {
-						activitylists()
+						// activitylists()
 					})
 					.fail(function() {
 						console.log("error");
@@ -33,7 +33,7 @@ $(document).ready(function() {
 			alert('请在微信客户端打开！')
 		}
 	} else {
-		activitylists();
+		// activitylists();
 	}
 
 	
