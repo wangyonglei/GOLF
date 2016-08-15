@@ -131,7 +131,6 @@ $(document).ready(function() {
 
 		}
 			// 刷新评论
-		}
 		var pinglun = function() {
 				$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Act/getDetails?act_id=' + id,
