@@ -162,8 +162,10 @@ function activitydetail(){
 			// dataType: 'json',
 			data: {
 				// uid: 304
-				code:code
-				// photos:photos
+				code:code,
+				act_id:id,
+
+				photos:photos
 			},
 			success: function(data, status) {
 				photos();
