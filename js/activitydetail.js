@@ -70,7 +70,7 @@ function activitydetail(){
 					}
 				html +='</span></h1>' +
 					'<div class="wai"><div class="weizhi duan" data-x="' + act_det.lngX + '" data-y="' + act_det.latY + '"><a href="navigation.html?id=' + act_det.id + '&x=' + act_det.lngX + '&y=' + act_det.latY + '&name=' + act_det.venueTitle + '">' + act_det.venueTitle + '<span class="jiao"></span></a></div><div class="date duan">' + act_det.act_date_str + '<span class="jiao"></span></div></div>' +
-					'<div class="wai"><div class="yaoqing duan">';
+					'<div class="wai"><div class="duan baoming">为报名<span class="jiao"></span></div><div class="yaoqing duan">';
 				for (var i = 0; i < act_det.joinActMembers.length; i++) {
 					html += act_det.joinActMembers[i].rname;
 				}
