@@ -43,7 +43,7 @@ $(document).ready(function() {
 			data: {
 				type: 0,
 				page: 1,
-				limit: 6,
+				limit: 7,
 				category: category,
 				code: code
 			},
@@ -52,7 +52,7 @@ $(document).ready(function() {
 				var html = '';
 				var actlistdata = data.data;
 				var j = actlistdata.length;
-				if (j <= 6) {
+				if (j <= 7) {
 					for (var i = 0; i < j; i++) {
 						html += '<li><a href="activitydetail.html"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
@@ -140,7 +140,7 @@ $(document).ready(function() {
 			var actdata = {
 				type: index,
 				page: 1,
-				limit: 6,
+				limit: 7,
 				category: category,
 				code: code
 			}
@@ -153,18 +153,57 @@ $(document).ready(function() {
 					$('#activitylist').html('')
 					var html = '';
 					var actlistdata = data.data;
-					for (var i = 0; i < 6; i++) {
-						html += '<li><a href="activitydetail.html"><div class="al_img">';
-						if (!actlistdata[i].actPhotoAlbumList.picurl) {
-							html += '<img src="images/golfdetail1.jpg">';
-						}
-						html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
-							'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
-							'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
-					};
+					// for (var i = 0; i < 7; i++) {
+					// 	html += '<li><a href="activitydetail.html"><div class="al_img">';
+					// 	if (!actlistdata[i].actPhotoAlbumList.picurl) {
+					// 		html += '<img src="images/golfdetail1.jpg">';
+					// 	}
+					// 	html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
+					// 		'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
+					// 		'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
+					// };
+
+
+					var j = actlistdata.length;
+					if (j <= 7) {
+						for (var i = 0; i < j; i++) {
+							html += '<li><a href="activitydetail.html"><div class="al_img">';
+							if (!actlistdata[i].actPhotoAlbumList.picurl) {
+								html += '<img src="images/golfdetail1.jpg">';
+							} else {
+								html += '<img src="' + actlistdata[i].actPhotoAlbumList.picurl + '">';
+							}
+							html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
+								'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
+								'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
+							$("#activitylist").html(html);
+							$('.Loading').html('全部加载完！')
+								scrollpage(index);
+						};
+					} else {
+						for (var i = 0; i < j; i++) {
+							html += '<li><a href="activitydetail.html"><div class="al_img">';
+							if (!actlistdata[i].actPhotoAlbumList.picurl) {
+								html += '<img src="images/golfdetail1.jpg">';
+							} else {
+								html += '<img src="' + actlistdata[i].actPhotoAlbumList.picurl + '">';
+							}
+							html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
+								'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
+								'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
+						};
+						$("#activitylist").html(html);
+						$('.Loading').html('全部加载完！')
+						// $('.Loading0').before(html)
+						scrollpage(index);
+					}
+
+
+
+
 					// $(".Loading"+index).before(html);
-					$('#activitylist').html(html)
-					scrollpage(index);
+					// $('#activitylist').html(html)
+					// scrollpage(index);
 				}
 			});
 		})
