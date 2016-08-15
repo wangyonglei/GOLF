@@ -62,7 +62,13 @@ function activitydetail(){
 				for (var i = 0; i < act_det.venueImgList.length; i++) {
 					html += '<div class="swiper-slide"><img src="' + act_det.venueImgList[i] + '"></div>';
 				}
-				html += '</div><div class="swiper-pagination"></div></div></div><h1 class="title">' + act_det.title + '<span>进行中</span></h1>' +
+				html += '</div><div class="swiper-pagination"></div></div></div><h1 class="title">' + act_det.title + '<span>'
+					if (act_det.actStatus==0) {
+						html +='活动结束'
+					}else{
+						html +='进行中'
+					}
+				html +='</span></h1>' +
 					'<div class="wai"><div class="weizhi duan" data-x="' + act_det.lngX + '" data-y="' + act_det.latY + '"><a href="navigation.html?id=' + act_det.id + '&x=' + act_det.lngX + '&y=' + act_det.latY + '&name=' + act_det.venueTitle + '">' + act_det.venueTitle + '<span class="jiao"></span></a></div><div class="date duan">' + act_det.act_date_str + '<span class="jiao"></span></div></div>' +
 					'<div class="wai"><div class="yaoqing duan">';
 				for (var i = 0; i < act_det.joinActMembers.length; i++) {
