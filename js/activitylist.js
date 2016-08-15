@@ -35,7 +35,6 @@ $(document).ready(function() {
 		activitylists();
 	}
 	function activitylists() {
-		var category = decodeURIComponent((new RegExp('[?|&]category=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		// 默认全部加载6条
 		$.ajax({
 			url: 'http://v.jgsports.com.cn/user/Act/getList',
