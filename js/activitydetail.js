@@ -68,11 +68,11 @@ $(document).ready(function() {
 					}
 					html += '</span></h1>' +
 						'<div class="wai"><div class="weizhi duan" data-x="' + act_det.lngX + '" data-y="' + act_det.latY + '"><a href="navigation.html?id=' + act_det.id + '&x=' + act_det.lngX + '&y=' + act_det.latY + '&name=' + act_det.venueTitle + '">' + act_det.venueTitle + '<span class="jiao"></span></a></div><div class="date duan">' + act_det.act_date_str + '<span class="jiao"></span></div></div>' +
-						'<div class="wai"><div class="yaoqing duan">';
+						'<div class="wai"><div class="yaoqing duan"><a href="baoming.html?id='+act_det.id+'">';
 					for (var i = 0; i < act_det.joinActMembers.length; i++) {
 						html += act_det.joinActMembers[i].rname;
 					}
-					html += '（' + act_det.joinActMembersNumber + '人）<span class="jiao"></span></div>	<ul class="renwu">';
+					html += '（' + act_det.joinActMembersNumber + '人）<span class="jiao"></span></a></div>	<ul class="renwu">';
 					for (var i = 0; i < act_det.joinActMembers.length; i++) {
 						html += '<li><div class="renwuicon">';
 						if (!act_det.joinActMembers.avatar) {

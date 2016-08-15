@@ -38,6 +38,15 @@ $(document).ready(function($) {
 
 
 	function baoming(){
+		(function($) {
+			$.getUrlParam = function(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if (r != null) return unescape(r[2]);
+				return null;
+			}
+		})(jQuery);
+		var id = $.getUrlParam('id');
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getJoinActMembers ',
 				type: 'get',
@@ -50,7 +59,7 @@ $(document).ready(function($) {
 			.done(function(data) {
 				 var baomingdata = data.data;
 				  var html = '';
-				  
+
 			})
 			.fail(function() {
 				console.log("error");
