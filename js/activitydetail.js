@@ -115,7 +115,7 @@ $(document).ready(function() {
 				alert(0)
 				$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Act/userJoinAct',
-					type: 'Get',
+					type: 'post',
 					dataType: 'json',
 					data: {
 						act_id: id,
