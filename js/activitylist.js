@@ -67,6 +67,7 @@ $(document).ready(function() {
 							// scrollpage(0);
 					};
 				} else {
+					console.log('默认'+limit)
 					for (var i = 0; i < limit; i++) {
 						html += '<li><a href="activitydetail.html"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
@@ -112,6 +113,7 @@ $(document).ready(function() {
 							success: function(data) {
 								var html = '';
 								var actlistdata = data.data;
+								console.log('滑屏'+limit)
 								for (var i = 0; i < limit; i++) {
 									html += '<li><a href="activitydetail.html"><div class="al_img">';
 									if (!actlistdata[i].actPhotoAlbumList.picurl) {
@@ -185,6 +187,7 @@ $(document).ready(function() {
 								scrollpage(index);
 						};
 					} else {
+						console.log('点击'+limit)
 						for (var i = 0; i < limit; i++) {
 							html += '<li><a href="activitydetail.html"><div class="al_img">';
 							if (!actlistdata[i].actPhotoAlbumList.picurl) {
