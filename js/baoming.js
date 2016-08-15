@@ -38,15 +38,8 @@ $(document).ready(function($) {
 
 
 	function baoming(){
-		(function($) {
-			$.getUrlParam = function(name) {
-				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-				var r = window.location.search.substr(1).match(reg);
-				if (r != null) return unescape(r[2]);
-				return null;
-			}
-		})(jQuery);
-		var id = $.getUrlParam('id');
+		var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getJoinActMembers ',
 				type: 'get',
