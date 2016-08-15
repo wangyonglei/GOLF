@@ -35,6 +35,7 @@ $(document).ready(function() {
 		activitylists();
 	}
 	function activitylists() {
+		var category = decodeURIComponent((new RegExp('[?|&]category=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		// 默认全部加载6条
 		$.ajax({
 			url: 'http://v.jgsports.com.cn/user/Act/getList',
@@ -44,7 +45,7 @@ $(document).ready(function() {
 				type: 0,
 				page: 1,
 				limit: 6,
-				category: 2,
+				category: category,
 				code: code
 			},
 			success: function(data) {
@@ -102,7 +103,7 @@ $(document).ready(function() {
 								page: page,
 								limit: 2,
 								type: type,
-								category: 2,
+								category: category,
 								code: code
 							},
 							success: function(data) {
@@ -141,7 +142,7 @@ $(document).ready(function() {
 				type: index,
 				page: 1,
 				limit: 6,
-				category: 2,
+				category: category,
 				code: code
 			}
 			$.ajax({
