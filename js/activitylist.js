@@ -54,7 +54,7 @@ $(document).ready(function() {
 				var j = actlistdata.length;
 				if (j <= 7) {
 					for (var i = 0; i < j; i++) {
-						html += '<li><a href="activitydetail.html"><div class="al_img">';
+						html += '<li><a href="activitydetail.html?id='+actlistdata[i].id+'"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
 							html += '<img src="images/golfdetail1.jpg">';
 						} else {
@@ -69,7 +69,7 @@ $(document).ready(function() {
 					};
 				} else {
 					for (var i = 0; i < 7; i++) {
-						html += '<li><a href="activitydetail.html"><div class="al_img">';
+						html += '<li><a href="activitydetail.html?id='+actlistdata[i].id+'"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
 							html += '<img src="images/golfdetail1.jpg">';
 						} else {
@@ -114,7 +114,7 @@ $(document).ready(function() {
 								var html = '';
 								var actlistdata = data.data;
 								for (var i = 0; i < 7; i++) {
-									html += '<li><a href="activitydetail.html"><div class="al_img">';
+									html += '<li><a href="activitydetail.html?id='+actlistdata[i].id+'"><div class="al_img">';
 									if (!actlistdata[i].actPhotoAlbumList.picurl) {
 										html += '<img src="images/golfdetail1.jpg">';
 									}
@@ -171,7 +171,7 @@ $(document).ready(function() {
 					var j = actlistdata.length;
 					if (j <= 7) {
 						for (var i = 0; i < j; i++) {
-							html += '<li><a href="activitydetail.html"><div class="al_img">';
+							html += '<li><a href="activitydetail.html?id='+actlistdata[i].id+'"><div class="al_img">';
 							if (!actlistdata[i].actPhotoAlbumList.picurl) {
 								html += '<img src="images/golfdetail1.jpg">';
 							} else {
@@ -187,7 +187,7 @@ $(document).ready(function() {
 					} else {
 						
 						for (var i = 0; i < 7; i++) {
-							html += '<li><a href="activitydetail.html"><div class="al_img">';
+							html += '<li><a href="activitydetail.html?id='+actlistdata[i].id+'"><div class="al_img">';
 							if (!actlistdata[i].actPhotoAlbumList.picurl) {
 								html += '<img src="images/golfdetail1.jpg">';
 							} else {
