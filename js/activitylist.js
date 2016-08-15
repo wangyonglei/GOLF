@@ -35,6 +35,7 @@ $(document).ready(function() {
 		activitylists();
 	}
 	function activitylists() {
+		alert(category)
 		// 默认全部加载6条
 		$.ajax({
 			url: 'http://v.jgsports.com.cn/user/Act/getList',
