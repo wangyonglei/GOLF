@@ -101,7 +101,7 @@ $(document).ready(function() {
 					// 	photoshtml += '<li><a href="photodetail.html?"><img src="' + act_det.actPhotoAlbumList[i].picurl + '"></a></li>';
 					// }
 					// $('.zhaopianimg ul').html(photoshtml);
-					if (act_det.joinStatus == 0) {
+					if (act_det.joinStatus == 1) {
 						$('.jifenka').html('积分卡')
 					}else{
 						$('.jifenka').html('报名')
