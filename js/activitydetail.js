@@ -102,9 +102,13 @@ $(document).ready(function() {
 					// }
 					// $('.zhaopianimg ul').html(photoshtml);
 					if (act_det.joinStatus == 1) {
-						$('.jifenka').html('积分卡')
+						$('.jifenka').show();
+						$('.shifoubaoming').hide();
+
 					} else {
-						$('.jifenka').html('报名');
+						$('.shifoubaoming').show();
+						$('.jifenka').hide();
+
 						shifoubaoming();
 					}
 				}
@@ -122,6 +126,8 @@ $(document).ready(function() {
 						code: code
 					},
 					success: function(data) {
+						$('.jifenka').show();
+						$('.shifoubaoming').hide();
 					}
 				})
 			})

@@ -267,7 +267,8 @@
         margin-right: 15px; }
   .activitydetail .jifenkabtn {
     margin-top: 0; }
-    .activitydetail .jifenkabtn .jifenka {
+    .activitydetail .jifenkabtn .jifenka, .activitydetail .jifenkabtn .shifoubaoming {
+      display: none;
       width: 80%;
       height: 40px;
       line-height: 40px;
