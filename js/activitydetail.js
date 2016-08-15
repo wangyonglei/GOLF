@@ -116,7 +116,6 @@ $(document).ready(function() {
 			// 报名
 		function shifoubaoming() {
 			$('.shifoubaoming').click(function() {
-				alert(0)
 				$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Act/userJoinAct',
 					type: 'post',
