@@ -103,34 +103,30 @@ $(document).ready(function() {
 					// $('.zhaopianimg ul').html(photoshtml);
 					if (act_det.joinStatus == 1) {
 						$('.jifenka').html('积分卡')
-					}else{
+					} else {
 						$('.jifenka').html('报名');
-						$('.jifenka').click(function(){
-							shifoubaoming();
-						})
-						
-
+						shifoubaoming();
 					}
 				}
 			})
-		// 报名
-		function shifoubaoming(){
-
-			$.ajax({
-				url: 'http://v.jgsports.com.cn/user/Act/userJoinAct',
-				type: 'Get',
-				dataType: 'json',
-				data: {
-					act_id: id,
-					code: code
-				},
-				success: function(data) {
-					$('.jifenka').html('积分卡')
-				}
+			// 报名
+		function shifoubaoming() {
+			$('.jifenka').click(function() {
+				alert(0)
+				$.ajax({
+					url: 'http://v.jgsports.com.cn/user/Act/userJoinAct',
+					type: 'Get',
+					dataType: 'json',
+					data: {
+						act_id: id,
+						code: code
+					},
+					success: function(data) {
+					}
+				})
 			})
-
 		}
-			// 刷新评论
+		// 刷新评论
 		var pinglun = function() {
 				$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Act/getDetails?act_id=' + id,
@@ -213,8 +209,6 @@ $(document).ready(function() {
 			});
 		}
 		upload();
-
-
 		if (true) {}
 	}
 });
