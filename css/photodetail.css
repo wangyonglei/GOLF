@@ -1,205 +1,178 @@
 .photodetail {
   width: 100%;
   height: auto;
-  overflow: hidden;
-}
-.photodetail .photo {
-  width: 100%;
-  height: auto;
-  min-height: 60px;
-  max-height: 450px;
-  overflow: hidden;
-  text-align: center;
-  background-color: #fff;
-  position: relative;
-}
-.photodetail .photo img {
-  max-width: 100%;
-  max-height: 100%;
-  /*width: 100%; max-height: 100%; */
-}
-.photodetail .photo .dianzanmask, .photodetail .photo .dianzan, .photodetail .photo .pinglun, .photodetail .photo .pinglunmask {
-  line-height: 37px;
-  width: 80px;
-  height: 37px;
-  position: absolute;
-  bottom: 10px;
-}
-.photodetail .photo .dianzanmask, .photodetail .photo .pinglunmask {
-  background-color: #000;
-  opacity: .6;
-  filter: alpha(opacity=60);
-  z-index: 5;
-}
-.photodetail .photo .pinglun, .photodetail .photo .pinglunmask {
-  right: 0;
-  border-radius: 50px 0px 0px 50px;
-}
-.photodetail .photo .dianzan, .photodetail .photo .dianzanmask {
-  left: 0;
-  border-radius: 0px 50px 50px 0px;
-}
-.photodetail .photo .dianzan {
-  background-image: url(../images/like.png);
-  z-index: 6;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: 15px center;
-  text-align: left;
-  text-indent: 40px;
-  color: #fff;
-  font-size: 13px;
-}
-.photodetail .photo .pinglun {
-  background-image: url(../images/pinglun.png);
-  z-index: 6;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: 25px center;
-  text-align: left;
-  text-indent: 50px;
-  color: #fff;
-  font-size: 13px;
-}
-.photodetail .renwu {
-  float: left;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  margin-top: 0;
-}
-.photodetail .renwu li {
-  margin-left: 15px;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  padding: 10px 0;
-  position: relative;
-}
-.photodetail .renwu li .renwuicon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  float: left;
-  overflow: hidden;
-  border: 1px solid #dddddd;
-  margin-right: 10px;
-}
-.photodetail .renwu li .renwuicon img {
-  width: 100%;
-  height: 100%;
-}
-.photodetail .renwu li .renwuname {
-  font-size: 15px;
-  color: #4fb4aa;
-  float: left;
-  width: 80%;
-  margin-top: 3px;
-}
-.photodetail .renwu li .huodongquan {
-  position: absolute;
-  right: 30px;
-  line-height: 45px;
-  font-size: 13px;
-  color: #666;
-}
-.photodetail .renwu li .renwuqianming {
-  font-size: 13px;
-  color: #333;
-  float: left;
-  width: 60%;
-  margin-top: 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  background-image: url(../images/qiu.png);
-  background-size: 14px;
-  background-repeat: no-repeat;
-  text-indent: 20px;
-}
-.photodetail .pinglunlist {
-  float: left;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-.photodetail .pinglunlist li {
-  margin-left: 15px;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  border-top: 1px solid #dddddd;
-  padding: 15px 0 10px 0;
-  position: relative;
-}
-.photodetail .pinglunlist li .pinglunicon {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  float: left;
-  overflow: hidden;
-  border: 1px solid #dddddd;
-  margin-right: 10px;
-}
-.photodetail .pinglunlist li .pinglunicon img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-.photodetail .pinglunlist li .pinglunname {
-  font-size: 15px;
-  color: #333;
-  float: left;
-  width: 82%;
-  margin-top: 3px;
-}
-.photodetail .pinglunlist li .pinglundate {
-  position: absolute;
-  right: 30px;
-  line-height: 45px;
-  font-size: 13px;
-  color: #999;
-}
-.photodetail .pinglunlist li .pingluncon {
-  font-size: 14px;
-  color: #4fb4aa;
-  float: left;
-  width: 82%;
-  margin-top: 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.photodetail .pinglunlist li:nth-of-type(1) {
-  border-top: 0;
-}
-.photodetail .hf {
-  margin-top: 0;
-  position: relative;
-  margin-bottom: 35px;
-}
-.photodetail .hf .huifubtn {
-  position: absolute;
-  right: 10%;
-  line-height: 30px;
-  color: #4fb4aa;
-  outline: none;
-  top: 15px;
-  height: 30px;
-  border: 0;
-  background: none;
-  border-left: 1px solid #dddddd;
-  padding: 0 15px;
-}
-.photodetail .hf .huifu {
-  width: 77%;
-  padding-left: 3%;
-  height: 40px;
-  outline: none;
-  margin: 10px 10%;
-  border: none;
-  background-color: #f2f2f2;
-  border: 1px solid #c5c5c5;
-  border-radius: 5px;
-  text-indent: 15px;
-}
+  overflow: hidden; }
+  .photodetail .photo {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    max-height: 450px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    position: relative; }
+    .photodetail .photo img {
+      max-width: 100%;
+      max-height: 100%;
+      /*width: 100%; max-height: 100%; */ }
+    .photodetail .photo .dianzanmask, .photodetail .photo .dianzan, .photodetail .photo .pinglun, .photodetail .photo .pinglunmask {
+      line-height: 37px;
+      width: 80px;
+      height: 37px;
+      position: absolute;
+      bottom: 10px; }
+    .photodetail .photo .dianzanmask, .photodetail .photo .pinglunmask {
+      background-color: #000;
+      opacity: .6;
+      filter: alpha(opacity=60);
+      z-index: 5; }
+    .photodetail .photo .pinglun, .photodetail .photo .pinglunmask {
+      right: 0;
+      border-radius: 50px 0px 0px 50px; }
+    .photodetail .photo .dianzan, .photodetail .photo .dianzanmask {
+      left: 0;
+      border-radius: 0px 50px 50px 0px; }
+    .photodetail .photo .dianzan {
+      background-image: url(../images/like.png);
+      z-index: 6;
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: 15px center;
+      text-align: left;
+      text-indent: 40px;
+      color: #fff;
+      font-size: 13px; }
+    .photodetail .photo .pinglun {
+      background-image: url(../images/pinglun.png);
+      z-index: 6;
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: 25px center;
+      text-align: left;
+      text-indent: 50px;
+      color: #fff;
+      font-size: 13px; }
+  .photodetail .renwu {
+    float: left;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 0; }
+    .photodetail .renwu li {
+      margin-left: 15px;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      padding: 10px 0;
+      position: relative; }
+      .photodetail .renwu li .renwuicon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        float: left;
+        overflow: hidden;
+        border: 1px solid #dddddd;
+        margin-right: 10px; }
+        .photodetail .renwu li .renwuicon img {
+          width: 100%;
+          height: 100%; }
+      .photodetail .renwu li .renwuname {
+        font-size: 15px;
+        color: #4fb4aa;
+        float: left;
+        width: 80%;
+        margin-top: 3px; }
+      .photodetail .renwu li .huodongquan {
+        position: absolute;
+        right: 30px;
+        line-height: 45px;
+        font-size: 13px;
+        color: #666; }
+      .photodetail .renwu li .renwuqianming {
+        font-size: 13px;
+        color: #333;
+        float: left;
+        width: 60%;
+        margin-top: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        background-image: url(../images/qiu.png);
+        background-size: 14px;
+        background-repeat: no-repeat;
+        text-indent: 20px; }
+  .photodetail .pinglunlist {
+    float: left;
+    width: 100%;
+    height: auto;
+    overflow: hidden; }
+    .photodetail .pinglunlist li {
+      margin-left: 15px;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      border-top: 1px solid #dddddd;
+      padding: 15px 0 10px 0;
+      position: relative; }
+      .photodetail .pinglunlist li .pinglunicon {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        float: left;
+        overflow: hidden;
+        border: 1px solid #dddddd;
+        margin-right: 10px; }
+        .photodetail .pinglunlist li .pinglunicon img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%; }
+      .photodetail .pinglunlist li .pinglunname {
+        font-size: 15px;
+        color: #333;
+        float: left;
+        width: 82%;
+        margin-top: 3px; }
+      .photodetail .pinglunlist li .pinglundate {
+        position: absolute;
+        right: 30px;
+        line-height: 45px;
+        font-size: 13px;
+        color: #999; }
+      .photodetail .pinglunlist li .pingluncon {
+        font-size: 14px;
+        color: #4fb4aa;
+        float: left;
+        width: 82%;
+        margin-top: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+    .photodetail .pinglunlist li:nth-of-type(1) {
+      border-top: 0; }
+  .photodetail .hf {
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 35px; }
+    .photodetail .hf .huifubtn {
+      position: absolute;
+      right: 10%;
+      line-height: 30px;
+      color: #4fb4aa;
+      outline: none;
+      top: 15px;
+      height: 30px;
+      border: 0;
+      background: none;
+      border-left: 1px solid #dddddd;
+      padding: 0 15px; }
+    .photodetail .hf .huifu {
+      width: 77%;
+      padding-left: 3%;
+      height: 40px;
+      outline: none;
+      margin: 10px 10%;
+      border: none;
+      background-color: #f2f2f2;
+      border: 1px solid #c5c5c5;
+      border-radius: 5px;
+      text-indent: 15px; }
