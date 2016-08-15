@@ -20,7 +20,7 @@ $(document).ready(function() {
 						}
 					})
 					.done(function(data) {
-						// activitylists()
+						activitylists()
 					})
 					.fail(function() {
 						console.log("error");
@@ -33,7 +33,7 @@ $(document).ready(function() {
 			alert('请在微信客户端打开！')
 		}
 	} else {
-		// activitylists();
+		activitylists();
 	}
 
 	
@@ -106,7 +106,8 @@ $(document).ready(function() {
 				type: 'Get',
 				dataType: 'json',
 				data: {
-					act_id: id
+					act_id: id,
+					code:code
 				},
 				success: function(data) {
 					var html = '';
@@ -127,9 +128,9 @@ $(document).ready(function() {
 			type: 'post',
 			dataType: 'json',
 			data: {
-				uid: 304,
 				act_id: id,
-				content: content
+				content: content,
+				code:code
 			},
 			success: function(data) {
 				pinglun();
@@ -160,8 +161,8 @@ $(document).ready(function() {
 			fileElementId: 'file1',
 			// dataType: 'json',
 			data: {
-				act_id: id,
-				uid: 304
+				// uid: 304
+				code:code
 				// photos:photos
 			},
 			success: function(data, status) {
