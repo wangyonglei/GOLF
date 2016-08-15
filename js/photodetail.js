@@ -57,7 +57,7 @@ $(document).ready(function() {
 			type: 'post',
 			dataType: 'json',
 			data: {
-				uid: 304,
+				code: code,
 				album_id: album_id
 			},
 			success: function(data) {
@@ -76,7 +76,7 @@ $(document).ready(function() {
 				type: 'post',
 				dataType: 'json',
 				data: {
-					uid: 304,
+					code: code,
 					album_id: album_id
 				},
 				success: function(data) {
@@ -98,7 +98,7 @@ $(document).ready(function() {
 			type: 'post',
 			dataType: 'json',
 			data: {
-				uid: 304,
+				code: code,
 				pic_id: album_id,
 				album_id: album_id,
 				content: content
@@ -115,7 +115,7 @@ $(document).ready(function() {
 				type: 'post',
 				dataType: 'json',
 				data: {
-					uid: 304,
+					code: code,
 					album_id: album_id
 				},
 				success: function(data) {
@@ -133,7 +133,7 @@ $(document).ready(function() {
 			type: 'post',
 			dataType: 'json',
 			data: {
-				uid: 304,
+				code: code,
 				album_id: album_id,
 				pic_id: album_id
 			},
