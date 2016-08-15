@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 
 	var activitylists = function() {
-		$(".al_con0").show();
+		// $(".al_con0").show();
 		// 已经报名
 		// 默认全部加载6条
 		$.ajax({
