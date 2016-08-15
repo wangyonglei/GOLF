@@ -47,8 +47,7 @@ $(document).ready(function() {
 				code: code
 			},
 			success: function(data) {
-					console.log('默认'+limit)
-				
+
 				// var html = $('#activitylist').html();
 				var html = '';
 				var actlistdata = data.data;
@@ -69,7 +68,7 @@ $(document).ready(function() {
 							// scrollpage(0);
 					};
 				} else {
-					for (var i = 0; i < limit; i++) {
+					for (var i = 0; i < 7; i++) {
 						html += '<li><a href="activitydetail.html"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
 							html += '<img src="images/golfdetail1.jpg">';
@@ -106,7 +105,7 @@ $(document).ready(function() {
 							dataType: 'json',
 							data: {
 								page: page,
-								limit: 2,
+								limit: 7,
 								type: type,
 								category: category,
 								code: code
@@ -114,8 +113,7 @@ $(document).ready(function() {
 							success: function(data) {
 								var html = '';
 								var actlistdata = data.data;
-								console.log('滑屏'+limit)
-								for (var i = 0; i < limit; i++) {
+								for (var i = 0; i < 7; i++) {
 									html += '<li><a href="activitydetail.html"><div class="al_img">';
 									if (!actlistdata[i].actPhotoAlbumList.picurl) {
 										html += '<img src="images/golfdetail1.jpg">';
@@ -170,7 +168,6 @@ $(document).ready(function() {
 					// 		'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
 					// };
 
-					console.log('点击'+limit)
 					var j = actlistdata.length;
 					if (j <= 7) {
 						for (var i = 0; i < j; i++) {
@@ -189,7 +186,7 @@ $(document).ready(function() {
 						};
 					} else {
 						
-						for (var i = 0; i < limit; i++) {
+						for (var i = 0; i < 7; i++) {
 							html += '<li><a href="activitydetail.html"><div class="al_img">';
 							if (!actlistdata[i].actPhotoAlbumList.picurl) {
 								html += '<img src="images/golfdetail1.jpg">';
