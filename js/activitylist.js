@@ -35,7 +35,6 @@ $(document).ready(function() {
 		activitylists();
 	}
 	function activitylists() {
-		// 默认全部加载6条
 		$.ajax({
 			url: 'http://v.jgsports.com.cn/user/Act/getList',
 			type: 'Get',
@@ -68,7 +67,7 @@ $(document).ready(function() {
 							// scrollpage(0);
 					};
 				} else {
-					for (var i = 0; i < j; i++) {
+					for (var i = 0; i < limit; i++) {
 						html += '<li><a href="activitydetail.html"><div class="al_img">';
 						if (!actlistdata[i].actPhotoAlbumList.picurl) {
 							html += '<img src="images/golfdetail1.jpg">';
@@ -80,6 +79,11 @@ $(document).ready(function() {
 							'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
 					};
 					$("#activitylist").html(html);
+					if (data.msg == "暂无活动信息") {
+						$(".Loading").html("全部加载完！");
+					} else {
+						$(".Loading").html("Loading...");
+					}
 					// $('.Loading0').before(html)
 					scrollpage(0);
 				}
@@ -108,7 +112,7 @@ $(document).ready(function() {
 							success: function(data) {
 								var html = '';
 								var actlistdata = data.data;
-								for (var i = 0; i < actlistdata.length; i++) {
+								for (var i = 0; i < limit; i++) {
 									html += '<li><a href="activitydetail.html"><div class="al_img">';
 									if (!actlistdata[i].actPhotoAlbumList.picurl) {
 										html += '<img src="images/golfdetail1.jpg">';
@@ -118,7 +122,7 @@ $(document).ready(function() {
 										'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
 								};
 								// $(".Loading"+type).before(html);
-								$('#activitylist').append(html)
+								$('#activitylist').html(html)
 								stop = true;
 								page++;
 								if (data.msg == "暂无活动信息") {
@@ -181,7 +185,7 @@ $(document).ready(function() {
 								scrollpage(index);
 						};
 					} else {
-						for (var i = 0; i < j; i++) {
+						for (var i = 0; i < limit; i++) {
 							html += '<li><a href="activitydetail.html"><div class="al_img">';
 							if (!actlistdata[i].actPhotoAlbumList.picurl) {
 								html += '<img src="images/golfdetail1.jpg">';
@@ -193,7 +197,11 @@ $(document).ready(function() {
 								'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
 						};
 						$("#activitylist").html(html);
-						$('.Loading').html('全部加载完！')
+						if (data.msg == "暂无活动信息") {
+							$(".Loading").html("全部加载完！");
+						} else {
+							$(".Loading").html("Loading...");
+						}
 						// $('.Loading0').before(html)
 						scrollpage(index);
 					}
