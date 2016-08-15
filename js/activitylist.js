@@ -163,7 +163,7 @@ $(document).ready(function() {
 							'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
 					};
 					// $(".Loading"+index).before(html);
-					$('#activitylist').append(html)
+					$('#activitylist').html(html)
 					scrollpage(index);
 				}
 			});
