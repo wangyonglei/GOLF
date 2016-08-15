@@ -105,7 +105,10 @@ $(document).ready(function() {
 						$('.jifenka').html('积分卡')
 					}else{
 						$('.jifenka').html('报名');
-						shifoubaoming();
+						$('.jifenka').click(function(){
+							shifoubaoming();
+						})
+						
 
 					}
 				}
