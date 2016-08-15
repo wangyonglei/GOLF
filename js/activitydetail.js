@@ -20,7 +20,7 @@ $(document).ready(function() {
 						}
 					})
 					.done(function(data) {
-						activitylists()
+						activitydetail()
 					})
 					.fail(function() {
 						console.log("error");
@@ -33,10 +33,10 @@ $(document).ready(function() {
 			alert('请在微信客户端打开！')
 		}
 	} else {
-		activitylists();
+		activitydetail();
 	}
 
-	
+function activitydetail(){
 	// 获取act_id
 	(function($) {
 		$.getUrlParam = function(name) {
@@ -182,4 +182,5 @@ $(document).ready(function() {
 		});
 	}
 	upload();
+	}
 });
