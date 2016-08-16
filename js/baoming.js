@@ -155,13 +155,10 @@ $(document).ready(function($) {
 			var htmlrname =''
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid');
-				// var ziliaouname = $(this).parent().attr('data-rname');
-				// $('.yaoqing_span').css('display','none');
-				// htmlrname += ''+ziliaouname+',';
-				// $('.yaoqing_yq').append(htmlrname);
 
 
-				$('.datadata').append(ziliaouid+',')
+				// $('.datadata').append(ziliaouid+',')
+				$('.datadata').html(ziliaouid)
 				$('.tongxunlu_mask').css('display', 'none');
 				$('.ball_card').css('display', 'none');
 
