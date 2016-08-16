@@ -118,7 +118,9 @@ $(document).ready(function() {
 				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
 				type: 'post',
 				dataType: 'json',
-				// data: {param1: 'value1'},
+				data: {
+					userIntegralCardId:3
+				},
 				success: function(data) {
 					var jifenlength = data.data;
 					var jifenhtml = ''
