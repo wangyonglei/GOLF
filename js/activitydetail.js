@@ -97,7 +97,7 @@ $(document).ready(function() {
 					// btn += '<div class="jifenka">积分卡</div><div class="shifoubaoming">报名</div>'
 					// $('.jifenkabtn').html(btn);
 
-					xianshijifen()
+					// xianshijifen()
 
 
 					if (act_det.joinStatus == 1) {
@@ -131,11 +131,6 @@ $(document).ready(function() {
 					$('.chengjicon').html()
 				}
 			})
-	
-			
-			
-
-
 		}
 
 		// 积分卡
