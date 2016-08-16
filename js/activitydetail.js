@@ -59,9 +59,12 @@ $(document).ready(function() {
 					html += '</div><div class="swiper-pagination"></div></div></div><h1 class="title">' + act_det.title + '<span>'
 					if (act_det.actStatus == 0) {
 						html += '活动结束'
-					} else {
+					} else if (act_det.actStatus ==1 )  {
 						html += '进行中'
+					}else if (act_det.actStatus ==2) {
+						html += '未开始'
 					}
+
 					html += '</span></h1>' +
 						'<div class="wai"><div class="weizhi duan" data-x="' + act_det.lngX + '" data-y="' + act_det.latY + '"><a href="navigation.html?id=' + act_det.id + '&x=' + act_det.lngX + '&y=' + act_det.latY + '&name=' + act_det.venueTitle + '">' + act_det.venueTitle + '<span class="jiao"></span></a></div><div class="date duan">' + act_det.act_date_str + '<span class="jiao"></span></div></div>' +
 						'<div class="wai"><div class="yaoqing duan"><a href="baoming.html?id='+act_det.id+'">';
