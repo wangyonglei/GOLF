@@ -34,12 +34,8 @@ $(document).ready(function($) {
 	} else {
 		bm();
 	}
-
-
-
 	function bm() {
 		var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
-
 		// 刷新报名页面
 		function baoming() {
 			$.ajax({
@@ -66,57 +62,13 @@ $(document).ready(function($) {
 				})
 		}
 		baoming();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		// 新增邀请
-		
-			$('.jiajian').click(function() {
-				$('.tongxunlu_mask').css('display', 'block');
-				$('.ball_card').css('display', 'block');
-				tongxunlu();
-			
-			});
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		$('.jiajian').click(function() {
+			$('.tongxunlu_mask').css('display', 'block');
+			$('.ball_card').css('display', 'block');
+			tongxunlu();
+		});
 		function tongxunlu() {
-
-
 			var title = encodeURIComponent($('.ballteam_input').val())
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Team/getList?title=' + title,
@@ -146,30 +98,18 @@ $(document).ready(function($) {
 					tongxunlu_id();
 				})
 		}
-
-
-
-
-
-		var tongxunlu_id = function(){
-			var htmlrname =''
+		var tongxunlu_id = function() {
+			var htmlrname = ''
 			$('.people_img').click(function() {
 				var ziliaouid = $(this).parent().attr('data-uid');
-
-
 				// $('.datadata').append(ziliaouid+',')
 				$('.datadata').html(ziliaouid)
 				$('.tongxunlu_mask').css('display', 'none');
 				$('.ball_card').css('display', 'none');
-
-			chenggongfanhui();
-				
+				chenggongfanhui();
 			});
-		
 		}
-
-
-		function chenggongfanhui(){
+		function chenggongfanhui() {
 			var uidval = parseInt($('.datadata').html());
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Act/inviteUserJoinAct',
@@ -182,57 +122,18 @@ $(document).ready(function($) {
 					}
 				})
 				.done(function(data) {
-					if (data.msg=="邀请人员不能为空") {
-						
+					if (data.msg == "邀请人员不能为空") {
 						alert("邀请人员不能为空")
-					}else if (data.msg=="您不是活动的发布者"){
+					} else if (data.msg == "您不是活动的发布者") {
 						alert("您不是活动的发布者")
-					}else{
-						
+					} else {
 					}
-
 					baoming()
-				
-					
-					
 				})
 		}
-
-
 		$('.tongxunlu_mask').click(function() {
-				$('.tongxunlu_mask').css('display', 'none');
-				$('.ball_card').css('display', 'none');
+			$('.tongxunlu_mask').css('display', 'none');
+			$('.ball_card').css('display', 'none');
 		})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	}
 })

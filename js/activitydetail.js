@@ -120,7 +120,7 @@ $(document).ready(function() {
 		// 积分卡
 		function jifen(){
 			$('.jifenka').click(function(event) {
-				// location='jifenka.html?id='+id +'&uid='+
+				location='jifenka.html?id='+id
 			});
 		}
 			// 报名
