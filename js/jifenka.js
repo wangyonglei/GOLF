@@ -8,7 +8,7 @@ $(document).ready(function($) {
 	var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 	var getTotal = function() {
 		var jifenkadata = {
-			uid: uid,
+			uid: 3,
 			act_id: act_id,
 			total_bar: parseInt($('.zonggan').html()),
 			netBar: parseInt($('.jinggan').html()),
