@@ -15,30 +15,30 @@ $(document).ready(function() {
 				var jifendata = data.data;
 				var html = ''
 				html +='<li><p>球洞</p><p>标准杆</p><p>成绩</p></li>'+
-						'<li><p>1</p><p>'+jifendata.oneHole+'</p><p>0</p></li>'+
-						'<li><p>2</p><p>'+jifendata.twoHole+'</p><p>0</p></li>'+
-						'<li><p>3</p><p>'+jifendata.threeHole+'</p><p>0</p></li>'+
-						'<li><p>4</p><p>'+jifendata.fourHole+'</p><p>0</p></li>'+
-						'<li><p>5</p><p>'+jifendata.fiveHole+'</p><p>0</p></li>'+
-						'<li><p>6</p><p>'+jifendata.sixHole+'</p><p>0</p></li>'+
-						'<li><p>7</p><p>'+jifendata.sevenHole+'</p><p>0</p></li>'+
-						'<li><p>8</p><p>'+jifendata.eightHole+'</p><p>0</p></li>'+
-						'<li><p>9</p><p>'+jifendata.nineHole+'</p><p>0</p></li>'+
+						'<li><p>1</p><p>'+jifendata.score_details.oneHole+'</p><p>0</p></li>'+
+						'<li><p>2</p><p>'+jifendata.score_details.twoHole+'</p><p>0</p></li>'+
+						'<li><p>3</p><p>'+jifendata.score_details.threeHole+'</p><p>0</p></li>'+
+						'<li><p>4</p><p>'+jifendata.score_details.fourHole+'</p><p>0</p></li>'+
+						'<li><p>5</p><p>'+jifendata.score_details.fiveHole+'</p><p>0</p></li>'+
+						'<li><p>6</p><p>'+jifendata.score_details.sixHole+'</p><p>0</p></li>'+
+						'<li><p>7</p><p>'+jifendata.score_details.sevenHole+'</p><p>0</p></li>'+
+						'<li><p>8</p><p>'+jifendata.score_details.eightHole+'</p><p>0</p></li>'+
+						'<li><p>9</p><p>'+jifendata.score_details.nineHole+'</p><p>0</p></li>'+
 						'<li><p>前九</p><p>5</p><p>0</p></li>'
 				$('.jifen_qian').html(html)
 				var htmlh = ''
 				htmlh +='<li><p>球洞</p><p>标准杆</p><p>成绩</p></li>'+
-						'<li><p>10</p><p>'+jifendata.tenHole+'</p><p>0</p></li>'+
-						'<li><p>11</p><p>'+jifendata.elevenHole+'</p><p>0</p></li>'+
-						'<li><p>12</p><p>'+jifendata.twelveHole+'</p><p>0</p></li>'+
-						'<li><p>13</p><p>'+jifendata.thirteenHole+'</p><p>0</p></li>'+
-						'<li><p>14</p><p>'+jifendata.fourteenHole+'</p><p>0</p></li>'+
-						'<li><p>15</p><p>'+jifendata.fifteenHole+'</p><p>0</p></li>'+
-						'<li><p>16</p><p>'+jifendata.sixteenHole+'</p><p>0</p></li>'+
-						'<li><p>17</p><p>'+jifendata.seventeenHole+'</p><p>0</p></li>'+
-						'<li><p>18</p><p>'+jifendata.eighteenHole+'</p><p>0</p></li>'+
+						'<li><p>10</p><p>'+jifendata.score_details.tenHole+'</p><p>0</p></li>'+
+						'<li><p>11</p><p>'+jifendata.score_details.elevenHole+'</p><p>0</p></li>'+
+						'<li><p>12</p><p>'+jifendata.score_details.twelveHole+'</p><p>0</p></li>'+
+						'<li><p>13</p><p>'+jifendata.score_details.thirteenHole+'</p><p>0</p></li>'+
+						'<li><p>14</p><p>'+jifendata.score_details.fourteenHole+'</p><p>0</p></li>'+
+						'<li><p>15</p><p>'+jifendata.score_details.fifteenHole+'</p><p>0</p></li>'+
+						'<li><p>16</p><p>'+jifendata.score_details.sixteenHole+'</p><p>0</p></li>'+
+						'<li><p>17</p><p>'+jifendata.score_details.seventeenHole+'</p><p>0</p></li>'+
+						'<li><p>18</p><p>'+jifendata.score_details.eighteenHole+'</p><p>0</p></li>'+
 						'<li><p>后九</p><p>5</p><p>0</p></li>'
-				$('.jifen_qian').html(htmlh)
+				$('.jifen_hou').html(htmlh)
 
 				
 			}
