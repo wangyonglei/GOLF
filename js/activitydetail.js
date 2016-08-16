@@ -98,7 +98,7 @@ $(document).ready(function() {
 					
 					var jifenhtml = ''
 					for (var i = 0; i < act_det.userIntegralCardList.length; i++) {
-						jifenhtml += '<li><div class="chengjiicon"><img src="'+act_det.userIntegralCardList[i].avatar+'"></div><div class="chengjiname">'+act_det.userIntegralCardList[i].rname+'</div><p>'+act_det.userIntegralCardList[i].handicap+'</p><p>'+act_det.userIntegralCardList[i].holeNumber+'</p></li>'
+						jifenhtml += '<li><a href="jifen.html?id='+act_det.userIntegralCardList[i].id+'&uid='+act_det.userIntegralCardList[i].uid+'"><div class="chengjiicon"><img src="'+act_det.userIntegralCardList[i].avatar+'"></div><div class="chengjiname">'+act_det.userIntegralCardList[i].rname+'</div><p>'+act_det.userIntegralCardList[i].handicap+'</p><p>'+act_det.userIntegralCardList[i].holeNumber+'</p></a></li>'
 					}
 					$('.chengjicon').html(jifenhtml)
 
