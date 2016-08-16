@@ -170,7 +170,7 @@ $(document).ready(function($) {
 
 
 		function chenggongfanhui(){
-			var uidval = parseInt($('datadata').html());
+			var uidval = parseInt($('.datadata').html());
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Act/inviteUserJoinAct',
 					type: 'post',
@@ -178,15 +178,15 @@ $(document).ready(function($) {
 					data: {
 						code: code,
 						act_id: id,
-						joinMember: 5
+						joinMember: uidval
 					}
 				})
 				.done(function(data) {
 					if (data.msg=="邀请人员不能为空") {
 						baoming()
 						alert("邀请人员不能为空")
-					}else{
-						alert('ok')
+					}else if (data.msg=="您不是活动的发布者"){
+						alert("您不是活动的发布者")
 					}
 
 					
