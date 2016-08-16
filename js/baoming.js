@@ -69,7 +69,8 @@ $(document).ready(function($) {
 			});
 	}
 	function zengjia() {
-		$('.jiajian').click(function(event) {
+		$('.jiajian').click(function() {
+			console.log(0)
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Act/inviteUserJoinAct',
 					type: 'post',
