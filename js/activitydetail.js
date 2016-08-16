@@ -116,11 +116,12 @@ $(document).ready(function() {
 		function xianshijifen(){
 			$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
-				type: 'post',
+				type: 'get',
 				dataType: 'json',
-				data: {
-					userIntegralCardId:1
-				},
+				// data: {
+				// 	userIntegralCardId:1
+				// },
+				
 				success: function(data) {
 					var jifenlength = data.data;
 					var jifenhtml = ''
