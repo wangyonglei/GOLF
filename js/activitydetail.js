@@ -16,17 +16,13 @@ $(document).ready(function() {
 						dataType: 'json',
 						data: {
 							code: code
+						},
+						success: function(data) {
+							activitydetail()
 						}
 					})
-					.done(function(data) {
-						activitydetail()
-					})
-					.fail(function() {
-						console.log("error");
-					})
-					.always(function() {
-						console.log("complete");
-					});
+					
+					
 			}
 		} else {
 			alert('请在微信客户端打开！')
