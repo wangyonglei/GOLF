@@ -74,7 +74,7 @@ $(document).ready(function() {
 					}
 					html += '（' + act_det.joinActMembersNumber + '人）<span class="jiao"></span></a></div>	<ul class="renwu">';
 					for (var i = 0; i < act_det.joinActMembers.length; i++) {
-						html += '<li><div class="renwuicon"><img src="' + act_det.joinActMembers[i].avatar + '"></div><div class="renwuname">' + act_det.joinActMembers[i].rname + '</div><div class="renwuqianming">' + act_det.joinActMembers[i].signature + '</div><div class="huodongquan">活动圈3月首发</div></li>'
+						html += '<li><div class="renwuicon"><img src="' + act_det.joinActMembers[i].avatar + '"></div><div class="renwuname">' + act_det.joinActMembers[i].rname + '</div><div class="renwuqianming">' + act_det.joinActMembers[i].signature + '</div></li>'//<div class="huodongquan">活动圈3月首发</div>
 					}
 					html += '</ul></div>'
 					$('#activitydetail').html(html);
