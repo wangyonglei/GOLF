@@ -20,7 +20,6 @@ $(document).ready(function($) {
 					})
 					.done(function(data) {
 						baoming();
-						zengjia()
 					})
 					.fail(function() {
 						console.log("error");
@@ -34,7 +33,6 @@ $(document).ready(function($) {
 		}
 	} else {
 		baoming();
-		zengjia()
 	}
 	function baoming() {
 		var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
@@ -58,7 +56,6 @@ $(document).ready(function($) {
 				for (var i = 0; i < baomingdata.noJoinUserList.length; i++) {
 					htmlwei += '<li><div class="people_img"><img src="' + baomingdata.noJoinUserList[i].avatar + '"></div><p>' + baomingdata.noJoinUserList[i].rname + '</p></li>'
 				}
-			
 				$('.weibaoming_people ul').html(htmlwei);
 			})
 			.fail(function() {
@@ -67,29 +64,31 @@ $(document).ready(function($) {
 			.always(function() {
 				console.log("complete");
 			});
-	}
-	function zengjia() {
-		$('.jiajian').click(function() {
-			console.log(0)
-			$.ajax({
-					url: 'http://v.jgsports.com.cn/user/Act/inviteUserJoinAct',
-					type: 'post',
-					dataType: 'json',
-					data: {
-						code: code,
-						act_id: id,
-						joinMember: uid
-					}
-				})
-				.done(function() {
-					baoming();
-				})
-				.fail(function() {
-					console.log("error");
-				})
-				.always(function() {
-					console.log("complete");
-				});
-		});
+		function zengjia() {
+			$('.jiajian').click(function() {
+				console.log(0)
+				$.ajax({
+						url: 'http://v.jgsports.com.cn/user/Act/inviteUserJoinAct',
+						type: 'post',
+						dataType: 'json',
+						data: {
+							code: code,
+							act_id: id,
+							joinMember: uid
+						}
+					})
+					.done(function() {
+						baoming();
+					})
+					.fail(function() {
+						console.log("error");
+					})
+					.always(function() {
+						console.log("complete");
+					});
+			});
+
+		}
+		zengjia()
 	}
 })
