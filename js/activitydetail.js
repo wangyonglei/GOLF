@@ -97,6 +97,7 @@ $(document).ready(function() {
 					// btn += '<div class="jifenka">积分卡</div><div class="shifoubaoming">报名</div>'
 					// $('.jifenkabtn').html(btn);
 
+					xianshijifen()
 
 
 					if (act_det.joinStatus == 1) {
@@ -111,6 +112,33 @@ $(document).ready(function() {
 					}
 				}
 			})
+
+		function xianshijifen(){
+			$.ajax({
+				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
+				type: 'post',
+				dataType: 'json',
+				// data: {param1: 'value1'},
+			})
+			.done(function(data) {
+					var jifenlength =data.data;
+
+					var jifenhtml = ''
+					for (var i = 0; i<jifenlength; i++) {
+						jifenhtml +='<li><div class="chengjiicon"><img src="images/card_img.jpg"></div><div class="chengjiname">王磊</div><p>0</p><p>-</p></li>'
+					}
+
+					
+				$('.chengjicon').html()
+
+
+			})
+			
+			
+
+
+		}
+
 		// 积分卡
 		function jifen(){
 			$('.jifenka').click(function() {
