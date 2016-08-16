@@ -53,9 +53,20 @@ $(document).ready(function($) {
 				 var baomingdata = data.data;
 				  var html = '';
 				  for (var i = 0; i <baomingdata.joinUserList.length; i++) {
-				  	html +='<li><div class="people_img"><img src="'+baomingdata.joinUserList[1].avatar+'"></div><p>'+baomingdata.joinUserList[1].rname+'</p></li>'
+				  	html +='<li><div class="people_img"><img src="'+baomingdata.joinUserList[i].avatar+'"></div><p>'+baomingdata.joinUserList[i].rname+'</p></li>'
 				  }
 				  $('.yibaoming_people ul').html(html);
+
+				  var htmlwei = '';
+				  for (var i = 0; i <baomingdata.noJoinUserList.length; i++) {
+				  	htmlwei +='<li><div class="people_img"><img src="'+baomingdata.noJoinUserList[i].avatar+'"></div><p>'+baomingdata.noJoinUserList[i].rname+'</p></li>'
+				  }
+				  $('.weibaoming_people ul').html(htmlwei);
+
+
+
+
+
 
 			})
 			.fail(function() {
