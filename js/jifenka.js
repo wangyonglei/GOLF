@@ -1,6 +1,4 @@
 $(document).ready(function($) {
-
-
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
@@ -36,44 +34,34 @@ $(document).ready(function($) {
 	} else {
 		jiFen();
 	}
-
-
-
 	function jiFen() {
 		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
-
+		//获取记分
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
 				type: 'get',
 				dataType: 'json',
-				data:{
-					code:code,
-					act_id:act_id
+				data: {
+					userIntegralCardId: act_id
 				}
 			})
 			.done(function(data) {
 				var xianshidata = data.data;
 				var html = '';
 				html += '<div class="jifenka_name">大鹏</div><div>净杆<p class="jinggan">0</p></div><div>差点<p class="chadian">0</p></div>	<div>总杆<p class="zonggan">0</p></div>';
-				$('.top').html(html)
+				$('.top').html(html);
+				for (var j = 1; j <= 18; j++) {
+					var html = ''
+					html += '<li><div class="list_num">' + j + '<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div><div class="list_core"><input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p></div></li>'
+					$('.jifenka_li').append(html);
+				}
+				jiajianxiugai();
 			})
-
-
-
-
-		for (var j = 1; j <= 18; j++) {
-			var html = ''
-			html += '<li><div class="list_num">' + j + '<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div><div class="list_core"><input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p></div></li>'
-			$('.jifenka_li').append(html);
-		}
-		jiajianxiugai();
-
-
 	}
 
+	//修改请求
 	function getTotal() {
 		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
-
 		var jifenkadata = {
 			act_id: act_id,
 			// total_bar: parseInt($('.zonggan').html()),
@@ -107,10 +95,9 @@ $(document).ready(function($) {
 				jiFen()
 			}
 		})
-
-
 	}
-	function jiajianxiugai(){
+	//编辑操作
+	function jiajianxiugai() {
 		var jifenli = $('.jifenka_li li')
 			//为每行元素添加事件
 		for (var i = 0; i < jifenli.length; i++) {
@@ -125,7 +112,6 @@ $(document).ready(function($) {
 					switch (cls) {
 						case 'add': //点击了加号
 							countInout.value = value + 1;
-
 							getTotal();
 							break;
 						case 'reduce': //点击了减号
