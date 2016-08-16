@@ -48,17 +48,36 @@ $(document).ready(function($) {
 			.done(function(data) {
 				var xianshidata = data.data;
 				var html = '';
-				html += '<div class="jifenka_name">大鹏</div><div>净杆<p class="jinggan">0</p></div><div>差点<p class="chadian">0</p></div>	<div>总杆<p class="zonggan">0</p></div>';
+				html += '<div class="jifenka_name">大鹏</div><div>净杆<p class="jinggan">' + xianshidata.net_bar + '</p></div><div>差点<p class="chadian">' + xianshidata.handicap + '</p></div>	<div>总杆<p class="zonggan">' + 'xianshidata.total_bar' + '</p></div>';
 				$('.top').html(html);
-				for (var j = 1; j <= 18; j++) {
-					var html = ''
-					html += '<li><div class="list_num">' + j + '<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div><div class="list_core"><input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p></div></li>'
-					$('.jifenka_li').append(html);
-				}
-				jiajianxiugai();
+				// for (var j = 1; j <= 18; j++) {
+				// 	var html = ''
+				// 	html += '<li><div class="list_num">' + j + '<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div><div class="list_core"><input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p></div></li>'
+				// 	$('.jifenka_li').append(html);
+				// }
+				var lihtml = '';
+				lihtml += '<li><div class="list_num">1<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.oneHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">2<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.twoHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">3<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.threeHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">4<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.fourHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">5<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.fiveHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">6<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.sixHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">7<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.sevenHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">8<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.eightHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">9<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.nineHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">10<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.tenHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">11<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.elevenHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">12<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.twelveHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">13<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.thirteenHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">14<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.fourteenHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">15<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.fifteenHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">16<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.sixteenHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">17<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.seventeenHole + '"><p class="xintianweng">信天翁</p>	</div></li>' +
+					'<li><div class="list_num">18<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.eighteenHole + '"><p class="xintianweng">信天翁</p>	</div></li>' 
+					$('.jifenka_li').html(lihtml);
+					jiajianxiugai();
 			})
 	}
-
 	//修改请求
 	function getTotal() {
 		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
