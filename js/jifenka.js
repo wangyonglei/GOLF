@@ -40,11 +40,16 @@ $(document).ready(function($) {
 
 
 	function jiFen() {
+		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
 				type: 'get',
 				dataType: 'json',
+				data:{
+					code:code,
+					act_id:act_id
+				}
 			})
 			.done(function(data) {
 				var xianshidata = data.data;
