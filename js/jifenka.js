@@ -40,8 +40,7 @@ $(document).ready(function($) {
 
 
 	function jiFen() {
-		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
-		
+
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
 				type: 'get',
@@ -73,6 +72,8 @@ $(document).ready(function($) {
 	}
 
 	function getTotal() {
+		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+		
 		var jifenkadata = {
 			act_id: act_id,
 			total_bar: parseInt($('.zonggan').html()),
