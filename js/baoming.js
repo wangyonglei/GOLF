@@ -181,10 +181,14 @@ $(document).ready(function($) {
 						joinMember: uidval
 					}
 				})
-				.done(function() {
+				.done(function(data.data) {
+					if (data.msg=="邀请人员不能为空") {
+						baoming()
+						alert("邀请人员不能为空")
+					}
 					
 				
-					baoming()
+					
 					
 				})
 		}
