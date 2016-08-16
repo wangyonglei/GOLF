@@ -119,8 +119,8 @@ $(document).ready(function() {
 			})
 		// 积分卡
 		function jifen(){
-			$('.jifenka').click(function(event) {
-				location='jifenka.html?id='+id
+			$('.jifenka').click(function() {
+				location='jifenka.html?act_id='+id
 			});
 		}
 			// 报名

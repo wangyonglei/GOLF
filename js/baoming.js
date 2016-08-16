@@ -126,7 +126,8 @@ $(document).ready(function($) {
 						alert("邀请人员不能为空")
 					} else if (data.msg == "您不是活动的发布者") {
 						alert("您不是活动的发布者")
-					} else {
+					} else if (data.msg=="此用户已经参加了该活动") {
+						alert("此用户已经参加了该活动")
 					}
 					baoming()
 				})
