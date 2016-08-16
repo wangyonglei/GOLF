@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	function loadingjifen(){
 	var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
-		
+
 		$.ajax({
 			url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
 			type: 'get',
@@ -12,12 +12,35 @@ $(document).ready(function() {
 			},
 			
 			success: function(data) {
-				var jifenlength = data.data;
-				// var html = ''
-				// // for (var i = 0; i < jifenlength; i++) {
-				// 	html += '<li><div class="chengjiicon"><img src="images/card_img.jpg"></div><div class="chengjiname">王磊</div><p>0</p><p>-</p></li>'
-				// // }
-				// $('.chengjicon').html(html)
+				var jifendata = data.data;
+				var html = ''
+				html +='<li><p>球洞</p><p>标准杆</p><p>成绩</p></li>'+
+						'<li><p>1</p><p>'+jifendata.oneHole+'</p><p>0</p></li>'+
+						'<li><p>2</p><p>'+jifendata.twoHole+'</p><p>0</p></li>'+
+						'<li><p>3</p><p>'+jifendata.threeHole+'</p><p>0</p></li>'+
+						'<li><p>4</p><p>'+jifendata.fourHole+'</p><p>0</p></li>'+
+						'<li><p>5</p><p>'+jifendata.fiveHole+'</p><p>0</p></li>'+
+						'<li><p>6</p><p>'+jifendata.sixHole+'</p><p>0</p></li>'+
+						'<li><p>7</p><p>'+jifendata.sevenHole+'</p><p>0</p></li>'+
+						'<li><p>8</p><p>'+jifendata.eightHole+'</p><p>0</p></li>'+
+						'<li><p>9</p><p>'+jifendata.nineHole+'</p><p>0</p></li>'+
+						'<li><p>前九</p><p>5</p><p>0</p></li>'
+				$('.jifen_qian').html(html)
+				var htmlh = ''
+				htmlh +='<li><p>球洞</p><p>标准杆</p><p>成绩</p></li>'+
+						'<li><p>10</p><p>'+jifendata.tenHole+'</p><p>0</p></li>'+
+						'<li><p>11</p><p>'+jifendata.elevenHole+'</p><p>0</p></li>'+
+						'<li><p>12</p><p>'+jifendata.twelveHole+'</p><p>0</p></li>'+
+						'<li><p>13</p><p>'+jifendata.thirteenHole+'</p><p>0</p></li>'+
+						'<li><p>14</p><p>'+jifendata.fourteenHole+'</p><p>0</p></li>'+
+						'<li><p>15</p><p>'+jifendata.fifteenHole+'</p><p>0</p></li>'+
+						'<li><p>16</p><p>'+jifendata.sixteenHole+'</p><p>0</p></li>'+
+						'<li><p>17</p><p>'+jifendata.seventeenHole+'</p><p>0</p></li>'+
+						'<li><p>18</p><p>'+jifendata.eighteenHole+'</p><p>0</p></li>'+
+						'<li><p>后九</p><p>5</p><p>0</p></li>'
+				$('.jifen_qian').html(htmlh)
+
+				
 			}
 		})
 	}
