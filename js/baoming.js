@@ -52,6 +52,10 @@ $(document).ready(function($) {
 			.done(function(data) {
 				 var baomingdata = data.data;
 				  var html = '';
+				  for (var i = 0; i <baomingdata.joinUserList.length; i++) {
+				  	html +='<li><div class="people_img"><img src="'+baomingdata.joinUserList[1].avatar+'"></div><p>'+baomingdata.joinUserList[1].rname+'</p></li>'
+				  }
+				  $('.yibaoming_people ul').html(html);
 
 			})
 			.fail(function() {
