@@ -40,6 +40,8 @@ $(document).ready(function($) {
 
 
 	function jiFen() {
+		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+		
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
 				type: 'get',
@@ -65,7 +67,6 @@ $(document).ready(function($) {
 			html += '<li><div class="list_num">' + j + '<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div><div class="list_core"><input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p></div></li>'
 			$('.jifenka_li').append(html);
 		}
-		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		getTotal();
 
 
