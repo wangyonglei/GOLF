@@ -104,49 +104,49 @@ $(document).ready(function($) {
 			dataType: 'json',
 			data: jifenkadata,
 			success: function(data) {
-				console.log('ok')
 				jiFen()
 			}
 		})
 
-		function jiajianxiugai(){
-			var jifenli = $('.jifenka_li li')
-				//为每行元素添加事件
-			for (var i = 0; i < jifenli.length; i++) {
-				//将点击事件绑定到jifenli元素
-				jifenli[i].onclick = function(e) {
-						var e = e || window.event;
-						var el = e.target || e.srcElement; //通过事件对象的target属性获取触发元素
-						var cls = el.className; //触发元素的class
-						var countInout = this.getElementsByTagName('input')[0]; // 数目input
-						var value = parseInt(countInout.value); //数目
-						//通过判断触发元素的class确定用户点击了哪个元素
-						switch (cls) {
-							case 'add': //点击了加号
-								countInout.value = value + 1;
 
-								getTotal();
-								break;
-							case 'reduce': //点击了减号
-								// if (value > 1) {
-								countInout.value = value - 1;
-								getTotal();
-								// }
-								break;
-						}
-						// getTotal();
+	}
+	function jiajianxiugai(){
+		var jifenli = $('.jifenka_li li')
+			//为每行元素添加事件
+		for (var i = 0; i < jifenli.length; i++) {
+			//将点击事件绑定到jifenli元素
+			jifenli[i].onclick = function(e) {
+					var e = e || window.event;
+					var el = e.target || e.srcElement; //通过事件对象的target属性获取触发元素
+					var cls = el.className; //触发元素的class
+					var countInout = this.getElementsByTagName('input')[0]; // 数目input
+					var value = parseInt(countInout.value); //数目
+					//通过判断触发元素的class确定用户点击了哪个元素
+					switch (cls) {
+						case 'add': //点击了加号
+							countInout.value = value + 1;
+
+							getTotal();
+							break;
+						case 'reduce': //点击了减号
+							// if (value > 1) {
+							countInout.value = value - 1;
+							getTotal();
+							// }
+							break;
 					}
-					// // 给数目输入框绑定keyup事件
-				jifenli[i].getElementsByTagName('input')[0].onkeyup = function() {
-					var val = parseInt(this.value);
-					if (isNaN(val)) {
-						val = 0;
-					}
-					if (this.value != val) {
-						this.value = val;
-					}
-					getTotal(); //更新总数
+					// getTotal();
 				}
+				// // 给数目输入框绑定keyup事件
+			jifenli[i].getElementsByTagName('input')[0].onkeyup = function() {
+				var val = parseInt(this.value);
+				if (isNaN(val)) {
+					val = 0;
+				}
+				if (this.value != val) {
+					this.value = val;
+				}
+				getTotal(); //更新总数
 			}
 		}
 	}
