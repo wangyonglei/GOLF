@@ -46,7 +46,7 @@ $(document).ready(function($) {
 				dataType: 'json',
 			})
 			.done(function(data) {
-				var xianshidata = dta.data;
+				var xianshidata = data.data;
 				var html = '';
 				html += '<div class="jifenka_name">大鹏</div><div>净杆<p class="jinggan">0</p></div><div>差点<p class="chadian">0</p></div>	<div>总杆<p class="zonggan">0</p></div>';
 				$('.top').html(html)
