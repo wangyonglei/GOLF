@@ -35,14 +35,14 @@ $(document).ready(function($) {
 		jiFen();
 	}
 	function jiFen() {
-		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+		var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		//获取记分
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
 				type: 'get',
 				dataType: 'json',
 				data: {
-					userIntegralCardId: act_id
+					userIntegralCardId: id
 				}
 			})
 			.done(function(data) {
