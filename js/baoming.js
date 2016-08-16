@@ -170,7 +170,7 @@ $(document).ready(function($) {
 
 
 		function chenggongfanhui(){
-			var uidval = $('datadata').html();
+			var uidval = parseInt($('datadata').html());
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Act/inviteUserJoinAct',
 					type: 'post',
