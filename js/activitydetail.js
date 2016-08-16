@@ -119,7 +119,7 @@ $(document).ready(function() {
 				type: 'post',
 				dataType: 'json',
 				data: {
-					userIntegralCardId:3
+					userIntegralCardId:1
 				},
 				success: function(data) {
 					var jifenlength = data.data;
