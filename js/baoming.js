@@ -178,14 +178,17 @@ $(document).ready(function($) {
 					data: {
 						code: code,
 						act_id: id,
-						joinMember: uidval
+						joinMember: 5
 					}
 				})
 				.done(function(data) {
 					if (data.msg=="邀请人员不能为空") {
 						baoming()
 						alert("邀请人员不能为空")
+					}else{
+						alert('ok')
 					}
+
 					
 				
 					
