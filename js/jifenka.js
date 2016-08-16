@@ -46,10 +46,10 @@ $(document).ready(function($) {
 				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
 				type: 'get',
 				dataType: 'json',
-				data:{
-					code:code,
-					act_id:act_id
-				}
+				// data:{
+				// 	code:code,
+				// 	act_id:act_id
+				// }
 			})
 			.done(function(data) {
 				var xianshidata = data.data;
