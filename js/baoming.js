@@ -183,13 +183,15 @@ $(document).ready(function($) {
 				})
 				.done(function(data) {
 					if (data.msg=="邀请人员不能为空") {
-						baoming()
+						
 						alert("邀请人员不能为空")
 					}else if (data.msg=="您不是活动的发布者"){
 						alert("您不是活动的发布者")
+					}else{
+						
 					}
 
-					
+					baoming()
 				
 					
 					
