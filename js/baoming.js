@@ -19,7 +19,7 @@ $(document).ready(function($) {
 						}
 					})
 					.done(function(data) {
-						baoming();
+						bm();
 					})
 					.fail(function() {
 						console.log("error");
@@ -32,63 +32,201 @@ $(document).ready(function($) {
 			alert('请在微信客户端打开！')
 		}
 	} else {
-		baoming();
+		bm();
 	}
-	function baoming() {
-		var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
-		$.ajax({
-				url: 'http://v.jgsports.com.cn/user/Act/getJoinActMembers',
-				type: 'get',
-				dataType: 'json',
-				data: {
-					code: code,
-					act_id: id
-				}
-			})
-			.done(function(data) {
-				var baomingdata = data.data;
-				var html = '';
-				for (var i = 0; i < baomingdata.joinUserList.length; i++) {
-					html += '<li><div class="people_img"><img src="' + baomingdata.joinUserList[i].avatar + '"></div><p>' + baomingdata.joinUserList[i].rname + '</p></li>'
-				}
-				$('.yibaoming_people ul').html(html);
-				var htmlwei = '';
-				for (var i = 0; i < baomingdata.noJoinUserList.length; i++) {
-					htmlwei += '<li><div class="people_img"><img src="' + baomingdata.noJoinUserList[i].avatar + '"></div><p>' + baomingdata.noJoinUserList[i].rname + '</p></li>'
-				}
-				$('.weibaoming_people ul').html(htmlwei);
-			})
-			.fail(function() {
-				console.log("error");
-			})
-			.always(function() {
-				console.log("complete");
-			});
-		function zengjia() {
-			$('.jiajian').click(function() {
-				console.log(0)
-				$.ajax({
-						url: 'http://v.jgsports.com.cn/user/Act/inviteUserJoinAct',
-						type: 'post',
-						dataType: 'json',
-						data: {
-							code: code,
-							act_id: id,
-							joinMember: uid
-						}
-					})
-					.done(function() {
-						baoming();
-					})
-					.fail(function() {
-						console.log("error");
-					})
-					.always(function() {
-						console.log("complete");
-					});
-			});
 
+
+
+	function bm() {
+		var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+
+		// 刷新报名页面
+		function baoming() {
+			$.ajax({
+					url: 'http://v.jgsports.com.cn/user/Act/getJoinActMembers',
+					type: 'get',
+					dataType: 'json',
+					data: {
+						code: code,
+						act_id: id
+					}
+				})
+				.done(function(data) {
+					var baomingdata = data.data;
+					var html = '';
+					for (var i = 0; i < baomingdata.joinUserList.length; i++) {
+						html += '<li><div class="people_img"><img src="' + baomingdata.joinUserList[i].avatar + '"></div><p>' + baomingdata.joinUserList[i].rname + '</p></li>'
+					}
+					$('.yibaoming_people ul').html(html);
+					var htmlwei = '';
+					for (var i = 0; i < baomingdata.noJoinUserList.length; i++) {
+						htmlwei += '<li><div class="people_img"><img src="' + baomingdata.noJoinUserList[i].avatar + '"></div><p>' + baomingdata.noJoinUserList[i].rname + '</p></li>'
+					}
+					$('.weibaoming_people ul').html(htmlwei);
+				})
 		}
-		zengjia()
+		baoming();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		// 新增邀请
+		
+			$('.jiajian').click(function() {
+				$('.tongxunlu_mask').css('display', 'block');
+				$('.ball_card').css('display', 'block');
+				tongxunlu();
+			
+			});
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		function tongxunlu() {
+
+
+			var title = encodeURIComponent($('.ballteam_input').val())
+			$.ajax({
+					url: 'http://v.jgsports.com.cn/user/Team/getList?title=' + title,
+					type: 'get',
+					dataType: 'json',
+					data: title
+				})
+				.done(function(data) {
+					var balldata = data.data;
+					var html = '';
+					for (var j = 0; j < balldata.length; j++) {
+						html += '<div class="wai"><div class="duan ball_card_title">' + balldata[j].title + '（' + balldata[j].membersNumber + '人）<p class="xiajiao"></p></div><ul class="ball_card_people"   data-teamId="' + balldata[j].id + '">'
+						if (balldata[j].membersList.length == 0) {
+							html += '<li>暂无</li>'
+						} else {
+							for (var i = 0; i < balldata[j].membersList.length; i++) {
+								html += '<li data-uid="' + balldata[j].membersList[i].uid + '" data-rname="' + balldata[j].membersList[i].rname + '" class="ziliao"> '
+								if (balldata[j].teamMaster == 1) {
+									html += '<div class="teamjian"><img src="images/jian.png"></div>'
+								}
+								html += '<div class="people_img"><img src="' + balldata[j].membersList[i].avatar + '"></div><p>' + balldata[j].membersList[i].rname + '</p></li>'
+							}
+						}
+						html += '</ul></div>'
+					}
+					$('#ball_card').html(html);
+					tongxunlu_id();
+				})
+		}
+
+
+
+
+
+		var tongxunlu_id = function(){
+			var htmlrname =''
+			$('.people_img').click(function() {
+				var ziliaouid = $(this).parent().attr('data-uid');
+				// var ziliaouname = $(this).parent().attr('data-rname');
+				// $('.yaoqing_span').css('display','none');
+				// htmlrname += ''+ziliaouname+',';
+				// $('.yaoqing_yq').append(htmlrname);
+
+
+				$('.datadata').append(ziliaouid+',')
+				$('.tongxunlu_mask').css('display', 'none');
+				$('.ball_card').css('display', 'none');
+
+			chenggongfanhui();
+				
+			});
+		
+		}
+
+
+		function chenggongfanhui(){
+			var uidval = $('datadata').html();
+			$.ajax({
+					url: 'http://v.jgsports.com.cn/user/Act/inviteUserJoinAct',
+					type: 'post',
+					dataType: 'json',
+					data: {
+						code: code,
+						act_id: id,
+						joinMember: uidval
+					}
+				})
+				.done(function() {
+					
+				
+					baoming()
+					
+				})
+		}
+
+
+		$('.tongxunlu_mask').click(function() {
+				$('.tongxunlu_mask').css('display', 'none');
+				$('.ball_card').css('display', 'none');
+		})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 })

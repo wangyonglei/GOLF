@@ -99,15 +99,16 @@ $(document).ready(function() {
 
 
 
-					var btn = ''
-					btn += '<div class="jifenka">积分卡</div><div class="shifoubaoming">报名</div>'
-					$('.jifenkabtn').html(btn);
+					// var btn = ''
+					// btn += '<div class="jifenka">积分卡</div><div class="shifoubaoming">报名</div>'
+					// $('.jifenkabtn').html(btn);
 
 
 
 					if (act_det.joinStatus == 1) {
 						$('.jifenka').show();
 						$('.shifoubaoming').hide();
+						jifen();
 
 					} else {
 						$('.shifoubaoming').show();
@@ -116,6 +117,12 @@ $(document).ready(function() {
 					}
 				}
 			})
+		// 积分卡
+		function jifen(){
+			$('.jifenka').click(function(event) {
+				// location='jifenka.html?id='+id +'&uid='+
+			});
+		}
 			// 报名
 		function shifoubaoming() {
 			$('.shifoubaoming').click(function() {
@@ -217,6 +224,5 @@ $(document).ready(function() {
 			});
 		}
 		upload();
-		if (true) {}
 	}
 });

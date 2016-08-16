@@ -7,35 +7,38 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/ball_card.css">
 	<link rel="stylesheet" type="text/css" href="css/baoming.css"></head>
 <body>
 	<div class="baoming">
 		<div class="baoming_title">已报名</div>
 		<div class="yibaoming_people">
-			<ul>
-				
-			<!-- 	<div class="jiajian">
-					<div class="people_img">
-						<img src="images/jia.png"></div>
-				</div>
-				<div class="jiajian">
-				
-					<div class="people_img">
-						<img src="images/jian.png"></div>
-				</div> -->
-			</ul>
+			<ul></ul>
 		</div>
 		<div class="baoming_title">未报名</div>
 		<div class="weibaoming_people">
-			<ul>
-				
-				
-			</ul>
-			<div class="jiajian">	<div class="people_img"><img src="images/jia.png"></div></div>
+			<ul></ul>
+			<div class="jiajian">
+				<div class="people_img">
+					<img src="images/jia.png"></div>
+			</div>
 		</div>
+
+
+		<div class="ball_card">
+			<div class="ball_search">
+				<input type="text" class="input ballteam_input" placeholder="请输入球队名称">		
+				<button class="search_btn">搜索</button>
+				<p class="x"></p>
+			</div>
+			<div id="ball_card"></div>
+			<div class="datadata"></div>
+		</div>
+		<div class="tongxunlu_mask"></div>
+
+
 	</div>
 	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 	<script type="text/javascript" src="js/baoming.js"></script>
-
 </body>
 </html>

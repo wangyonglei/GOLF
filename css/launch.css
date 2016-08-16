@@ -2,125 +2,149 @@
 .launch {
   width: 100%;
   height: auto;
-  overflow: hidden; }
-  .launch input {
-    border: 0;
-    background-color: none;
-    height: 45px;
-    width: 85%;
-    color: #333; }
-  .launch .riqi {
-    background-image: url(../images/date.png); }
-  .launch .shijian {
-    background-image: url(../images/time.png); }
-  .launch .qiuchang {
-    background-image: url(../images/weizhi.png); }
-    .launch .qiuchang .qiuchangright {
-      float: right;
-      margin-right: 20px;
-      font-size: 15px;
-      color: #333; }
-  .launch .beizhu {
-    background-image: url(../images/beizhu.png);
-    border-bottom: 0;
-    background-position: 0 13px; }
-  .launch .faqi {
-    background-image: url(../images/biaoti.png); }
-    .launch .faqi .faqiright {
-      float: right;
-      margin-right: 20px;
-      font-size: 15px;
-      color: #c5c5c5; }
-  .launch .yaoqing {
-    background-image: url(../images/yaoqing.png);
-    margin-top: 10px;
-    position: relative; }
-    .launch .yaoqing a {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      display: block; }
-    .launch .yaoqing .yaoqing_input {
-      height: 45px;
-      width: 85%;
-      color: #333;
-      float: left;
-      margin-left: 45px; }
-  .launch .righticon {
-    background-image: url(../images/telbook.png);
-    position: relative;
-    top: -45px;
-    right: 10%; }
-  .launch .qiuchang_inputid, .launch .datadata {
-    display: none; }
-  .launch .yaoqing_maxk {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    overflow: hidden;
-    left: 0;
-    background-color: #f8f8f8;
-    display: none;
-    z-index: 30; }
-    .launch .yaoqing_maxk .yaoqing_input {
-      width: 80%;
-      height: auto;
-      overflow: hidden;
-      margin-top: 10px;
-      margin-left: 10%;
-      border-radius: 8px; }
-    .launch .yaoqing_maxk input {
-      text-indent: 1em;
-      width: 100%; }
-    .launch .yaoqing_maxk .yaoqing_btn {
-      height: 50px;
-      outline: none;
-      width: 100%;
-      background-color: #4fb4aa;
-      font-size: 17px;
-      color: #fff;
-      text-align: center;
-      line-height: 50px;
-      position: absolute;
-      left: 0;
-      bottom: 0px;
-      border: 0; }
-  .launch .beizhu_input {
-    float: left;
-    margin-left: 30px;
-    height: 80px;
-    border: 0;
-    margin-top: 15px;
-    width: 85%;
-    margin-bottom: 10px;
-    overflow: hidden;
-    min-height: 0px;
-    max-height: 100px; }
-  .launch .yaoqinghuodong {
-    height: 50px;
-    width: 100%;
-    outline: none;
-    background-color: #4fb4aa;
-    font-size: 17px;
-    color: #fff;
-    text-align: center;
-    line-height: 50px;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    border: 0; }
+  overflow: hidden;
+}
+.launch input {
+  border: 0;
+  background-color: none;
+  height: 45px;
+  width: 85%;
+  color: #333;
+}
+.launch .riqi {
+  background-image: url(../images/date.png);
+}
+.launch .shijian {
+  background-image: url(../images/time.png);
+}
+.launch .qiuchang {
+  background-image: url(../images/weizhi.png);
+}
+.launch .qiuchang .qiuchangright {
+  float: right;
+  margin-right: 20px;
+  font-size: 15px;
+  color: #333;
+}
+.launch .beizhu {
+  background-image: url(../images/beizhu.png);
+  border-bottom: 0;
+  background-position: 0 13px;
+}
+.launch .faqi {
+  background-image: url(../images/biaoti.png);
+}
+.launch .faqi .faqiright {
+  float: right;
+  margin-right: 20px;
+  font-size: 15px;
+  color: #c5c5c5;
+}
+.launch .yaoqing {
+  background-image: url(../images/yaoqing.png);
+  margin-top: 10px;
+  position: relative;
+}
+.launch .yaoqing a {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+.launch .yaoqing .yaoqing_input {
+  height: 45px;
+  width: 85%;
+  color: #333;
+  float: left;
+  margin-left: 45px;
+}
+.launch .righticon {
+  background-image: url(../images/telbook.png);
+  position: relative;
+  top: -45px;
+  right: 10%;
+}
+.launch .qiuchang_inputid, .launch .datadata {
+  display: none;
+}
+.launch .yaoqing_maxk {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  left: 0;
+  background-color: #f8f8f8;
+  display: none;
+  z-index: 30;
+}
+.launch .yaoqing_maxk .yaoqing_input {
+  width: 80%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 10%;
+  border-radius: 8px;
+}
+.launch .yaoqing_maxk input {
+  text-indent: 1em;
+  width: 100%;
+}
+.launch .yaoqing_maxk .yaoqing_btn {
+  height: 50px;
+  outline: none;
+  width: 100%;
+  background-color: #4fb4aa;
+  font-size: 17px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  border: 0;
+}
+.launch .beizhu_input {
+  float: left;
+  margin-left: 30px;
+  height: 80px;
+  border: 0;
+  margin-top: 15px;
+  width: 85%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  min-height: 0px;
+  max-height: 100px;
+}
+.launch .yaoqinghuodong {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  background-color: #4fb4aa;
+  font-size: 17px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  border: 0;
+}
 
 .ball_list {
-  padding-top: 0; }
-  .ball_list .ballsearch {
-    position: static;
-    /*height: 20%;*/ }
-  .ball_list ul {
-    margin-top: 0; }
+  padding-top: 0;
+}
+.ball_list .ballsearch {
+  position: static;
+  /*height: 20%;*/
+}
+.ball_list ul {
+  margin-top: 0;
+}
 
 .duan {
-  height: auto; }
+  height: auto;
+}
 
 .qiuchang_mask, .tongxunlu_mask {
   display: none;
@@ -131,7 +155,8 @@
   left: 0;
   background-color: #000;
   opacity: .6;
-  z-index: 2; }
+  z-index: 2;
+}
 
 .qiuchang_maxk, .ball_card {
   width: 80%;
@@ -143,6 +168,7 @@
   left: 10%;
   background-color: #fff;
   display: none;
-  z-index: 3; }
+  z-index: 3;
+}
 
 /*.tongxunlu{ display: block; background-color: #000; }*/
