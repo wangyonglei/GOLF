@@ -74,13 +74,7 @@ $(document).ready(function() {
 					}
 					html += '（' + act_det.joinActMembersNumber + '人）<span class="jiao"></span></a></div>	<ul class="renwu">';
 					for (var i = 0; i < act_det.joinActMembers.length; i++) {
-						html += '<li><div class="renwuicon">';
-						// if (!act_det.joinActMembers.avatar) {
-						// 	html += '<img src="images/card_img.jpg">';
-						// } else {
-							html += '<img src="' + act_det.joinActMembers[i].avatar + '">';
-						// }
-						html += '</div><div class="renwuname">' + act_det.joinActMembers[i].rname + '</div><div class="renwuqianming">' + act_det.joinActMembers[i].signature + '</div><div class="huodongquan">活动圈3月首发</div></li>'
+						html += '<li><div class="renwuicon"><img src="' + act_det.joinActMembers[i].avatar + '"></div><div class="renwuname">' + act_det.joinActMembers[i].rname + '</div><div class="renwuqianming">' + act_det.joinActMembers[i].signature + '</div><div class="huodongquan">活动圈3月首发</div></li>'
 					}
 					html += '</ul></div>'
 					$('#activitydetail').html(html);
