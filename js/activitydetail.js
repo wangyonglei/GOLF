@@ -96,11 +96,15 @@ $(document).ready(function() {
 					});
 					pinglun();
 					photos();
-					// var photoshtml = ''
-					// for (var i = 0; i < act_det.actPhotoAlbumList.length; i++) {
-					// 	photoshtml += '<li><a href="photodetail.html?"><img src="' + act_det.actPhotoAlbumList[i].picurl + '"></a></li>';
-					// }
-					// $('.zhaopianimg ul').html(photoshtml);
+
+
+
+					var btn = ''
+					btn += '<div class="jifenka">积分卡</div><div class="shifoubaoming">报名</div>'
+					$('.jifenkabtn').html(btn);
+
+
+
 					if (act_det.joinStatus == 1) {
 						$('.jifenka').show();
 						$('.shifoubaoming').hide();
@@ -108,7 +112,6 @@ $(document).ready(function() {
 					} else {
 						$('.shifoubaoming').show();
 						$('.jifenka').hide();
-
 						shifoubaoming();
 					}
 				}
