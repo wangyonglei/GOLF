@@ -48,7 +48,7 @@ $(document).ready(function($) {
 			.done(function(data) {
 				var xianshidata = data.data;
 				var html = '';
-				html += '<div class="jifenka_name">大鹏</div><div>净杆<p class="jinggan">' + xianshidata.net_bar + '</p></div><div>差点<p class="chadian">' + xianshidata.handicap + '</p></div>	<div>总杆<p class="zonggan">' + 'xianshidata.total_bar' + '</p></div>';
+				html += '<div class="jifenka_name">大鹏</div><div>净杆<p class="jinggan">' + xianshidata.net_bar + '</p></div><div>差点<p class="chadian">' + xianshidata.handicap + '</p></div>	<div>总杆<p class="zonggan">' + xianshidata.total_bar + '</p></div>';
 				$('.top').html(html);
 				// for (var j = 1; j <= 18; j++) {
 				// 	var html = ''
@@ -82,10 +82,10 @@ $(document).ready(function($) {
 	function getTotal() {
 		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		var jifenkadata = {
-			act_id: act_id,
-			// total_bar: parseInt($('.zonggan').html()),
-			// netBar: parseInt($('.jinggan').html()),
-			// handicap: parseInt($('.chadian').html()),
+			userIntegralCardId : id,
+			total_bar: parseInt($('.zonggan').html()),
+			netBar: parseInt($('.jinggan').html()),
+			handicap: parseInt($('.chadian').html()),
 			one_hole: $('.jifenka_li li .jifen_input').eq(0).val(),
 			two_hole: $('.jifenka_li li .jifen_input').eq(1).val(),
 			three_hole: $('.jifenka_li li .jifen_input').eq(2).val(),
@@ -106,7 +106,7 @@ $(document).ready(function($) {
 			eighteen_hole: $('.jifenka_li li .jifen_input').eq(17).val()
 		}
 		$.ajax({
-			url: 'http://v.jgsports.com.cn/user/Act/addUserIntegralCardInfo',
+			url: 'http://v.jgsports.com.cn/user/Act/modifyUserIntegralCardInfo',
 			type: 'post',
 			dataType: 'json',
 			data: jifenkadata,
