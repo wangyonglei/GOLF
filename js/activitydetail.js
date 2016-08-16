@@ -118,25 +118,7 @@ $(document).ready(function() {
 				}
 			})
 
-		function xianshijifen(){
-			$.ajax({
-				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
-				type: 'get',
-				dataType: 'json',
-				// data: {
-				// 	userIntegralCardId:1
-				// },
-				
-				success: function(data) {
-					var jifenlength = data.data;
-					var jifenhtml = ''
-					// for (var i = 0; i < jifenlength; i++) {
-						jifenhtml += '<li><div class="chengjiicon"><img src="images/card_img.jpg"></div><div class="chengjiname">王磊</div><p>0</p><p>-</p></li>'
-					// }
-					$('.chengjicon').html()
-				}
-			})
-		}
+		
 
 		// 积分卡
 		function jifen(){
