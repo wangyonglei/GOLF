@@ -58,7 +58,7 @@ $(document).ready(function($) {
 				for (var i = 0; i < baomingdata.noJoinUserList.length; i++) {
 					htmlwei += '<li><div class="people_img"><img src="' + baomingdata.noJoinUserList[i].avatar + '"></div><p>' + baomingdata.noJoinUserList[i].rname + '</p></li>'
 				}
-				htmlwei += '<div class="jiajian">	<div class="people_img"><img src="images/jia.png"></div></div>'
+			
 				$('.weibaoming_people ul').html(htmlwei);
 			})
 			.fail(function() {
