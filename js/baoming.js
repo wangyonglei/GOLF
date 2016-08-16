@@ -41,7 +41,7 @@ $(document).ready(function($) {
 		var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 
 		$.ajax({
-				url: 'http://v.jgsports.com.cn/user/Act/getJoinActMembers ',
+				url: 'http://v.jgsports.com.cn/user/Act/getJoinActMembers',
 				type: 'get',
 				dataType: 'json',
 				data: {
