@@ -36,14 +36,14 @@ $(document).ready(function($) {
 	}
 
 	function jiFen() {
-		var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		//获取记分
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
 				type: 'get',
 				dataType: 'json',
 				data: {
-					userIntegralCardId: id
+					userIntegralCardId: act_id
 				}
 			})
 			.done(function(data) {
@@ -82,9 +82,9 @@ $(document).ready(function($) {
 
 				//修改请求
 				function getTotal() {
-					var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+					// var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 					var jifenkadata = {
-						userIntegralCardId: id,
+						userIntegralCardId: act_id,
 						total_bar: parseInt($('.zonggan').html()),
 						netBar: parseInt($('.jinggan').html()),
 						handicap: parseInt($('.chadian').html()),
