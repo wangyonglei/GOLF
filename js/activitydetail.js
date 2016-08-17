@@ -96,9 +96,9 @@ $(document).ready(function() {
 				}
 				$('.chengjicon').html(jifenhtml)
 				if (act_det.joinStatus == 1) { //joinStatus:判断有没有报名活动
-					if (act_det.actStatus == 1) {//判断状态是结束，未开始，还是已经结束
+					if (act_det.actStatus == 1) {//判断状态是结束，未开始，还是进行中
 
-						if (true) { //判断是否有成绩，默认为没有
+						if (act_det.haveScore == 0) { //判断是否有成绩，默认为没有//是否有成绩0--是没有1--是有
 							$('.jifenka').show();
 							$('.shifoubaoming').hide();
 							$('.jifenka').click(function() {
