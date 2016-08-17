@@ -71,6 +71,12 @@ $(document).ready(function($) {
 						'<li><div class="list_num">18<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.eighteenHole + '"><p class="xintianweng">信天翁</p>	</div></li>'
 					$('.jifenka_li').html(lihtml);
 					jiajianxiugai();
+
+
+
+
+
+
 					//修改请求
 					//编辑操作
 					function jiajianxiugai() {
@@ -112,6 +118,11 @@ $(document).ready(function($) {
 							}
 						}
 					}
+
+
+
+
+
 					function getTotal() {
 						// var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 						var one_hole = parseInt($('.jifenka_li li .jifen_input').eq(0).val());
@@ -134,6 +145,10 @@ $(document).ready(function($) {
 						var eighteen_hole = parseInt($('.jifenka_li li .jifen_input').eq(17).val());
 						$('.zonggan').html(one_hole + two_hole + three_hole + four_hole + five_hole + six_hole + seven_hole + eight_hole + nine_hole + ten_hole + eleven_hole + twelve_hole + thirteen_hole + fourteen_hole + fifteen_hole + sixteen_hole + seventeen_hole + eighteen_hole)
 					}
+
+
+
+
 					$('.tijiao_tbn').click(function(event) {
 							$('.jinggan').html(parseInt($('.zonggan').html()) - parseInt($('.chadian').val()))
 							var jifenkadata = {
@@ -171,6 +186,19 @@ $(document).ready(function($) {
 							})
 						
 					})
+
+
+
+
+
+
+
 			})
+
+
+
+
+
+
 	}
 })
