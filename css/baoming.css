@@ -4,43 +4,36 @@
   height: auto;
   padding: 20px 0 10px 0;
   font-size: 15px;
-  color: #666;
-}
+  color: #666; }
 .baoming .yibaoming_people, .baoming .weibaoming_people {
   width: 100%;
   height: auto;
   padding: 15px 0;
   background-color: #fff;
-  overflow: hidden;
-}
-.baoming .yibaoming_people li, .baoming .weibaoming_people li {
-  float: left;
-  margin-left: 15px;
-}
-.baoming .yibaoming_people .jiajian, .baoming .weibaoming_people .jiajian {
-  float: left;
-  margin-left: 15px;
-}
-.baoming .yibaoming_people .people_img, .baoming .weibaoming_people .people_img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid #ddd;
-}
-.baoming .yibaoming_people .people_img img, .baoming .weibaoming_people .people_img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-.baoming .yibaoming_people p, .baoming .weibaoming_people p {
-  width: 100%;
-  height: auto;
-  font-size: 15px;
-  color: #333;
-  text-align: center;
-  margin-top: 10px;
-}
+  overflow: hidden; }
+  .baoming .yibaoming_people li, .baoming .weibaoming_people li {
+    float: left;
+    margin-left: 15px; }
+  .baoming .yibaoming_people .jiajian, .baoming .weibaoming_people .jiajian {
+    float: left;
+    margin-left: 15px; }
+  .baoming .yibaoming_people .people_img, .baoming .weibaoming_people .people_img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #ddd; }
+    .baoming .yibaoming_people .people_img img, .baoming .weibaoming_people .people_img img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%; }
+  .baoming .yibaoming_people p, .baoming .weibaoming_people p {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    color: #333;
+    text-align: center;
+    margin-top: 10px; }
 .baoming .ball_card {
   width: 80%;
   height: 90%;
@@ -51,8 +44,7 @@
   left: 10%;
   background-color: #fff;
   display: none;
-  z-index: 3;
-}
+  z-index: 3; }
 .baoming .tongxunlu_mask {
   display: none;
   width: 100%;
@@ -62,8 +54,6 @@
   left: 0;
   background-color: #000;
   opacity: .6;
-  z-index: 2;
-}
+  z-index: 2; }
 .baoming .datadata {
-  display: none;
-}
+  display: none; }

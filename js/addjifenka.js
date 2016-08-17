@@ -94,6 +94,7 @@ $(document).ready(function($) {
 			arr.sort(function() {
 				return Math.random()
 			})
+
 			// int randomNumber=(int)(Math.random()*8)+1;
 
 
@@ -181,7 +182,7 @@ $(document).ready(function($) {
 				dataType: 'json',
 				data: jifenkadata,
 				success: function(data) {
-					console('ok')
+					console.log('ok')
 				}
 			})
 
