@@ -93,14 +93,16 @@ $(document).ready(function($) {
 									//通过判断触发元素的class确定用户点击了哪个元素
 									switch (cls) {
 										case 'add': //点击了加号
+										if (value < 50) {
 											countInout.value = value + 1;
 											getTotal();
+										}
 											break;
 										case 'reduce': //点击了减号
-											// if (value > 1) {
+											if (value > 1) {
 											countInout.value = value - 1;
 											getTotal();
-											// }
+											}
 											break;
 									}
 									// getTotal();
