@@ -29,7 +29,7 @@ $(document).ready(function($) {
 		jiFen();
 	}
 	function jiFen() {
-		var id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+		var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		//获取记分
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
