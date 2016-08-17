@@ -34,42 +34,58 @@ $(document).ready(function($) {
 	} else {
 		addjiFen();
 	}
-
 	function addjiFen() {
 		//获取默认记分都为0
+		// var html = '';
+		// html += '<div class="jifenka_name">大鹏</div><div>净杆<p class="jinggan">0</p></div><div>差点<p class="chadian">0</p></div>	<div>总杆<p class="zonggan">0</p></div>';
+		// $('.top').html(html);
+		// var lihtml = '';
+		// lihtml += '<li><div class="list_num">1<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">2<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">3<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">4<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">5<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">6<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">7<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">8<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">9<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">10<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">11<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">12<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">13<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">14<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">15<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">16<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">17<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
+		// 	'<li><div class="list_num">18<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>'
 		var html = '';
-		html += '<div class="jifenka_name">大鹏</div><div>净杆<p class="jinggan">0</p></div><div>差点<p class="chadian">0</p></div>	<div>总杆<p class="zonggan">0</p></div>';
+		html += '<div class="jifenka_name">大鹏</div><div>净杆<p class="jinggan">0</p></div><div>差点<input class="chadian" value="0">	<div>总杆<p class="zonggan">0</p></div>';
 		$('.top').html(html);
 		var lihtml = '';
-		lihtml += '<li><div class="list_num">1<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">2<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">3<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">4<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">5<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">6<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">7<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">8<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">9<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">10<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">11<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">12<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">13<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">14<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">15<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">16<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">17<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
-			'<li><div class="list_num">18<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>'
+		lihtml += '<li><div class="list_num">1</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">2</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">3</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">4</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">5</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">6</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">7</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">8</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">9</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">10</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">11</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">12</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">13</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">14</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">15</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">16</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">17</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
+			'<li><div class="list_num">18</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>'
 		$('.jifenka_li').html(lihtml);
 		//修改请求
-
-
-
 		function getTotal() {
 			// var zonggan = parseInt();
 			// var jinggan = parseInt($('.jinggan').html());
 			// var chadian = parseInt($('.chadian').html());
-
-
 			var one_hole = parseInt($('.jifenka_li li .jifen_input').eq(0).val());
 			var two_hole = parseInt($('.jifenka_li li .jifen_input').eq(1).val());
 			var three_hole = parseInt($('.jifenka_li li .jifen_input').eq(2).val());
@@ -88,22 +104,14 @@ $(document).ready(function($) {
 			var sixteen_hole = parseInt($('.jifenka_li li .jifen_input').eq(15).val());
 			var seventeen_hole = parseInt($('.jifenka_li li .jifen_input').eq(16).val());
 			var eighteen_hole = parseInt($('.jifenka_li li .jifen_input').eq(17).val());
-
-			var arr = [one_hole, two_hole, three_hole, four_hole, five_hole, six_hole, seven_hole, eight_hole, nine_hole, ten_hole, eleven_hole, twelve_hole, thirteen_hole, fourteen_hole, fifteen_hole, sixteen_hole, seventeen_hole, eighteen_hole]
-
-			arr.sort(function() {
-				return Math.random()
-			})
-
+			//var arr = [one_hole, two_hole, three_hole, four_hole, five_hole, six_hole, seven_hole, eight_hole, nine_hole, ten_hole, eleven_hole, twelve_hole, thirteen_hole, fourteen_hole, fifteen_hole, sixteen_hole, seventeen_hole, eighteen_hole]
+			//arr.sort(function() {
+			//	return Math.random()
+			//})
 			// int randomNumber=(int)(Math.random()*8)+1;
-
-
-			console.log(arr)
-
+			//console.log(arr)
 			$('.zonggan').html(one_hole + two_hole + three_hole + four_hole + five_hole + six_hole + seven_hole + eight_hole + nine_hole + ten_hole + eleven_hole + twelve_hole + thirteen_hole + fourteen_hole + fifteen_hole + sixteen_hole + seventeen_hole + eighteen_hole)
-
 		}
-
 		//编辑操作
 		function jiajianxiugai() {
 			var jifenli = $('.jifenka_li li')
@@ -124,7 +132,6 @@ $(document).ready(function($) {
 									getTotal();
 								}
 								break;
-
 							case 'reduce': //点击了减号
 								if (value > 1) {
 									countInout.value = value - 1;
@@ -148,15 +155,13 @@ $(document).ready(function($) {
 			}
 		}
 		jiajianxiugai();
-
-
 		$('.tijiao_tbn').click(function(event) {
 			var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 			var jifenkadata = {
-				act_id:id,
+				act_id: id,
 				total_bar: parseInt($('.zonggan').html()),
 				netBar: parseInt($('.jinggan').html()),
-				handicap: parseInt($('.chadian').html()),
+				handicap: parseInt($('.chadian').val()),
 				one_hole: $('.jifenka_li li .jifen_input').eq(0).val(),
 				two_hole: $('.jifenka_li li .jifen_input').eq(1).val(),
 				three_hole: $('.jifenka_li li .jifen_input').eq(2).val(),
@@ -185,9 +190,6 @@ $(document).ready(function($) {
 					console.log('ok')
 				}
 			})
-
-
-
 		});
 	}
 })
