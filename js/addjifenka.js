@@ -59,7 +59,7 @@ $(document).ready(function($) {
 		// 	'<li><div class="list_num">17<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>' +
 		// 	'<li><div class="list_num">18<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"><p class="xintianweng">信天翁</p>	</div></li>'
 		var html = '';
-		html += '<div class="jifenka_name">大鹏</div><div>净杆<p class="jinggan">0</p></div><div>差点<input class="chadian" value="0">	<div>总杆<p class="zonggan">0</p></div>';
+		html += '<div class="jifenka_name">大鹏</div><div>净杆<p class="jinggan">0</p></div><div>差点<input class="chadian" value="0">	</div><div>总杆<p class="zonggan">0</p></div>';
 		$('.top').html(html);
 		var lihtml = '';
 		lihtml += '<li><div class="list_num">1</div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="0"></div></li>' +
