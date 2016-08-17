@@ -64,7 +64,7 @@ $(document).ready(function($) {
 
 
 		function getTotal() {
-			var zonggan = parseInt($('.zonggan').html());
+			var zonggan = parseInt();
 			var jinggan = parseInt($('.jinggan').html());
 			var chadian = parseInt($('.chadian').html());
 
@@ -88,7 +88,7 @@ $(document).ready(function($) {
 			var seventeen_hole= $('.jifenka_li li .jifen_input').eq(16).val();
 			var eighteen_hole= $('.jifenka_li li .jifen_input').eq(17).val();
 
-			zonggan = one_hole + two_hole+three_hole+four_hole+five_hole+six_hole+seven_hole+eight_hole+nine_hole+ten_hole+eleven_hole+twelve_hole+thirteen_hole+fourteen_hole+fifteen_hole+sixteen_hole+seventeen_hole+eighteen_hole
+			$('.zonggan').html(one_hole + two_hole+three_hole+four_hole+five_hole+six_hole+seven_hole+eight_hole+nine_hole+ten_hole+eleven_hole+twelve_hole+thirteen_hole+fourteen_hole+fifteen_hole+sixteen_hole+seventeen_hole+eighteen_hole)
 			}
 
 		//编辑操作
