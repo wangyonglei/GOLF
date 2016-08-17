@@ -101,7 +101,7 @@ $(document).ready(function() {
 					
 					var jifenhtml = ''
 					for (var i = 0; i < act_det.userIntegralCardList.length; i++) {
-						jifenhtml += '<li><a href="jifen.html?id='+act_det.userIntegralCardList[i].id+"><div class="chengjiicon"><img src="'+act_det.userIntegralCardList[i].avatar+'"></div><div class="chengjiname">'+act_det.userIntegralCardList[i].rname+'</div><p>'+act_det.userIntegralCardList[i].handicap+'</p><p>'+act_det.userIntegralCardList[i].holeNumber+'</p></a></li>'
+						jifenhtml += '<li><a href="jifen.html?id='+act_det.userIntegralCardList[i].id+'"><div class="chengjiicon"><img src="'+act_det.userIntegralCardList[i].avatar+'"></div><div class="chengjiname">'+act_det.userIntegralCardList[i].rname+'</div><p>'+act_det.userIntegralCardList[i].handicap+'</p><p>'+act_det.userIntegralCardList[i].holeNumber+'</p></a></li>'
 					}
 					$('.chengjicon').html(jifenhtml)
 
