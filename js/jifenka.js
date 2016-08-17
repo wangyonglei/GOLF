@@ -29,7 +29,7 @@ $(document).ready(function($) {
 		jiFen();
 	}
 	function jiFen() {
-		var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+		var act_id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		//获取记分
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/Act/getUserIntegralCardInfoDetail',
@@ -152,7 +152,7 @@ $(document).ready(function($) {
 					$('.tijiao_tbn').click(function(event) {
 							$('.jinggan').html(parseInt($('.zonggan').html()) - parseInt($('.chadian').val()))
 							var jifenkadata = {
-								userIntegralCardId: id,
+								userIntegralCardId: act_id,
 								total_bar: parseInt($('.zonggan').html()),
 								netBar: parseInt($('.jinggan').html()),
 								handicap: parseInt($('.chadian').html()),
