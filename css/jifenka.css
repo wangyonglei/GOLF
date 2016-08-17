@@ -2,87 +2,122 @@
   width: 98%;
   height: 40px;
   padding: 10px 0;
-  padding-right: 2%; }
-  .jifenka .top .jifenka_name {
-    float: left;
-    font-size: 17px;
-    color: #333;
-    line-height: 40px; }
-  .jifenka .top div {
-    float: right;
-    text-indent: 0;
-    width: auto;
-    margin-right: 20px;
-    font-size: 14px;
-    color: #666;
-    line-height: 20px;
-    text-align: center; }
-  .jifenka .top p {
-    font-size: 17px; }
+  padding-right: 2%;
+}
+.jifenka .top .jifenka_name {
+  float: left;
+  font-size: 17px;
+  color: #333;
+  line-height: 40px;
+}
+.jifenka .top div {
+  float: right;
+  text-indent: 0;
+  width: auto;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #666;
+  line-height: 20px;
+  text-align: center;
+}
+.jifenka .top p {
+  font-size: 17px;
+}
 .jifenka .jifenka_list {
   width: 100%;
   height: auto;
   overflow: hidden;
-  border-bottom: 0; }
-  .jifenka .jifenka_list li {
-    width: 100%;
-    height: 51px;
-    overflow: hidden;
-    padding: 15px 0 15px 0;
-    border-bottom: 1px solid #ddd; }
-  .jifenka .jifenka_list .list_num {
-    font-size: 30px;
-    color: #333;
-    float: left;
-    width: 40px;
-    text-align: center;
-    text-indent: 0; }
-    .jifenka .jifenka_list .list_num p {
-      font-size: 15px;
-      line-height: 0px; }
-  .jifenka .jifenka_list .add, .jifenka .jifenka_list .reduce {
-    color: #999;
-    text-indent: 0;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    text-align: center;
-    line-height: 51px;
-    width: 51px;
-    height: 51px;
-    font-size: 30px;
-    float: left; }
-  .jifenka .jifenka_list .add {
-    margin: 0 15px; }
-  .jifenka .jifenka_list .list_core {
-    text-indent: 0;
-    float: right;
-    width: 60px;
-    text-align: center;
-    margin-right: 50px;
-    position: relative;
-    line-height: 51px;
-    color: #ed6466;
-    font-size: 30px; }
-    .jifenka .jifenka_list .list_core input {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      width: 60px;
-      text-align: center;
-      line-height: 51px;
-      color: #ed6466;
-      font-size: 30px; }
-    .jifenka .jifenka_list .list_core p {
-      font-size: 14px;
-      height: 20px;
-      width: 60px;
-      text-align: center;
-      line-height: 20px;
-      color: #fff;
-      position: absolute;
-      bottom: -10px;
-      background-color: #ed6466;
-      border-radius: 5px;
-      margin-right: 15px; }
-  .jifenka .jifenka_list li:last-child {
-    border-bottom: 0; }
+  border-bottom: 0;
+}
+.jifenka .jifenka_list li {
+  width: 100%;
+  height: 51px;
+  overflow: hidden;
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+.jifenka .jifenka_list .list_num {
+  font-size: 30px;
+  color: #333;
+  float: left;
+  width: 40px;
+  text-align: center;
+  text-indent: 0;
+}
+.jifenka .jifenka_list .list_num p {
+  font-size: 15px;
+  line-height: 0px;
+}
+.jifenka .jifenka_list .add, .jifenka .jifenka_list .reduce {
+  color: #999;
+  text-indent: 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  text-align: center;
+  line-height: 51px;
+  width: 51px;
+  height: 51px;
+  font-size: 30px;
+  float: left;
+}
+.jifenka .jifenka_list .add {
+  margin: 0 15px;
+}
+.jifenka .jifenka_list .list_core {
+  text-indent: 0;
+  float: right;
+  width: 60px;
+  text-align: center;
+  margin-right: 50px;
+  position: relative;
+  line-height: 51px;
+  color: #ed6466;
+  font-size: 30px;
+}
+.jifenka .jifenka_list .list_core input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  width: 60px;
+  text-align: center;
+  line-height: 51px;
+  color: #ed6466;
+  font-size: 30px;
+}
+.jifenka .jifenka_list .list_core p {
+  font-size: 14px;
+  height: 20px;
+  width: 60px;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: -10px;
+  background-color: #ed6466;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+.jifenka .jifenka_list li:last-child {
+  border-bottom: 0;
+}
+
+.tijiao {
+  width: 100%;
+  height: 50%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.tijiao .tijiao_tbn {
+  width: 80%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background-color: #4fb4aa;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+}

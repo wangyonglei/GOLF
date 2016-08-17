@@ -18,3 +18,19 @@
 		li:last-child{ border-bottom: 0 ; }
 	}
 }
+.tijiao{ width: 100%; height: 50%; position: fixed; bottom: 0; left: 0;
+	.tijiao_tbn{
+
+		width: 80%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #fff;
+		background-color: #4fb4aa;
+		margin: 0 auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 15px;
+		border-radius: 6px;
+	}
+ }
