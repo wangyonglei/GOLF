@@ -18,7 +18,7 @@
 		li:last-child{ border-bottom: 0 ; }
 	}
 }
-.tijiao{ width: 100%; height: 50px; position: fixed; bottom: 0; left: 0;
+.tijiao{ width: 100%; height: 50px; position: fixed; bottom: 0; left: 0; background-color: #fff;
 	.tijiao_tbn{
 
 		width: 80%;
@@ -28,8 +28,8 @@
 		color: #fff;
 		background-color: #4fb4aa;
 		margin: 0 auto;
-		margin-top: 10px;
-		margin-bottom: 10px;
+		margin-top: 5px;
+		margin-bottom: 5px;
 		font-size: 15px;
 		border-radius: 6px;
 	}
