@@ -157,7 +157,7 @@ $(document).ready(function($) {
 								userIntegralCardId: act_id,
 								total_bar: parseInt($('.zonggan').html()),
 								netBar: parseInt($('.jinggan').html()),
-								handicap: parseInt($('.chadian').html()),
+								handicap: parseInt($('.chadian').val()),
 								one_hole: parseInt($('.jifenka_li li .jifen_input').eq(0).val()),
 								two_hole: parseInt($('.jifenka_li li .jifen_input').eq(1).val()),
 								three_hole: parseInt($('.jifenka_li li .jifen_input').eq(2).val()),
