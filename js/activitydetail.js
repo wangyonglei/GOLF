@@ -111,7 +111,12 @@ $(document).ready(function() {
 					if (act_det.joinStatus == 1) {
 						$('.jifenka').show();
 						$('.shifoubaoming').hide();
-						jifen();
+
+						
+						$('.jifenka').click(function() {
+							location='jifenka.html'
+						});
+
 
 					} else {
 						$('.shifoubaoming').show();
@@ -123,12 +128,7 @@ $(document).ready(function() {
 
 		
 
-		// 积分卡
-		function jifen(){
-			$('.jifenka').click(function() {
-				location='jifenka.html?act_id='+id
-			});
-		}
+
 			// 报名
 		function shifoubaoming() {
 			$('.shifoubaoming').click(function() {
