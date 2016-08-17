@@ -34,7 +34,6 @@ $(document).ready(function($) {
 	} else {
 		jiFen();
 	}
-
 	function jiFen() {
 		var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		//获取记分
@@ -77,9 +76,6 @@ $(document).ready(function($) {
 					'<li><div class="list_num">18<p class="par">par5</p></div><div class="add">+</div><div class="reduce">-</div>	<div class="list_core">	<input type="" name="" class="jifen_input" value="' + xianshidata.score_details.eighteenHole + '"><p class="xintianweng">信天翁</p>	</div></li>'
 				$('.jifenka_li').html(lihtml);
 				jiajianxiugai();
-
-
-
 				//修改请求
 				function getTotal() {
 					// var act_id = decodeURIComponent((new RegExp('[?|&]act_id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
@@ -157,10 +153,6 @@ $(document).ready(function($) {
 						}
 					}
 				}
-
-
-
 			})
 	}
-
 })

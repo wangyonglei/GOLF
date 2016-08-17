@@ -11,18 +11,16 @@ $(document).ready(function() {
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
 			} else {
 				$.ajax({
-						url: 'http://v.jgsports.com.cn/user/User/login',
-						type: 'get',
-						dataType: 'json',
-						data: {
-							code: code
-						},
-						success: function(data) {
-							activitydetail()
-						}
-					})
-					
-					
+					url: 'http://v.jgsports.com.cn/user/User/login',
+					type: 'get',
+					dataType: 'json',
+					data: {
+						code: code
+					},
+					success: function(data) {
+						activitydetail()
+					}
+				})
 			}
 		} else {
 			alert('请在微信客户端打开！')
@@ -43,93 +41,88 @@ $(document).ready(function() {
 		var id = $.getUrlParam('id');
 		//加载信息
 		$.ajax({
-				url: 'http://v.jgsports.com.cn/user/Act/getDetails?act_id=' + id,
-				type: 'Get',
-				dataType: 'json',
-				data: {
-					act_id: id
-				},
-				success: function(data) {
-					var act_det = data.data;
-					var html = '';
-					html += '<div class="banner"><div class="swiper-container"><div class="swiper-wrapper">';
-					for (var i = 0; i < act_det.venueImgList.length; i++) {
-						html += '<div class="swiper-slide"><img src="' + act_det.venueImgList[i] + '"></div>';
-					}
-					html += '</div><div class="swiper-pagination"></div></div></div><h1 class="title">' + act_det.title + '<span>'
-					if (act_det.actStatus == 0) {
-						html += '活动结束'
-					} else if (act_det.actStatus ==1 )  {
-						html += '进行中'
-					}else if (act_det.actStatus ==2) {
-						html += '未开始'
-					}
-
-					html += '</span></h1>' +
-						'<div class="wai"><div class="weizhi duan" data-x="' + act_det.lngX + '" data-y="' + act_det.latY + '"><a href="navigation.html?id=' + act_det.id + '&x=' + act_det.lngX + '&y=' + act_det.latY + '&name=' + act_det.venueTitle + '">' + act_det.venueTitle + '<span class="jiao"></span></a></div><div class="date duan">' + act_det.act_date_str + '<span class="jiao"></span></div></div>' +
-						'<div class="wai"><div class="yaoqing duan"><a href="baoming.html?id='+act_det.id+'">';
-					for (var i = 0; i < act_det.joinActMembers.length; i++) {
-						html += act_det.joinActMembers[i].rname;
-					}
-					html += '（' + act_det.joinActMembersNumber + '人）<span class="jiao"></span></a></div>	<ul class="renwu">';
-					for (var i = 0; i < act_det.joinActMembers.length; i++) {
-						html += '<li><div class="renwuicon"><img src="' + act_det.joinActMembers[i].avatar + '"></div><div class="renwuname">' + act_det.joinActMembers[i].rname + '</div><div class="renwuqianming">' + act_det.joinActMembers[i].signature + '</div></li>'//<div class="huodongquan">活动圈3月首发</div>
-					}
-					html += '</ul></div>'
-					$('#activitydetail').html(html);
-					var swiper = new Swiper('.swiper-container', {
-						pagination: '.swiper-pagination',
-						nextButton: '.swiper-button-next',
-						prevButton: '.swiper-button-prev',
-						paginationClickable: true,
-						spaceBetween: 10,
-						centeredSlides: true,
-						autoplay: 2500,
-						autoplayDisableOnInteraction: false
-					});
-					pinglun();
-					photos();
-
-
-
-					// var btn = ''
-					// btn += '<div class="jifenka">积分卡</div><div class="shifoubaoming">报名</div>'
-					// $('.jifenkabtn').html(btn);
-
-					// xianshijifen()
-
-					
-					var jifenhtml = ''
-					for (var i = 0; i < act_det.userIntegralCardList.length; i++) {
-						jifenhtml += '<li><a href="jifen.html?id='+act_det.userIntegralCardList[i].id+'"><div class="chengjiicon"><img src="'+act_det.userIntegralCardList[i].avatar+'"></div><div class="chengjiname">'+act_det.userIntegralCardList[i].rname+'</div><p>'+act_det.userIntegralCardList[i].handicap+'</p><p>'+act_det.userIntegralCardList[i].holeNumber+'</p></a></li>'
-					}
-					$('.chengjicon').html(jifenhtml)
-
-
-
-
-					if (act_det.joinStatus == 1) {
-						$('.jifenka').show();
-						$('.shifoubaoming').hide();
-
-						
-						$('.jifenka').click(function() {
-							location='jifenka.html'
-						});
-
-
-					} else {
-						$('.shifoubaoming').show();
-						$('.jifenka').hide();
-						shifoubaoming();
-					}
+			url: 'http://v.jgsports.com.cn/user/Act/getDetails?act_id=' + id,
+			type: 'Get',
+			dataType: 'json',
+			data: {
+				act_id: id
+			},
+			success: function(data) {
+				var act_det = data.data;
+				var html = '';
+				html += '<div class="banner"><div class="swiper-container"><div class="swiper-wrapper">';
+				for (var i = 0; i < act_det.venueImgList.length; i++) {
+					html += '<div class="swiper-slide"><img src="' + act_det.venueImgList[i] + '"></div>';
 				}
-			})
+				html += '</div><div class="swiper-pagination"></div></div></div><h1 class="title">' + act_det.title + '<span>'
+				if (act_det.actStatus == 0) {
+					html += '活动结束'
+				} else if (act_det.actStatus == 1) {
+					html += '进行中'
+				} else if (act_det.actStatus == 2) {
+					html += '未开始'
+				}
+				html += '</span></h1>' +
+					'<div class="wai"><div class="weizhi duan" data-x="' + act_det.lngX + '" data-y="' + act_det.latY + '"><a href="navigation.html?id=' + act_det.id + '&x=' + act_det.lngX + '&y=' + act_det.latY + '&name=' + act_det.venueTitle + '">' + act_det.venueTitle + '<span class="jiao"></span></a></div><div class="date duan">' + act_det.act_date_str + '<span class="jiao"></span></div></div>' +
+					'<div class="wai"><div class="yaoqing duan"><a href="baoming.html?id=' + act_det.id + '">';
+				for (var i = 0; i < act_det.joinActMembers.length; i++) {
+					html += act_det.joinActMembers[i].rname;
+				}
+				html += '（' + act_det.joinActMembersNumber + '人）<span class="jiao"></span></a></div>	<ul class="renwu">';
+				for (var i = 0; i < act_det.joinActMembers.length; i++) {
+					html += '<li><div class="renwuicon"><img src="' + act_det.joinActMembers[i].avatar + '"></div><div class="renwuname">' + act_det.joinActMembers[i].rname + '</div><div class="renwuqianming">' + act_det.joinActMembers[i].signature + '</div></li>' //<div class="huodongquan">活动圈3月首发</div>
+				}
+				html += '</ul></div>'
+				$('#activitydetail').html(html);
+				var swiper = new Swiper('.swiper-container', {
+					pagination: '.swiper-pagination',
+					nextButton: '.swiper-button-next',
+					prevButton: '.swiper-button-prev',
+					paginationClickable: true,
+					spaceBetween: 10,
+					centeredSlides: true,
+					autoplay: 2500,
+					autoplayDisableOnInteraction: false
+				});
+				pinglun();
+				photos();
+				// var btn = ''
+				// btn += '<div class="jifenka">积分卡</div><div class="shifoubaoming">报名</div>'
+				// $('.jifenkabtn').html(btn);
+				// xianshijifen()
+				var jifenhtml = ''
+				for (var i = 0; i < act_det.userIntegralCardList.length; i++) {
+					jifenhtml += '<li><a href="jifen.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li>'
+				}
+				$('.chengjicon').html(jifenhtml)
+				if (act_det.joinStatus == 1) { //joinStatus:判断有没有报名活动
+					if (act_det.actStatus == 1) {//判断状态是结束，未开始，还是已经结束
 
-		
+						if (true) { //判断是否有成绩，默认为没有
+							$('.jifenka').show();
+							$('.shifoubaoming').hide();
+							$('.jifenka').click(function() {
+								location = 'addjifenka.html'
+							})
+						}else{
+							$('.jifenka').hide();
+							$('.shifoubaoming').hide();
+						}
 
-
-			// 报名
+					}else{
+						//活动未开始，已经结束，此时不显示
+						$('.jifenka').hide();
+						$('.shifoubaoming').hide();
+					}
+					
+				} else {
+					$('.shifoubaoming').show();
+					$('.jifenka').hide();
+					shifoubaoming();
+				}
+			}
+		})
+		// 报名
 		function shifoubaoming() {
 			$('.shifoubaoming').click(function() {
 				$.ajax({
@@ -202,6 +195,7 @@ $(document).ready(function() {
 				}
 			})
 		}
+		// 上传活动图册
 		function ajaxFileUpload() {
 			$.ajaxFileUpload({
 				url: 'http://v.jgsports.com.cn/user/Act/addPhotoAlbum',
@@ -224,6 +218,7 @@ $(document).ready(function() {
 			})
 			return false;
 		}
+		// 初始化图册上传控件
 		var upload = function() {
 			$('.photos').change(function(event) {
 				ajaxFileUpload();
