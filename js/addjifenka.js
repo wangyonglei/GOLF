@@ -69,24 +69,24 @@ $(document).ready(function($) {
 			var chadian = parseInt($('.chadian').html());
 
 
-			var one_hole = $('.jifenka_li li .jifen_input').eq(0).val();
-			var two_hole= $('.jifenka_li li .jifen_input').eq(1).val();
-			var three_hole= $('.jifenka_li li .jifen_input').eq(2).val();
-			var four_hole= $('.jifenka_li li .jifen_input').eq(3).val();
-			var five_hole= $('.jifenka_li li .jifen_input').eq(4).val();
-			var six_hole= $('.jifenka_li li .jifen_input').eq(5).val();
-			var seven_hole= $('.jifenka_li li .jifen_input').eq(6).val();
-			var eight_hole= $('.jifenka_li li .jifen_input').eq(7).val();
-			var nine_hole= $('.jifenka_li li .jifen_input').eq(8).val();
-			var ten_hole= $('.jifenka_li li .jifen_input').eq(9).val();
-			var eleven_hole=$('.jifenka_li li .jifen_input').eq(10).val();
-			var twelve_hole=$('.jifenka_li li .jifen_input').eq(11).val();
-			var thirteen_hole= $('.jifenka_li li .jifen_input').eq(12).val();
-			var fourteen_hole= $('.jifenka_li li .jifen_input').eq(13).val();
-			var fifteen_hole= $('.jifenka_li li .jifen_input').eq(14).val();
-			var sixteen_hole= $('.jifenka_li li .jifen_input').eq(15).val();
-			var seventeen_hole= $('.jifenka_li li .jifen_input').eq(16).val();
-			var eighteen_hole= $('.jifenka_li li .jifen_input').eq(17).val();
+			var one_hole = parseInt($('.jifenka_li li .jifen_input').eq(0).val());
+			var two_hole= parseInt($('.jifenka_li li .jifen_input').eq(1).val());
+			var three_hole= parseInt($('.jifenka_li li .jifen_input').eq(2).val());
+			var four_hole= parseInt($('.jifenka_li li .jifen_input').eq(3).val());
+			var five_hole= parseInt($('.jifenka_li li .jifen_input').eq(4).val());
+			var six_hole= parseInt($('.jifenka_li li .jifen_input').eq(5).val());
+			var seven_hole= parseInt($('.jifenka_li li .jifen_input').eq(6).val());
+			var eight_hole= parseInt($('.jifenka_li li .jifen_input').eq(7).val());
+			var nine_hole= parseInt($('.jifenka_li li .jifen_input').eq(8).val());
+			var ten_hole= parseInt($('.jifenka_li li .jifen_input').eq(9).val());
+			var eleven_hole=parseInt($('.jifenka_li li .jifen_input').eq(10).val());
+			var twelve_hole=parseInt($('.jifenka_li li .jifen_input').eq(11).val());
+			var thirteen_hole= parseInt($('.jifenka_li li .jifen_input').eq(12).val());
+			var fourteen_hole= parseInt($('.jifenka_li li .jifen_input').eq(13).val());
+			var fifteen_hole= parseInt($('.jifenka_li li .jifen_input').eq(14).val());
+			var sixteen_hole= parseInt($('.jifenka_li li .jifen_input').eq(15).val());
+			var seventeen_hole= parseInt($('.jifenka_li li .jifen_input').eq(16).val());
+			var eighteen_hole= parseInt($('.jifenka_li li .jifen_input').eq(17).val());
 
 			$('.zonggan').html()
 			alert(one_hole + two_hole+three_hole+four_hole+five_hole+six_hole+seven_hole+eight_hole+nine_hole+ten_hole+eleven_hole+twelve_hole+thirteen_hole+fourteen_hole+fifteen_hole+sixteen_hole+seventeen_hole+eighteen_hole)
