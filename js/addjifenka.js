@@ -134,5 +134,6 @@ $(document).ready(function($) {
 				}
 			}
 		}
+		jiajianxiugai();
 	}
 })
