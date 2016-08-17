@@ -156,6 +156,9 @@ $(document).ready(function($) {
 		}
 		jiajianxiugai();
 		$('.tijiao_tbn').click(function(event) {
+
+			$('.jinggan').html(parseInt($('.zonggan').html())-parseInt($('.chadian').val()))
+
 			var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 			var jifenkadata = {
 				act_id: id,
