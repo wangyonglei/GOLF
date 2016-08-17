@@ -169,8 +169,8 @@ $(document).ready(function($) {
 									jiFen()
 								}
 							})
-						})
+						
 					})
-			}
+			})
 	}
 })
