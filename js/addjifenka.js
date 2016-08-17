@@ -64,9 +64,9 @@ $(document).ready(function($) {
 
 
 		function getTotal() {
-			var zonggan = parseInt();
-			var jinggan = parseInt($('.jinggan').html());
-			var chadian = parseInt($('.chadian').html());
+			// var zonggan = parseInt();
+			// var jinggan = parseInt($('.jinggan').html());
+			// var chadian = parseInt($('.chadian').html());
 
 
 			var one_hole = parseInt($('.jifenka_li li .jifen_input').eq(0).val());
@@ -87,6 +87,11 @@ $(document).ready(function($) {
 			var sixteen_hole= parseInt($('.jifenka_li li .jifen_input').eq(15).val());
 			var seventeen_hole= parseInt($('.jifenka_li li .jifen_input').eq(16).val());
 			var eighteen_hole= parseInt($('.jifenka_li li .jifen_input').eq(17).val());
+
+			var arr = [one_hole , two_hole,three_hole,four_hole,five_hole,six_hole,seven_hole,eight_hole,nine_hole,ten_hole,eleven_hole,twelve_hole,thirteen_hole,fourteen_hole,fifteen_hole,sixteen_hole,seventeen_hole,eighteen_hole]
+
+			console.log(arr)
+
 
 			$('.zonggan').html(one_hole + two_hole+three_hole+four_hole+five_hole+six_hole+seven_hole+eight_hole+nine_hole+ten_hole+eleven_hole+twelve_hole+thirteen_hole+fourteen_hole+fifteen_hole+sixteen_hole+seventeen_hole+eighteen_hole)
 			
