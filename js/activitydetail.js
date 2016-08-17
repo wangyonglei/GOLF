@@ -102,7 +102,7 @@ $(document).ready(function() {
 							$('.jifenka').show();
 							$('.shifoubaoming').hide();
 							$('.jifenka').click(function() {
-								location = 'addjifenka.html'
+								location = 'addjifenka.html?id='+act_det.id
 							})
 						}else{
 							$('.jifenka').hide();
