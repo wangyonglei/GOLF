@@ -211,8 +211,8 @@ $(document).ready(function($) {
 				data: $('.datadata').html(),
 				// uid: 304,
 				title: $('.faqi_input').val(),
-				act_date: $('#pickdate').val(),
-				act_time: $('#picktime').val(),
+				act_date: $('#appDate').val(),
+				act_time: $('#appTime').val(),
 				remarks: $('.beizhu_input').val(),
 				venue_id: $('.qiuchang_inputid').html(),
 				join_member : $('.datadata').html()
