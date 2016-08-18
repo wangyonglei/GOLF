@@ -212,7 +212,6 @@ $(document).ready(function($) {
 		$('#yaoqinghuodong').click(function() {
 			var dataval = {
 				data: $('.datadata').html(),
-				// uid: 304,
 				title: $('.faqi_input').val(),
 				act_date: $('#appDate').val(),
 				act_time: $('#appTime').val(),
@@ -229,7 +228,6 @@ $(document).ready(function($) {
 				.done(function(data) { 
 					if (data.status == 1) {
 
-						// alert('发布成功')
 						if (confirm("发布活动成功！确定-进入活动列表")) {
 							window.location.href = "activitylist.html"
 						}

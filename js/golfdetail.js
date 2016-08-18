@@ -22,7 +22,9 @@ $(document).ready(function($) {
 					url: 'http://v.jgsports.com.cn/user/Venue/getDetails?venue_id='+id,
 					type: 'GET',
 					dataType: 'json',
-					data: {},
+					data: {
+						id:id
+					},
 				})
 				.done(function(data) {
 					var golfdetail = data.data;
