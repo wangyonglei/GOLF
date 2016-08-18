@@ -105,7 +105,7 @@ $(document).ready(function() {
 
 						}
 						if(act_det.actStatus == 2) {
-							jifenhtml += '暂无'
+							jifenhtml += '<li><div class="chengjiname">暂无</div></li>'
 
 						}
 						if(act_det.actStatus == 0) {
