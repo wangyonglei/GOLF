@@ -27,8 +27,8 @@ $(document).ready(function() {
 						'<li><p>6</p><p>'+jifendata.score_details.sixHole+'</p><p>'+jifendata.score_details.sevenHole+'</p></li>'+
 						'<li><p>7</p><p>'+jifendata.score_details.sevenHole+'</p><p>'+jifendata.score_details.sevenHole+'</p></li>'+
 						'<li><p>8</p><p>'+jifendata.score_details.eightHole+'</p><p>'+jifendata.score_details.sevenHole+'</p></li>'+
-						'<li><p>9</p><p>'+jifendata.score_details.nineHole+'</p><p>'+jifendata.score_details.sevenHole+'</p></li>'+
-						'<li><p>前九</p><p>5</p><p>0</p></li>'
+						'<li><p>9</p><p>'+jifendata.score_details.nineHole+'</p><p>'+jifendata.score_details.sevenHole+'</p></li>'
+						// '<li><p>前九</p><p>5</p><p>0</p></li>'
 				$('.jifen_qian').html(html)
 				var htmlh = ''
 				htmlh +='<li><p>球洞</p><p>标准杆</p><p>成绩</p></li>'+
@@ -40,8 +40,8 @@ $(document).ready(function() {
 						'<li><p>15</p><p>'+jifendata.score_details.fifteenHole+'</p><p>'+jifendata.score_details.sevenHole+'</p></li>'+
 						'<li><p>16</p><p>'+jifendata.score_details.sixteenHole+'</p><p>'+jifendata.score_details.sevenHole+'</p></li>'+
 						'<li><p>17</p><p>'+jifendata.score_details.seventeenHole+'</p><p>'+jifendata.score_details.sevenHole+'</p></li>'+
-						'<li><p>18</p><p>'+jifendata.score_details.eighteenHole+'</p><p>'+jifendata.score_details.sevenHole+'</p></li>'+
-						'<li><p>后九</p><p>5</p><p>0</p></li>'
+						'<li><p>18</p><p>'+jifendata.score_details.eighteenHole+'</p><p>'+jifendata.score_details.sevenHole+'</p></li>'
+						// '<li><p>后九</p><p>5</p><p>0</p></li>'
 				$('.jifen_hou').html(htmlh)
 
 				var htmlall = '';
