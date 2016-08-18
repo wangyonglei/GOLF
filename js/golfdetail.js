@@ -38,7 +38,7 @@ $(document).ready(function($) {
 						golfdetail.route + '</div></div><div class="tel chang"><a href="tel:' + golfdetail.tel +'">' +
 						golfdetail.tel + '<span class="jiao"></span></a></div><div class="dong chang"><a href="gonglue.html?id='+golfdetail.id+'">' +
 						golfdetail.hole + '洞<span class="jiao"></span></a></div><div class="wai"><div class="des changs">' +
-						golfdetail.description + '</div></div><div class="foot"><div class="yuding">立即预定</div><div class="actives"><a href="launch.html?id='+golfdetail.id+'">发起活动</a></div></div>';
+						golfdetail.description + '</div></div><div class="foot"><div class="yuding">立即预定</div><div class="actives"><a href="launch.html?id='+golfdetail.id+'&qiuchangtitle='+golfdetail.title+'">发起活动</a></div></div>';
 					$("#golfdetail").html(html);
 					// 初始化banner
 						var swiper = new Swiper('.swiper-container', {
