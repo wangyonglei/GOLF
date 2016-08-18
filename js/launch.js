@@ -5,8 +5,7 @@ $(document).ready(function($) {
 	var launchs = function() {
 
 		  var qiuchangtitle = decodeURIComponent((new RegExp('[?|&]qiuchangtitle=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
-			console.log(qiuchangtitle)
-			console.log(qiuchangtitle)
+		$('.qiuchang_input').val(qiuchangtitle)
 		// 球场列表
 		$('.qiuchang').click(function() {
 			$('.qiuchang_maxk').css('display', 'block');
