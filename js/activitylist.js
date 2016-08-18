@@ -56,7 +56,7 @@ $(document).ready(function() {
 						}
 						html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
 							'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
-							'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
+							'<div class="al_km"></div>	</div></a></li>';
 						$("#activitylist").html(html);
 						$('.Loading').html('全部加载完！')
 							// scrollpage(0);
@@ -71,7 +71,7 @@ $(document).ready(function() {
 						}
 						html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
 							'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
-							'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
+							'<div class="al_km"></div>	</div></a></li>';
 					};
 					$("#activitylist").html(html);
 					if (data.msg == "暂无活动信息") {
@@ -114,7 +114,7 @@ $(document).ready(function() {
 									}
 									html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
 										'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
-										'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
+										'<div class="al_km"></div>	</div></a></li>';
 								};
 								// $(".Loading"+type).before(html);
 								$('#activitylist').html(html)
@@ -159,7 +159,7 @@ $(document).ready(function() {
 					// 	}
 					// 	html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
 					// 		'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
-					// 		'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
+					// 		'<div class="al_km"></div>	</div></a></li>';
 					// };
 
 					var j = actlistdata.length;
@@ -189,7 +189,7 @@ $(document).ready(function() {
 							}
 							html += '<div class="al_mask"></div><div class="al_mask_img">' + actlistdata[i].actPhotoAlbumNumber + '</div></div>' +
 								'<div class="alright_con"><h1>' + actlistdata[i].title + '</h1><p>' + actlistdata[i].act_date + '</p><p>' + actlistdata[i].venueTitle + '</p>' +
-								'<div class="al_km">' + actlistdata[i].z / 1000 + 'km</div>	</div></a></li>';
+								'<div class="al_km"></div>	</div></a></li>';
 						};
 						$("#activitylist").html(html);
 						if (data.msg == "暂无活动信息") {
