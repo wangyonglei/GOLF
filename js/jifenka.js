@@ -184,7 +184,10 @@ $(document).ready(function($) {
 								data: jifenkadata,
 								success: function(data) {
 									jiFen()
-									alert('修改成功')
+									if (data.msg=="修改成功") {
+										alert('修改成功')
+									}
+									
 								}
 							})
 						
