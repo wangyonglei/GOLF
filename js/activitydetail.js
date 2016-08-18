@@ -103,7 +103,10 @@ $(document).ready(function() {
 							}
 
 
-						}else{
+						}else if(act_det.actStatus == 2) {
+							jifenhtml += '<li><a href="jifen.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li>'
+
+						}else if(act_det.actStatus == 0) {
 							jifenhtml += '<li><a href="jifen.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li>'
 
 						}
