@@ -129,7 +129,9 @@ $(document).ready(function() {
 					$("#activitylist").html(html);
 					if (data.msg == "暂无活动信息") {
 						$(".Loading").html("全部加载完！");
-					} else {
+					}else if (data.status == 0) {
+						$(".Loading").html("暂无数据");
+					}else {
 						$(".Loading").html("Loading...");
 					}
 					// $('.Loading0').before(html)
