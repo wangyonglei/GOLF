@@ -127,14 +127,11 @@ $(document).ready(function() {
 							'<div class="al_km"></div>	</div></a></li>';
 					};
 					$("#activitylist").html(html);
-					if (data.msg == "暂无活动信息") {
-						$(".Loading").html("全部加载完！");
-					}else if (data.status == 0) {
+					if (data.status == 0) {
 						$(".Loading").html("暂无数据");
-					}else {
+					}else if (data.status == 1) {
 						$(".Loading").html("Loading...");
 					}
-					// $('.Loading0').before(html)
 					scrollpage(0);
 				}
 			}
