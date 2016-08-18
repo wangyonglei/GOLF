@@ -53,12 +53,7 @@ $(document).ready(function($) {
 						});
 
 				})
-				.fail(function() {
-					console.log("error");
-				})
-				.always(function() {
-					console.log("complete");
-				});
+			
 	}
 	if (!ex_code && !ex_mobile && !ex_uid) {
 		var code = decodeURIComponent((new RegExp('[?|&]code=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;

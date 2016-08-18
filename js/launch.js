@@ -3,6 +3,10 @@ $(document).ready(function($) {
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
 	var launchs = function() {
+
+		  var qiuchangtitle = decodeURIComponent((new RegExp('[?|&]qiuchangtitle=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+			console.log(qiuchangtitle)
+			console.log(qiuchangtitle)
 		// 球场列表
 		$('.qiuchang').click(function() {
 			$('.qiuchang_maxk').css('display', 'block');
