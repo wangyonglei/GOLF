@@ -92,33 +92,29 @@ $(document).ready(function() {
 				// xianshijifen()
 				var jifenhtml = ''
 				for (var i = 0; i < act_det.userIntegralCardList.length; i++) {
-					// if (act_det.jgsports == 1) {
 						if (act_det.actStatus == 1) {
 							if (act_det.userIntegralCardList[i].isMaster == 1) {
-							jifenhtml += '<li><a href="jifenka.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li>'
+								jifenhtml += '<div class="chegnjitit"><p>洞数</p><p>成绩</p></div><ul class="chengjicon"><li><a href="jifenka.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li></ul>'
 
 							}else{
-							jifenhtml += '<li><a href="jifen.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li>'
+								jifenhtml += '<div class="chegnjitit"><p>洞数</p><p>成绩</p></div><ul class="chengjicon"><li><a href="jifen.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li></ul>'
 
 							}
 
 
 						}
 						if(act_det.actStatus == 2) {
-							jifenhtml += '<li><div class="chengjiname">暂无</div></li>'
+							jifenhtml += '<div class="chegnjitit"><p>洞数</p><p>成绩</p></div><ul class="chengjicon"><li><div class="chengjiname">暂无</div></li></ul>'
 
 						}
 						if(act_det.actStatus == 0) {
-							jifenhtml += '<li><a href="jifen.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li>'
+							jifenhtml += '<div class="chegnjitit"><p>洞数</p><p>成绩</p></div><ul class="chengjicon"><li><a href="jifen.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li></ul>'
 
 						}
 
-					// }else{
-					// 		jifenhtml += '<li><a href="jifen.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li>'
-						
-					// }
+					
 				}
-				$('.chengjicon').html(jifenhtml)
+				$('#chengjicon').html(jifenhtml)
 				if (act_det.joinStatus == 1) { //joinStatus:判断有没有报名活动
 					if (act_det.actStatus == 1) {//判断状态是结束，未开始，还是进行中
 
