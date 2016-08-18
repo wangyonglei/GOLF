@@ -6,34 +6,38 @@
           </script>
       </head>
      <body>
-        <script type="text/javascript" src="http://restapi.amap.com/v3/geocode/geo?key=389880a06e3f893ea46036f030c94700&s=rsv3&city=35&address=福建省霞浦县水门畲族乡"></script>
+     <div id="out"></div>
+       <script type="text/javascript">
+//获取经纬度坐标
+function getPosition (callback) {
 
-        
+    if ("geolocation" in navigator) {
+        var geo_options = {
+          enableHighAccuracy: true,
+          maximumAge: 0,
+          timeout : 6000
+        };
+        navigator.geolocation.getCurrentPosition(function(pos) {
+            // 获取到当前位置经纬度
+            var lng = pos.coords.longitude;
+            var lat = pos.coords.latitude;
+            callback(lng,lat);
+        }, function(err){
+            console.log(err.message);
+        }, geo_options);
+    } else {
+         console.log("Browser didnt support geolocation");
+    }
 
-        <!-- 可用key=389880a06e3f893ea46036f030c94700测试 -->
+};
 
-        <!-- http://webapi.amap.com/maps?v=1.1&key=389880a06e3f893ea46036f030c94700 -->
+//测试
+getPosition(function(lng,lat){
+    var out=document.getElementById('out');
+    out.outerHTML='当前经度:'+lng+'<br/>当前纬度'+lat;
+});
 
-         
-<script type="text/javascript">
-  
-  String addressStr = "http://restapi.amap.com/v3/geocode/geo?key=389880a06e3f893ea46036f030c94700&s=rsv3&city=028&address=";
-          String getAddress = HttpUtils.get(addressStr + UrlEncoded.encodeString(address));
-          JSONObject object = JSONObject.parseObject(getAddress);
-          JSONArray geocodes = object.getJSONArray("geocodes");
-          ExcelDetails details = ExcelDetails.dao.findById(id);
-          if (geocodes.size() == 0) {
-              details.set("status", 0);
-          } else if (geocodes.size() == 1) {
-              JSONObject trueAddress = geocodes.getJSONObject(0);
-              String location = trueAddress.getString("location");
-              String lngX = location.split(",")[0];
-              String latY = location.split(",")[1];
-          } else {
-          }
-          
 </script>
-
 
 
      </body>

@@ -93,13 +93,14 @@ $(document).ready(function() {
 				var jifenhtml = ''
 				for (var i = 0; i < act_det.userIntegralCardList.length; i++) {
 						if (act_det.actStatus == 1) {
-							if (act_det.userIntegralCardList[i].isMaster == 1) {
-								jifenhtml += '<div class="chegnjitit"><p>洞数</p><p>成绩</p></div><ul class="chengjicon"><li><a href="jifenka.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li></ul>'
+							// if (act_det.userIntegralCardList[i].isMaster == 1) {
+							// 	jifenhtml += '<div class="chegnjitit"><p>洞数</p><p>成绩</p></div><ul class="chengjicon"><li><a href="jifenka.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li></ul>'
 
-							}else{
-								jifenhtml += '<div class="chegnjitit"><p>洞数</p><p>成绩</p></div><ul class="chengjicon"><li><a href="jifen.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li></ul>'
+							// }
+							// else{
+							// 	jifenhtml += '<div class="chegnjitit"><p>洞数</p><p>成绩</p></div><ul class="chengjicon"><li><a href="jifen.html?id=' + act_det.userIntegralCardList[i].id + '"><div class="chengjiicon"><img src="' + act_det.userIntegralCardList[i].avatar + '"></div><div class="chengjiname">' + act_det.userIntegralCardList[i].rname + '</div><p>' + act_det.userIntegralCardList[i].handicap + '</p><p>' + act_det.userIntegralCardList[i].holeNumber + '</p></a></li></ul>'
 
-							}
+							// }
 
 
 						}
