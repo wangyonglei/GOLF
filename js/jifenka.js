@@ -184,6 +184,7 @@ $(document).ready(function($) {
 								data: jifenkadata,
 								success: function(data) {
 									jiFen()
+									alert('修改成功')
 								}
 							})
 						

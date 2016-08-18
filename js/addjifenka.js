@@ -190,7 +190,7 @@ $(document).ready(function($) {
 				dataType: 'json',
 				data: jifenkadata,
 				success: function(data) {
-					console.log('ok')
+					alert('添加成功')
 				}
 			})
 		});
