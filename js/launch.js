@@ -4,8 +4,10 @@ $(document).ready(function($) {
 	var ex_uid = getCookie("ex_uid");
 	var launchs = function() {
 
+		  var id = decodeURIComponent((new RegExp('[?|&]id=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 		  var qiuchangtitle = decodeURIComponent((new RegExp('[?|&]qiuchangtitle=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
-		$('.qiuchang_input').val(qiuchangtitle)
+		$('.qiuchang_input').val(qiuchangtitle);
+		$('.qiuchang_inputid').html(id)
 		// 球场列表
 		$('.qiuchang').click(function() {
 			$('.qiuchang_maxk').css('display', 'block');
@@ -218,7 +220,7 @@ $(document).ready(function($) {
 				remarks: $('.beizhu_input').val(),
 				venue_id: $('.qiuchang_inputid').html(),
 				join_member : $('.datadata').html(),
-				id:$('.qiuchang_input').val()
+				
 			}
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Act/addInfo',
