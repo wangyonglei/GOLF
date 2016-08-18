@@ -156,6 +156,7 @@ $(document).ready(function() {
 						code: code
 					},
 					success: function(data) {
+						alert('报名成功！')
 						$('.jifenka').show();
 						$('.shifoubaoming').hide();
 					}
