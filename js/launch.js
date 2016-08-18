@@ -73,7 +73,7 @@ $(document).ready(function($) {
 		// 	// $('.yaoqing_yq').html('')
 		// })
 
-		
+
 		// var htmlrname =''
 		// $('.yaoqing_btn').click(function(event) {
 		// 	var rname = $('.yaoqing_name').val();
@@ -193,7 +193,7 @@ $(document).ready(function($) {
 
 
 
-		$('.righticon').click(function(){
+		$('.yaoqing').click(function(){
 			$('.tongxunlu_mask').css('display', 'block');
 			$('.ball_card').css('display', 'block');
 			tongxunlu();
