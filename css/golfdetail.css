@@ -29,10 +29,10 @@
   display: block;
 }
 .golfdetail .daohang {
-  background-image: url(../images/daohang.png);
+  background-image: url(../images/weizhi.png);
 }
 .golfdetail .weizhi {
-  background-image: url(../images/weizhi.png);
+  background-image: url(../images/daohang.png);
   height: auto;
   line-height: 21px;
   border-bottom: 0;
