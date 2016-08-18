@@ -217,7 +217,8 @@ $(document).ready(function($) {
 				act_time: $('#appTime').val(),
 				remarks: $('.beizhu_input').val(),
 				venue_id: $('.qiuchang_inputid').html(),
-				join_member : $('.datadata').html()
+				join_member : $('.datadata').html(),
+				id:$('.qiuchang_input').val()
 			}
 			$.ajax({
 					url: 'http://v.jgsports.com.cn/user/Act/addInfo',
