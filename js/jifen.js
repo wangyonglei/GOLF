@@ -13,6 +13,10 @@ $(document).ready(function() {
 			
 			success: function(data) {
 				var jifendata = data.data;
+				var tophtml = ''
+				tophtml +='<div class="renwuicon"><img src="'+jifendata.avatar+'"></div><div class="renwuname">'+jifendata.rname+'</div><div class="renwuqianming">'+jifendata.signature+'</div>'
+				$('.renwu').html(tophtml)
+
 				var html = ''
 				html +='<li><p>球洞</p><p>标准杆</p><p>成绩</p></li>'+
 						'<li><p>1</p><p>'+jifendata.score_details.oneHole+'</p><p>'+jifendata.score_details.sevenHole+'</p></li>'+

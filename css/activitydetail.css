@@ -1,287 +1,336 @@
 .activitydetail {
   width: 100%;
   height: auto;
-  overflow: hidden; }
-  .activitydetail .banner {
-    width: 100%;
-    max-height: 200px; }
-    .activitydetail .banner img {
-      width: 100%;
-      max-height: 200px; }
-  .activitydetail .title {
-    color: #4fb4aa;
-    height: 45px;
-    background-color: #fff;
-    line-height: 45px;
-    text-indent: 15px;
-    font-size: 17px;
-    border-bottom: 1px solid #dddddd;
-    font-weight: normal; }
-    .activitydetail .title span {
-      float: right;
-      font-size: 15px;
-      color: #ed6466;
-      margin-right: 15px; }
-  .activitydetail .jiao {
-    position: absolute;
-    right: 15px;
-    top: 0;
-    display: block;
-    width: 7px;
-    height: 11px;
-    background-image: url(../images/jiao.png);
-    background-size: cover;
-    margin-top: 15px; }
-  .activitydetail .wai {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    background-color: #fff;
-    margin-top: 10px;
-    float: left;
-    border-bottom: 1px solid #dddddd; }
-  .activitydetail .weizhi {
-    background-image: url(../images/weizhi.png); }
-  .activitydetail .zhaopian {
-    background-image: url(../images/zhaopian.png); }
-  .activitydetail .date {
-    background-image: url(../images/date.png);
-    border-bottom: 0; }
-  .activitydetail .yaoqing {
-    background-image: url(../images/yaoqing.png);
-    border-bottom: 0; }
-  .activitydetail .pinglun {
-    background-image: url(../images/pinglun.png);
-    border-bottom: 0; }
-  .activitydetail .renwu {
-    float: left;
-    width: 100%;
-    height: auto;
-    overflow: hidden; }
-    .activitydetail .renwu li {
-      margin-left: 15px;
-      width: 100%;
-      height: 45px;
-      border-top: 1px solid #dddddd;
-      padding: 12px 0;
-      position: relative; }
-      .activitydetail .renwu li .renwuicon {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        float: left;
-        overflow: hidden;
-        border: 1px solid #dddddd;
-        margin-right: 10px; }
-        .activitydetail .renwu li .renwuicon img {
-          width: 100%;
-          height: 100%; }
-      .activitydetail .renwu li .renwuname {
-        font-size: 15px;
-        color: #333;
-        float: left;
-        width: 82%;
-        margin-top: 3px; }
-      .activitydetail .renwu li .huodongquan {
-        position: absolute;
-        right: 30px;
-        line-height: 45px;
-        font-size: 14px;
-        color: #4fb4aa; }
-      .activitydetail .renwu li .renwuqianming {
-        font-size: 14px;
-        color: #999;
-        float: left;
-        /*width: 82%;*/
-        width: 60%;
-        margin-top: 5px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis; }
-  .activitydetail .pinglunlist {
-    float: left;
-    width: 100%;
-    height: auto;
-    overflow: hidden; }
-    .activitydetail .pinglunlist li {
-      margin-left: 15px;
-      width: 100%;
-      height: 45px;
-      border-top: 1px solid #dddddd;
-      padding: 12px 0;
-      position: relative; }
-      .activitydetail .pinglunlist li .pinglunicon {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        float: left;
-        overflow: hidden;
-        border: 1px solid #dddddd;
-        margin-right: 10px; }
-        .activitydetail .pinglunlist li .pinglunicon img {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%; }
-      .activitydetail .pinglunlist li .pinglunname {
-        font-size: 15px;
-        color: #333;
-        float: left;
-        width: 82%;
-        margin-top: 3px; }
-      .activitydetail .pinglunlist li .pinglundate {
-        position: absolute;
-        right: 30px;
-        line-height: 45px;
-        font-size: 13px;
-        color: #999; }
-      .activitydetail .pinglunlist li .pingluncon {
-        font-size: 14px;
-        color: #999;
-        float: left;
-        width: 82%;
-        margin-top: 5px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis; }
-  .activitydetail .zhaopianimg {
-    padding-bottom: 10px;
-    float: left;
-    width: 100%;
-    height: auto;
-    overflow: hidden; }
-    .activitydetail .zhaopianimg li {
-      margin-left: 15px;
-      float: left;
-      overflow: hidden;
-      width: 70px;
-      height: 70px;
-      border: 1px solid #dddddd;
-      margin: 15px 5px 0 15px;
-      border-radius: 7px;
-      overflow: hidden; }
-      .activitydetail .zhaopianimg li img {
-        width: 100%;
-        height: 100%; }
-    .activitydetail .zhaopianimg li:last-child {
-      font-size: 50px;
-      text-align: center;
-      line-height: 70px; }
-      .activitydetail .zhaopianimg li:last-child a {
-        color: #b5b5b5;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        display: block; }
-    .activitydetail .zhaopianimg .tuce {
-      position: relative; }
-      .activitydetail .zhaopianimg .tuce .photos {
-        background-color: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 0;
-        border: 0;
-        outline: none;
-        width: 100%;
-        height: 100%; }
-      .activitydetail .zhaopianimg .tuce a {
-        position: absolute;
-        left: 0;
-        top: 0; }
-  .activitydetail .hf {
-    margin-top: 0;
-    position: relative; }
-    .activitydetail .hf .huifubtn {
-      position: absolute;
-      right: 10%;
-      line-height: 30px;
-      color: #4fb4aa;
-      outline: none;
-      top: 15px;
-      height: 30px;
-      border: 0;
-      background: none;
-      border-left: 1px solid #dddddd;
-      padding: 0 15px; }
-    .activitydetail .hf .huifu {
-      width: 77%;
-      padding-left: 3%;
-      height: 40px;
-      outline: none;
-      margin: 10px 10%;
-      border: none;
-      background-color: #f2f2f2;
-      border: 1px solid #c5c5c5;
-      border-radius: 5px;
-      text-indent: 15px; }
-  .activitydetail .chegnjitit {
-    width: 100%;
-    height: auto;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    float: left;
-    background-color: #f8f8f8; }
-    .activitydetail .chegnjitit p {
-      width: 50px;
-      float: right;
-      text-align: center;
-      color: #666;
-      font-size: 14px; }
-  .activitydetail .chengjicon {
-    float: left;
-    width: 100%;
-    height: auto;
-    overflow: hidden; }
-    .activitydetail .chengjicon li {
-      margin-left: 15px;
-      width: 100%;
-      overflow: hidden;
-      height: 55px; }
-      .activitydetail .chengjicon li .chengjiicon {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        float: left;
-        border: 1px solid #dddddd;
-        margin: 15px 10px; }
-        .activitydetail .chengjicon li .chengjiicon img {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%; }
-      .activitydetail .chengjicon li .chengjiname {
-        float: left;
-        line-height: 55px;
-        float: left;
-        font-size: 15px;
-        color: #333; }
-      .activitydetail .chengjicon li p {
-        width: 50px;
-        float: right;
-        text-align: center;
-        color: #666;
-        font-size: 14px;
-        line-height: 55px;
-        font-size: 14px;
-        color: #4fb4aa; }
-      .activitydetail .chengjicon li p:nth-of-type(1) {
-        margin-right: 15px; }
-      .activitydetail .chengjicon li a {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        display: block; }
-  .activitydetail .jifenkabtn {
-    margin-top: 0; }
-    .activitydetail .jifenkabtn .jifenka, .activitydetail .jifenkabtn .shifoubaoming {
-      display: none;
-      width: 80%;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
-      color: #fff;
-      background-color: #4fb4aa;
-      margin: 0 auto;
-      margin-top: 40px;
-      margin-bottom: 20px;
-      font-size: 15px;
-      border-radius: 6px; }
+  overflow: hidden;
+}
+.activitydetail .banner {
+  width: 100%;
+  max-height: 200px;
+}
+.activitydetail .banner img {
+  width: 100%;
+  max-height: 200px;
+}
+.activitydetail .title {
+  color: #4fb4aa;
+  height: 45px;
+  background-color: #fff;
+  line-height: 45px;
+  text-indent: 15px;
+  font-size: 17px;
+  border-bottom: 1px solid #dddddd;
+  font-weight: normal;
+}
+.activitydetail .title span {
+  float: right;
+  font-size: 15px;
+  color: #ed6466;
+  margin-right: 15px;
+}
+.activitydetail .jiao {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  display: block;
+  width: 7px;
+  height: 11px;
+  background-image: url(../images/jiao.png);
+  background-size: cover;
+  margin-top: 15px;
+}
+.activitydetail .wai {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  margin-top: 10px;
+  float: left;
+  border-bottom: 1px solid #dddddd;
+}
+.activitydetail .weizhi {
+  background-image: url(../images/weizhi.png);
+}
+.activitydetail .zhaopian {
+  background-image: url(../images/zhaopian.png);
+}
+.activitydetail .date {
+  background-image: url(../images/date.png);
+  border-bottom: 0;
+}
+.activitydetail .yaoqing {
+  background-image: url(../images/yaoqing.png);
+  border-bottom: 0;
+}
+.activitydetail .pinglun {
+  background-image: url(../images/pinglun.png);
+  border-bottom: 0;
+}
+.activitydetail .renwu {
+  float: left;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.activitydetail .renwu li {
+  margin-left: 15px;
+  width: 100%;
+  height: 45px;
+  border-top: 1px solid #dddddd;
+  padding: 12px 0;
+  position: relative;
+}
+.activitydetail .renwu li .renwuicon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  overflow: hidden;
+  border: 1px solid #dddddd;
+  margin-right: 10px;
+}
+.activitydetail .renwu li .renwuicon img {
+  width: 100%;
+  height: 100%;
+}
+.activitydetail .renwu li .renwuname {
+  font-size: 15px;
+  color: #333;
+  float: left;
+  width: 82%;
+  margin-top: 3px;
+}
+.activitydetail .renwu li .huodongquan {
+  position: absolute;
+  right: 30px;
+  line-height: 45px;
+  font-size: 14px;
+  color: #4fb4aa;
+}
+.activitydetail .renwu li .renwuqianming {
+  font-size: 14px;
+  color: #999;
+  float: left;
+  /*width: 82%;*/
+  width: 60%;
+  margin-top: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.activitydetail .pinglunlist {
+  float: left;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.activitydetail .pinglunlist li {
+  margin-left: 15px;
+  width: 100%;
+  height: 45px;
+  border-top: 1px solid #dddddd;
+  padding: 12px 0;
+  position: relative;
+}
+.activitydetail .pinglunlist li .pinglunicon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  float: left;
+  overflow: hidden;
+  border: 1px solid #dddddd;
+  margin-right: 10px;
+}
+.activitydetail .pinglunlist li .pinglunicon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.activitydetail .pinglunlist li .pinglunname {
+  font-size: 15px;
+  color: #333;
+  float: left;
+  width: 82%;
+  margin-top: 3px;
+}
+.activitydetail .pinglunlist li .pinglundate {
+  position: absolute;
+  right: 30px;
+  line-height: 45px;
+  font-size: 13px;
+  color: #999;
+}
+.activitydetail .pinglunlist li .pingluncon {
+  font-size: 14px;
+  color: #999;
+  float: left;
+  width: 82%;
+  margin-top: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.activitydetail .zhaopianimg {
+  padding-bottom: 10px;
+  float: left;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.activitydetail .zhaopianimg li {
+  margin-left: 15px;
+  float: left;
+  overflow: hidden;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #dddddd;
+  margin: 15px 5px 0 15px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.activitydetail .zhaopianimg li img {
+  width: 100%;
+  height: 100%;
+}
+.activitydetail .zhaopianimg li:last-child {
+  font-size: 50px;
+  text-align: center;
+  line-height: 70px;
+}
+.activitydetail .zhaopianimg li:last-child a {
+  color: #b5b5b5;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+.activitydetail .zhaopianimg .tuce {
+  position: relative;
+}
+.activitydetail .zhaopianimg .tuce .photos {
+  background-color: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border: 0;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+.activitydetail .zhaopianimg .tuce a {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.activitydetail .hf {
+  margin-top: 0;
+  position: relative;
+}
+.activitydetail .hf .huifubtn {
+  position: absolute;
+  right: 10%;
+  line-height: 30px;
+  color: #4fb4aa;
+  outline: none;
+  top: 15px;
+  height: 30px;
+  border: 0;
+  background: none;
+  border-left: 1px solid #dddddd;
+  padding: 0 15px;
+}
+.activitydetail .hf .huifu {
+  width: 77%;
+  padding-left: 3%;
+  height: 40px;
+  outline: none;
+  margin: 10px 10%;
+  border: none;
+  background-color: #f2f2f2;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+  text-indent: 15px;
+}
+.activitydetail .chegnjitit {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  float: left;
+  background-color: #f8f8f8;
+}
+.activitydetail .chegnjitit p {
+  width: 50px;
+  float: right;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+.activitydetail .chengjicon {
+  float: left;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.activitydetail .chengjicon li {
+  margin-left: 15px;
+  width: 100%;
+  overflow: hidden;
+  height: 55px;
+}
+.activitydetail .chengjicon li .chengjiicon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  float: left;
+  border: 1px solid #dddddd;
+  margin: 15px 10px;
+}
+.activitydetail .chengjicon li .chengjiicon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.activitydetail .chengjicon li .chengjiname {
+  float: left;
+  line-height: 55px;
+  float: left;
+  font-size: 15px;
+  color: #333;
+}
+.activitydetail .chengjicon li p {
+  width: 50px;
+  float: right;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  line-height: 55px;
+  font-size: 14px;
+  color: #4fb4aa;
+}
+.activitydetail .chengjicon li p:nth-of-type(1) {
+  margin-right: 15px;
+}
+.activitydetail .chengjicon li a {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+.activitydetail .jifenkabtn {
+  margin-top: 0;
+}
+.activitydetail .jifenkabtn .jifenka, .activitydetail .jifenkabtn .shifoubaoming {
+  display: none;
+  width: 80%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background-color: #4fb4aa;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  border-radius: 6px;
+}
