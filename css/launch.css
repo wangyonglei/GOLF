@@ -3,6 +3,7 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+  /*.righticon { background-image: url(../images/telbook.png); float: right; }*/
 }
 .launch input {
   border: 0;
@@ -58,11 +59,11 @@
   float: left;
   margin-left: 45px;
 }
-.launch .righticon {
+.launch .yaoqing .yaoqing_yq {
   background-image: url(../images/telbook.png);
-  position: relative;
-  top: -45px;
-  right: 10%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 .launch .qiuchang_inputid, .launch .datadata {
   display: none;

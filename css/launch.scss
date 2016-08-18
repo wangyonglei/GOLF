@@ -13,9 +13,10 @@
 	.yaoqing { background-image: url(../images/yaoqing.png); margin-top: 10px; position: relative;
 		a{ width: 100%; height: 100%; overflow: hidden; display: block; }
 		.yaoqing_input{height: 45px; width: 85%; color: #333;float: left; margin-left: 45px;}
+		.yaoqing_yq{ background-image: url(../images/telbook.png); background-size: 20px; background-repeat: no-repeat; background-position: right center;  }
 		
 	}
-	.righticon { background-image: url(../images/telbook.png); position: relative; top: -45px; right: 10%; }
+	/*.righticon { background-image: url(../images/telbook.png); float: right; }*/
 	.qiuchang_inputid ,.datadata{ display: none; }
 	.yaoqing_maxk{ width: 100%; height: 100% ;position: fixed; top: 0; overflow: hidden; left: 0; background-color: #f8f8f8; display: none;  z-index: 30; 
 		.yaoqing_input{ width: 80%; height: auto;overflow: hidden; margin-top: 10px; margin-left: 10%; border-radius: 8px;   }
@@ -30,9 +31,7 @@
 	ul{ margin-top: 0;   }
 }
 .duan{  height: auto; }
-.tongxunlu{
-	
-}
+
 .qiuchang_mask ,.tongxunlu_mask{ display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; background-color: #000; opacity: .6; z-index: 2; }
 .qiuchang_maxk ,.ball_card{ width: 80%; height: 90% ;position: fixed; top: 5%; overflow: hidden; overflow-y:scroll;  left: 10%; background-color: #fff; display: none;  z-index: 3; }
 /*.tongxunlu{ display: block; background-color: #000; }*/
