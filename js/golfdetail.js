@@ -34,8 +34,8 @@ $(document).ready(function($) {
 					html +='</div><div class="swiper-pagination"></div></div></div>';
 					html +='<h1 class="title"><a href="navigation.html?id='+golfdetail.id+'&x='+golfdetail.lng_x+'&y='+golfdetail.lat_y+'&name='+golfdetail.title+'">' +
 						golfdetail.title + '</h1><div class="wai"><div class="daohang duan" data-x="'+golfdetail.lng_x+'" data-y="'+golfdetail.lat_y+'">' +
-						golfdetail.route + '</a></div><div class="weizhi duans">' +
-						golfdetail.address + '<span class="jiao"></span></div></div><div class="tel chang"><a href="tel:' + golfdetail.tel +'">' +
+						golfdetail.address + '<span class="jiao"></span></a></div><div class="weizhi duans">' +
+						golfdetail.route + '</div></div><div class="tel chang"><a href="tel:' + golfdetail.tel +'">' +
 						golfdetail.tel + '<span class="jiao"></span></a></div><div class="dong chang"><a href="gonglue.html?id='+golfdetail.id+'">' +
 						golfdetail.hole + '洞<span class="jiao"></span></a></div><div class="wai"><div class="des changs">' +
 						golfdetail.description + '</div></div><div class="foot"><div class="yuding">立即预定</div><div class="actives"><a href="launch.html?id='+golfdetail.id+'">发起活动</a></div></div>';
@@ -79,6 +79,7 @@ $(document).ready(function($) {
 					.done(function(data) {
 						golfdetail()
 					})
+				
 			}
 		} else {
 			alert('请在微信客户端打开！')
