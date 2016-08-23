@@ -33,6 +33,7 @@
 }
 .golfdetail .banner .tianqi {
   position: absolute;
+  overflow: hidden;
   left: 0;
   top: 10px;
   height: 37px;
@@ -44,6 +45,12 @@
   padding-left: 10px;
   padding-right: 20px;
   border-radius: 0px 50px 50px 0px;
+}
+.golfdetail .banner .tianqi a {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
 }
 .golfdetail .title {
   color: #4fb4aa;
