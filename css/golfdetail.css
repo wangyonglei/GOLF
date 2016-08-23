@@ -14,6 +14,18 @@
   width: 100%;
   height: 100%;
 }
+.golfdetail .banner .tianqi_img {
+  width: 25px;
+  height: 25px;
+  float: left;
+}
+.golfdetail .banner .tianqi_img img {
+  width: 100%;
+  height: 100%;
+}
+.golfdetail .banner .tianqi_des {
+  float: left;
+}
 .golfdetail .banner .tianqi {
   position: absolute;
   left: 0;
