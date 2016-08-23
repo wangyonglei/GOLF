@@ -28,8 +28,8 @@
   float: left;
   color: #4fb4aa;
   font-size: 12px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  /*margin-top: 5px; margin-bottom: 5px;*/
+  margin-left: 10px;
 }
 .golfdetail .banner .tianqi {
   position: absolute;
