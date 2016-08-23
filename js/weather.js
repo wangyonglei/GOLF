@@ -2,14 +2,17 @@ $(document).ready(function($) {
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
-	  var title = decodeURIComponent((new RegExp('[?|&]title=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 	function weather(){
+		console.log('1')
+	  var title = decodeURIComponent((new RegExp('[?|&]title=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+
 		$.ajax({
 			url: 'http://v.jgsports.com.cn/user/Venue/getWeather?title='+title,
 			type: 'GET',
 			dataType: 'json',
 		})
 		.done(function(data) {
+			console.log('2')
 			var weatherdata = data.data;
 			var html = '';
 			html +='<div class="wea_top"><div class="wea_img"><img src="'+weatherdata.weather_info.pic+'"></div>	<div class="wea_du">'+weatherdata.weather_info.temperature+'°C</div>	<div class="wea_baodao">'+weatherdata.weather_info.weather+'</div>	<div class="wea_time">'+weatherdata.weather_info.reporttime+' </div></div><div class="hengxian">	<p></p>	<p>·</p><p></p>	</div>	<div class="wea_style">	<div class="qiwen">气温<span>'+weatherdata.weather_info.temperature+'°C</span></div>	<div class="fengli">风力<span>'+weatherdata.weather_info.windpower+'级</span></div>	</div>';
