@@ -8,10 +8,19 @@
   height: 170px;
   max-height: 200px;
   overflow: hidden;
+  position: relative;
 }
 .golfdetail .banner img {
   width: 100%;
   height: 100%;
+}
+.golfdetail .banner .tianqi {
+  position: absolute;
+  left: 0;
+  height: 37px;
+  background-color: #000;
+  opacity: .6;
+  filter: alpha(opacity=60);
 }
 .golfdetail .title {
   color: #4fb4aa;

@@ -27,7 +27,7 @@ $(document).ready(function($) {
 				.done(function(data) {
 					var golfdetail = data.data;
 					var html = "";
-					html += '<div class="banner"><div class="swiper-container"><div class="swiper-wrapper" id="banner">';
+					html += '<div class="banner">  <div class="tianqi"></div>   <div class="swiper-container"><div class="swiper-wrapper" id="banner">';
 					for (var i = 0; i <golfdetail.venue_img_list.length; i++) {
 						html += '<div class="swiper-slide"><img src="' + golfdetail.venue_img_list[i] + '"></div>';
 					}
