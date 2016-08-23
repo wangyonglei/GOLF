@@ -2,7 +2,7 @@ $(document).ready(function($) {
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
-	function weather(){
+	var weather = function (){
 		console.log('1')
 	  var title = decodeURIComponent((new RegExp('[?|&]title=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 
