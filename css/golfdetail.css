@@ -17,10 +17,15 @@
 .golfdetail .banner .tianqi {
   position: absolute;
   left: 0;
+  top: 10px;
   height: 37px;
   background-color: #000;
   opacity: .6;
   filter: alpha(opacity=60);
+  min-width: 100px;
+  padding-left: 10px;
+  padding-right: 20px;
+  border-radius: 0px 50px 50px 0px;
 }
 .golfdetail .title {
   color: #4fb4aa;
