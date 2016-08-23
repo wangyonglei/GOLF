@@ -27,7 +27,7 @@ $(document).ready(function($) {
 				.done(function(data) {
 					var golfdetail = data.data;
 					var html = "";
-					html += '<div class="banner">  <div class="tianqi"><a href="weather.html?title='+golfdetail.title+'"><div class="tianqi_img"><img src="'+golfdetail.weather_info.pic+'"></div><div class="tianqi_des"><p>'+golfdetail.weather_info.temperature+'°C '+golfdetail.weather_info.weather+'</p><p>'+golfdetail.weather_info.winddirection+'风'+golfdetail.weather_info.windpower+'级 降水量'+golfdetail.weather_info.humidity+'mm</p></div></a></div>   <div class="swiper-container"><div class="swiper-wrapper" id="banner">';
+					html += '<div class="banner">  <div class="tianqi"><a href="weather.html?title='+golfdetail.title+'"><div class="tianqi_img"><img src="'+golfdetail.weather_info.pic+'"></div><div class="tianqi_des"><p>'+golfdetail.weather_info.temperature+'°C '+golfdetail.weather_info.weather+'</p><p>'+golfdetail.weather_info.winddirection+'风'+golfdetail.weather_info.windpower+'级 </p></div></a></div>   <div class="swiper-container"><div class="swiper-wrapper" id="banner">';
 					for (var i = 0; i <golfdetail.venue_img_list.length; i++) {
 						html += '<div class="swiper-slide"><img src="' + golfdetail.venue_img_list[i] + '"></div>';
 					}
