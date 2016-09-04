@@ -25,6 +25,7 @@ $(document).ready(function($) {
 						cartEdit()
 					})
 					.fail(function() {
+						alert(5)
 						console.log("error");
 					})
 					.always(function() {
@@ -286,7 +287,7 @@ $(document).ready(function($) {
 
 
 
-				
+
 			})
 			.fail(function() {
 				console.log("error");
