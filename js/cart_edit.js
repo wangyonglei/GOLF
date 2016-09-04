@@ -97,8 +97,8 @@ $(document).ready(function($) {
 					'<div class="wai"><div class="duan"><label class="label">	公司<input type="" class="company_describe" name="" value="' + carteditdata.company_describe + '" placeholder=""><span class="jiao"></span></label></div>' +
 					'<div class="duan">	<label class="label">	职务<input type="" name="" class="position" value="' + carteditdata.position + '" placeholder="">	<span class="jiao"></span></label></div>' +
 					'<div class="duan"><label class="label">城市<input type="" name="" class="city" value="' + carteditdata.city + '" placeholder=""><span class="jiao"></span></label></div>' +
-					'<div class="duan ziyuan"><label class="label">	资源<input type="" name="" class="resources" value="' + carteditdata.resources + '" placeholder="填写您所拥有的资源"><span class="jiao"></span></label></div></div>' +
-					'<div class="baocun">保存</div>'
+					'<div class="duan ziyuan"><label class="label">	资源<input type="" name="" class="resources" value="' + carteditdata.resources + '" placeholder="填写您所拥有的资源"><span class="jiao"></span></label></div></div>' 
+					// '<div class="baocun">保存</div>'
 				$('.cart_edit').html(html);
 				alert(6)
 			})
@@ -147,10 +147,10 @@ $(document).ready(function($) {
 	})
 
 	
-});
+// });
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
 	// 球场列表
 	$('body').on('click','.huiji_s',function() {
 
@@ -202,7 +202,7 @@ $(document).ready(function() {
 			$('.qiuchang_mask').css('display', 'none');
 		})
 		// 球场列表搜索
-	var search = function() {
+	function search() {
 		var title = $('#search_input').val();
 		$.ajax({
 			url: 'http://v.jgsports.com.cn/user/Venue/getList?title=' + title,
