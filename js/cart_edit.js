@@ -101,6 +101,7 @@ $(document).ready(function($) {
 
 
 	$('body').on('click', '.baocun', function() {
+		alert('保存')
 		var datacart = {
 			signature: $('.signature').val(),
 			membership: $('#huiji_id').html(),
