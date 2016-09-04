@@ -39,13 +39,14 @@ $(document).ready(function($) {
 	} else {
 		alert(5)
 		cartEdit();
+		alert(8)
 
 	}
 
 
 
 
-	var cartEdit = function() {
+	function cartEdit() {
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/User/getUserInfo',
 				type: 'Get',
