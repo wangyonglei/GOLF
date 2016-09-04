@@ -2,51 +2,7 @@ $(document).ready(function($) {
 	var ex_code = getCookie("ex_code");
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
-	
-	if (!ex_code && !ex_mobile && !ex_uid) {
-		var code = decodeURIComponent((new RegExp('[?|&]code=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
-		var locationUrl = window.location.href;
-		var ua = navigator.userAgent.toLowerCase();
-		// if (ua.match(/MicroMessenger/i) == "micromessenger") {
-			if (!code) {
-				alert(1)
-				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
-			} else {
-				alert(2)
-				$.ajax({
-						url: 'http://v.jgsports.com.cn/user/User/login',
-						type: 'get',
-						dataType: 'json',
-						data: {
-							code: code
-						}
-					})
-					.done(function(data) {
-						alert(3)
-						cartEdit()
-					})
-					.fail(function() {
-						alert(4)
-						console.log("error");
-					})
-					.always(function() {
-						console.log("complete");
-					});
-			}
-		// } else {
-		// 	alert('请在微信客户端打开！')
-		// }
-	} else {
-		alert(5)
-		cartEdit();
-		alert(8)
-
-	}
-
-
-
-
-	function cartEdit() {
+	var cartEdit = function() {
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/User/getUserInfo',
 				type: 'Get',
@@ -97,10 +53,9 @@ $(document).ready(function($) {
 					'<div class="wai"><div class="duan"><label class="label">	公司<input type="" class="company_describe" name="" value="' + carteditdata.company_describe + '" placeholder=""><span class="jiao"></span></label></div>' +
 					'<div class="duan">	<label class="label">	职务<input type="" name="" class="position" value="' + carteditdata.position + '" placeholder="">	<span class="jiao"></span></label></div>' +
 					'<div class="duan"><label class="label">城市<input type="" name="" class="city" value="' + carteditdata.city + '" placeholder=""><span class="jiao"></span></label></div>' +
-					'<div class="duan ziyuan"><label class="label">	资源<input type="" name="" class="resources" value="' + carteditdata.resources + '" placeholder="填写您所拥有的资源"><span class="jiao"></span></label></div></div>' 
-					// '<div class="baocun">保存</div>'
+					'<div class="duan ziyuan"><label class="label">	资源<input type="" name="" class="resources" value="' + carteditdata.resources + '" placeholder="填写您所拥有的资源"><span class="jiao"></span></label></div></div>' +
+					'<div class="baocun">保存</div>'
 				$('.cart_edit').html(html);
-				alert(6)
 			})
 			.fail(function() {
 				console.log("error");
@@ -109,12 +64,43 @@ $(document).ready(function($) {
 				console.log("complete");
 			});
 	}
+	if (!ex_code && !ex_mobile && !ex_uid) {
+		var code = decodeURIComponent((new RegExp('[?|&]code=' + '([^&;]+?)(&|#|;|$)', "ig").exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+		var locationUrl = window.location.href;
+		var ua = navigator.userAgent.toLowerCase();
+		if (ua.match(/MicroMessenger/i) == "micromessenger") {
+			if (!code) {
+				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
+			} else {
+				$.ajax({
+						url: 'http://v.jgsports.com.cn/user/User/login',
+						type: 'get',
+						dataType: 'json',
+						data: {
+							code: code
+						}
+					})
+					.done(function(data) {
+						cartEdit()
+					})
+					.fail(function() {
+						console.log("error");
+					})
+					.always(function() {
+						console.log("complete");
+					});
+			}
+		} else {
+			alert('请在微信客户端打开！')
+		}
+	} else {
+		cartEdit();
 
+	}
 
 
 
 	$('body').on('click', '.baocun', function() {
-		alert(7)
 		var datacart = {
 			signature: $('.signature').val(),
 			membership: $('#huiji_id').html(),
@@ -147,10 +133,10 @@ $(document).ready(function($) {
 	})
 
 	
-// });
+});
 
 
-// $(document).ready(function() {
+$(document).ready(function() {
 	// 球场列表
 	$('body').on('click','.huiji_s',function() {
 
@@ -202,7 +188,7 @@ $(document).ready(function($) {
 			$('.qiuchang_mask').css('display', 'none');
 		})
 		// 球场列表搜索
-	function search() {
+	var search = function() {
 		var title = $('#search_input').val();
 		$.ajax({
 			url: 'http://v.jgsports.com.cn/user/Venue/getList?title=' + title,
