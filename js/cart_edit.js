@@ -72,6 +72,7 @@ $(document).ready(function($) {
 			if (!code) {
 				location = 'http://v.jgsports.com.cn/user/Act/getCode?backUri=' + locationUrl;
 			} else {
+				alert(1)
 				$.ajax({
 						url: 'http://v.jgsports.com.cn/user/User/login',
 						type: 'get',
@@ -81,12 +82,14 @@ $(document).ready(function($) {
 						}
 					})
 					.done(function(data) {
+						alert(2)
 						cartEdit()
 					})
 					.fail(function() {
 						console.log("error");
 					})
 					.always(function() {
+						alert(3)
 						console.log("complete");
 					});
 			}
@@ -94,6 +97,7 @@ $(document).ready(function($) {
 			alert('请在微信客户端打开！')
 		}
 	} else {
+		alert(4)
 		cartEdit();
 
 	}
@@ -134,10 +138,10 @@ $(document).ready(function($) {
 	})
 
 	
-});
+// });
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
 	// 球场列表
 	$('body').on('click','.huiji_s',function() {
 
