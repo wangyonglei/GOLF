@@ -100,7 +100,7 @@ $(document).ready(function($) {
 
 
 
-	$('body').on('click',  '.baocun',  function() {
+	$(document.body).on('click',  '.baocun',  function() {
 		alert('保存')
 		var datacart = {
 			signature: $('.signature').val(),
