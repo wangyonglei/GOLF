@@ -55,7 +55,7 @@ $(document).ready(function($) {
 					'<div class="duan">	<label class="label">	职务<input type="" name="" class="position" value="' + carteditdata.position + '" placeholder="">	<span class="jiao"></span></label></div>' +
 					'<div class="duan"><label class="label">城市<input type="" name="" class="city" value="' + carteditdata.city + '" placeholder=""><span class="jiao"></span></label></div>' +
 					'<div class="duan ziyuan"><label class="label">	资源<input type="" name="" class="resources" value="' + carteditdata.resources + '" placeholder="填写您所拥有的资源"><span class="jiao"></span></label></div></div>' +
-					'<div class="baocun">保存</div>'
+					'<div class="baocun" id="baocun">保存</div>'
 				$('.cart_edit').html(html);
 				alert('jiazai')
 			})
@@ -104,9 +104,9 @@ $(document).ready(function($) {
 	}
 
 
-		$('body').click(function() {
+		// $('body').click(function() {
 	
-	// $('body').on('click', '.baocun', function() {
+	$('body').on('click', '#baocun', function() {
 		alert('baocun')
 		var datacart = {
 			signature: $('.signature').val(),
