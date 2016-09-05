@@ -3,7 +3,7 @@ $(document).ready(function($) {
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
 	var cartEdit = function() {
-		alert('cartEdit')
+		
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/User/getUserInfo',
 				type: 'Get',
@@ -57,10 +57,10 @@ $(document).ready(function($) {
 					'<div class="duan ziyuan"><label class="label">	资源<input type="" name="" class="resources" value="' + carteditdata.resources + '" placeholder="填写您所拥有的资源"><span class="jiao"></span></label></div></div>' +
 					'<div class="baocun" id="baocun">保存</div>'
 				$('.cart_edit').html(html);
-				alert('jiazai')
+				
 			})
 			.fail(function() {
-				alert('error')
+			
 				console.log("error");
 			})
 			.always(function() {
@@ -84,7 +84,7 @@ $(document).ready(function($) {
 						}
 					})
 					.done(function(data) {
-						alert(0)
+						
 						cartEdit()
 					})
 					.fail(function() {
@@ -98,7 +98,7 @@ $(document).ready(function($) {
 			alert('请在微信客户端打开！')
 		}
 	} else {
-		alert(1)
+		
 		cartEdit();
 
 	}
@@ -107,7 +107,7 @@ $(document).ready(function($) {
 		// $('body').click(function() {
 	
 	$('body').on('click', '#baocun', function() {
-		alert('baocun')
+		
 		var datacart = {
 			signature: $('.signature').val(),
 			membership: $('#huiji_id').html(),
@@ -146,7 +146,7 @@ $(document).ready(function($) {
 $(document).ready(function() {
 	// 球场列表
 	$('body').on('click','.huiji_s',function() {
-		alert('huiji')
+		
 
 		$('.qiuchang_maxk').css('display', 'block');
 		$('.qiuchang_mask').css('display', 'block');
