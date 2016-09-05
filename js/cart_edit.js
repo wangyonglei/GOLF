@@ -3,6 +3,7 @@ $(document).ready(function($) {
 	var ex_mobile = getCookie("ex_mobile");
 	var ex_uid = getCookie("ex_uid");
 	var cartEdit = function() {
+		alert('cartEdit')
 		$.ajax({
 				url: 'http://v.jgsports.com.cn/user/User/getUserInfo',
 				type: 'Get',
@@ -18,7 +19,7 @@ $(document).ready(function($) {
 					// '<div class="duan xingbie">	<label class="label">性别<input type="" name="" class="ball_age" value="'+carteditdata.ball_age+'" ><span class="jiao"></span></label></div>'+
 					'<div class="duan gexing"><label class="label">	个性签名<input type="text" class="signature" value="' + carteditdata.signature + '" placeholder="简单的介绍一下自己"><span class="jiao"></span>	</label></div></div>' +
 					'<div class="wai">	<div class="duan">	<label class="label">球龄<input type="" name="" class="ball_age" value="' + carteditdata.ball_age + '" placeholder=""><span class="jiao"></span>	</label></div>' +
-					'<div class="duan dianshu">	<label class="label">	点数<input type="" name="" class="almost" value="' + carteditdata.almost + '" placeholder=""><span class="jiao"></span>	</label></div></div><div class="wai">'+
+					'<div class="duan dianshu">	<label class="label">	差点<input type="" name="" class="almost" value="' + carteditdata.almost + '" placeholder=""><span class="jiao"></span>	</label></div></div><div class="wai">'+
 				// 单个球场
 				// if (carteditdata.membership.length == 0) {
 				// 	html += '<div class="duan huiji_s"><label class="label">	会籍情况<span id="huiji_id"></span><input type="" class="membership" name="" value="" placeholder="无"><span class="jiao"></span>	</label></div>';
@@ -56,8 +57,10 @@ $(document).ready(function($) {
 					'<div class="duan ziyuan"><label class="label">	资源<input type="" name="" class="resources" value="' + carteditdata.resources + '" placeholder="填写您所拥有的资源"><span class="jiao"></span></label></div></div>' +
 					'<div class="baocun">保存</div>'
 				$('.cart_edit').html(html);
+				alert('jiazai')
 			})
 			.fail(function() {
+				alert('error')
 				console.log("error");
 			})
 			.always(function() {
@@ -81,6 +84,7 @@ $(document).ready(function($) {
 						}
 					})
 					.done(function(data) {
+						alert(0)
 						cartEdit()
 					})
 					.fail(function() {
@@ -94,6 +98,7 @@ $(document).ready(function($) {
 			alert('请在微信客户端打开！')
 		}
 	} else {
+		alert(1)
 		cartEdit();
 
 	}
@@ -101,6 +106,7 @@ $(document).ready(function($) {
 
 
 	$('body').on('click', '.baocun', function() {
+		alert('baocun')
 		var datacart = {
 			signature: $('.signature').val(),
 			membership: $('#huiji_id').html(),
@@ -139,6 +145,7 @@ $(document).ready(function($) {
 $(document).ready(function() {
 	// 球场列表
 	$('body').on('click','.huiji_s',function() {
+		alert('huiji')
 
 		$('.qiuchang_maxk').css('display', 'block');
 		$('.qiuchang_mask').css('display', 'block');
