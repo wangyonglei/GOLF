@@ -60,6 +60,7 @@
   border-bottom: 0;
 }
 .cart_edit .baocun {
+  cursor: pointer;
   float: left;
   border-radius: 5px;
   background-color: #4fb4aa;
@@ -97,6 +98,7 @@
 
 .huiji_s {
   height: auto;
+  cursor: pointer;
 }
 
 #huiji_id {
