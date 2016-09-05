@@ -104,8 +104,9 @@ $(document).ready(function($) {
 	}
 
 
-
-	$('body').on('click', '.baocun', function() {
+		$('body').click(function() {
+	
+	// $('body').on('click', '.baocun', function() {
 		alert('baocun')
 		var datacart = {
 			signature: $('.signature').val(),
